@@ -1830,7 +1830,7 @@ El Diagrama de Contenedores detalla la arquitectura de alto nivel y las piezas d
 - MySQL Database: Base de datos relacional centralizada que almacena la información de dominio (usuarios, clientes, proveedores, pedidos, pagos, flota, despachos, etc.), accedida desde la API mediante Spring Data JPA / Hibernate.
 
 <div align="center">
-  <img src="assets/chapter-4/Componentsiteration1.png" width="700" />
+  <img src="assets/chapter-4/ComponentsIteration1.png" width="700" />
 </div>
 
 <div align="center">
