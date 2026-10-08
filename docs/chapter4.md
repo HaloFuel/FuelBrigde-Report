@@ -4,7 +4,7 @@
 
 ### 4.1.1 Principles Statements
 
-El diseño arquitectónico de FuelBridge (desarrollado por PrimeFuel) se rige bajo principios fundamentales de ingeniería de software para garantizar escalabilidad, mantenibilidad y una experiencia de usuario óptima:
+El diseño arquitectónico de FuelBridge (desarrollado por HaloFuel) se rige bajo principios fundamentales de ingeniería de software para garantizar escalabilidad, mantenibilidad y una experiencia de usuario óptima:
 
 - Domain-Driven Design (DDD): El software está estrictamente alineado con los procesos de negocio de compra y distribución de combustible. El sistema se divide en Bounded Contexts claramente definidos (como Ordering, Payment, Fulfillment y Catalog) para aislar la complejidad del dominio.
 
@@ -62,9 +62,9 @@ El Diagrama de Contenedores detalla la arquitectura de alto nivel y las piezas d
 
 - Landing Page: Sitio web estático que presenta las características de la plataforma, planes de precios, preguntas frecuentes y formulario de contacto, redirigiendo al usuario a la aplicación principal.
 
-- FullTank Web Application: Una Single Page Application (SPA) ejecutada en el navegador del usuario, que sirve como la interfaz gráfica unificada para que clientes y proveedores gestionen el ciclo de vida del combustible.
+- FuelBridge Web Application: Una Single Page Application (SPA) ejecutada en el navegador del usuario, que sirve como la interfaz gráfica unificada para que clientes y proveedores gestionen el ciclo de vida del combustible.
 
-- FullTank API: Desarrollada en ASP.NET Core 8, es la API RESTful central que contiene toda la lógica de negocio, procesa las peticiones del frontend y orquesta los diferentes Bounded Contents.
+- FuelBridge API: Desarrollada en ASP.NET Core 8, es la API RESTful central que contiene toda la lógica de negocio, procesa las peticiones del frontend y orquesta los diferentes Bounded Contents.
 
 - MySQL Database: Base de datos relacional centralizada que almacena la información de dominio (usuarios, clientes, proveedores, pedidos, pagos, flota, despachos, etc.) utilizando Spring Data JPA.
 
@@ -72,7 +72,7 @@ El Diagrama de Contenedores detalla la arquitectura de alto nivel y las piezas d
   <img src="../assets/chapter-4/image15.png" width="700" />
 </div>
 
-A nivel de componentes, la FullTank API se descompone en los siguientes Bounded Contexts (BC) para mantener alta cohesión:
+A nivel de componentes, la FuelBridge API se descompone en los siguientes Bounded Contexts (BC) para mantener alta cohesión:
 
 - Identity & Access BC: Gestiona registro, autenticación, JWT y recuperación de contraseñas.
 
@@ -178,7 +178,7 @@ Desempeño (Performance): La carga de interfaces analíticas (como el Dashboard 
 | ADD-02 | Establecer el estilo arquitectónico base (SPA + API REST + BCs)                          | QA-2 (Performance), Constraint Tecnológica                   | Alta          | Por resolver |
 | ADD-03 | Definir la estrategia de comunicación entre contenedores (sincrónica o. asincrónica)     | QA-1 (Availability & Traceability), Concern: Desacoplamiento | Alta          | Por resolver |
 | ADD-04 | Establecer la separación en Bounded Contexts dentro de la API                            | QA-2 (Performance), Concern: Gestión Segura del Estado       | Media         | Por resolver |
-| ADD-05 | Definir la Landing Page como contenedor estático separado de la FullTank Web Application | QA-3 (Usability), Concern: Separación de responsabilidades   | Media         | Por resolver |
+| ADD-05 | Definir la Landing Page como contenedor estático separado de la FuelBridge Web Application | QA-3 (Usability), Concern: Separación de responsabilidades   | Media         | Por resolver |
 
 #### 4.3.1.2 Establish Iteration Goal by Selecting Drivers
 
@@ -223,14 +223,14 @@ Decisión adoptada: arquitectura de Monolito Modular con SPA desacoplada. La API
 | **Elemento**             | **Tipo**                 | **Responsabilidad**                                                                                                 | **Interfaz**                                                                                  |
 |--------------------------|--------------------------|---------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
 | Landing Page             | Static Web               | Presentación pública de la plataforma y redirección al Web Application                                              | Ninguna, redirección via URL                                                                  |
-| FullTank Web Application | SPA (Vue/React)          | Interfaz unificada para clientes y proveedores en la gestión del ciclo de vida del combustible                      | Consume: FullTank API (REST/HTTPS)                                                            |
-| FullTank API             | ASP.NET Core 8           | Lógica de negocio completa dividida en 7 BCs; procesamiento de pedidos, pagos, despachos, notificaciones y reportes | Expone: REST API (HTTPS/JSON). Consume: MySQL DB, Email Service, Cloud Storage, PDF Generator |
-| MySQL Database           | Base de datos relacional | Persistencia transaccional de todos los dominios del sistema                                                        | Consumida por FullTank API via Entity Framework Core                                          |
+| FuelBridge Web Application | SPA (Vue/React)          | Interfaz unificada para clientes y proveedores en la gestión del ciclo de vida del combustible                      | Consume: FuelBridge API (REST/HTTPS)                                                            |
+| FuelBridge API             | ASP.NET Core 8           | Lógica de negocio completa dividida en 7 BCs; procesamiento de pedidos, pagos, despachos, notificaciones y reportes | Expone: REST API (HTTPS/JSON). Consume: MySQL DB, Email Service, Cloud Storage, PDF Generator |
+| MySQL Database           | Base de datos relacional | Persistencia transaccional de todos los dominios del sistema                                                        | Consumida por FuelBridge API via Entity Framework Core                                          |
 | Email Service            | Sistema externo          | Envío de correos de recuperación de contraseña                                                                      | Consumido por Identity & Access BC via REST API                                               |
 | Cloud Storage            | Sistema externo          | Almacenamiento de vouchers de pago                                                                                  | Consumido por Payment BC via REST API                                                         |
 | PDF Generator Service    | Sistema externo          | Generación de reportes en PDF                                                                                       | Consumido por Reporting & Analytics BC via REST API                                           |
 
-**Bounded Contexts de la FullTank API:**
+**Bounded Contexts de la FuelBridge API:**
 
 | **Bounded Context**      | **Responsabilidad**                                                        |
 |--------------------------|----------------------------------------------------------------------------|
@@ -258,21 +258,21 @@ Decisión adoptada: arquitectura de Monolito Modular con SPA desacoplada. La API
 
 **Diagrama de Componentes - Estructura del Monolito**
 
-**Component Diagram – FullTank API**
+**Component Diagram – FuelBridge API**
 
 <div align="center">
   <img src="../assets/chapter-4/image30.png" width="700" />
 </div>
 
-El diagrama de componentes representa la estructura interna del Monolito Modular implementado en FullTank API. La lógica de negocio se divide en siete Bounded Contexts con responsabilidades independientes: Identity & Access, Ordering, Payment, Catalog, Fulfillment, Notification y Reporting & Analytics. Todos los componentes se ejecutan dentro de una única API ASP.NET Core 8 y comparten una base de datos MySQL. Las integraciones externas se mantienen asociadas al contexto responsable: Identity & Access consume Email Service, Payment utiliza Cloud Storage y Reporting & Analytics utiliza PDF Generator Service. Asimismo, Ordering BC se comunica con Notification BC mediante Observer/Pub-Sub interno para reducir el acoplamiento del flujo de notificaciones.
+El diagrama de componentes representa la estructura interna del Monolito Modular implementado en FuelBridge API. La lógica de negocio se divide en siete Bounded Contexts con responsabilidades independientes: Identity & Access, Ordering, Payment, Catalog, Fulfillment, Notification y Reporting & Analytics. Todos los componentes se ejecutan dentro de una única API ASP.NET Core 8 y comparten una base de datos MySQL. Las integraciones externas se mantienen asociadas al contexto responsable: Identity & Access consume Email Service, Payment utiliza Cloud Storage y Reporting & Analytics utiliza PDF Generator Service. Asimismo, Ordering BC se comunica con Notification BC mediante Observer/Pub-Sub interno para reducir el acoplamiento del flujo de notificaciones.
 
-**C4 Component Diagram – FullTank Web Application**
+**C4 Component Diagram – FuelBridge Web Application**
 
 <div align="center">
   <img src="../assets/chapter-4/image25.png" width="700" />
 </div>
 
-El diagrama de componentes de FullTank Web Application representa la organización interna de la SPA utilizada por clientes, proveedores y administradores. La interfaz se divide en componentes asociados a las principales funcionalidades del sistema, como autenticación, pedidos, catálogo, pagos, despachos, notificaciones y reportes. Todas las operaciones hacia el backend se centralizan mediante API Client, que consume FullTank API utilizando REST sobre HTTPS. Shared UI Components reúne elementos reutilizables de interfaz para evitar duplicación y mantener consistencia visual.
+El diagrama de componentes de FuelBridge Web Application representa la organización interna de la SPA utilizada por clientes, proveedores y administradores. La interfaz se divide en componentes asociados a las principales funcionalidades del sistema, como autenticación, pedidos, catálogo, pagos, despachos, notificaciones y reportes. Todas las operaciones hacia el backend se centralizan mediante API Client, que consume FuelBridge API utilizando REST sobre HTTPS. Shared UI Components reúne elementos reutilizables de interfaz para evitar duplicación y mantener consistencia visual.
 
 **C4 Component Diagram – Landing Page**
 
@@ -280,7 +280,7 @@ El diagrama de componentes de FullTank Web Application representa la organizaci�
   <img src="../assets/chapter-4/image5.png" width="700" />
 </div>
 
-El diagrama de componentes de la Landing Page representa la estructura del sitio público de FuelBridge. Al tratarse de una aplicación web estática, sus componentes se limitan a responsabilidades de presentación y navegación. Navigation permite acceder a las distintas secciones, Hero Section comunica la propuesta principal, Platform Information presenta las características de la solución y Access CTA redirige hacia FullTank Web Application. Esta separación mantiene la Landing Page independiente de la lógica transaccional del sistema.
+El diagrama de componentes de la Landing Page representa la estructura del sitio público de FuelBridge. Al tratarse de una aplicación web estática, sus componentes se limitan a responsabilidades de presentación y navegación. Navigation permite acceder a las distintas secciones, Hero Section comunica la propuesta principal, Platform Information presenta las características de la solución y Access CTA redirige hacia FuelBridge Web Application. Esta separación mantiene la Landing Page independiente de la lógica transaccional del sistema.
 
 | **ID** | **Decisión**                                                  | **Alternativa descartada**        | **Justificación**                                                                        | **Consecuencia**                                                                |
 |--------|---------------------------------------------------------------|-----------------------------------|------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
@@ -301,7 +301,7 @@ Al cierre de esta iteración, los objetivos planteados en el backlog quedan en e
 | Separar API en Bounded Contexts y asignar responsabilidades | Done       |
 | Elaborar C4 Level 1 Context Diagram                         | Done       |
 | Elaborar C4 Level 2 Container Diagram                       | Done       |
-| Elaborar C4 Level 3 Component Diagram (FullTank API)        | Done       |
+| Elaborar C4 Level 3 Component Diagram (FuelBridge API)        | Done       |
 | Registrar decisiones de diseño (ADR-01 al ADR-04)           | Done       |
 | Abordar QA-2 (Performance) a nivel de componentes internos  | Pendiente  |
 
@@ -321,11 +321,11 @@ Los drivers QA-1 y QA-3 quedan satisfechos a nivel estructural. QA-2 se traslada
 
 #### 4.3.2.2 Establish Iteration Goal by Selecting Drivers
 
-El objetivo de esta segunda iteración es refinar los componentes internos de la FullTank/FuelBridge API, priorizando el desempeño del Dashboard, el procesamiento de reportes y el desacoplamiento de notificaciones generadas por cambios de estado de pedidos. Los drivers seleccionados son QA-2 Performance, porque el Dashboard y el historial requieren consultar múltiples registros sin bloquear la operación; QA-1 Availability & Traceability, porque cada cambio de estado del pedido debe generar notificaciones sin pérdida de eventos; y el concern de Desacoplamiento de Servicios Bloqueantes, porque la generación de PDFs y envío de correos no deben ejecutarse dentro del flujo principal HTTP. Estos drivers ya estaban identificados en la sección 4.2 y quedaron pendientes al cierre de la Iteración 1.
+El objetivo de esta segunda iteración es refinar los componentes internos de la FuelBridge/FuelBridge API, priorizando el desempeño del Dashboard, el procesamiento de reportes y el desacoplamiento de notificaciones generadas por cambios de estado de pedidos. Los drivers seleccionados son QA-2 Performance, porque el Dashboard y el historial requieren consultar múltiples registros sin bloquear la operación; QA-1 Availability & Traceability, porque cada cambio de estado del pedido debe generar notificaciones sin pérdida de eventos; y el concern de Desacoplamiento de Servicios Bloqueantes, porque la generación de PDFs y envío de correos no deben ejecutarse dentro del flujo principal HTTP. Estos drivers ya estaban identificados en la sección 4.2 y quedaron pendientes al cierre de la Iteración 1.
 
 #### 4.3.2.3 Choose One or More Elements of the System to Refine
 
-En esta iteración se refina el contenedor FullTank/FuelBridge API, específicamente los Bounded Contexts internos que soportan el flujo transaccional y analítico:
+En esta iteración se refina el contenedor FuelBridge/FuelBridge API, específicamente los Bounded Contexts internos que soportan el flujo transaccional y analítico:
 
 - Ordering BC: ciclo de vida del pedido.
 
@@ -367,7 +367,7 @@ Decisión adoptada: mantener el Monolito Modular con eventos internos mediante O
 
 #### 4.3.2.6 Sketch Views (C4 & UML) and Record Design Decisions
 
-**C4 Component Diagram – FullTank/FuelBridge API  
+**C4 Component Diagram – FuelBridge/FuelBridge API  
 **El diagrama de componentes de esta iteración debe mostrar la estructura interna de la API, refinando los Bounded Contexts más críticos: Ordering, Payment, Catalog, Fulfillment, Notification y Reporting & Analytics. Ordering BC actúa como núcleo del ciclo de pedido y publica eventos internos cuando un pedido cambia de estado. Notification BC consume esos eventos para generar alertas in-app, mientras Reporting & Analytics BC consulta MySQL para mostrar KPIs y solicitar reportes PDF al servicio externo. Esta vista permite evidenciar el uso de bajo acoplamiento, alta cohesión y procesamiento asíncrono interno.
 
 | **ID** | **Decisión**                                         | **Alternativa descartada**                | **Justificación**                                  | **Consecuencia**                                         |
@@ -381,7 +381,7 @@ Decisión adoptada: mantener el Monolito Modular con eventos internos mediante O
 
 | **Tarea**                                                        | **Estado** |
 |------------------------------------------------------------------|------------|
-| Refinar componentes internos de FullTank/FuelBridge API          | Done       |
+| Refinar componentes internos de FuelBridge/FuelBridge API          | Done       |
 | Definir comunicación interna entre Ordering BC y Notification BC | Done       |
 | Definir estrategia de consultas para Dashboard y reportes        | Done       |
 | Registrar ADR-05 a ADR-08                                        | Done       |
@@ -393,13 +393,13 @@ Al cierre de esta iteración, los objetivos principales quedan cubiertos: se ref
 
 #### 4.3.2.8 C4 Y DIAGRAMA UML
 
-**C4 Component Diagram – FullTank API refinado**
+**C4 Component Diagram – FuelBridge API refinado**
 
 <div align="center">
   <img src="../assets/chapter-4/image7.png" width="700" />
 </div>
 
-El diagrama muestra el refinamiento interno de la FullTank API durante la segunda iteración. Se representan los Bounded Contexts principales relacionados con pedidos, pagos, stock, despachos, notificaciones y reportes, además del Domain Event Dispatcher y los repositorios. La estructura busca reducir el acoplamiento entre componentes y mejorar el acceso a datos y el rendimiento de las consultas.
+El diagrama muestra el refinamiento interno de la FuelBridge API durante la segunda iteración. Se representan los Bounded Contexts principales relacionados con pedidos, pagos, stock, despachos, notificaciones y reportes, además del Domain Event Dispatcher y los repositorios. La estructura busca reducir el acoplamiento entre componentes y mejorar el acceso a datos y el rendimiento de las consultas.
 
 **UML Sequence Diagram – Aprobación y despacho de pedido**
 

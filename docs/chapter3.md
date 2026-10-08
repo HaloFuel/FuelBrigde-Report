@@ -28,7 +28,7 @@
 <tr class="odd">
 <th>US-01</th>
 <th>Ver sección Home</th>
-<th>Como visitante (proveedor), quiero ver una sección de inicio que resuma el valor de FullTank para comprender rápidamente el objetivo del sistema.</th>
+<th>Como visitante (proveedor), quiero ver una sección de inicio que resuma el valor de FuelBridge para comprender rápidamente el objetivo del sistema.</th>
 <th><p>Escenario 1: Visualización de resumen del sistema</p>
 <p>Dado que el visitante (proveedor) accede al sitio web,</p>
 <p>Cuando se encuentra en la sección Home,</p>
@@ -36,13 +36,13 @@
 <p>Escenario 2: Acceso a call to action desde Home</p>
 <p>Dado que el visitante (proveedor) revisa la sección Home,</p>
 <p>Cuando desliza hacia abajo,</p>
-<p>Entonces encuentra un botón que lo invita a conocer más sobre FullTank.</p></th>
+<p>Entonces encuentra un botón que lo invita a conocer más sobre FuelBridge.</p></th>
 <th>EP01</th>
 </tr>
 <tr class="header">
 <th>US-02</th>
 <th>Ver sección About Us</th>
-<th>Como visitante de ambos segmentos, quiero conocer quiénes están detrás de FullTank para confiar en el sistema.</th>
+<th>Como visitante de ambos segmentos, quiero conocer quiénes están detrás de FuelBridge para confiar en el sistema.</th>
 <th><p>Escenario 1: Información visible del equipo</p>
 <p>Dado que el visitante de ambos segmentos accede a About Us,</p>
 <p>Cuando se carga la sección,</p>
@@ -56,7 +56,7 @@
 <tr class="odd">
 <th>US-03</th>
 <th>Ver sección How it works?</th>
-<th>Como visitante de ambos segmentos, quiero entender cómo funciona FullTank paso a paso para evaluar si se ajusta a mis necesidades.</th>
+<th>Como visitante de ambos segmentos, quiero entender cómo funciona FuelBridge paso a paso para evaluar si se ajusta a mis necesidades.</th>
 <th><p>Escenario 1: Comprensión del flujo de pedidos</p>
 <p>Dado que el visitante de ambos segmentos accede a How it works?,</p>
 <p>Cuando lee la sección,</p>
@@ -534,27 +534,27 @@
 <th>Ver sección Benefits</th>
 <th>Como visitante de ambos segmentos, quiero conocer las principales ventajas con las que puedo contar para evaluar la implementación de la plataforma.</th>
 <th><p>Escenario 1: Visualizar beneficios</p>
-<p>Dado que el visitante de ambos segmentos accede a la sección "¿Por qué elegir FullTank?",</p>
+<p>Dado que el visitante de ambos segmentos accede a la sección "¿Por qué elegir FuelBridge?",</p>
 <p>Cuando visualiza los múltiples beneficios,</p>
 <p>Entonces puede identificar nuestra ventajas frente a nuestros competidores.</p>
 <p>Escenario 2: Visualizar beneficios</p>
-<p>Dado que el visitante de ambos segmentos accede a la sección "¿Por qué elegir FullTank?",</p>
+<p>Dado que el visitante de ambos segmentos accede a la sección "¿Por qué elegir FuelBridge?",</p>
 <p>Cuando observa la lista de beneficios,</p>
-<p>Entonces ve como le podría beneficiar usar FullTank.</p></th>
+<p>Entonces ve como le podría beneficiar usar FuelBridge.</p></th>
 <th>EP01</th>
 </tr>
 <tr class="header">
 <th>US-34</th>
 <th>Ver sección Lo que Dicen Nuestros Clientes</th>
-<th>Como visitante de ambos segmentos, quiero conocer los testimonios de los usuarios de FullTank para tener confianza en la plataforma y saber que otras empresas ya la están usando.</th>
+<th>Como visitante de ambos segmentos, quiero conocer los testimonios de los usuarios de FuelBridge para tener confianza en la plataforma y saber que otras empresas ya la están usando.</th>
 <th><p>Escenario 1: Ver testimonios de clientes</p>
 <p>Dado que el visitante de ambos segmentos está interesado en los comentarios de los clientes,</p>
 <p>Cuando accede a la sección,</p>
-<p>Entonces puede leer un breve testimonio sobre experiencias usando FullTank.</p>
+<p>Entonces puede leer un breve testimonio sobre experiencias usando FuelBridge.</p>
 <p>Escenario 2: Visualizar testimonios recientes</p>
 <p>Dado que el visitante de ambos segmentos accede a la sección y esta se actualiza regularmente,</p>
 <p>Cuando se carga la información,</p>
-<p>Entonces visualiza las últimos testimonios que se han unido a FullTank.</p></th>
+<p>Entonces visualiza las últimos testimonios que se han unido a FuelBridge.</p></th>
 <th>EP01</th>
 </tr>
 <tr class="odd">
@@ -564,7 +564,7 @@
 <th><p>Escenario 1: Ver información sobre ser solicitante de combustible</p>
 <p>Dado que el visitante entra a la sección Precios y Planes,</p>
 <p>Cuando visualiza los diferentes precios y las features incluidas,</p>
-<p>Entonces entiende que existe flexibilidad para adaptar FullTank a su empresa.</p>
+<p>Entonces entiende que existe flexibilidad para adaptar FuelBridge a su empresa.</p>
 <p>Escenario 2: Seleccionar un plan</p>
 <p>Dado que el visitante está interesado en obtener un plan específico,</p>
 <p>Cuando hace clic en el call to action,</p>
@@ -1014,9 +1014,9 @@
 
 ## 3.3 Impact Map
 
-En el Impact Mapping del modelo de negocio digital de FullTank, desarrollado por la startup PrimeFuel, el equipo elaboró el mapa partiendo de un Business Goal principal que cumple los criterios SMART: “Optimizar la gestión y distribución de combustible, alcanzando 300 empresas solicitantes activas y 100 proveedores registrados en el primer año de operación, reduciendo en un 40% los tiempos de gestión de pedidos”. A partir de esta meta se incorporaron como Actors/Personas a los User Personas previamente definidos: Carlos Ramírez (empresa solicitante) y Andrea López (proveedora de combustible). Para cada uno se identificaron los Impacts esperados, es decir, cómo se busca cambiar su comportamiento para lograr el objetivo: en el caso de Carlos, la digitalización del registro de pedidos, la reducción de la dependencia de canales informales, el seguimiento en tiempo real y una mejor toma de decisiones basada en datos; en el caso de Andrea, la centralización de pedidos, la optimización de la planificación logística, la mejora en la comunicación con clientes y el uso de métricas para el control operativo.
+En el Impact Mapping del modelo de negocio digital de FuelBridge, desarrollado por la startup HaloFuel, el equipo elaboró el mapa partiendo de un Business Goal principal que cumple los criterios SMART: “Optimizar la gestión y distribución de combustible, alcanzando 300 empresas solicitantes activas y 100 proveedores registrados en el primer año de operación, reduciendo en un 40% los tiempos de gestión de pedidos”. A partir de esta meta se incorporaron como Actors/Personas a los User Personas previamente definidos: Carlos Ramírez (empresa solicitante) y Andrea López (proveedora de combustible). Para cada uno se identificaron los Impacts esperados, es decir, cómo se busca cambiar su comportamiento para lograr el objetivo: en el caso de Carlos, la digitalización del registro de pedidos, la reducción de la dependencia de canales informales, el seguimiento en tiempo real y una mejor toma de decisiones basada en datos; en el caso de Andrea, la centralización de pedidos, la optimización de la planificación logística, la mejora en la comunicación con clientes y el uso de métricas para el control operativo.
 
-A partir de estos impactos se definieron los Deliverables que la plataforma FullTank debe ofrecer para generar dichos cambios en los actores. Entre ellos se incluyen el módulo de registro y gestión de pedidos, el sistema de tracking en tiempo real, el panel de control con métricas operativas, la planificación logística automatizada, el historial de pedidos y el sistema de notificaciones y comunicación integrada. Finalmente, en la columna de User Stories se detallaron historias en formato “Como \[persona\] deseo \[acción\] para \[beneficio\]” (por ejemplo, registro de pedidos, consulta de estado, actualización de entregas, coordinación logística y generación de reportes), lo que permite trazar una línea clara desde los objetivos de negocio hasta las funcionalidades del sistema, asegurando la alineación entre Business Goals, Impacts, Deliverables y el desarrollo de la solución.
+A partir de estos impactos se definieron los Deliverables que la plataforma FuelBridge debe ofrecer para generar dichos cambios en los actores. Entre ellos se incluyen el módulo de registro y gestión de pedidos, el sistema de tracking en tiempo real, el panel de control con métricas operativas, la planificación logística automatizada, el historial de pedidos y el sistema de notificaciones y comunicación integrada. Finalmente, en la columna de User Stories se detallaron historias en formato “Como \[persona\] deseo \[acción\] para \[beneficio\]” (por ejemplo, registro de pedidos, consulta de estado, actualización de entregas, coordinación logística y generación de reportes), lo que permite trazar una línea clara desde los objetivos de negocio hasta las funcionalidades del sistema, asegurando la alineación entre Business Goals, Impacts, Deliverables y el desarrollo de la solución.
 
 <div align="center">
   <img src="../assets/chapter-3/image23.png" width="700" />
@@ -1055,11 +1055,11 @@ A partir de estos impactos se definieron los Deliverables que la plataforma Full
 | **27**      | US-34  | Ver gráfico de ventas (Proveedor)          | Como proveedor, quiero ver un gráfico de ventas por mes para monitorear el rendimiento del negocio.                                                                                | **3**            |
 | **28**      | US-48  | Ver distribución de ventas por sector      | Como proveedor, quiero ver la distribución de mis ventas por sector industrial para identificar cuáles son mis clientes más relevantes por rubro.                                  | **2**            |
 | **29**      | US-35  | Descargar reporte PDF                      | Como usuario de ambos segmentos, quiero descargar un resumen de pedidos o ventas en formato PDF para archivarlo o compartirlo.                                                     | **3**            |
-| **30**      | US-01  | Ver sección Home                           | Como visitante (proveedor), quiero ver una sección de inicio que resuma el valor de FullTank para comprender rápidamente el objetivo del sistema.                                  | **2**            |
-| **31**      | US-02  | Ver sección About Us                       | Como visitante de ambos segmentos, quiero conocer quiénes están detrás de FullTank para confiar en el sistema.                                                                     | **1**            |
-| **32**      | US-03  | Ver sección How it works?                  | Como visitante de ambos segmentos, quiero entender cómo funciona FullTank paso a paso para evaluar si se ajusta a mis necesidades.                                                 | **2**            |
+| **30**      | US-01  | Ver sección Home                           | Como visitante (proveedor), quiero ver una sección de inicio que resuma el valor de FuelBridge para comprender rápidamente el objetivo del sistema.                                  | **2**            |
+| **31**      | US-02  | Ver sección About Us                       | Como visitante de ambos segmentos, quiero conocer quiénes están detrás de FuelBridge para confiar en el sistema.                                                                     | **1**            |
+| **32**      | US-03  | Ver sección How it works?                  | Como visitante de ambos segmentos, quiero entender cómo funciona FuelBridge paso a paso para evaluar si se ajusta a mis necesidades.                                                 | **2**            |
 | **33**      | US-36  | Ver sección Benefits                       | Como visitante de ambos segmentos, quiero conocer las principales ventajas para evaluar la implementación de la plataforma.                                                        | **1**            |
-| **34**      | US-37  | Ver sección Lo que Dicen Nuestros Clientes | Como visitante de ambos segmentos, quiero conocer los testimonios de usuarios de FullTank para tener confianza en la plataforma.                                                   | **2**            |
+| **34**      | US-37  | Ver sección Lo que Dicen Nuestros Clientes | Como visitante de ambos segmentos, quiero conocer los testimonios de usuarios de FuelBridge para tener confianza en la plataforma.                                                   | **2**            |
 | **35**      | US-38  | Ver sección Planes y Precios               | Como visitante de ambos segmentos, quiero saber qué planes se adecuan a mis necesidades para poder iniciar un proceso de registro.                                                 | **3**            |
 | **36**      | US-39  | Cambiar idioma                             | Como visitante de ambos segmentos, quiero poder cambiar entre inglés y español para entender la plataforma en mi idioma preferido.                                                 | **3**            |
 | **37**      | US-04  | Enviar mensaje de contacto                 | Como visitante de ambos segmentos, quiero enviar un mensaje desde Contact Us para solicitar más información.                                                                       | **3**            |

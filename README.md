@@ -10,9 +10,9 @@
   <p>Docente</p>
   <p><strong>Marco Antonio Ochante Vicuña</strong></p>
   <p>Startup</p>
-  <p><strong>Prime Fuel</strong></p>
+  <p><strong>HaloFuel</strong></p>
   <p>Producto</p>
-  <p><strong>Full Tank</strong></p>
+  <p><strong>FuelBridge</strong></p>
 </div>
 
 <h2 align="center">Integrantes</h2>
@@ -150,7 +150,7 @@
 <p><strong>Schneider Carlos Alberto Delgado Carrasco (AV1):</strong> Exploró técnicas de análisis cualitativo y mapeo de procesos (As-Is y To-Be Scenario Mapping) para identificar puntos de dolor en canales informales (WhatsApp, Excel) y estructurar un flujo digitalizado de pedidos.</p>
 <p><strong>Milenko Rubén Cayanchi Avila (AV2):</strong> Participó en la elaboración de la primera iteración de la metodología ADD, definiendo el Architectural Design Backlog, seleccionando drivers arquitectónicos y justificando decisiones relacionadas con la estructura global de FuelBridge. Asimismo, contribuyó en la evaluación del enfoque SPA + REST API y del Monolito Modular como base arquitectónica del sistema.</p>
 <p><strong>Sebastian Andres Aiquipa Poma (AV2):</strong> Desarrolló y revisó vistas de arquitectura mediante el modelo C4, incluyendo el System Context Diagram y el Container Diagram, identificando actores, contenedores principales, sistemas externos y relaciones de comunicación dentro de FuelBridge.</p>
-<p><strong>Carlos Alberto Lopez Goitia (AV2):</strong> Trabajó en la descomposición del Monolito Modular de FullTank API mediante Bounded Contexts, definiendo responsabilidades e interfaces para Identity &amp; Access, Ordering, Payment, Catalog, Fulfillment, Notification y Reporting &amp; Analytics. También apoyó en los diagramas de componentes del frontend y de la Landing Page.</p>
+<p><strong>Carlos Alberto Lopez Goitia (AV2):</strong> Trabajó en la descomposición del Monolito Modular de FuelBridge API mediante Bounded Contexts, definiendo responsabilidades e interfaces para Identity &amp; Access, Ordering, Payment, Catalog, Fulfillment, Notification y Reporting &amp; Analytics. También apoyó en los diagramas de componentes del frontend y de la Landing Page.</p>
 <p><strong>Diego Fernando Herrera Enriquez (AV2):</strong> Participó en la segunda iteración ADD enfocada en Performance y desacoplamiento, analizando alternativas como Observer/Pub-Sub interno, Repository Pattern e índices en MySQL. Además, colaboró en el registro de decisiones arquitectónicas mediante ADR y en la evaluación de riesgos y consecuencias de cada decisión.</p>
 <p><strong>Schneider Carlos Alberto Delgado Carrasco (AV2):</strong> Elaboró y refinó los diagramas de arquitectura en Structurizr y los diagramas UML de secuencia para representar el flujo de aprobación, validación de pago, stock, despacho y notificaciones. Asimismo, participó en la integración de las dos iteraciones ADD, revisión del Kanban y consolidación de decisiones de arquitectura en el informe.</p></th>
 <th><p>AV1: Se logró actualizar e integrar conocimientos clave sobre Lean UX, elicitación de requisitos ágiles y análisis de procesos B2B. Esto permitió pasar de un entorno de comunicación informal y desorganizado a la concepción de una arquitectura de requisitos sólida para la solución FuelBridge.</p>

@@ -4,7 +4,7 @@
 
 ### 1.1.1 Descripción del Startup
 
-**Prime Fuel**: Startup dedicada a la gestión de la compraventa de combustible entre empresas solicitantes y proveedores. Fundada por estudiantes de la Universidad Peruana de Ciencias Aplicadas, nuestra propuesta se centra en la digitalización de un sector tradicionalmente dependiente de procesos manuales, brindando una solución tecnológica que garantiza eficiencia, transparencia y un control más riguroso de las operaciones.
+**HaloFuel**: Startup dedicada a la gestión de la compraventa de combustible entre empresas solicitantes y proveedores. Fundada por estudiantes de la Universidad Peruana de Ciencias Aplicadas, nuestra propuesta se centra en la digitalización de un sector tradicionalmente dependiente de procesos manuales, brindando una solución tecnológica que garantiza eficiencia, transparencia y un control más riguroso de las operaciones.
 
 **Misión**: Desarrollar soluciones tecnológicas avanzadas que transformen el mercado de combustible, eliminando los medios informales y reduciendo el margen de error, mediante una plataforma digital intuitiva y accesible.
 
@@ -53,9 +53,9 @@
 
 ### 1.2.1 Nombre de producto
 
-El producto desarrollado por la startup Prime Fuel se denomina FuelBridge. El nombre combina Fuel (el commodity que articula toda la operación del negocio) con Bridge (el puente digital que conecta a las empresas solicitantes con los proveedores de combustible), reflejando la propuesta de valor central: una plataforma que centraliza y conecta directamente a ambos actores del mercado, eliminando los intermediarios informales (llamadas, correos, WhatsApp, Excel) que hoy fragmentan el proceso.
+El producto desarrollado por la startup HaloFuel se denomina FuelBridge. El nombre combina Fuel (el commodity que articula toda la operación del negocio) con Bridge (el puente digital que conecta a las empresas solicitantes con los proveedores de combustible), reflejando la propuesta de valor central: una plataforma que centraliza y conecta directamente a ambos actores del mercado, eliminando los intermediarios informales (llamadas, correos, WhatsApp, Excel) que hoy fragmentan el proceso.
 
-Distinción Startup vs. Producto: Prime Fuel es la empresa/marca fundadora; FuelBridge es la plataforma (producto de software) que Prime Fuel desarrolla y comercializa. Esta distinción se mantiene consistente en el resto del informe.
+Distinción Startup vs. Producto: HaloFuel es la empresa/marca fundadora; FuelBridge es la plataforma (producto de software) que HaloFuel desarrolla y comercializa. Esta distinción se mantiene consistente en el resto del informe.
 
 ### 1.2.2 Antecedentes y Problemática
 
