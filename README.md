@@ -77,55 +77,55 @@
 
 ## Contenido
 
-- [Capítulo I: Introducción](docs/chapter1.md)
-  - [1.1. Startup Profile](docs/chapter1.md#11-startup-profile)
-    - [1.1.1. Descripción del Startup](docs/chapter1.md#111-descripción-del-startup)
-    - [1.1.2. Perfiles de integrantes del equipo](docs/chapter1.md#112-perfiles-de-integrantes-del-equipo)
-  - [1.2. Solution Profile](docs/chapter1.md#12-solution-profile)
-    - [1.2.1. Nombre de producto](docs/chapter1.md#121-nombre-de-producto)
-    - [1.2.2. Antecedentes y Problemática](docs/chapter1.md#122-antecedentes-y-problemática)
-    - [1.2.3. Lean UX Process](docs/chapter1.md#123-lean-ux-process)
-      - [1.2.3.1. Lean UX Problem Statement](docs/chapter1.md#1231-lean-ux-problem-statement)
-      - [1.2.3.2. Lean UX Assumptions](docs/chapter1.md#1232-lean-ux-assumptions)
-      - [1.2.3.3. Lean UX Hypothesis](docs/chapter1.md#1233-lean-ux-hypothesis)
-      - [1.2.3.4. Lean UX Canvas](docs/chapter1.md#1234-lean-ux-canvas)
-  - [1.3. Segmentos objetivo](docs/chapter1.md#13-segmentos-objetivo)
-- [Capítulo II: Requirements Elicitation & Analysis](docs/chapter2.md)
-  - [2.1. Competidores](docs/chapter2.md#21-competidores)
-    - [2.1.1. Análisis competitivo](docs/chapter2.md#211-análisis-competitivo)
-    - [2.1.2. Estrategias y tácticas frente a competidores](docs/chapter2.md#212-estrategias-y-tácticas-frente-a-competidores)
-  - [2.2. Entrevistas](docs/chapter2.md#22-entrevistas)
-    - [2.2.1. Diseño de entrevistas](docs/chapter2.md#221-diseño-de-entrevistas)
-    - [2.2.2. Registro de entrevistas](docs/chapter2.md#222-registro-de-entrevistas)
-  - [2.3. Needfinding](docs/chapter2.md#23-needfinding)
-    - [2.3.1. User Personas](docs/chapter2.md#231-user-personas)
-    - [2.3.2. User Task Matrix](docs/chapter2.md#232-user-task-matrix)
-    - [2.3.3. Empathy Maps](docs/chapter2.md#233-empathy-maps)
-    - [2.3.4. As-is Scenario Mapping](docs/chapter2.md#234-as-is-scenario-mapping)
-- [Capítulo III: Requirements Specification](docs/chapter3.md)
-  - [3.1. To-Be Scenario Mapping](docs/chapter3.md#31-to-be-scenario-mapping)
-  - [3.2. User Stories](docs/chapter3.md#32-user-stories)
-  - [3.3. Impact Map](docs/chapter3.md#33-impact-map)
-  - [3.4. Product Backlog](docs/chapter3.md#34-product-backlog)
-- [Capítulo IV: Product Architecture Design](docs/chapter4.md)
-  - [4.1. Design Concepts, ViewPoints & ER Diagrams](docs/chapter4.md#41-design-concepts-viewpoints--er-diagrams)
-    - [4.1.1. Principles Statements](docs/chapter4.md#411-principles-statements)
-    - [4.1.2. Approaches Statements Architectural Styles & Patterns](docs/chapter4.md#412-approaches-statements-architectural-styles--patterns)
-    - [4.1.3. Context Diagram](docs/chapter4.md#413-context-diagram)
-    - [4.1.4. Approach Driven ViewPoints Diagrams](docs/chapter4.md#414-approach-driven-viewpoints-diagrams)
-    - [4.1.5. Relational/Non Relational Database Diagram](docs/chapter4.md#415-relationalnon-relational-database-diagram)
-    - [4.1.6. Design Patterns](docs/chapter4.md#416-design-patterns)
-    - [4.1.7. Tactics](docs/chapter4.md#417-tactics)
-  - [4.2. Architectural Drivers](docs/chapter4.md#42-architectural-drivers)
-    - [4.2.1. Design Purpose](docs/chapter4.md#421-design-purpose)
-    - [4.2.2. Primary Functionality (Primary User Stories)](docs/chapter4.md#422-primary-functionality-primary-user-stories)
-    - [4.2.3. Quality Attribute Scenarios](docs/chapter4.md#423-quality-attribute-scenarios)
-    - [4.2.4. Constraints](docs/chapter4.md#424-constraints)
-    - [4.2.5. Architectural Concerns](docs/chapter4.md#425-architectural-concerns)
-  - [4.3. ADD Iterations](docs/chapter4.md#43-add-iterations)
-    - [4.3.1. Iteration 1: Estructura Global del Sistema](docs/chapter4.md#431-iteration-1-estructura-global-del-sistema)
-    - [4.3.2. Iteration 2: Performance y Procesamiento Asíncrono de Pedidos, Notificaciones y Reportes](docs/chapter4.md#432-iteration-2-performance-y-procesamiento-asíncrono-de-pedidos-notificaciones-y-reportes)
-- [Referencias bibliográficas](docs/referencias.md)
+- [Capítulo I: Introducción](#capítulo-i-introducción)
+  - [1.1. Startup Profile](#11-startup-profile)
+    - [1.1.1. Descripción del Startup](#111-descripción-del-startup)
+    - [1.1.2. Perfiles de integrantes del equipo](#112-perfiles-de-integrantes-del-equipo)
+  - [1.2. Solution Profile](#12-solution-profile)
+    - [1.2.1. Nombre de producto](#121-nombre-de-producto)
+    - [1.2.2. Antecedentes y Problemática](#122-antecedentes-y-problemática)
+    - [1.2.3. Lean UX Process](#123-lean-ux-process)
+      - [1.2.3.1. Lean UX Problem Statement](#1231-lean-ux-problem-statement)
+      - [1.2.3.2. Lean UX Assumptions](#1232-lean-ux-assumptions)
+      - [1.2.3.3. Lean UX Hypothesis](#1233-lean-ux-hypothesis)
+      - [1.2.3.4. Lean UX Canvas](#1234-lean-ux-canvas)
+  - [1.3. Segmentos objetivo](#13-segmentos-objetivo)
+- [Capítulo II: Requirements Elicitation & Analysis](#capítulo-ii-requirements-elicitation--analysis)
+  - [2.1. Competidores](#21-competidores)
+    - [2.1.1. Análisis competitivo](#211-análisis-competitivo)
+    - [2.1.2. Estrategias y tácticas frente a competidores](#212-estrategias-y-tácticas-frente-a-competidores)
+  - [2.2. Entrevistas](#22-entrevistas)
+    - [2.2.1. Diseño de entrevistas](#221-diseño-de-entrevistas)
+    - [2.2.2. Registro de entrevistas](#222-registro-de-entrevistas)
+  - [2.3. Needfinding](#23-needfinding)
+    - [2.3.1. User Personas](#231-user-personas)
+    - [2.3.2. User Task Matrix](#232-user-task-matrix)
+    - [2.3.3. Empathy Maps](#233-empathy-maps)
+    - [2.3.4. As-is Scenario Mapping](#234-as-is-scenario-mapping)
+- [Capítulo III: Requirements Specification](#capítulo-iii-requirements-specification)
+  - [3.1. To-Be Scenario Mapping](#31-to-be-scenario-mapping)
+  - [3.2. User Stories](#32-user-stories)
+  - [3.3. Impact Map](#33-impact-map)
+  - [3.4. Product Backlog](#34-product-backlog)
+- [Capítulo IV: Product Architecture Design](#capítulo-iv-product-architecture-design)
+  - [4.1. Design Concepts, ViewPoints & ER Diagrams](#41-design-concepts-viewpoints--er-diagrams)
+    - [4.1.1. Principles Statements](#411-principles-statements)
+    - [4.1.2. Approaches Statements Architectural Styles & Patterns](#412-approaches-statements-architectural-styles--patterns)
+    - [4.1.3. Context Diagram](#413-context-diagram)
+    - [4.1.4. Approach Driven ViewPoints Diagrams](#414-approach-driven-viewpoints-diagrams)
+    - [4.1.5. Relational/Non Relational Database Diagram](#415-relationalnon-relational-database-diagram)
+    - [4.1.6. Design Patterns](#416-design-patterns)
+    - [4.1.7. Tactics](#417-tactics)
+  - [4.2. Architectural Drivers](#42-architectural-drivers)
+    - [4.2.1. Design Purpose](#421-design-purpose)
+    - [4.2.2. Primary Functionality (Primary User Stories)](#422-primary-functionality-primary-user-stories)
+    - [4.2.3. Quality Attribute Scenarios](#423-quality-attribute-scenarios)
+    - [4.2.4. Constraints](#424-constraints)
+    - [4.2.5. Architectural Concerns](#425-architectural-concerns)
+  - [4.3. ADD Iterations](#43-add-iterations)
+    - [4.3.1. Iteration 1: Estructura Global del Sistema](#431-iteration-1-estructura-global-del-sistema)
+    - [4.3.2. Iteration 2: Performance y Procesamiento Asíncrono de Pedidos, Notificaciones y Reportes](#432-iteration-2-performance-y-procesamiento-asíncrono-de-pedidos-notificaciones-y-reportes)
+- [Referencias bibliográficas](#referencias-bibliográficas)
 
 ## Student Outcome
 
@@ -175,3 +175,2033 @@
 <tbody>
 </tbody>
 </table>
+
+---
+
+# Capítulo I: Introducción
+
+## 1.1 Startup Profile
+
+### 1.1.1 Descripción del Startup
+
+**HaloFuel**: Startup dedicada a la gestión de la compraventa de combustible entre empresas solicitantes y proveedores. Fundada por estudiantes de la Universidad Peruana de Ciencias Aplicadas, nuestra propuesta se centra en la digitalización de un sector tradicionalmente dependiente de procesos manuales, brindando una solución tecnológica que garantiza eficiencia, transparencia y un control más riguroso de las operaciones.
+
+**Misión**: Desarrollar soluciones tecnológicas avanzadas que transformen el mercado de combustible, eliminando los medios informales y reduciendo el margen de error, mediante una plataforma digital intuitiva y accesible.
+
+**Visión**: Posicionarnos como líderes en la digitalización del sector energético, ofreciendo a las empresas una herramienta que facilite una gestión más eficiente, segura y sostenible, contribuyendo al progreso tecnológico y a la mejora de la competitividad del sector.
+
+### 1.1.2 Perfiles de integrantes del equipo
+
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Foto</th>
+<th>Descripcion</th>
+</tr>
+<tr class="odd">
+<th><img src="assets/chapter-1/image17.png" width="300" /></th>
+<th><p>Nombre: Milenko Rubén Cayanchi Avila</p>
+<p>Estudiante de Ingeniería de Software, enfocado en el desarrollo de soluciones tecnológicas innovadoras para la mejora de la calidad de vida. Poseo conocimientos básicos en Python y conocimientos básicos/intermedios en C++. Mi objetivo es adquirir conocimientos avanzados en inteligencia artificial y desarrollo de aplicaciones de salud, con el fin de mejorar mis habilidades y contribuir en el campo de la salud tecnológica.</p></th>
+</tr>
+<tr class="header">
+<th><img src="assets/chapter-1/image6.jpg" width="300" /></th>
+<th>Soy Diego, con creatividad, responsabilidad y con gran disposición para aprender y crecer junto a mi equipo, pienso en entregar una aportación sobresaliente. Me adapto con facilidad a distintos retos, aportando ideas y soluciones prácticas que buscan mejorar cada proyecto. Valoro las buenas prácticas en esta profesión para servir a las personas con pasión por lo que hacemos.Conocimientos competentes en Frontend (HTML, CSS, JS) y experimentado en el diseño de proyectos a nivel integral. Mi enfoque está orientado a desarrollar soluciones prácticas y efectivas, siempre priorizando la satisfacción del usuario y con visióna seguir mejorando en futuros proyectos</th>
+</tr>
+<tr class="odd">
+<th><img src="assets/chapter-1/image3.png" width="300" /></th>
+<th>Estudiante de Ingeniería de Software en la UPC. Cuento con experiencia en desarrollo full-stack: frontend móvil con Flutter y Kotlin/Jetpack Compose, backend con .NET 8 y MySQL, y desarrollo de aplicaciones web con Angular, Node.js/Express y MongoDB. He trabajado en proyectos desplegados en la nube (Azure) usando Docker para la orquestación de servicios, además de diseño de APIs REST y modelado de bases de datos NoSQL.</th>
+</tr>
+<tr class="header">
+<th><img src="assets/chapter-1/image11.png" width="300" /></th>
+<th><p>Nombre: Sebastian Andres Aiquipa Poma</p>
+<p>Soy estudiante de Ingeniería de Software y desarrollador full-stack. Tengo experiencia construyendo plataformas web completas — desde la arquitectura hasta el despliegue — utilizando tecnologías como React, Node.js, Express y PostgreSQL. Actualmente, mi objetivo es seguir consolidando mis habilidades técnicas para desempeñarme con confianza en el entorno laboral. Me interesa participar en proyectos donde pueda aplicar lo que sé y aportar soluciones prácticas a problemas reales.</p></th>
+</tr>
+<tr class="odd">
+<th><img src="assets/chapter-1/image26.png" width="300" /></th>
+<th>Soy estudiante de Ingeniería de Software en la UPC, con conocimientos en programación y bases de datos. Me interesa la tecnología, la innovación y el desarrollo de soluciones digitales que mejoren la vida de las personas. Estoy comprometido con mi formación y busco nuevos retos que me permitan crecer a nivel académico y personal.</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+
+## 1.2 Solution Profile
+
+### 1.2.1 Nombre de producto
+
+El producto desarrollado por la startup HaloFuel se denomina FuelBridge. El nombre combina Fuel (el commodity que articula toda la operación del negocio) con Bridge (el puente digital que conecta a las empresas solicitantes con los proveedores de combustible), reflejando la propuesta de valor central: una plataforma que centraliza y conecta directamente a ambos actores del mercado, eliminando los intermediarios informales (llamadas, correos, WhatsApp, Excel) que hoy fragmentan el proceso.
+
+Distinción Startup vs. Producto: HaloFuel es la empresa/marca fundadora; FuelBridge es la plataforma (producto de software) que HaloFuel desarrolla y comercializa. Esta distinción se mantiene consistente en el resto del informe.
+
+### 1.2.2 Antecedentes y Problemática
+
+**What? (¿Qué?)** La problemática principal es la falta de un sistema centralizado y digital para gestionar los pedidos de combustible, lo que genera errores humanos, duplicación de esfuerzos y retrasos en las entregas.
+
+**When? (¿Cuándo?)** El problema se presenta constantemente en el proceso de gestión de pedidos, especialmente cuando hay un alto volumen de solicitudes o múltiples pedidos a coordinar.
+
+**Where? (¿Dónde?)** El problema ocurre en empresas solicitantes de combustible y proveedores, tanto en áreas urbanas como rurales, donde la infraestructura digital aún no está optimizada.
+
+**Who? (¿Quién?)** Los principales afectados son las empresas solicitantes (medianas y grandes), los proveedores de combustible y los encargados de la logística y gestión de pedidos.
+
+**Why? (¿Por qué?)** El problema radica en la falta de integración entre los métodos actuales de gestión (correos, aplicaciones de mensajería), que dificultan un control centralizado y preciso de los pedidos.
+
+**How? (¿Cómo?)** Los procesos actuales son desorganizados, utilizando diversas plataformas desconectadas, lo que impide tener un flujo de trabajo eficiente y controlado.
+
+**How Much? (¿Cuánto?)** La magnitud del problema es considerable: cada día se pierden horas valiosas debido a la ineficiencia y los errores, lo que incrementa los costos operativos y puede generar pérdidas económicas significativas.
+
+### 1.2.3 Lean UX Process
+
+Para el desarrollo de la startup se utilizó el enfoque Lean UX, que permite validar hipótesis, enfocarse en la experiencia del usuario y reducir riesgos desde las etapas iniciales. A través de prototipos, pruebas con empresas, simulaciones y ciclos de retroalimentación continua, la plataforma se adapta a las necesidades reales del mercado de combustible.
+
+#### 1.2.3.1 Lean UX Problem Statement
+
+El estado actual de la gestión de pedidos de combustible se ha apoyado principalmente en llamadas telefónicas, correos electrónicos y aplicaciones de mensajería sin trazabilidad centralizada, atendiendo a empresas solicitantes de los sectores construcción y minería y a proveedores/distribuidores de combustible, quienes pierden visibilidad sobre el estado de sus pedidos y enfrentan errores de coordinación, duplicidad de solicitudes y retrasos en las entregas. Lo que los productos y servicios existentes (canales informales, hojas de cálculo, sistemas de mensajería) no abordan es un mecanismo centralizado que permita registrar, confirmar y monitorear pedidos de combustible en tiempo real entre ambos actores del mercado. Nuestro producto, FuelBridge, abordará este vacío mediante una plataforma web que centraliza el registro de pedidos, la confirmación de disponibilidad, el seguimiento del estado de despacho y las notificaciones automáticas entre empresas solicitantes y proveedores. Nuestro foco inicial serán las empresas medianas y grandes de los sectores construcción y minería que mantienen contratos de exclusividad con proveedores de combustible. Sabremos que tenemos éxito cuando observemos que más del 70% de los pedidos se confirman sin necesidad de correcciones posteriores durante los primeros tres meses de uso, una reducción del 30% en llamadas de seguimiento, una reducción del 20% en el tiempo promedio entre confirmación y entrega, y una disminución del 40% en solicitudes de información con un 60% menos de tiempo de atención.
+
+#### 1.2.3.2 Lean UX Assumptions
+
+**Assumptions Worksheet**
+
+**Business Assumptions**
+
+- Creo que mis clientes tienen la necesidad de centralizar y dar trazabilidad a sus pedidos de combustible, reduciendo errores de coordinación y tiempos de respuesta entre empresas solicitantes y proveedores.
+
+- Estas necesidades pueden resolverse con FuelBridge, una plataforma web que permite registrar pedidos, confirmar disponibilidad, notificar cambios de estado y hacer seguimiento en tiempo real entre ambos actores del mercado.
+
+- Mis clientes iniciales son:
+
+  - Segmento B2B — Solicitantes: empresas medianas y grandes de construcción y minería que requieren abastecimiento constante de combustible.
+
+  - Segmento B2B — Proveedores: empresas distribuidoras de combustible que atienden clientes corporativos e industriales.
+
+- El principal valor que un cliente quiere obtener de mi servicio es reducir errores y tiempos de gestión en el ciclo pedido-entrega de combustible, con visibilidad total del estado de cada operación.
+
+- También pueden obtener estos beneficios adicionales:
+
+  - Para solicitantes: historial de pedidos, alertas de estado y reducción de llamadas de seguimiento.
+
+  - Para proveedores: paneles de control, métricas de desempeño y menor carga administrativa.
+
+- Adquiriré la mayoría de mis clientes a través de venta directa B2B, demostraciones del producto y pilotos con empresas de los sectores construcción y minería que ya mantienen contratos de suministro con proveedores de combustible.
+
+- Ganaré dinero mediante un modelo SaaS de suscripción mensual o anual por empresa, según el volumen de pedidos gestionados.
+
+- Mi principal competencia en el mercado será la coordinación manual vía llamadas, correos y mensajería, así como plataformas de gestión logística genéricas no especializadas en combustible (Zavgar, FuelCloud, Wialon — ver Cap. II, Competidores).
+
+- Superaremos a la competencia debido a nuestra especialización en el ciclo completo del pedido de combustible (registro, confirmación, despacho, seguimiento), y no solo en telemetría de flota genérica.
+
+- El mayor riesgo de mi producto es que la digitalización del proceso no sea adoptada por proveedores acostumbrados a procesos manuales, limitando el efecto de red del marketplace.
+
+- Lo resolveremos mediante onboarding asistido, incentivos de adopción temprana y demostración de reducción medible de tiempos desde el primer mes de uso.
+
+- Otras suposiciones que, si se demuestran falsas, harán que nuestro negocio fracase:
+
+  - Que las empresas solicitantes estén dispuestas a migrar de canales informales a una plataforma digital.
+
+  - Que los proveedores acepten confirmar y actualizar el estado de los pedidos dentro de la plataforma en lugar de sus canales propios.
+
+  - Que la reducción de errores y tiempos sea percibida como suficiente para justificar el costo de la suscripción.
+
+**User Assumptions**
+
+- ¿Quién es el usuario? Los usuarios principales son los encargados logísticos de los proveedores y las empresas solicitantes de combustible.
+
+- ¿Dónde encaja nuestro producto en su trabajo o vida? FuelBridge encaja en el día a día de los usuarios como una plataforma de gestión centralizada que ayuda a coordinar, rastrear y organizar pedidos de combustible, reemplazando los sistemas desconectados que se utilizan hoy en día.
+
+- ¿Qué problemas tiene nuestro producto que resolver? FuelBridge debe resolver la desorganización causada por métodos informales de venta, reducir errores humanos y mejorar la experiencia del cliente.
+
+- ¿Cuándo y cómo es nuestro producto usado? Será utilizado diariamente por solicitantes y proveedores por igual: los solicitantes lo usan para registrar y monitorear pedidos, y los proveedores para gestionar recepción, programación y entrega.
+
+- ¿Qué características son importantes? Seguimiento de pedidos en tiempo real, notificaciones de estado, historial de entregas, paneles de control y una interfaz clara y rápida.
+
+- ¿Cómo debe verse nuestro producto y cómo debe comportarse? Interfaz limpia y profesional, adaptada al perfil corporativo de los clientes objetivo. Debe ser eficiente (creación, modificación y seguimiento de pedidos en pocos clics) y highly confiable, dado el alto valor de las órdenes gestionadas.
+
+**Feature Assumptions**
+
+- Creemos que al proporcionar una plataforma centralizada con trazabilidad en tiempo real, ayudaremos a las empresas a reducir errores y mejorar la eficiencia logística.
+
+- Creemos que al ofrecer una interfaz clara y rápida con funciones de seguimiento, aumentaremos la adopción entre proveedores y solicitantes.
+
+- Creemos que al automatizar la gestión de pedidos, los usuarios reducirán su dependencia de métodos informales y ganarán en control y visibilidad.
+
+- Creemos que al integrar notificaciones en tiempo real sobre estados de pedido, mejoraremos la coordinación entre actores y reduciremos los retrasos.
+
+- Creemos que al incluir visualización de métricas, facilitaremos la toma de decisiones y la optimización operativa de los proveedores.
+
+**Business Outcomes**
+
+- Más del 70% de los pedidos confirmados sin necesidad de correcciones posteriores durante los primeros tres meses de uso.
+
+- Reducción del 30% en llamadas de seguimiento realizadas por las empresas solicitantes.
+
+- Reducción del 20% en el tiempo promedio entre confirmación y entrega de pedidos para los proveedores.
+
+- Reducción del 40% en solicitudes de información de clientes y del 60% en el tiempo promedio de atención, tras el primer trimestre de uso.
+
+#### 1.2.3.3 Lean UX Hypothesis
+
+**Hipótesis 1 — Registro y Confirmación Centralizada de Pedidos**
+
+Creemos que lograremos que más del 70% de los pedidos sean confirmados sin necesidad de correcciones posteriores durante los primeros tres meses de uso Si las empresas solicitantes y los proveedores de combustible Obtienen un canal único para registrar, confirmar y validar cada pedido sin depender de llamadas o correos dispersos Con el módulo de registro y confirmación centralizada de pedidos
+
+**Hipótesis 2 — Seguimiento en Tiempo Real del Estado del Pedido**
+
+Creemos que lograremos una reducción del 30% en llamadas de seguimiento realizadas por las empresas solicitantes Si las empresas solicitantes de combustible Obtienen visibilidad continua del estado de su pedido sin necesidad de contactar al proveedor Con el módulo de seguimiento en tiempo real del estado del pedido
+
+**Hipótesis 3 — Asignación y Notificación de Despacho**
+
+Creemos que los proveedores lograrán reducir en un 20% el tiempo promedio entre confirmación y entrega de pedidos Si los proveedores de combustible Obtienen un flujo estructurado para asignar y notificar despachos apenas se confirma un pedido Con el módulo de asignación y notificación de despacho
+
+**Hipótesis 4 — Notificaciones Automáticas de Estado**
+
+Creemos que lograremos reducir en un 40% las solicitudes de información de clientes y en un 60% el tiempo promedio de atención Si las empresas solicitantes y los proveedores de combustible Obtienen alertas automáticas ante cada cambio de estado del pedido, sin depender de operadores comerciales de alta disponibilidad Con el módulo de notificaciones automáticas de estado de pedido
+
+#### 1.2.3.4 Lean UX Canvas
+
+<div align="center">
+  <img src="assets/chapter-1/image31.png" width="700" />
+</div>
+
+## 1.3 Segmentos objetivo
+
+**A. Empresas solicitantes de combustible**
+
+Empresas medianas y grandes que requieren combustible de forma constante para el desarrollo de sus operaciones (maquinaria pesada, vehículos, equipos), principalmente en los sectores de construcción y minería — los mismos sectores representados en las entrevistas realizadas (Cap. II). Según el Ministerio de la Producción (Produce), del total de 2,346,592 empresas formales registradas en Perú al cierre de 2024, el sector construcción representa el 3.5% (~82,100 empresas) y el sector minería el 0.8% (~18,800 empresas) — universo de mercado potencial para el segmento solicitante. Estas empresas suelen mantener contratos de exclusividad con un proveedor de combustible, lo que les da un flujo constante de pedidos y una relación comercial estable.
+
+**Necesidades:**
+
+Asegurar el abastecimiento oportuno de combustible.
+
+Reducir errores derivados de la informalidad en los procesos.
+
+Mantener comunicación constante con proveedores.
+
+**B. Proveedores de combustible**
+
+Empresas dedicadas a la distribución de combustibles, atendiendo principalmente a clientes corporativos o industriales. Según la Asociación de Grifos y Estaciones de Servicio del Perú (GESP), el país cuenta con aproximadamente 600 estaciones de servicio operativas, de las cuales el 60% son empresas familiares — un segmento con alta necesidad de digitalización y bajo nivel de sistematización actual. (Cifra de referencia sectorial; se recomienda validar con datos actualizados de OSINERGMIN antes de la entrega final.)
+
+**Motivaciones:**
+
+Mejorar la experiencia del cliente mediante canales digitales.
+
+Reducir errores en la entrega por información incompleta o mal gestionada.
+
+Optimizar la planificación logística y distribución.
+
+---
+
+# Capítulo II: Requirements Elicitation & Analysis
+
+## 2.1 Competidores
+
+En el mercado existen diversas soluciones digitales enfocadas en la gestión de combustible y flotas que compiten de manera directa o indirecta con lo propuesto. Entre ellas destaca Zavgar, una plataforma SaaS que ayuda a las empresas con flotas vehiculares a optimizar costos y controlar el consumo de combustible. Otro competidor importante es FuelCloud, que ofrece una solución integrada de hardware y software para garantizar seguridad y precisión en el despacho de combustible, principalmente en empresas con tanques propios. Finalmente, Wialon se presenta como una plataforma internacional de gestión de flotas que combina monitoreo GPS, análisis operativos y control de combustible, dirigida a compañías logísticas y de transporte.
+
+### 2.1.1 Análisis competitivo
+
+| **Competitive Analysis Landscape**        |                                   |                                                                                                                                                                            |                                                                                                          |                                                                                    |                                                                                               |
+|-------------------------------------------|-----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
+| **¿Por qué llevar a cabo este análisis?** |                                   | Este análisis se está llevando a cabo porque queremos conocer las ventajas y desventajas de nuestra aplicación frente a la competencia, y cómo nos diferenciamos de ellas. |                                                                                                          |                                                                                    |                                                                                               |
+|                                           |                                   | **FuelBridge**                                                                                                                                                             | **Zavgar**                                                                                               | **FuelCloud**                                                                      | **Wialon**                                                                                    |
+| **Perfil**                                | **Visión general**                | Plataforma web que digitaliza y estructura el proceso completo de pedido de combustible entre empresas y proveedores.                                                      | SaaS para la gestión de consumo de combustible de flotas, con enfoque en eficiencia, monitoreo y costos. | Solución con hardware/software para el control físico del despacho de combustible. | Plataforma de gestión de flotas con control de combustible, GPS y reportes operativos.        |
+| **Perfil**                                | **Ventaja competitiva**           | Especialización en el flujo completo de pedido, despacho y análisis; integración de pagos y logística; UI intuitiva.                                                       | No requiere hardware; ofrece métricas, control de gastos y reportes sobre consumo.                       | Control físico preciso del combustible, monitoreo en tiempo real.                  | Seguimiento en tiempo real, visualización de rutas, integración con sensores de combustible.  |
+| **Perfil**                                | **¿Qué valor ofrece al cliente?** | Trazabilidad total, eficiencia operativa, reportes de consumo y validación segura de pedidos.                                                                              | Optimización de costos y control sobre el uso de combustible en flotas.                                  | Seguridad y precisión operativa en el control de combustible.                      | Trazabilidad de flotas, alertas automáticas, análisis de rutas y consumo de combustible.      |
+| **Perfil de Marketing**                   | **Mercado objetivo**              | Empresas que solicitan combustible a proveedores.                                                                                                                          | Empresas con flotas vehiculares que desean monitorear y reducir el consumo de combustible.               | Empresas con tanques de combustible propios.                                       | Empresas logísticas, distribuidoras y de transporte de combustible.                           |
+| **Perfil de Marketing**                   | **Estrategias de marketing**      | Alianzas con proveedores, demostraciones de ahorro, marketing de contenido enfocado en eficiencia.                                                                         | Enfoque digital, contenido técnico, integración con proveedores de tarjetas de combustible.              | Ferias industriales, distribuidores, venta consultiva entre empresas.              | Alianzas con distribuidores de GPS, marketing técnico, ferias de transporte.                  |
+| **Perfil de Producto**                    | **Productos & Servicios**         | Plataforma para gestión completa de pedidos, seguimiento, reportes, validación y alertas.                                                                                  | Plataforma web con módulo de abastecimiento, reportes de consumo, integración GPS y tarjetas.            | Hardware IoT y software para gestión, y control de combustible.                    | Plataforma SaaS + app móvil con monitoreo, alertas, mapas y módulos personalizables.          |
+| **Perfil de Producto**                    | **Precios & Costos**              | Modelo SaaS con suscripción escalable según volumen y servicios.                                                                                                           | SaaS con modelos por flota activa o vehículos monitoreados.                                              | Venta e instalación de hardware + licencias de software.                           | Modelo SaaS modular, basado en vehículos activos y funcionalidades activadas.                 |
+| **Perfil de Producto**                    | **Canales de distribución**       | Web app responsive, potencial app móvil futura.                                                                                                                            | Web app, marketing digital y comunidad de flotas.                                                        | Plataforma web + hardware instalado en sitio.                                      | Red de partners global, distribuidores locales e integradores de sistemas GPS.                |
+| **Análisis SWOT**                         | **Fortalezas**                    | Enfoque especializado, experiencia de usuario optimizada, integraciones clave, análisis avanzado de consumo.                                                               | Implementación ágil, sin hardware, fácil adopción en empresas medianas.                                  | Control físico riguroso, solución probada en industrias exigentes.                 | Plataforma robusta, cobertura internacional, integración con más de 2,400 dispositivos GPS.   |
+| **Análisis SWOT**                         | **Debilidades**                   | Nueva en el mercado, menor reconocimiento de marca, necesita consolidar confianza.                                                                                         | No gestiona el flujo completo del pedido, enfoque parcial en flotas.                                     | Alto costo, dependencia de hardware, menor adaptabilidad en mercados emergentes.   | No gestiona pedidos entre proveedor y solicitante, requiere configuración técnica inicial.    |
+| **Análisis SWOT**                         | **Oportunidades**                 | Alta informalidad en el sector, digitalización creciente en logística, necesidad de trazabilidad y control.                                                                | Mayor conciencia en eficiencia de flotas y digitalización de costos operativos.                          | Nuevos mercados industriales con enfoque en seguridad y control.                   | Creciente necesidad de control logístico y monitoreo de distribución en países en desarrollo. |
+| **Análisis SWOT**                         | **Amenazas**                      | Aparición de soluciones similares, resistencia al cambio en empresas tradicionales, competencia ERP.                                                                       | SaaS especializados con mayor cobertura funcional (ERP, proveedores, logística).                         | SaaS ágiles y sin hardware físico, que ofrecen soluciones más accesibles.          | SaaS más específicos y ligeros, enfocados exclusivamente en la trazabilidad de entregas.      |
+
+### 2.1.2 Estrategias y tácticas frente a competidores
+
+FuelBridge aplicará diversas estrategias para afrontar la competencia y aprovechar las oportunidades que ofrece el sector.
+
+**a. Diferenciación a través de especialización**
+
+Una de las principales estrategias de HaloFuel es la especialización en el flujo completo de pedido de combustible. A diferencia de soluciones como Zavgar, que están orientadas principalmente al control y análisis del consumo de combustible en flotas, nuestra plataforma se enfoca en las interacciones B2B entre empresas solicitantes y proveedores. Esto nos permite ofrecer un control dedicado del pedido, gestión de la logística, y reportes detallados de consumo y entregas, lo cual no está presente en la mayoría de las plataformas competidoras.
+
+- **Táctica**: Desarrollar funcionalidades para la validación automática de pagos, gestión de stock en tiempo real y la optimización del transporte logrando la automatización de procesos que solo eran logrados de forma manual. Esto crea una ventaja frente a competidores como FuelCloud, que se centran más en el control físico del combustible y menos en la administración a nivel operativo.
+
+**b. Innovación en la interfaz de usuario y experiencia**
+
+El sistema de HaloFuel está diseñado para ofrecer una experiencia de usuario optimizada, algo que Wialon, FuelCloud y la propia OSINERGMIN no abordan en sus plataformas. Al ser una solución especializada y dirigida a una tarea específica, podemos dedicar más recursos en crear una interfaz intuitiva y procesos bien definidos brindando comodidad y seguridad a nuestros usuarios.
+
+- **Táctica**: Diseñar una interfaz intuitiva y consistente que permita a los usuarios acceder a reportes de consumo, validar pedidos y coordinar logística con facilidad. Además, ofrecer soporte y formación continua para asegurar que los usuarios aprovechen al máximo todas las funcionalidades del sistema.
+
+**c. Flexibilidad en precios y modelo SaaS escalable**
+
+El modelo de precios de HaloFuel ofrece planes escalables basados en suscripción, lo que hace que sea más accesible para medianas y grandes empresas. Esto es más competitivo frente a Wialon, que puede no ser una opción viable para empresas que solo requieren una solución de pedidos de combustible. También es más asequible que FuelCloud, que requiere una inversión considerable en hardware, instalación y mantenimiento.
+
+- **Táctica:** Ofrecer un modelo de suscripción flexible y precios competitivos, con múltiples niveles de suscripción adaptados a las necesidades de diferentes empresas. Esto permitirá que empresas de menor tamaño puedan acceder a la plataforma sin comprometer su presupuesto, a la vez que se asegura el crecimiento a largo plazo a medida que la empresa crece.
+
+**d. Aprovechamiento de la digitalización en la logística**
+
+El sector de la logística está experimentando una transformación digital acelerada. HaloFuel se aprovechará de esta tendencia buscando la integración de la plataforma con otras soluciones logísticas (como los sistemas de gestión de vehículos o flotas). De esta forma podemos ofrecer una solución más completa y eficiente.
+
+- **Táctica**: Colaborar con empresas de gestión de flotas para optimizar el proceso de asignación de vehículos, cisternas y choferes. También se considerará la posibilidad de integrar sensores IoT en los camiones de reparto para un control más preciso sobre el combustible transportado y la entrega.
+
+**e. Expansión hacia mercados internacionales**
+
+Si bien HaloFuel está inicialmente orientada a empresas locales, el modelo de negocio y la flexibilidad de la plataforma la hacen ideal para expandirse a mercados internacionales. Competidores como Wialon ya tienen presencia en mercados globales, pero su enfoque en empresas grandes y sus altos costos de implementación pueden ser una barrera para empresas de menor tamaño, limitando su alcance.
+
+- **Táctica**: Iniciar la expansión en mercados emergentes donde la digitalización en la logística es una necesidad creciente. Esto incluirá la localización de la plataforma (idioma, moneda, regulaciones locales) para facilitar la adaptabilidad de los nuevos mercados.
+
+## 2.2 Entrevistas
+
+### 2.2.1 Diseño de entrevistas
+
+- **A. Proveedores de Combustible**
+
+> Preguntas:
+
+1.  ¿Cuál es su cargo dentro de la empresa proveedora?
+
+2.  ¿Qué tipos de clientes atienden principalmente (logística, construcción, minería, agroindustria)?
+
+3.  ¿Qué volumen de operaciones realizan mensualmente?
+
+4.  ¿Cómo gestionan actualmente los pedidos y contratos de sus clientes?
+
+5.  ¿Qué problemas han experimentado con los métodos tradicionales (llamadas, correos, planillas)?
+
+6.  ¿Utilizan algún software especializado para ventas o logística?
+
+7.  ¿Qué características valoraría más en una plataforma digital para gestionar pedidos?
+
+8.  ¿Considera que una solución que centralice cotizaciones, contratos y entregas sería útil para su empresa?
+
+9.  ¿Qué tan importante es para ustedes tener reportes históricos y comparativos de ventas?
+
+10. ¿Qué estrategias usan actualmente para fidelizar clientes, y cómo cree que una plata forma como NombredelaStartup podría apoyarlos?
+
+- **B. Empresas Solicitantes**
+
+> Preguntas:
+
+1.  ¿Cuál es su cargo en la empresa?
+
+2.  ¿Hace cuánto tiempo trabaja en el sector energético/logístico?
+
+3.  ¿Qué volumen de combustible gestionan aproximadamente al mes?
+
+4.  ¿Cómo gestionan actualmente la compra y control de combustible?
+
+5.  ¿Qué herramientas usan (Excel, llamadas, correos, sistemas propios)?
+
+6.  ¿Cuáles son los principales problemas que enfrentan con su sistema actual?
+
+7.  ¿Qué tan importante es para usted contar con trazabilidad en tiempo real?
+
+8.  ¿Qué dispositivos utilizan para gestionar pedidos (PC, móvil, tablet)?
+
+9.  ¿Qué información considera más valiosa al momento de comprar combustible (precio, tiempo de entrega, historial de proveedor, etc.)?
+
+10. ¿Cómo afecta la falta de transparencia en los precios a sus decisiones de compra?
+
+11. ¿Le interesaría recibir notificaciones en tiempo real sobre cambios de precio o estado de sus pedidos?
+
+12. ¿Qué barreras considera que dificultarían implementar una solución digital como PrimerFuel en su empresa?
+
+### 2.2.2 Registro de entrevistas
+
+1\. Segmento 1: Empresas solicitantes de combustible
+
+- **Entrevista 1:**
+
+| **Campo**               | Empresas solicitantes de combustible                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+|-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Nombre entrevistado** | Denis Paul Requejo Sanchez                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| **Edad**                | 34                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| **Departamento**        | Lima                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| **Inicio del video**    | 0:00                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| **Fin del video**       | 05:35                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| **Link del video**      | [https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241c630_upc_edu_pe/IQD9W1DrB9WQS4N8_M5GJPorAXnVh-sF_SPbza6v5m4C4_A?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=YbIC1j](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241c630_upc_edu_pe/IQD9W1DrB9WQS4N8_M5GJPorAXnVh-sF_SPbza6v5m4C4_A?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=YbIC1j)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| **Foto entrevista**     | <img src="assets/chapter-2/image10.png" width="300" />                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| **Resumen**             | El entrevistado se desempeña como jefe de operaciones logísticas, con aproximadamente 8 años de experiencia en el sector, enfocado en la coordinación del abastecimiento y distribución de combustible, gestionando un volumen mensual que oscila entre 40,000 y 60,000 galones según la demanda. Actualmente, la gestión de compra y control se realiza mediante un enfoque tradicional basado en correos, llamadas y registros en hojas de Excel, complementado con el uso de WhatsApp para coordinaciones rápidas, sin contar con un sistema integrado. Entre los principales problemas identificados destacan el desorden en la información, la duplicidad de datos y la presencia de errores en los pedidos, lo que evidencia limitaciones en la eficiencia operativa. La trazabilidad en tiempo real es considerada altamente importante, ya que permitiría mejorar el control de los procesos y facilitar una respuesta oportuna ante incidencias. En cuanto a herramientas, se utilizan principalmente computadoras en oficina y dispositivos móviles en campo, reflejando una operación híbrida. Los factores más relevantes en la toma de decisiones son el precio, el tiempo de entrega y el historial de cumplimiento del proveedor. Asimismo, la falta de transparencia en los precios genera desconfianza y dificulta la comparación entre opciones. El entrevistado muestra una actitud positiva hacia el uso de notificaciones en tiempo real, destacando su utilidad para mejorar la planificación y la toma de decisiones. Finalmente, identifica como principales barreras para la adopción de una solución digital la resistencia al cambio por parte del personal y el tiempo requerido para su capacitación. |
+
+- **Entrevista 2:**
+
+| **Campo**               | Empresas solicitantes de combustible                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+|-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Nombre entrevistado** | Vannya                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| **Edad**                | 30                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| **Departamento**        | Lima                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **Inicio del video**    | 00:00                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **Fin del video**       | 04:49                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **Link del video**      | [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202319027_upc_edu_pe/IQB5qTrYM78QSZVuiMmVg17EAefxCme6U4gWAVQFQBExCeY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=OZHSPU](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202319027_upc_edu_pe/IQB5qTrYM78QSZVuiMmVg17EAefxCme6U4gWAVQFQBExCeY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=OZHSPU)                                                                                                                                                                                                                                                                                             |
+| **Foto entrevista**     | <img src="assets/chapter-2/image16.png" width="300" />                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| **Resumen**             | La entrevistada, Vannya Herrera, jefa comercial de una empresa proveedora de combustible en Lima, indicó que atienden principalmente a empresas de transporte, construcción, minería y agroindustria, gestionando alrededor de 80 a 100 pedidos mensuales. Actualmente, las cotizaciones y pedidos se coordinan mediante correo, teléfono y WhatsApp, complementados con un sistema básico y archivos de Excel, lo que genera pérdida de tiempo y dificultad para centralizar información. Considera importante contar con una plataforma que integre pedidos, cotizaciones, contratos, clientes, precios y entregas, además de alertas y reportes históricos de ventas. Asimismo, señaló que una solución digital permitiría reducir la carga administrativa, mejorar el seguimiento de pedidos y brindar una atención más rápida y transparente, contribuyendo también a la fidelización de clientes mediante mejores condiciones comerciales y comunicación. |
+
+- **Entrevista 3:** Empresas solicitantes de combustible
+
+| **Campo**               | Empresas solicitantes de combustible                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Nombre entrevistado** | Renato Guillermo Calvo Yalan                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| **Edad**                | 22                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **Departamento**        | Lima                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| **Inicio del video**    | 00:00                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| **Fin del video**       | 07:17                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| **Link del video**      | [https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241c630_upc_edu_pe/IQDS2Yop64CbRLtW82ISOuc4AU56u40anOCvBotRFMydvE4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=Jgu6ZG](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241c630_upc_edu_pe/IQDS2Yop64CbRLtW82ISOuc4AU56u40anOCvBotRFMydvE4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=Jgu6ZG)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| **Foto entrevista**     | <img src="assets/chapter-2/image1.png" width="300" />                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| **Resumen**             | El entrevistado se desempeña como asistente de logística en una empresa de transporte de carga mediana, con más de dos años de experiencia en el sector, y gestiona un volumen aproximado de 8,000 a 12,000 unidades de combustible mensuales, dependiendo de la demanda operativa. Su labor principal consiste en coordinar pedidos y realizar el seguimiento de entregas, utilizando actualmente un sistema basado en contratos directos con proveedores, gestionado mediante llamadas, WhatsApp y registros en Excel, sin el uso de un sistema integrado. Entre los principales problemas identificados destacan la desorganización de la información, errores en los pedidos, falta de claridad en los datos, inconsistencias en los precios y una considerable pérdida de tiempo en la verificación y validación manual de la información. La trazabilidad en tiempo real es considerada muy importante, ya que permitiría un mayor control sobre los pedidos y el suministro. El uso de dispositivos se centra principalmente en teléfonos móviles para la comunicación y gestión operativa. En cuanto a los factores de decisión, el precio y el tiempo de entrega son los más relevantes, seguidos por la confianza en el proveedor. La falta de transparencia en los precios genera desconfianza y dificulta la comparación entre opciones, afectando negativamente la toma de decisiones. El entrevistado muestra interés en recibir notificaciones en tiempo real, especialmente sobre cambios de precios, para poder reaccionar oportunamente. Finalmente, identifica como principales barreras para la adopción de una solución digital la resistencia al cambio del personal y el tiempo requerido para adaptarse a una nueva forma de trabajo. |
+
+2\. Segmento 2: Proveedores de combustible
+
+- Entrevista 1:
+
+| **Campo**               | Proveedores de combustible                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+|-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Nombre entrevistado** | Franceso                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| **Edad**                | 20                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| **Departamento**        | Lima                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| **Inicio del video**    | 0:30                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| **Fin del video**       | 5:48                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| **Link del video**      | [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202312566_upc_edu_pe/IQDwdZAlffeBR7rWRt\_\_6knyAcukG4A2urcNXp4_k4lFWFw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=wOSc4W](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202312566_upc_edu_pe/IQDwdZAlffeBR7rWRt__6knyAcukG4A2urcNXp4_k4lFWFw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=wOSc4W)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| **Foto entrevista**     | <img src="assets/chapter-2/image4.png" width="300" />                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **Resumen**             | El entrevistado se desempeña como asistente comercial en una empresa distribuidora de combustibles B2B, con aproximadamente un año de experiencia, encargándose de la gestión de clientes, cotizaciones y seguimiento de pedidos, atendiendo principalmente a empresas de transporte y logística, y en menor medida del sector construcción. La empresa maneja un volumen mensual de entre 10,000 y 18,000 galones, dependiendo de la demanda. Actualmente, los pedidos se gestionan mediante WhatsApp y correo electrónico, registrándose posteriormente en hojas de Excel, mientras que los contratos se almacenan en documentos separados, sin integración entre estos elementos. Entre los principales problemas identificados destacan la presencia de errores debido a información incompleta o mal registrada, la pérdida de tiempo en la búsqueda y validación de datos, y la falta de claridad sobre el estado de los pedidos. No cuentan con un sistema especializado, utilizando únicamente herramientas básicas como Excel y canales de comunicación tradicionales. El entrevistado valora especialmente que una solución digital sea sencilla, centralice la información, reduzca errores y permita visualizar el estado de las entregas en tiempo real. Asimismo, considera que integrar cotizaciones, contratos y pedidos en una sola plataforma sería altamente beneficioso para mejorar el control y la organización. Destaca también la importancia de contar con reportes históricos y comparativos para analizar el comportamiento de los clientes y optimizar la planificación de ventas. Finalmente, señala que la fidelización de clientes se basa en la rapidez de atención y el cumplimiento, y que una plataforma digital podría contribuir a mejorar la transparencia, profesionalizar el servicio y fortalecer la relación con los clientes. |
+
+- Entrevista 2:
+
+| **Campo**               | Proveedores de combustible                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+|-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Nombre entrevistado** | Jorge                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| **Edad**                | 50 años                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| **Departamento**        | Lima                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| **Inicio del video**    | 0:15                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| **Fin del video**       | 5:42                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| **Link del video**      | [upc-pre-202620-1acc0238-16723-FuelBridge-Entrevista-Segmento-Proveedores.mp4](https://upcedupe-my.sharepoint.com/:v:/g/personal/u201916755_upc_edu_pe/IQBD0lTGl-XwQ4qKCnmH6TofAeaUe0s7D1l69jdzKcbxme4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=oLBWzO)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| **Foto entrevista**     | <img src="assets/chapter-2/image32.png" width="300" />                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **Resumen**             | El entrevistado se desempeña como Jefe de Logística en una empresa de transporte de carga, con aproximadamente ocho años de experiencia en el sector, encargándose de coordinar la flota y el abastecimiento de combustible para una operación que consume entre 15,000 y 19,000 galones de diésel al mes. Actualmente gestiona los pedidos por WhatsApp y llamadas, registrando después la información en Excel, lo que le ha generado errores puntuales y cruces entre pedidos por falta de confirmación clara con los proveedores. Su principal preocupación es no tener visibilidad en tiempo real del estado de sus pedidos, lo que en más de una ocasión ha afectado la programación de sus propios camiones, y reconoce haber pagado de más por no poder comparar precios entre proveedores en el momento de decidir la compra. Al priorizar sus criterios de compra, ubica el tiempo de entrega por encima del precio, y el historial de cumplimiento del proveedor como un factor casi tan relevante como el costo. Se mostró abierto a recibir notificaciones en tiempo real sobre precios y pedidos, pero identificó como principal barrera para adoptar una solución como FuelBridge que sus propios proveedores también deban sumarse a la plataforma, ya que de lo contrario la herramienta perdería utilidad; señaló además la conectividad en algunas zonas de operación y una posible resistencia inicial de su equipo como obstáculos secundarios, aunque considera que esta última se superaría rápido si perciben beneficios claros en el día a día. |
+
+## 2.3 Needfinding
+
+### 2.3.1 User Personas
+
+- Segmento 1: Empresas solicitantes de combustible
+
+<div align="center">
+  <img src="assets/chapter-2/image27.png" width="700" />
+</div>
+
+- Segmento 2: Proveedores de Combustible
+
+<div align="center">
+  <img src="assets/chapter-2/image12.png" width="700" />
+</div>
+
+### 2.3.2 User Task Matrix
+
+El User Task Matrix presenta las tareas que realizan los User Persona para cumplir sus objetivos en su día a día, independientemente de si usan nuestro software o no. Se evalúa la frecuencia y la importancia de cada tarea para identificar dónde aportar valor.
+
+<div align="center">
+  <img src="assets/chapter-2/image13.png" width="700" />
+</div>
+
+### 2.3.3 Empathy Maps
+
+Para la elaboración de los Empathy Maps, el equipo partió del conocimiento y observaciones recolectadas durante el análisis de los User Persona. Se colocó al centro de cada mapa al usuario correspondiente (Carlos y Andrea) y se respondieron las preguntas claves sobre su entorno, emociones, comportamientos y necesidades.
+
+- Segmento 1: Empresas solicitantes de combustible
+
+<div align="center">
+  <img src="assets/chapter-2/image29.png" width="700" />
+</div>
+
+- Segmento 2: Proveedores de Combustible
+
+<div align="center">
+  <img src="assets/chapter-2/image22.png" width="700" />
+</div>
+
+### 2.3.4 As-is Scenario Mapping
+
+<div align="center">
+  <img src="assets/chapter-2/image9.png" width="700" />
+</div>
+
+---
+
+# Capítulo III: Requirements Specification
+
+## 3.1 To-Be Scenario Mapping
+
+<div align="center">
+  <img src="assets/chapter-3/image24.png" width="700" />
+</div>
+
+## 3.2 User Stories
+
+<table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 15%" />
+<col style="width: 20%" />
+<col style="width: 39%" />
+<col style="width: 13%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><p><strong>Epic / User</strong></p>
+<p><strong>Story ID</strong></p></th>
+<th><strong>Título</strong></th>
+<th><strong>Descripción</strong></th>
+<th><strong>Criterios de aceptación</strong></th>
+<th><strong>Relacionado con (Epic ID)</strong></th>
+</tr>
+<tr class="odd">
+<th>US-01</th>
+<th>Ver sección Home</th>
+<th>Como visitante (proveedor), quiero ver una sección de inicio que resuma el valor de FuelBridge para comprender rápidamente el objetivo del sistema.</th>
+<th><p>Escenario 1: Visualización de resumen del sistema</p>
+<p>Dado que el visitante (proveedor) accede al sitio web,</p>
+<p>Cuando se encuentra en la sección Home,</p>
+<p>Entonces puede ver un resumen claro del sistema.</p>
+<p>Escenario 2: Acceso a call to action desde Home</p>
+<p>Dado que el visitante (proveedor) revisa la sección Home,</p>
+<p>Cuando desliza hacia abajo,</p>
+<p>Entonces encuentra un botón que lo invita a conocer más sobre FuelBridge.</p></th>
+<th>EP01</th>
+</tr>
+<tr class="header">
+<th>US-02</th>
+<th>Ver sección About Us</th>
+<th>Como visitante de ambos segmentos, quiero conocer quiénes están detrás de FuelBridge para confiar en el sistema.</th>
+<th><p>Escenario 1: Información visible del equipo</p>
+<p>Dado que el visitante de ambos segmentos accede a About Us,</p>
+<p>Cuando se carga la sección,</p>
+<p>Entonces puede leer una descripción del equipo detrás del sistema.</p>
+<p>Escenario 2: Ver valores o misión</p>
+<p>Dado que el visitante de ambos segmentos revisa la sección completa,</p>
+<p>Cuando llega al final del contenido,</p>
+<p>Entonces puede conocer los valores o misión de la empresa.</p></th>
+<th>EP01</th>
+</tr>
+<tr class="odd">
+<th>US-03</th>
+<th>Ver sección How it works?</th>
+<th>Como visitante de ambos segmentos, quiero entender cómo funciona FuelBridge paso a paso para evaluar si se ajusta a mis necesidades.</th>
+<th><p>Escenario 1: Comprensión del flujo de pedidos</p>
+<p>Dado que el visitante de ambos segmentos accede a How it works?,</p>
+<p>Cuando lee la sección,</p>
+<p>Entonces entiende el flujo de pedido desde solicitud hasta entrega.</p>
+<p>Escenario 2: Interacción clara entre usuarios</p>
+<p>Dado que el visitante de ambos segmentos busca claridad,</p>
+<p>Cuando revisa la sección,</p>
+<p>Entonces puede comprender cómo interactúan solicitante y proveedor.</p></th>
+<th>EP01</th>
+</tr>
+<tr class="header">
+<th>US-04</th>
+<th>Enviar mensaje de contacto</th>
+<th>Como visitante de ambos segmentos, quiero enviar un mensaje desde Contact Us para solicitar más información.</th>
+<th><p>Escenario 1: Envío exitoso de mensaje</p>
+<p>Dado que el visitante de ambos segmentos completa el formulario correctamente,</p>
+<p>Cuando presiona "Enviar",</p>
+<p>Entonces el mensaje es registrado para revisión.</p>
+<p>Escenario 2: Validación de campos obligatorios</p>
+<p>Dado que el visitante de ambos segmentos deja campos vacíos,</p>
+<p>Cuando intenta enviar el formulario,</p>
+<p>Entonces el sistema muestra una advertencia.</p>
+<p>Escenario 3: Confirmación visual del envío</p>
+<p>Dado que el visitante de ambos segmentos envía el formulario exitosamente,</p>
+<p>Cuando el mensaje es registrado,</p>
+<p>Entonces recibe una confirmación visual o notificación.</p></th>
+<th>EP01</th>
+</tr>
+<tr class="odd">
+<th>US-05</th>
+<th>Registrar nuevo pedido</th>
+<th>Como solicitante, quiero registrar un pedido con tipo y cantidad de combustible para que el proveedor lo procese.</th>
+<th><p>Escenario 1: Registro exitoso del pedido</p>
+<p>Dado que el solicitante accede al formulario de pedidos,</p>
+<p>Cuando completa los campos requeridos,</p>
+<p>Entonces puede enviar un nuevo pedido.</p>
+<p>Escenario 2: Validación de campos</p>
+<p>Dado que el solicitante deja un campo obligatorio vacío,</p>
+<p>Cuando intenta enviar el pedido,</p>
+<p>Entonces el sistema muestra un mensaje de error.</p>
+<p>Escenario 3: Confirmación del cambio de estado</p>
+<p>Dado que el solicitante envió el pedido,</p>
+<p>Cuando el proveedor lo aprueba,</p>
+<p>Entonces su estado se actualiza automáticamente.</p></th>
+<th>EP02</th>
+</tr>
+<tr class="header">
+<th>US-06</th>
+<th>Consultar estado del pedido</th>
+<th>Como solicitante, quiero ver el estado de mis pedidos para saber si están aprobados, en tránsito o entregados.</th>
+<th><p>Escenario 1: Consulta de estado en el panel</p>
+<p>Dado que el solicitante accede a su panel,</p>
+<p>Cuando revisa la lista de pedidos,</p>
+<p>Entonces ve el estado actualizado.</p>
+<p>Escenario 2: Actualización dinámica de estado</p>
+<p>Dado que el solicitante está visualizando el panel de pedidos,</p>
+<p>Cuando el pedido cambia de estado,</p>
+<p>Entonces el cambio se refleja correctamente al recargar el panel.</p></th>
+<th>EP02</th>
+</tr>
+<tr class="odd">
+<th>US-07</th>
+<th>Confirmar recepción de pedido</th>
+<th>Como solicitante, quiero confirmar que recibí el pedido para que el proveedor lo cierre.</th>
+<th><p>Escenario 1: Confirmación exitosa de recepción</p>
+<p>Dado que el solicitante recibió el pedido,</p>
+<p>Cuando lo confirma en el sistema,</p>
+<p>Entonces su estado cambia a "Entregado".</p>
+<p>Escenario 2: Prevención de doble confirmación</p>
+<p>Dado que el solicitante ya confirmó la entrega,</p>
+<p>Cuando intenta volver a confirmar,</p>
+<p>Entonces el sistema bloquea la acción y notifica al usuario.</p></th>
+<th>EP02</th>
+</tr>
+<tr class="header">
+<th>US-08</th>
+<th>Registrar información de pago</th>
+<th>Como solicitante, quiero ingresar la información de los pagos correspondientes para validar el pedido ante el proveedor.</th>
+<th><p>Escenario 1: Registro exitoso de depósitos</p>
+<p>Dado que el solicitante ingresa la información de depósitos,</p>
+<p>Cuando registra el pedido,</p>
+<p>Estos quedan vinculados a él.</p>
+<p>Escenario 2: Validación del formulario de ingreso de depósitos</p>
+<p>Dado que el solicitante intenta ingresar los datos del depósito,</p>
+<p>Cuando excede el límite de caracteres,</p>
+<p>Entonces el sistema muestra un mensaje de error.</p>
+<p>Escenario 3: Validación de depósitos ya registrados</p>
+<p>Dado que el solicitante ingresa un depósito con un número de operación repetido,</p>
+<p>Cuando intenta seguir con el registro,</p>
+<p>Entonces el sistema notifica el error.</p></th>
+<th>EP02</th>
+</tr>
+<tr class="odd">
+<th>US-09</th>
+<th>Ver historial de pedidos</th>
+<th>Como solicitante, quiero ver mis pedidos anteriores para tener control sobre mi consumo.</th>
+<th><p>Escenario 1: Visualización del historial</p>
+<p>Dado que el solicitante accede al historial,</p>
+<p>Cuando se listan los pedidos,</p>
+<p>Entonces puede ver fecha, tipo y estado de cada uno.</p>
+<p>Escenario 2: Historial vacío</p>
+<p>Dado que el solicitante aún no ha realizado pedidos,</p>
+<p>Cuando accede al historial,</p>
+<p>Entonces se muestra un mensaje informativo.</p>
+<p>Escenario 3: Acceso a detalles desde historial</p>
+<p>Dado que el solicitante ve la lista de pedidos anteriores,</p>
+<p>Cuando selecciona uno,</p>
+<p>Entonces puede revisar sus detalles.</p></th>
+<th>EP02</th>
+</tr>
+<tr class="header">
+<th>US-10</th>
+<th>Ver pedidos pendientes</th>
+<th>Como proveedor, quiero ver todos los pedidos pendientes para analizarlos y tomar acción.</th>
+<th><p>Escenario 1: Listado de pedidos pendientes</p>
+<p>Dado que el proveedor accede al panel,</p>
+<p>Cuando ve los pedidos pendientes,</p>
+<p>Entonces puede revisar sus detalles básicos.</p>
+<p>Escenario 2: Filtro por fechas o cliente</p>
+<p>Dado que el proveedor tiene muchos pedidos,</p>
+<p>Cuando aplica filtros por fecha o empresa,</p>
+<p>Entonces puede localizar los pedidos relevantes.</p></th>
+<th>EP03</th>
+</tr>
+<tr class="odd">
+<th>US-11</th>
+<th>Aprobar pedido</th>
+<th>Como proveedor, quiero aprobar pedidos según los depósitos hechos a mis cuentas bancarias.</th>
+<th><p>Escenario 1: Aprobación de pedido con depósitos válidos</p>
+<p>Dado que el proveedor tiene el pago completo del pedido,</p>
+<p>Cuando intenta aprobarlo,</p>
+<p>Entonces el estado cambia a "Aprobado".</p>
+<p>Escenario 2: No aprobar el pedido por pago incompleto</p>
+<p>Dado que el proveedor no cuenta con los depósitos suficientes para completar el pago del pedido,</p>
+<p>Cuando intenta aprobarlo,</p>
+<p>Entonces se muestra un mensaje indicando que el pedido no fue pagado por completo.</p></th>
+<th>EP03</th>
+</tr>
+<tr class="header">
+<th>US-12</th>
+<th>Marcar pedido como despachado</th>
+<th>Como proveedor, quiero marcar cuándo un pedido sale a entrega para notificar al cliente.</th>
+<th><p>Escenario 1: Despacho exitoso de un pedido</p>
+<p>Dado que el proveedor tiene un pedido aprobado,</p>
+<p>Cuando marca el pedido como despachado,</p>
+<p>Entonces el estado cambia a "Despachado".</p>
+<p>Escenario 2: Restricción de despacho sin aprobación previa</p>
+<p>Dado que el proveedor intenta despachar un pedido sin pasar por la liberación correspondiente,</p>
+<p>Cuando ejecuta la acción,</p>
+<p>Entonces el sistema impide el cambio de estado y muestra un mensaje.</p></th>
+<th>EP03</th>
+</tr>
+<tr class="odd">
+<th>US-13</th>
+<th>Cerrar pedido</th>
+<th>Como proveedor, quiero cerrar el pedido cuando el cliente confirme la entrega para finalizar el proceso.</th>
+<th><p>Escenario 1: Cierre correcto del pedido tras confirmación</p>
+<p>Dado que el solicitante ya confirmó la entrega,</p>
+<p>Cuando el proveedor cierra el pedido,</p>
+<p>Entonces este no puede modificarse más.</p>
+<p>Escenario 2: Intento de cierre sin confirmación previa</p>
+<p>Dado que el proveedor intenta cerrar el pedido,</p>
+<p>Cuando el solicitante aún no ha confirmado la entrega,</p>
+<p>Entonces el sistema impide esta acción.</p></th>
+<th>EP03</th>
+</tr>
+<tr class="header">
+<th>US-14</th>
+<th>Generar reporte de ventas</th>
+<th>Como proveedor, quiero generar reportes de ventas para tener registro de operaciones realizadas.</th>
+<th><p>Escenario 1: Generación de reporte con datos disponibles</p>
+<p>Dado que el proveedor selecciona un rango de fechas válido,</p>
+<p>Cuando solicita el reporte,</p>
+<p>Entonces se genera un archivo con los datos de ventas.</p>
+<p>Escenario 2: Generación sin datos en el rango</p>
+<p>Dado que el proveedor selecciona un rango sin ventas,</p>
+<p>Cuando solicita el reporte,</p>
+<p>Entonces el sistema informa que no hay resultados.</p>
+<p>Escenario 3: Descarga del archivo generado</p>
+<p>Dado que el reporte se genera correctamente,</p>
+<p>Cuando finaliza el proceso,</p>
+<p>Entonces el proveedor puede descargar el archivo.</p></th>
+<th>EP03</th>
+</tr>
+<tr class="odd">
+<th>US-15</th>
+<th>Iniciar sesión</th>
+<th>Como usuario registrado, quiero iniciar sesión con correo y contraseña para acceder a mi cuenta.</th>
+<th><p>Escenario 1: Inicio de sesión exitoso</p>
+<p>Dado que el usuario registrado ingresa credenciales válidas,</p>
+<p>Cuando presiona iniciar sesión,</p>
+<p>Entonces accede a su dashboard.</p>
+<p>Escenario 2: Error por credenciales incorrectas</p>
+<p>Dado que el usuario registrado ingresa datos incorrectos,</p>
+<p>Cuando intenta iniciar sesión,</p>
+<p>Entonces el sistema muestra un mensaje de error.</p>
+<p>Escenario 3: Validación de campos vacíos</p>
+<p>Dado que el usuario deja campos vacíos,</p>
+<p>Cuando intenta iniciar sesión,</p>
+<p>Entonces el sistema solicita completar los campos.</p></th>
+<th>EP04</th>
+</tr>
+<tr class="header">
+<th>US-16</th>
+<th>Recuperar contraseña</th>
+<th>Como usuario registrado, quiero recuperar mi contraseña para volver a acceder si la olvidé.</th>
+<th><p>Escenario 1: Envío de enlace de recuperación</p>
+<p>Dado que el usuario registrado ingresa su correo válido,</p>
+<p>Cuando solicita recuperación,</p>
+<p>Entonces recibe un enlace al correo.</p>
+<p>Escenario 2: Error por correo no registrado</p>
+<p>Dado que el usuario ingresa un correo inexistente,</p>
+<p>Cuando solicita recuperación,</p>
+<p>Entonces se le informa que el correo no está registrado.</p>
+<p>Escenario 3: Validación de campo vacío</p>
+<p>Dado que el usuario no completa el campo de correo,</p>
+<p>Cuando intenta enviar la solicitud,</p>
+<p>Entonces el sistema solicita completarlo.</p></th>
+<th>EP04</th>
+</tr>
+<tr class="odd">
+<th>US-17</th>
+<th>Cerrar sesión</th>
+<th>Como usuario registrado, quiero poder cerrar sesión para mantener segura mi cuenta.</th>
+<th><p>Escenario 1: Cierre exitoso de sesión</p>
+<p>Dado que el usuario está autenticado,</p>
+<p>Cuando selecciona "Cerrar sesión",</p>
+<p>Entonces la sesión se finaliza y es redirigido al login.</p>
+<p>Escenario 2: Confirmación de cierre de sesión</p>
+<p>Dado que el usuario cierra sesión,</p>
+<p>Cuando termina la acción,</p>
+<p>Entonces el sistema muestra un mensaje de despedida o confirmación.</p></th>
+<th>EP04</th>
+</tr>
+<tr class="header">
+<th>US-18</th>
+<th>Ver resumen de pedidos (Solicitante)</th>
+<th>Como solicitante, quiero ver un resumen de mis pedidos para identificar cuántos están en proceso o completados.</th>
+<th><p>Escenario 1: Visualización de resumen con datos disponibles</p>
+<p>Dado que el solicitante tiene pedidos registrados,</p>
+<p>Cuando accede a su dashboard,</p>
+<p>Entonces visualiza los KPIs por estado: pendientes, aprobados, despachados, finalizados y rechazados.</p>
+<p>Escenario 2: Sin pedidos registrados</p>
+<p>Dado que el solicitante no tiene pedidos,</p>
+<p>Cuando accede al dashboard,</p>
+<p>Entonces ve un mensaje informando "No hay pedidos registrados".</p>
+<p>Escenario 3: Error al cargar datos del resumen</p>
+<p>Dado que el solicitante accede al dashboard,</p>
+<p>Cuando ocurre un error de carga,</p>
+<p>Entonces el sistema muestra un mensaje e intenta recargar los datos automáticamente.</p></th>
+<th>EP05</th>
+</tr>
+<tr class="odd">
+<th>US-19</th>
+<th>Validar disponibilidad de transporte</th>
+<th>Como proveedor, quiero saber qué vehículos están disponibles antes de asignarlos para vincularlos correctamente.</th>
+<th><p>Escenario 1: Vehículo no disponible por superposición</p>
+<p>Dado que el proveedor visualiza el listado de vehículos,</p>
+<p>Cuando un vehículo está asignado a otro pedido para la misma fecha y hora estimada,</p>
+<p>Entonces el sistema lo muestra como no disponible.</p>
+<p>Escenario 2: Vehículo disponible</p>
+<p>Dado que el proveedor visualiza un vehículo sin conflictos de agenda,</p>
+<p>Cuando se carga el listado de vehículos,</p>
+<p>Entonces dicho vehículo se muestra como seleccionable.</p>
+<p>Escenario 3: Conflicto en tiempo real</p>
+<p>Dado que el proveedor intenta seleccionar un vehículo que fue asignado recientemente por otro usuario,</p>
+<p>Cuando realiza la acción,</p>
+<p>Entonces el sistema bloquea la selección y muestra un mensaje de actualización.</p></th>
+<th>EP08</th>
+</tr>
+<tr class="header">
+<th>US-20</th>
+<th>Ver perfil de usuario</th>
+<th>Como usuario registrado, quiero ver mis datos de perfil para revisar mi información registrada.</th>
+<th><p>Escenario 1: Visualización exitosa del perfil</p>
+<p>Dado que el usuario tiene sesión activa,</p>
+<p>Cuando accede a su perfil,</p>
+<p>Entonces ve su nombre, correo y rol.</p>
+<p>Escenario 2: Error en la carga de datos</p>
+<p>Dado que el usuario accede a su perfil y ocurre un error al obtener los datos,</p>
+<p>Cuando se carga la vista,</p>
+<p>Entonces se muestra un mensaje de error y se sugiere reintentar.</p>
+<p>Escenario 3: Restricción de datos de otros usuarios</p>
+<p>Dado que el usuario tiene sesión activa,</p>
+<p>Cuando intenta ver otro perfil,</p>
+<p>Entonces el sistema restringe el acceso y muestra su propia información.</p></th>
+<th>EP09</th>
+</tr>
+<tr class="odd">
+<th>US-21</th>
+<th>Editar datos de perfil</th>
+<th>Como usuario registrado, quiero editar mis datos para mantener mi información actualizada.</th>
+<th><p>Escenario 1: Edición y guardado exitoso</p>
+<p>Dado que el usuario modifica uno o más campos del formulario,</p>
+<p>Cuando la información ingresada es válida,</p>
+<p>Entonces el sistema guarda los cambios correctamente.</p>
+<p>Escenario 2: Campo obligatorio vacío</p>
+<p>Dado que el usuario deja un campo obligatorio vacío,</p>
+<p>Cuando intenta guardar,</p>
+<p>Entonces el sistema muestra un mensaje de validación indicando el campo requerido.</p>
+<p>Escenario 3: Error del servidor al guardar</p>
+<p>Dado que el usuario intenta guardar y ocurre un fallo en el servidor,</p>
+<p>Cuando se realiza la acción,</p>
+<p>Entonces se muestra un mensaje de error y los datos ingresados permanecen visibles.</p></th>
+<th>EP09</th>
+</tr>
+<tr class="header">
+<th>US-22</th>
+<th>Ver sección de preguntas frecuentes</th>
+<th>Como visitante de ambos segmentos, quiero acceder a una sección de preguntas frecuentes para resolver dudas rápidamente.</th>
+<th><p>Escenario 1: Visualización de preguntas comunes</p>
+<p>Dado que el visitante accede a la sección,</p>
+<p>Cuando se carga el contenido,</p>
+<p>Entonces puede leer las preguntas y respuestas más frecuentes.</p>
+<p>Escenario 2: Organización por categorías</p>
+<p>Dado que el visitante accede a la sección de preguntas frecuentes con muchas entradas,</p>
+<p>Cuando navega por la sección,</p>
+<p>Entonces puede visualizarlas clasificadas en categorías.</p>
+<p>Escenario 3: Error al cargar FAQs</p>
+<p>Dado que el visitante accede a la sección y ocurre un fallo en la carga,</p>
+<p>Cuando intenta visualizar las preguntas frecuentes,</p>
+<p>Entonces se muestra un mensaje de error o un contenido informativo alternativo.</p></th>
+<th>EP10</th>
+</tr>
+<tr class="odd">
+<th>US-23</th>
+<th>Acceder a información de contacto rápido</th>
+<th>Como usuario de ambos segmentos, quiero ver datos de contacto directo (teléfono o correo) para hacer consultas urgentes.</th>
+<th><p>Escenario 1: Visualización de datos de contacto</p>
+<p>Dado que el usuario accede a la sección de soporte,</p>
+<p>Cuando se carga la página,</p>
+<p>Entonces puede visualizar claramente el correo de soporte y número telefónico.</p>
+<p>Escenario 2: Acceso al correo de cliente</p>
+<p>Dado que el usuario hace clic en la dirección de correo,</p>
+<p>Cuando tiene una app de correo configurada,</p>
+<p>Entonces se abre automáticamente su aplicación de correo predeterminada.</p>
+<p>Escenario 3: Falla en la configuración de contacto</p>
+<p>Dado que el usuario accede a la página y los datos de contacto no están bien configurados,</p>
+<p>Cuando se carga la sección de contacto,</p>
+<p>Entonces el sistema muestra un mensaje genérico invitando a intentar más tarde.</p></th>
+<th>EP10</th>
+</tr>
+<tr class="header">
+<th>US-24</th>
+<th>Buscar pedido por código</th>
+<th>Como usuario de ambos segmentos, quiero buscar un pedido específico por su código para encontrarlo rápidamente.</th>
+<th><p>Escenario 1: Pedido encontrado</p>
+<p>Dado que el usuario escribe un código válido,</p>
+<p>Cuando existe un pedido con ese código,</p>
+<p>Entonces se muestra el resultado correspondiente.</p>
+<p>Escenario 2: Pedido no encontrado</p>
+<p>Dado que el usuario digita un código no correspondiente a ningún pedido,</p>
+<p>Cuando finaliza la búsqueda,</p>
+<p>Entonces el sistema muestra un mensaje de que no hay coincidencias.</p></th>
+<th>EP11</th>
+</tr>
+<tr class="odd">
+<th>US-25</th>
+<th>Filtrar pedidos por estado</th>
+<th>Como usuario de ambos segmentos, quiero filtrar mis pedidos por estado (pendiente, aprobado, entregado) para facilitar la revisión.</th>
+<th><p>Escenario 1: Aplicar filtro correctamente</p>
+<p>Dado que el usuario selecciona un estado,</p>
+<p>Cuando se aplica el filtro,</p>
+<p>Entonces solo se muestran los pedidos con ese estado.</p>
+<p>Escenario 2: No hay pedidos en ese estado</p>
+<p>Dado que el usuario selecciona un estado que no tiene coincidencias,</p>
+<p>Cuando ejecuta el filtro,</p>
+<p>Entonces se muestra un mensaje indicando que no hay pedidos para ese estado.</p></th>
+<th>EP11</th>
+</tr>
+<tr class="header">
+<th>US-26</th>
+<th>Recibir notificación de aprobación</th>
+<th>Como solicitante, quiero recibir una notificación cuando un pedido sea aprobado o rechazado para estar informado.</th>
+<th><p>Escenario 1: Visualización de notificación</p>
+<p>Dado que el proveedor cambia el estado del pedido,</p>
+<p>Cuando el solicitante inicia sesión,</p>
+<p>Entonces ve una notificación del evento.</p>
+<p>Escenario 2: Pedido actualizado desde otra sesión</p>
+<p>Dado que el solicitante aún no ha leído la notificación,</p>
+<p>Cuando actualiza la interfaz,</p>
+<p>Entonces la notificación se mantiene visible hasta que sea marcada como leída.</p></th>
+<th>EP12</th>
+</tr>
+<tr class="odd">
+<th>US-27</th>
+<th>Notificación de pedido despachado</th>
+<th>Como solicitante, quiero recibir una notificación cuando un pedido haya sido despachado para estar informado.</th>
+<th><p>Escenario 1: Pedido marcado como despachado</p>
+<p>Dado que el proveedor marca el pedido como despachado,</p>
+<p>Cuando el solicitante consulta su cuenta,</p>
+<p>Entonces puede ver la notificación correspondiente.</p>
+<p>Escenario 2: Visualización posterior del evento</p>
+<p>Dado que el pedido fue despachado anteriormente,</p>
+<p>Cuando el solicitante accede en otro momento,</p>
+<p>Entonces la notificación sigue disponible hasta ser archivada o leída.</p></th>
+<th>EP12</th>
+</tr>
+<tr class="header">
+<th>US-28</th>
+<th>Ver listado de empresas</th>
+<th>Como proveedor, quiero ver una lista de empresas solicitantes para identificar a mis clientes frecuentes.</th>
+<th><p>Escenario 1: Visualización del listado</p>
+<p>Dado que el proveedor accede al módulo de empresas,</p>
+<p>Cuando se carga el listado,</p>
+<p>Entonces se muestran nombre, pedidos activos y total histórico por empresa.</p>
+<p>Escenario 2: Lista vacía o sin datos</p>
+<p>Dado que el proveedor accede al módulo y no hay empresas registradas,</p>
+<p>Cuando se carga la vista,</p>
+<p>Entonces se muestra un mensaje indicando que no hay empresas disponibles.</p></th>
+<th>EP13</th>
+</tr>
+<tr class="odd">
+<th>US-29</th>
+<th>Ver detalles de empresa</th>
+<th>Como proveedor, quiero ver información detallada de una empresa solicitante para analizar su historial de pedidos.</th>
+<th><p>Escenario 1: Acceso a detalle de empresa</p>
+<p>Dado que el proveedor selecciona una empresa,</p>
+<p>Cuando se carga el detalle,</p>
+<p>Entonces visualiza pedidos realizados, cantidades solicitadas y fechas.</p>
+<p>Escenario 2: Empresa sin historial de pedidos</p>
+<p>Dado que el proveedor selecciona una empresa que aún no ha realizado pedidos,</p>
+<p>Cuando se accede a su perfil,</p>
+<p>Entonces se muestra un mensaje indicando que no hay historial disponible.</p></th>
+<th>EP13</th>
+</tr>
+<tr class="header">
+<th>US-30</th>
+<th>Ver gráfico de consumo (Solicitante)</th>
+<th>Como solicitante, quiero ver un gráfico de mi consumo mensual para tener control sobre el uso del combustible.</th>
+<th><p>Escenario 1: Gráfico con datos disponibles</p>
+<p>Dado que el solicitante ha realizado pedidos,</p>
+<p>Cuando accede al módulo de reportes,</p>
+<p>Entonces se visualiza un gráfico con galones consumidos por mes.</p>
+<p>Escenario 2: Sin datos de consumo</p>
+<p>Dado que el solicitante no ha hecho pedidos aún,</p>
+<p>Cuando accede al gráfico,</p>
+<p>Entonces se muestra un mensaje de que no hay datos suficientes.</p></th>
+<th>EP14</th>
+</tr>
+<tr class="odd">
+<th>US-31</th>
+<th>Ver gráfico de ventas (Proveedor)</th>
+<th>Como proveedor, quiero ver un gráfico de ventas por mes para monitorear el rendimiento del negocio.</th>
+<th><p>Escenario 1: Datos disponibles para graficar</p>
+<p>Dado que el proveedor ha despachado pedidos,</p>
+<p>Cuando accede al módulo de reportes,</p>
+<p>Entonces se visualiza un gráfico con las ventas mensuales totales.</p>
+<p>Escenario 2: Sin pedidos registrados</p>
+<p>Dado que el proveedor no ha realizado ventas aún,</p>
+<p>Cuando accede al gráfico,</p>
+<p>Entonces se muestra un mensaje de que no hay datos suficientes.</p></th>
+<th>EP14</th>
+</tr>
+<tr class="header">
+<th>US-32</th>
+<th>Descargar reporte PDF</th>
+<th>Como usuario de ambos segmentos, quiero descargar un resumen de pedidos o ventas en formato PDF para archivarlo o compartirlo.</th>
+<th><p>Escenario 1: Generación de PDF con datos</p>
+<p>Dado que el usuario hace clic en "Descargar",</p>
+<p>Cuando hay datos en el periodo seleccionado,</p>
+<p>Entonces se genera un archivo PDF descargable.</p>
+<p>Escenario 2: No hay datos en el periodo seleccionado</p>
+<p>Dado que el usuario no tiene registros en el periodo seleccionado,</p>
+<p>Cuando se solicita la descarga,</p>
+<p>Entonces el sistema notifica que no hay contenido para exportar.</p>
+<p>Escenario 3: Falla en la generación del PDF</p>
+<p>Dado que el usuario intenta descargar el archivo y ocurre un error en el backend al generar el PDF,</p>
+<p>Cuando hace clic en el botón de descargar,</p>
+<p>Entonces se muestra un mensaje de error sin afectar la sesión.</p></th>
+<th>EP14</th>
+</tr>
+<tr class="odd">
+<th>US-33</th>
+<th>Ver sección Benefits</th>
+<th>Como visitante de ambos segmentos, quiero conocer las principales ventajas con las que puedo contar para evaluar la implementación de la plataforma.</th>
+<th><p>Escenario 1: Visualizar beneficios</p>
+<p>Dado que el visitante de ambos segmentos accede a la sección "¿Por qué elegir FuelBridge?",</p>
+<p>Cuando visualiza los múltiples beneficios,</p>
+<p>Entonces puede identificar nuestra ventajas frente a nuestros competidores.</p>
+<p>Escenario 2: Visualizar beneficios</p>
+<p>Dado que el visitante de ambos segmentos accede a la sección "¿Por qué elegir FuelBridge?",</p>
+<p>Cuando observa la lista de beneficios,</p>
+<p>Entonces ve como le podría beneficiar usar FuelBridge.</p></th>
+<th>EP01</th>
+</tr>
+<tr class="header">
+<th>US-34</th>
+<th>Ver sección Lo que Dicen Nuestros Clientes</th>
+<th>Como visitante de ambos segmentos, quiero conocer los testimonios de los usuarios de FuelBridge para tener confianza en la plataforma y saber que otras empresas ya la están usando.</th>
+<th><p>Escenario 1: Ver testimonios de clientes</p>
+<p>Dado que el visitante de ambos segmentos está interesado en los comentarios de los clientes,</p>
+<p>Cuando accede a la sección,</p>
+<p>Entonces puede leer un breve testimonio sobre experiencias usando FuelBridge.</p>
+<p>Escenario 2: Visualizar testimonios recientes</p>
+<p>Dado que el visitante de ambos segmentos accede a la sección y esta se actualiza regularmente,</p>
+<p>Cuando se carga la información,</p>
+<p>Entonces visualiza las últimos testimonios que se han unido a FuelBridge.</p></th>
+<th>EP01</th>
+</tr>
+<tr class="odd">
+<th>US-35</th>
+<th>Ver sección Planes y Precios</th>
+<th>Como visitante (ambos segmentos), quiero saber que planes se adecuan a mis necesidades para poder iniciar un proceso de registro o solicitud.</th>
+<th><p>Escenario 1: Ver información sobre ser solicitante de combustible</p>
+<p>Dado que el visitante entra a la sección Precios y Planes,</p>
+<p>Cuando visualiza los diferentes precios y las features incluidas,</p>
+<p>Entonces entiende que existe flexibilidad para adaptar FuelBridge a su empresa.</p>
+<p>Escenario 2: Seleccionar un plan</p>
+<p>Dado que el visitante está interesado en obtener un plan específico,</p>
+<p>Cuando hace clic en el call to action,</p>
+<p>Entonces es redirigido a la página de registro.</p></th>
+<th>EP01</th>
+</tr>
+<tr class="header">
+<th>US-36</th>
+<th>Cambiar idioma</th>
+<th>Como visitante de ambos segmentos, quiero poder cambiar entre inglés y español para entender la plataforma en mi idioma preferido.</th>
+<th><p>Escenario 1: Cambiar idioma a español</p>
+<p>Dado que el visitante de ambos segmentos está viendo la página en inglés,</p>
+<p>Cuando selecciona la opción de español,</p>
+<p>Entonces toda la interfaz de la página se muestra en español.</p>
+<p>Escenario 2: Cambiar idioma a inglés</p>
+<p>Dado que el visitante está viendo la página en español,</p>
+<p>Cuando selecciona la opción de inglés,</p>
+<p>Entonces toda la interfaz de la página se muestra en inglés.</p></th>
+<th>EP01</th>
+</tr>
+<tr class="odd">
+<th>US-37</th>
+<th>Registrar empresa solicitante</th>
+<th>Como visitante (solicitante), quiero registrar mi empresa en la plataforma para comenzar a realizar pedidos de combustible.</th>
+<th><p>Escenario 1: Registro exitoso de empresa</p>
+<p>Dado que el visitante completa todos los campos requeridos del formulario de registro,</p>
+<p>Cuando presiona "Registrar empresa",</p>
+<p>Entonces se crea la cuenta y es redirigido a su dashboard.</p>
+<p>Escenario 2: RUC o correo ya registrado</p>
+<p>Dado que el visitante ingresa un RUC o correo que ya existe en el sistema,</p>
+<p>Cuando intenta completar el registro,</p>
+<p>Entonces el sistema muestra un mensaje indicando que ya existe una cuenta con esos datos.</p>
+<p>Escenario 3: Campos obligatorios vacíos</p>
+<p>Dado que el visitante deja uno o más campos obligatorios sin completar,</p>
+<p>Cuando intenta continuar con el registro,</p>
+<p>Entonces el sistema resalta los campos faltantes y solicita completarlos.</p></th>
+<th>EP04</th>
+</tr>
+<tr class="header">
+<th>US-38</th>
+<th>Registrar empresa proveedora</th>
+<th>Como visitante (proveedor), quiero registrar mi empresa distribuidora en la plataforma para comenzar a gestionar pedidos de combustible.</th>
+<th><p>Escenario 1: Registro exitoso de proveedor</p>
+<p>Dado que el visitante proveedor completa todos los campos del formulario,</p>
+<p>Cuando confirma el registro,</p>
+<p>Entonces se crea la cuenta y puede acceder a su panel de gestión.</p>
+<p>Escenario 2: Datos de empresa duplicados</p>
+<p>Dado que el visitante ingresa un RUC que ya está registrado como proveedor,</p>
+<p>Cuando intenta finalizar el registro,</p>
+<p>Entonces el sistema notifica que ya existe una empresa con ese RUC.</p>
+<p>Escenario 3: Formato inválido en campos</p>
+<p>Dado que el visitante ingresa datos con formato incorrecto,</p>
+<p>Cuando intenta avanzar en el formulario,</p>
+<p>Entonces el sistema muestra un mensaje de validación por campo.</p></th>
+<th>EP04</th>
+</tr>
+<tr class="odd">
+<th>US-39</th>
+<th>Rechazar pedido</th>
+<th>Como proveedor, quiero rechazar un pedido cuando no pueda atenderlo para notificar al solicitante oportunamente.</th>
+<th><p>Escenario 1: Rechazo exitoso con motivo</p>
+<p>Dado que el proveedor decide no atender un pedido pendiente,</p>
+<p>Cuando selecciona "Rechazar" e ingresa un motivo,</p>
+<p>Entonces el estado del pedido cambia a "Rechazado" y el solicitante recibe una notificación.</p>
+<p>Escenario 2: Intento de rechazo sin motivo</p>
+<p>Dado que el proveedor intenta rechazar un pedido sin ingresar motivo,</p>
+<p>Cuando ejecuta la acción,</p>
+<p>Entonces el sistema solicita ingresar un motivo obligatorio antes de confirmar.</p>
+<p>Escenario 3: Rechazo de pedido ya procesado</p>
+<p>Dado que el proveedor intenta rechazar un pedido que ya fue aprobado o despachado,</p>
+<p>Cuando ejecuta la acción,</p>
+<p>Entonces el sistema impide la acción y muestra el estado actual del pedido.</p></th>
+<th>EP03</th>
+</tr>
+<tr class="header">
+<th>US-40</th>
+<th>Ver detalle de pedido</th>
+<th>Como usuario de ambos segmentos, quiero ver el detalle completo de un pedido para revisar toda la información asociada.</th>
+<th><p>Escenario 1: Visualización completa del detalle</p>
+<p>Dado que el usuario selecciona un pedido desde su panel,</p>
+<p>Cuando se carga la vista de detalle,</p>
+<p>Entonces puede ver tipo de combustible, cantidad, estado, fechas, datos de pago y asignación logística.</p>
+<p>Escenario 2: Pedido no encontrado</p>
+<p>Dado que el usuario intenta acceder al detalle de un pedido inexistente,</p>
+<p>Cuando se carga la vista,</p>
+<p>Entonces el sistema muestra un mensaje de error y ofrece regresar al listado.</p>
+<p>Escenario 3: Restricción de acceso a pedidos ajenos</p>
+<p>Dado que el usuario intenta acceder al detalle de un pedido que no le pertenece,</p>
+<p>Cuando carga la URL directamente,</p>
+<p>Entonces el sistema restringe el acceso y redirige a su propio panel.</p></th>
+<th>EP02</th>
+</tr>
+<tr class="odd">
+<th>US-41</th>
+<th>Gestionar vehículos de flota</th>
+<th>Como proveedor, quiero registrar y administrar los vehículos de mi flota para tenerlos disponibles al momento de asignarlos a pedidos.</th>
+<th><p>Escenario 1: Registro exitoso de vehículo</p>
+<p>Dado que el proveedor accede al módulo de flota y completa los datos del vehículo,</p>
+<p>Cuando guarda el registro,</p>
+<p>Entonces el vehículo queda disponible para ser asignado a pedidos.</p>
+<p>Escenario 2: Placa duplicada</p>
+<p>Dado que el proveedor intenta registrar un vehículo con una placa ya existente,</p>
+<p>Cuando intenta guardar,</p>
+<p>Entonces el sistema muestra un error indicando que la placa ya está registrada.</p>
+<p>Escenario 3: Eliminación de vehículo</p>
+<p>Dado que el proveedor elimina un vehículo de la flota,</p>
+<p>Cuando confirma la acción,</p>
+<p>Entonces el vehículo deja de aparecer como opción en la asignación de pedidos.</p></th>
+<th>EP08</th>
+</tr>
+<tr class="header">
+<th>US-42</th>
+<th>Gestionar conductores</th>
+<th>Como proveedor, quiero registrar y administrar los conductores de mi empresa para asignarlos correctamente a los despachos.</th>
+<th><p>Escenario 1: Registro exitoso de conductor</p>
+<p>Dado que el proveedor completa los datos del conductor (nombre, DNI, licencia),</p>
+<p>Cuando guarda el registro,</p>
+<p>Entonces el conductor queda disponible para ser asignado a pedidos.</p>
+<p>Escenario 2: DNI duplicado</p>
+<p>Dado que el proveedor intenta registrar un conductor con un DNI ya existente,</p>
+<p>Cuando intenta guardar,</p>
+<p>Entonces el sistema notifica que el conductor ya está registrado.</p>
+<p>Escenario 3: Edición de datos de conductor</p>
+<p>Dado que el proveedor actualiza los datos de un conductor existente,</p>
+<p>Cuando guarda los cambios,</p>
+<p>Entonces la información se actualiza correctamente en el sistema.</p></th>
+<th>EP08</th>
+</tr>
+<tr class="odd">
+<th>US-43</th>
+<th>Gestionar inventario de combustibles</th>
+<th>Como proveedor, quiero registrar, editar y eliminar los productos de combustible de mi catálogo para que estén disponibles como opciones al crear un pedido.</th>
+<th><p>Escenario 1: Registro y visualización de productos en el inventario</p>
+<p>Dado que el proveedor accede al módulo de inventario y completa los campos requeridos del formulario de producto (nombre, tipo de combustible, precio por litro y unidad),</p>
+<p>Cuando guarda el registro,</p>
+<p>Entonces el producto aparece listado en el inventario con su información completa y queda disponible para ser referenciado en nuevos pedidos.</p>
+<p>Escenario 2: Edición y eliminación de un producto existente</p>
+<p>Dado que el proveedor selecciona un producto ya registrado en el inventario,</p>
+<p>Cuando actualiza sus datos o confirma su eliminación,</p>
+<p>Entonces los cambios se reflejan de inmediato en el listado y el producto editado o eliminado no genera inconsistencias en pedidos en curso.</p></th>
+<th>EP16</th>
+</tr>
+<tr class="header">
+<th>US-44</th>
+<th>Ver Dashboard principal del proveedor</th>
+<th>Como proveedor, quiero acceder a un panel principal con KPIs de operación y un gráfico de tendencia de ventas para tener visibilidad en tiempo real del estado de mi negocio.</th>
+<th><p>Escenario 1: Visualización de KPIs y gráfico de tendencia</p>
+<p>Dado que el proveedor accede al dashboard principal,</p>
+<p>Cuando se cargan los datos del periodo activo,</p>
+<p>Entonces visualiza las tarjetas de KPIs (combustible total vendido, pedidos pendientes) y un gráfico de tendencia con opción de filtrar por vista diaria, semanal o mensual.</p>
+<p>Escenario 2: Navegación desde el dashboard hacia otras secciones</p>
+<p>Dado que el proveedor revisa el panel principal y desea profundizar en un indicador,</p>
+<p>Cuando selecciona el acceso directo a pedidos activos o al módulo de reportes,</p>
+<p>Entonces es redirigido a la vista correspondiente sin perder el contexto de sesión.</p></th>
+<th>EP05</th>
+</tr>
+<tr class="odd">
+<th>US-45</th>
+<th>Ver distribución de ventas por sector</th>
+<th>Como proveedor, quiero ver la distribución de mis ventas por sector industrial para identificar cuáles son mis clientes más relevantes por rubro.</th>
+<th><p>Escenario 1: Visualización de distribución con datos disponibles</p>
+<p>Dado que el proveedor accede al módulo de reportes de clientes,</p>
+<p>Cuando existen ventas registradas en más de un sector industrial,</p>
+<p>Entonces el sistema muestra un gráfico de barras con el volumen y porcentaje de participación por sector.</p>
+<p>Escenario 2: Sin distribución por sector disponible</p>
+<p>Dado que el proveedor aún no tiene ventas registradas o todos sus clientes pertenecen al mismo sector,</p>
+<p>Cuando accede a la sección de distribución,</p>
+<p>Entonces el sistema muestra un mensaje indicando que no hay datos suficientes para mostrar la distribución.</p></th>
+<th>EP14</th>
+</tr>
+<tr class="header">
+<th>US-46</th>
+<th>Asignar recursos a despacho</th>
+<th>Como proveedor, quiero asignar un vehículo y un conductor a un pedido aprobado en una sola operación para agilizar la preparación del despacho.</th>
+<th><p>Escenario 1: Asignación exitosa de recursos al despacho</p>
+<p>Dado que el proveedor selecciona un pedido aprobado y elige un vehículo y conductor disponibles,</p>
+<p>Cuando confirma la asignación,</p>
+<p>Entonces ambos recursos quedan vinculados al pedido y el despacho queda registrado con estado "Asignado".</p>
+<p>Escenario 2: Recursos no disponibles para la fecha del pedido</p>
+<p>Dado que el proveedor intenta asignar recursos a un pedido y tanto el vehículo como el conductor seleccionados ya tienen compromisos en esa fecha,</p>
+<p>Cuando ejecuta la asignación,</p>
+<p>Entonces el sistema muestra cuáles recursos están en conflicto e impide completar la operación.</p></th>
+<th>EP08</th>
+</tr>
+<tr class="odd">
+<th>TS-01</th>
+<th>Endpoint: Login</th>
+<th>Como developer, quiero un endpoint para autenticar usuarios.</th>
+<th><p>Escenario 1: Autenticación exitosa</p>
+<p>Dado que el developer incluye credenciales válidas en el request,</p>
+<p>Cuando lo envía al endpoint de autenticación,</p>
+<p>Entonces recibe un token JWT y un status 200 como respuesta.</p>
+<p>Escenario 2: Credenciales inválidas</p>
+<p>Dado que el developer incluye credenciales incorrectas en el request,</p>
+<p>Cuando se procesa la solicitud,</p>
+<p>Entonces se retorna status 401 con un mensaje de error.</p>
+<p>Escenario 3: Error interno del servidor</p>
+<p>Dado que el developer realiza un request y ocurre un problema en el backend,</p>
+<p>Cuando se procesa la autenticación,</p>
+<p>Entonces se retorna status 500 con un mensaje genérico de error.</p></th>
+<th>EP06</th>
+</tr>
+<tr class="header">
+<th>TS-02</th>
+<th>Endpoint: Recuperar contraseña</th>
+<th>Como developer, quiero un endpoint para que permita enviar correo de recuperación.</th>
+<th><p>Escenario 1: Solicitud válida</p>
+<p>Dado que el developer envía un request con un correo que existe en la base de datos,</p>
+<p>Cuando el request llega al endpoint de recuperación,</p>
+<p>Entonces el sistema genera un token y envía el correo de recuperación.</p>
+<p>Escenario 2: Correo inexistente</p>
+<p>Dado que el developer envía un request con un correo no registrado,</p>
+<p>Cuando se procesa la solicitud,</p>
+<p>Entonces se retorna status 404 y no se envía ningún correo.</p>
+<p>Escenario 3: Error en el envío del correo</p>
+<p>Dado que el developer ejecuta la acción y ocurre un fallo en el servicio de correo,</p>
+<p>Cuando se intenta enviar el mensaje,</p>
+<p>Entonces se retorna status 500 y se registra el error en los logs del servidor.</p></th>
+<th>EP06</th>
+</tr>
+<tr class="odd">
+<th>TS-03</th>
+<th>Endpoint: Logout</th>
+<th>Como developer, quiero un endpoint para cerrar sesión.</th>
+<th><p>Escenario 1: Logout exitoso</p>
+<p>Dado que el developer envía un token de sesión válido,</p>
+<p>Cuando llama al endpoint de logout,</p>
+<p>Entonces la sesión se invalida y se retorna status 200.</p>
+<p>Escenario 2: Token inválido o expirado</p>
+<p>Dado que el developer incluye un token no válido o expirado,</p>
+<p>Cuando se llama al endpoint de logout,</p>
+<p>Entonces se retorna status 401 y no se realiza ninguna acción.</p>
+<p>Escenario 3: Falla del servidor</p>
+<p>Dado que el developer realiza un request y ocurre un error interno en el servidor,</p>
+<p>Cuando se procesa el logout,</p>
+<p>Entonces se retorna status 500 con un mensaje genérico.</p></th>
+<th>EP06</th>
+</tr>
+<tr class="header">
+<th>TS-04</th>
+<th>Endpoint: Crear pedido</th>
+<th>Como developer, quiero un endpoint para registrar un nuevo pedido de combustible.</th>
+<th><p>Escenario 1: Petición con datos completos</p>
+<p>Dado que el developer envía una petición con todos los campos requeridos,</p>
+<p>Cuando se procesa el POST,</p>
+<p>Entonces se retorna status 201 con el ID del nuevo pedido.</p>
+<p>Escenario 2: Petición incompleta</p>
+<p>Dado que el developer envía una petición con campos obligatorios faltantes,</p>
+<p>Cuando se procesa la solicitud,</p>
+<p>Entonces se retorna status 400 con un mensaje de validación.</p></th>
+<th>EP07</th>
+</tr>
+<tr class="odd">
+<th>TS-05</th>
+<th>Endpoint: Consultar pedidos por usuario</th>
+<th>Como developer, quiero un endpoint para obtener todos los pedidos de un usuario.</th>
+<th><p>Escenario 1: Usuario con pedidos registrados</p>
+<p>Dado que el usuario tiene pedidos en el sistema,</p>
+<p>Cuando se llama al endpoint,</p>
+<p>Entonces retorna un array con sus pedidos y status 200.</p>
+<p>Escenario 2: Usuario sin pedidos</p>
+<p>Dado que el usuario no ha realizado pedidos,</p>
+<p>Cuando se ejecuta la solicitud,</p>
+<p>Entonces retorna un array vacío con status 200.</p></th>
+<th>EP07</th>
+</tr>
+<tr class="header">
+<th>TS-06</th>
+<th>Endpoint: Registro de usuario</th>
+<th>Como developer, quiero un endpoint para registrar nuevos usuarios en la plataforma (sign-up).</th>
+<th>Ver especificación del endpoint de registro de usuarios.</th>
+<th>EP08</th>
+</tr>
+<tr class="odd">
+<th>TS-07</th>
+<th>Endpoint: Consultar usuarios</th>
+<th>Como developer, quiero endpoints para listar todos los usuarios y consultar uno por su ID.</th>
+<th>Ver especificación de consulta de usuarios.</th>
+<th>EP08</th>
+</tr>
+<tr class="header">
+<th>TS-08</th>
+<th>Endpoint: CRUD de empresas compradoras</th>
+<th>Como developer, quiero endpoints para registrar, listar, consultar y actualizar empresas compradoras.</th>
+<th>Ver especificación CRUD de buyer companies.</th>
+<th>EP08</th>
+</tr>
+<tr class="odd">
+<th>TS-09</th>
+<th>Endpoint: CRUD de empresas proveedoras</th>
+<th>Como developer, quiero endpoints para registrar, listar, consultar y actualizar empresas proveedoras.</th>
+<th>Ver especificación CRUD de provider companies.</th>
+<th>EP08</th>
+</tr>
+<tr class="header">
+<th>TS-10</th>
+<th>Endpoint: Actualizar perfil de usuario</th>
+<th>Como developer, quiero un endpoint para que un usuario autenticado actualice los datos de su propio perfil.</th>
+<th>Ver especificación de actualización de perfil.</th>
+<th>EP08</th>
+</tr>
+<tr class="odd">
+<th>TS-11</th>
+<th>Endpoint: CRUD de productos de combustible</th>
+<th>Como developer, quiero endpoints para crear, listar, consultar, actualizar y eliminar productos de combustible.</th>
+<th>Ver especificación CRUD de productos.</th>
+<th>EP09</th>
+</tr>
+<tr class="header">
+<th>TS-12</th>
+<th>Endpoint: Actualizar stock de producto</th>
+<th>Como developer, quiero un endpoint para actualizar el stock disponible de un producto de combustible.</th>
+<th>Ver especificación de actualización de stock.</th>
+<th>EP09</th>
+</tr>
+<tr class="odd">
+<th>TS-13</th>
+<th>Endpoint: Consultar pedidos</th>
+<th>Como developer, quiero endpoints para listar todos los pedidos y consultarlos por ID, por empresa compradora y por proveedor.</th>
+<th><p>Escenario 1: Consulta exitosa por ID</p>
+<p>Dado que el developer envía un ID de pedido existente,</p>
+<p>Cuando se llama al endpoint de consulta,</p>
+<p>Entonces se retorna el pedido correspondiente con status 200.</p>
+<p>Escenario 2: Consulta por empresa compradora o proveedor</p>
+<p>Dado que el developer envía el identificador de una empresa compradora o proveedora,</p>
+<p>Cuando se ejecuta la solicitud,</p>
+<p>Entonces se retorna un array con los pedidos asociados y status 200.</p>
+<p>Escenario 3: Pedido no encontrado</p>
+<p>Dado que el developer envía un ID que no corresponde a ningún pedido registrado,</p>
+<p>Cuando se procesa la solicitud,</p>
+<p>Entonces se retorna status 404 con un mensaje de error.</p></th>
+<th>EP07</th>
+</tr>
+<tr class="header">
+<th>TS-14</th>
+<th>Endpoint: Confirmar / cancelar pedido</th>
+<th>Como developer, quiero endpoints para confirmar o cancelar un pedido existente.</th>
+<th><p>Escenario 1: Confirmación exitosa del pedido</p>
+<p>Dado que el developer envía una solicitud de confirmación sobre un pedido válido,</p>
+<p>Cuando se procesa el request,</p>
+<p>Entonces el estado del pedido cambia a confirmado y se retorna status 200.</p>
+<p>Escenario 2: Cancelación exitosa del pedido</p>
+<p>Dado que el developer envía una solicitud de cancelación sobre un pedido que aún puede cancelarse,</p>
+<p>Cuando se procesa el request,</p>
+<p>Entonces el estado del pedido cambia a cancelado y se retorna status 200.</p>
+<p>Escenario 3: Intento de acción sobre pedido ya cerrado</p>
+<p>Dado que el developer intenta confirmar o cancelar un pedido que ya fue cerrado o cancelado previamente,</p>
+<p>Cuando se procesa la solicitud,</p>
+<p>Entonces se retorna status 400 con un mensaje indicando que la acción no es válida para el estado actual.</p></th>
+<th>EP07</th>
+</tr>
+<tr class="odd">
+<th>TS-15</th>
+<th>Endpoint: Solicitudes de combustible</th>
+<th>Como developer, quiero endpoints para crear, listar, aceptar y rechazar solicitudes de combustible.</th>
+<th>Ver especificación de fuel requests.</th>
+<th>EP10</th>
+</tr>
+<tr class="header">
+<th>TS-16</th>
+<th>Endpoint: Consultar solicitud por ID</th>
+<th>Como developer, quiero un endpoint para consultar el detalle de una solicitud de combustible específica.</th>
+<th>Ver especificación de consulta de solicitud.</th>
+<th>EP10</th>
+</tr>
+<tr class="odd">
+<th>TS-17</th>
+<th>Endpoint: Gestión de entregas</th>
+<th>Como developer, quiero endpoints para crear, despachar, completar, marcar como fallida y consultar entregas.</th>
+<th>Ver especificación de entregas.</th>
+<th>EP10</th>
+</tr>
+<tr class="header">
+<th>TS-18</th>
+<th>Endpoint: CRUD de conductores</th>
+<th>Como developer, quiero endpoints para registrar, consultar, actualizar y eliminar conductores</th>
+<th>Ver especificación CRUD de conductores.</th>
+<th>EP10</th>
+</tr>
+<tr class="odd">
+<th>TS-19</th>
+<th>Endpoint: CRUD de vehículos</th>
+<th>Como developer, quiero endpoints para registrar, consultar, actualizar y eliminar vehículos.</th>
+<th>Ver especificación CRUD de vehículos.</th>
+<th>EP10</th>
+</tr>
+<tr class="header">
+<th>TS-20</th>
+<th>Endpoint: Registrar y procesar pagos</th>
+<th>Como developer, quiero endpoints para registrar pagos, completarlos y procesar reembolsos.</th>
+<th>Ver especificación de pagos.</th>
+<th>EP11</th>
+</tr>
+<tr class="odd">
+<th>TS-21</th>
+<th>Endpoint: Consultar pagos</th>
+<th>Como developer, quiero endpoints para consultar pagos por distintos criterios.</th>
+<th>Ver especificación de consultas de pago.</th>
+<th>EP11</th>
+</tr>
+<tr class="header">
+<th>TS-22</th>
+<th>Endpoint: Calificaciones de proveedores</th>
+<th>Como developer, quiero endpoints para crear, listar y actualizar calificaciones de proveedores.</th>
+<th>Ver especificación de provider ratings.</th>
+<th>EP12</th>
+</tr>
+<tr class="odd">
+<th>TS-23</th>
+<th>Endpoint: Gestión de equipos</th>
+<th>Como developer, quiero endpoints para registrar, actualizar, listar y consultar equipos.</th>
+<th>Ver especificación de equipos.</th>
+<th>EP12</th>
+</tr>
+<tr class="header">
+<th>TS-24</th>
+<th>Endpoint: Asignar proveedor favorito</th>
+<th>Como developer, quiero un endpoint para asignar un proveedor favorito a un equipo.</th>
+<th>Ver especificación de proveedor favorito.</th>
+<th>EP12</th>
+</tr>
+<tr class="odd">
+<th>TS-25</th>
+<th>Endpoint: Eliminar equipo</th>
+<th>Como developer, quiero un endpoint para eliminar un equipo registrado.</th>
+<th>Ver especificación de eliminación de equipos.</th>
+<th>EP12</th>
+</tr>
+<tr class="header">
+<th>TS-26</th>
+<th>Endpoint: Sistema de notificaciones</th>
+<th>Como developer, quiero endpoints para crear, consultar y marcar notificaciones como leídas.</th>
+<th>Ver especificación de notificaciones.</th>
+<th>EP13</th>
+</tr>
+<tr class="odd">
+<th>TS-27</th>
+<th>Endpoint: Reportes y analítica</th>
+<th>Como developer, quiero endpoints para obtener indicadores y estadísticas de la plataforma.</th>
+<th>Ver especificación de analítica.</th>
+<th>EP14</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+
+## 3.3 Impact Map
+
+En el Impact Mapping del modelo de negocio digital de FuelBridge, desarrollado por la startup HaloFuel, el equipo elaboró el mapa partiendo de un Business Goal principal que cumple los criterios SMART: “Optimizar la gestión y distribución de combustible, alcanzando 300 empresas solicitantes activas y 100 proveedores registrados en el primer año de operación, reduciendo en un 40% los tiempos de gestión de pedidos”. A partir de esta meta se incorporaron como Actors/Personas a los User Personas previamente definidos: Carlos Ramírez (empresa solicitante) y Andrea López (proveedora de combustible). Para cada uno se identificaron los Impacts esperados, es decir, cómo se busca cambiar su comportamiento para lograr el objetivo: en el caso de Carlos, la digitalización del registro de pedidos, la reducción de la dependencia de canales informales, el seguimiento en tiempo real y una mejor toma de decisiones basada en datos; en el caso de Andrea, la centralización de pedidos, la optimización de la planificación logística, la mejora en la comunicación con clientes y el uso de métricas para el control operativo.
+
+A partir de estos impactos se definieron los Deliverables que la plataforma FuelBridge debe ofrecer para generar dichos cambios en los actores. Entre ellos se incluyen el módulo de registro y gestión de pedidos, el sistema de tracking en tiempo real, el panel de control con métricas operativas, la planificación logística automatizada, el historial de pedidos y el sistema de notificaciones y comunicación integrada. Finalmente, en la columna de User Stories se detallaron historias en formato “Como \[persona\] deseo \[acción\] para \[beneficio\]” (por ejemplo, registro de pedidos, consulta de estado, actualización de entregas, coordinación logística y generación de reportes), lo que permite trazar una línea clara desde los objetivos de negocio hasta las funcionalidades del sistema, asegurando la alineación entre Business Goals, Impacts, Deliverables y el desarrollo de la solución.
+
+<div align="center">
+  <img src="assets/chapter-3/image23.png" width="700" />
+</div>
+
+## 3.4 Product Backlog
+
+| **\#Orden** | **ID** | **Título**                                 | **Descripción**                                                                                                                                                                    | **Story Points** |
+|-------------|--------|--------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|
+| **01**      | US-05  | Registrar nuevo pedido                     | Como solicitante, quiero registrar un pedido con tipo y cantidad de combustible para que el proveedor lo procese.                                                                  | **5**            |
+| **02**      | US-06  | Consultar estado del pedido                | Como solicitante, quiero ver el estado de mis pedidos para saber si están aprobados, en tránsito o entregados.                                                                     | **2**            |
+| **03**      | US-08  | Registrar información de pago              | Como solicitante, quiero ingresar la información de los pagos correspondientes para validar el pedido ante el proveedor.                                                           | **3**            |
+| **04**      | US-07  | Confirmar recepción de pedido              | Como solicitante, quiero confirmar que recibí el pedido para que el proveedor lo cierre.                                                                                           | **2**            |
+| **05**      | US-09  | Ver historial de pedidos                   | Como solicitante, quiero ver mis pedidos anteriores para tener control sobre mi consumo.                                                                                           | **2**            |
+| **06**      | US-43  | Ver detalle de pedido                      | Como usuario de ambos segmentos, quiero ver el detalle completo de un pedido para revisar toda la información asociada.                                                            | **2**            |
+| **07**      | US-10  | Ver pedidos pendientes                     | Como proveedor, quiero ver todos los pedidos pendientes para analizarlos y tomar acción.                                                                                           | **2**            |
+| **08**      | US-11  | Aprobar pedido                             | Como proveedor, quiero aprobar pedidos según los depósitos hechos a mis cuentas bancarias.                                                                                         | **3**            |
+| **09**      | US-42  | Rechazar pedido                            | Como proveedor, quiero rechazar un pedido cuando no pueda atenderlo para notificar al solicitante oportunamente.                                                                   | **2**            |
+| **10**      | US-12  | Marcar pedido como despachado              | Como proveedor, quiero marcar cuándo un pedido sale a entrega para notificar al cliente.                                                                                           | **2**            |
+| **11**      | US-13  | Cerrar pedido                              | Como proveedor, quiero cerrar el pedido cuando el cliente confirme la entrega para finalizar el proceso.                                                                           | **2**            |
+| **12**      | US-14  | Generar reporte de ventas                  | Como proveedor, quiero generar reportes de ventas para tener registro de operaciones realizadas.                                                                                   | **3**            |
+| **13**      | US-46  | Gestionar inventario de combustibles       | Como proveedor, quiero registrar, editar y eliminar los productos de combustible de mi catálogo para que estén disponibles como opciones al crear un pedido.                       | **3**            |
+| **14**      | US-44  | Gestionar vehículos de flota               | Como proveedor, quiero registrar y administrar los vehículos de mi flota para tenerlos disponibles al asignarlos a pedidos.                                                        | **3**            |
+| **15**      | US-45  | Gestionar conductores                      | Como proveedor, quiero registrar y administrar los conductores de mi empresa para asignarlos correctamente a los despachos.                                                        | **3**            |
+| **16**      | US-49  | Asignar recursos a despacho                | Como proveedor, quiero asignar un vehículo y un conductor a un pedido aprobado en una sola operación para agilizar la preparación del despacho.                                    | **5**            |
+| **17**      | US-22  | Validar disponibilidad de transporte       | Como proveedor, quiero saber qué vehículos están disponibles antes de asignarlos para vincularlos correctamente.                                                                   | **5**            |
+| **18**      | US-18  | Ver resumen de pedidos (Solicitante)       | Como solicitante, quiero ver un resumen de mis pedidos para identificar cuántos están en proceso o completados.                                                                    | **3**            |
+| **19**      | US-47  | Ver Dashboard principal del proveedor      | Como proveedor, quiero acceder a un panel principal con KPIs de operación y un gráfico de tendencia de ventas para tener visibilidad en tiempo real del estado de mi negocio.      | **3**            |
+| **20**      | US-29  | Recibir notificación de aprobación         | Como solicitante, quiero recibir una notificación cuando un pedido sea aprobado o rechazado para estar informado.                                                                  | **2**            |
+| **21**      | US-30  | Notificación de pedido despachado          | Como solicitante, quiero recibir una notificación cuando un pedido haya sido despachado para estar informado.                                                                      | **2**            |
+| **22**      | US-27  | Buscar pedido por código                   | Como usuario de ambos segmentos, quiero buscar un pedido específico por su código para encontrarlo rápidamente.                                                                    | **2**            |
+| **23**      | US-28  | Filtrar pedidos por estado                 | Como usuario de ambos segmentos, quiero filtrar mis pedidos por estado para facilitar la revisión.                                                                                 | **2**            |
+| **24**      | US-31  | Ver listado de empresas                    | Como proveedor, quiero ver una lista de empresas solicitantes para identificar a mis clientes frecuentes.                                                                          | **2**            |
+| **25**      | US-32  | Ver detalles de empresa                    | Como proveedor, quiero ver información detallada de una empresa solicitante para analizar su historial de pedidos.                                                                 | **2**            |
+| **26**      | US-33  | Ver gráfico de consumo (Solicitante)       | Como solicitante, quiero ver un gráfico de mi consumo mensual para tener control sobre el uso del combustible.                                                                     | **3**            |
+| **27**      | US-34  | Ver gráfico de ventas (Proveedor)          | Como proveedor, quiero ver un gráfico de ventas por mes para monitorear el rendimiento del negocio.                                                                                | **3**            |
+| **28**      | US-48  | Ver distribución de ventas por sector      | Como proveedor, quiero ver la distribución de mis ventas por sector industrial para identificar cuáles son mis clientes más relevantes por rubro.                                  | **2**            |
+| **29**      | US-35  | Descargar reporte PDF                      | Como usuario de ambos segmentos, quiero descargar un resumen de pedidos o ventas en formato PDF para archivarlo o compartirlo.                                                     | **3**            |
+| **30**      | US-01  | Ver sección Home                           | Como visitante (proveedor), quiero ver una sección de inicio que resuma el valor de FuelBridge para comprender rápidamente el objetivo del sistema.                                  | **2**            |
+| **31**      | US-02  | Ver sección About Us                       | Como visitante de ambos segmentos, quiero conocer quiénes están detrás de FuelBridge para confiar en el sistema.                                                                     | **1**            |
+| **32**      | US-03  | Ver sección How it works?                  | Como visitante de ambos segmentos, quiero entender cómo funciona FuelBridge paso a paso para evaluar si se ajusta a mis necesidades.                                                 | **2**            |
+| **33**      | US-36  | Ver sección Benefits                       | Como visitante de ambos segmentos, quiero conocer las principales ventajas para evaluar la implementación de la plataforma.                                                        | **1**            |
+| **34**      | US-37  | Ver sección Lo que Dicen Nuestros Clientes | Como visitante de ambos segmentos, quiero conocer los testimonios de usuarios de FuelBridge para tener confianza en la plataforma.                                                   | **2**            |
+| **35**      | US-38  | Ver sección Planes y Precios               | Como visitante de ambos segmentos, quiero saber qué planes se adecuan a mis necesidades para poder iniciar un proceso de registro.                                                 | **3**            |
+| **36**      | US-39  | Cambiar idioma                             | Como visitante de ambos segmentos, quiero poder cambiar entre inglés y español para entender la plataforma en mi idioma preferido.                                                 | **3**            |
+| **37**      | US-04  | Enviar mensaje de contacto                 | Como visitante de ambos segmentos, quiero enviar un mensaje desde Contact Us para solicitar más información.                                                                       | **3**            |
+| **38**      | US-23  | Ver perfil de usuario                      | Como usuario registrado, quiero ver mis datos de perfil para revisar mi información registrada.                                                                                    | **1**            |
+| **39**      | US-24  | Editar datos de perfil                     | Como usuario registrado, quiero editar mis datos para mantener mi información actualizada.                                                                                         | **2**            |
+| **40**      | US-25  | Ver sección de preguntas frecuentes        | Como visitante de ambos segmentos, quiero acceder a una sección de preguntas frecuentes para resolver dudas rápidamente.                                                           | **2**            |
+| **41**      | US-26  | Acceder a información de contacto rápido   | Como usuario de ambos segmentos, quiero ver datos de contacto directo (teléfono o correo) para hacer consultas urgentes.                                                           | **1**            |
+| **42**      | US-40  | Registrar empresa solicitante              | Como visitante (solicitante), quiero registrar mi empresa en la plataforma para comenzar a realizar pedidos de combustible.                                                        | **3**            |
+| **43**      | US-41  | Registrar empresa proveedora               | Como visitante (proveedor), quiero registrar mi empresa distribuidora en la plataforma para comenzar a gestionar pedidos de combustible.                                           | **3**            |
+| **44**      | US-15  | Iniciar sesión                             | Como usuario registrado, quiero iniciar sesión con correo y contraseña para acceder a mi cuenta.                                                                                   | **2**            |
+| **45**      | US-16  | Recuperar contraseña                       | Como usuario registrado, quiero recuperar mi contraseña para volver a acceder si la olvidé.                                                                                        | **2**            |
+| **46**      | US-17  | Cerrar sesión                              | Como usuario registrado, quiero poder cerrar sesión para mantener segura mi cuenta.                                                                                                | **1**            |
+| **47**      | TS-01  | Endpoint: Login                            | Como developer, quiero un endpoint para autenticar usuarios.                                                                                                                       | **2**            |
+| **48**      | TS-02  | Endpoint: Recuperar contraseña             | Como developer, quiero un endpoint que permita enviar correo de recuperación.                                                                                                      | **2**            |
+| **49**      | TS-03  | Endpoint: Logout                           | Como developer, quiero un endpoint para cerrar sesión.                                                                                                                             | **1**            |
+| **50**      | TS-04  | Endpoint: Crear pedido                     | Como developer, quiero un endpoint para registrar un nuevo pedido de combustible.                                                                                                  | **3**            |
+| **51**      | TS-05  | Endpoint: Consultar pedidos por usuario    | Como developer, quiero un endpoint para obtener todos los pedidos de un usuario.                                                                                                   | **2**            |
+| **52**      | TS-06  | Endpoint: Registro de usuario              | Como developer, quiero un endpoint para registrar nuevos usuarios en la plataforma (sign-up).                                                                                      | **3**            |
+| **53**      | TS-07  | Endpoint: Consultar usuarios               | Como developer, quiero endpoints para listar todos los usuarios y consultar uno por su ID.                                                                                         | **5**            |
+| **54**      | TS-08  | Endpoint: CRUD de empresas compradoras     | Como developer, quiero endpoints para registrar, listar, consultar y actualizar empresas compradoras (buyer companies).                                                            | **5**            |
+| **55**      | TS-09  | Endpoint: CRUD de empresas proveedoras     | Como developer, quiero endpoints para registrar, listar, consultar y actualizar empresas proveedoras (provider companies).                                                         | **3**            |
+| **56**      | TS-10  | Endpoint: Actualizar perfil de usuario     | Como developer, quiero un endpoint para que un usuario autenticado actualice los datos de su propio perfil.                                                                        | **5**            |
+| **57**      | TS-11  | Endpoint: CRUD de productos de combustible | Como developer, quiero endpoints para crear, listar, consultar (por ID y por proveedor), actualizar y eliminar productos de combustible.                                           | **2**            |
+| **58**      | TS-12  | Endpoint: Actualizar stock de producto     | Como developer, quiero un endpoint para actualizar el stock disponible de un producto de combustible.                                                                              | **3**            |
+| **59**      | TS-13  | Endpoint: Consultar pedidos                | Como developer, quiero endpoints para listar todos los pedidos y consultarlos por ID, por empresa compradora y por proveedor.                                                      | **3**            |
+| **60**      | TS-14  | Endpoint: Confirmar / cancelar pedido      | Como developer, quiero endpoints para confirmar o cancelar un pedido existente.                                                                                                    | **5**            |
+| **61**      | TS-15  | Endpoint: Solicitudes de combustible       | Como developer, quiero endpoints para crear, listar, aceptar y rechazar solicitudes de combustible (fuel requests).                                                                | **2**            |
+| **62**      | TS-16  | Endpoint: Consultar solicitud por ID       | Como developer, quiero un endpoint para consultar el detalle de una solicitud de combustible específica.                                                                           | **5**            |
+| **63**      | TS-17  | Endpoint: Gestión de entregas              | Como developer, quiero endpoints para crear, despachar, completar, marcar como fallida y consultar entregas (todas, por ID, por proveedor y por pedido).                           | **5**            |
+| **64**      | TS-18  | Endpoint: CRUD de conductores              | Como developer, quiero endpoints para registrar, listar por proveedor, consultar, actualizar y eliminar conductores.                                                               | **5**            |
+| **65**      | TS-19  | Endpoint: CRUD de vehículos                | Como developer, quiero endpoints para registrar, listar por proveedor, consultar, actualizar y eliminar vehículos.                                                                 | **3**            |
+| **66**      | TS-20  | Endpoint: Registrar y procesar pagos       | Como developer, quiero endpoints para registrar un pago, marcarlo como completado y procesar su reembolso.                                                                         | **3**            |
+| **67**      | TS-21  | Endpoint: Consultar pagos                  | Como developer, quiero endpoints para listar todos los pagos y consultarlos por ID, por pedido y por empresa.                                                                      | **3**            |
+| **68**      | TS-22  | Endpoint: Calificaciones de proveedores    | Como developer, quiero endpoints para crear, listar y actualizar calificaciones de proveedores.                                                                                    | **5**            |
+| **69**      | TS-23  | Endpoint: Gestión de equipos               | Como developer, quiero endpoints para registrar, actualizar, listar y consultar equipos (por ID y por empresa).                                                                    | **2**            |
+| **70**      | TS-24  | Endpoint: Asignar proveedor favorito       | Como developer, quiero un endpoint para asignar un proveedor favorito a un equipo.                                                                                                 | **2**            |
+| **71**      | TS-25  | Endpoint: Eliminar equipo                  | Como developer, quiero un endpoint para eliminar un equipo registrado.                                                                                                             | **5**            |
+| **72**      | TS-26  | Endpoint: Sistema de notificaciones        | Como developer, quiero endpoints para crear notificaciones, marcarlas como leídas y consultarlas por usuario, por empresa compradora, por proveedor y las no leídas de un usuario. | **5**            |
+| **73**      | TS-27  | Endpoint: Reportes y analítica             | Como developer, quiero endpoints para obtener el resumen general de la plataforma y la analítica de un proveedor o comprador específico.                                           | **5**            |
+
+<div align="center">
+  <img src="assets/chapter-3/image8.png" width="700" />
+</div>
+
+Link del Trello: **[https://trello.com/invite/b/69e2fd01ee5b055b2d967a45/ATTI05a9ebca4c1da02108fc92fa76bfa07e412172F6/fulltank](https://trello.com/invite/b/69e2fd01ee5b055b2d967a45/ATTI05a9ebca4c1da02108fc92fa76bfa07e412172F6/fulltank)**
+
+---
+
+# Capítulo IV: Product Architecture Design
+
+## 4.1 Design Concepts, ViewPoints & ER Diagrams
+
+### 4.1.1 Principles Statements
+
+El diseño arquitectónico de FuelBridge (desarrollado por HaloFuel) se rige bajo principios fundamentales de ingeniería de software para garantizar escalabilidad, mantenibilidad y una experiencia de usuario óptima:
+
+- Domain-Driven Design (DDD): El software está estrictamente alineado con los procesos de negocio de compra y distribución de combustible. El sistema se divide en Bounded Contexts claramente definidos (como Ordering, Payment, Fulfillment y Catalog) para aislar la complejidad del dominio.
+
+- Separation of Concerns (SoC): El sistema se divide en distintas capas (Presentación, Lógica de Negocio mediante APIs y Acceso a Datos) asegurando que cada componente tenga una responsabilidad única.
+
+- API-First Design: Todo el acceso a la lógica de negocio y a los datos se expone mediante una API REST centralizada, permitiendo que múltiples interfaces consuman los mismos servicios y facilitando integraciones futuras.
+
+- Diseño centrado en el usuario: Priorización de interfaces limpias, fluidas y de respuesta rápida (Single Page Application) orientadas a resolver problemas prácticos del día a día logístico y asegurar la satisfacción del usuario final.
+
+### 4.1.2 Approaches Statements Architectural Styles & Patterns
+
+Para resolver la problemática de comunicación informal y trazabilidad en el sector energético, se adoptan los siguientes estilos:
+
+- Arquitectura basada en Componentes / Microservicios lógicos: El backend se estructura internamente en módulos independientes por dominio, facilitando la escalabilidad y el mantenimiento concurrente.
+
+- Single Page Application (SPA): El frontend utiliza un estilo de aplicación de página única para brindar una experiencia fluida sin recargas, crucial para paneles de control en tiempo real.
+
+- Event-Driven (Parcial): Implementado para la orquestación asíncrona, como el disparo de notificaciones o la generación de reportes PDF cuando un pedido cambia de estado en el sistema.
+
+### 4.1.3 Context Diagram
+
+<div align="center">
+  <img src="assets/chapter-4/image2.png" width="700" />
+</div>
+
+El Diagrama de Contexto de FuelBridge define los límites del sistema y sus interacciones principales con los usuarios y sistemas externos:
+
+**Sistema Central**
+
+FuelBridge Platform: Sistema web para la gestión de distribución de combustible.
+
+**Actores (Personas)**
+
+- Visitor: Usuario anónimo que navega por la Landing Page pública para conocer las características de la plataforma y registrarse.
+
+- Client (Requester): Representante de una empresa que necesita combustible. Interactúa para crear pedidos, registrar pagos y hacer seguimiento del estado de entrega.
+
+- Provider: Representante de la empresa distribuidora de combustible. Gestiona el inventario, aprueba/rechaza pedidos, asigna la flota logística y despacha las entregas.
+
+**Sistemas Externos**
+
+- Email Service: Sistema de software utilizado para enviar correos de recuperación de contraseñas a los usuarios registrados mediante REST API.
+
+- Cloud Storage: Servicio en la nube encargado de almacenar las imágenes de los vouchers de pago subidos por los clientes.
+
+- PDF Generator Service: Herramienta externa consumida vía REST API para generar reportes descargables en PDF sobre ventas y resúmenes de consumo.
+
+### 4.1.4 Approach Driven ViewPoints Diagrams
+
+<div align="center">
+  <img src="assets/chapter-4/image19.png" width="700" />
+</div>
+
+El Diagrama de Contenedores detalla la arquitectura de alto nivel y las piezas de software desplegables:
+
+- Landing Page: Sitio web estático que presenta las características de la plataforma, planes de precios, preguntas frecuentes y formulario de contacto, redirigiendo al usuario a la aplicación principal.
+
+- FuelBridge Web Application: Una Single Page Application (SPA) ejecutada en el navegador del usuario, que sirve como la interfaz gráfica unificada para que clientes y proveedores gestionen el ciclo de vida del combustible.
+
+- FuelBridge API: Desarrollada en ASP.NET Core 8, es la API RESTful central que contiene toda la lógica de negocio, procesa las peticiones del frontend y orquesta los diferentes Bounded Contents.
+
+- MySQL Database: Base de datos relacional centralizada que almacena la información de dominio (usuarios, clientes, proveedores, pedidos, pagos, flota, despachos, etc.) utilizando Spring Data JPA.
+
+<div align="center">
+  <img src="assets/chapter-4/image15.png" width="700" />
+</div>
+
+A nivel de componentes, la FuelBridge API se descompone en los siguientes Bounded Contexts (BC) para mantener alta cohesión:
+
+- Identity & Access BC: Gestiona registro, autenticación, JWT y recuperación de contraseñas.
+
+- Ordering BC: Orquesta el ciclo de vida del pedido (creación, aprobación, rechazo, despacho y cierre).
+
+- Catalog BC: Administra el inventario del proveedor, niveles de stock y precios.
+
+- Payment BC: Registra comprobantes de pago y valida los montos.
+
+- Fulfillment BC: Administra la flota (vehículos y conductores) y su asignación a pedidos.
+
+- Notification BC: Crea notificaciones in-app ante cambios de estado de los pedidos.
+
+- Reporting & Analytics BC: Agrega datos para generar gráficos y solicitar PDFs de ventas.
+
+### 4.1.5 Relational/Non Relational Database Diagram
+
+<div align="center">
+  <img src="assets/chapter-4/image14.png" width="700" />
+</div>
+
+El modelo de datos relacional de la plataforma está normalizado para garantizar la integridad referencial y soportar las transacciones de los diferentes Bounded Contexts. El esquema se articula de la siguiente manera:
+
+- Identidad y Perfiles: La tabla central USER almacena credenciales y roles. De esta se derivan lógicamente los perfiles especializados CLIENT (empresa solicitante) y PROVIDER (distribuidor), que incluyen datos comerciales específicos.
+
+- Ciclo de Pedidos: La interacción comercial inicia en la tabla REQUEST y se detalla en REQUEST_DETAILS. Una vez aceptada, se consolida en la tabla transaccional ORDER, que centraliza estados y tiempos (aprobado, despachado, entregado).
+
+- Finanzas e Inventario: Los pagos se registran en la tabla PAYMENT (asociada a una orden), además de considerar depósitos pre-aprobados en DEPOSIT. La tabla INVENTORY controla el stock de combustible de cada proveedor.
+
+- Logística y Despacho: La tabla DISPATCH actúa como el núcleo operativo, vinculando un pedido aprobado (ORDER) con los recursos físicos de la tabla TRANSPORT (vehículos, placas, capacidad) y DRIVER (conductores y licencias).
+
+- Notificaciones y Reportes: Tablas auxiliares como NOTIFICATION permiten el historial de alertas por usuario, y REPORT consolida la metadata de los archivos generados en el sistema.
+
+### 4.1.6 Design Patterns
+
+- Repository Pattern: Aplicado en el acceso a datos para abstraer las consultas a MySQL, permitiendo modificaciones en el motor de persistencia sin alterar los controladores de la API.
+
+- Observer (Publish-Subscribe): Empleado internamente para que el Notification BC y Reporting & Analytics BC reaccionen asíncronamente a los eventos del Ordering BC (ej. cuando se aprueba o despacha una orden).
+
+- MVC / MVVM: Patrones aplicados en el diseño de la SPA en el frontend para separar la lógica de presentación de la lógica de consumo de servicios REST.
+
+### 4.1.7 Tactics
+
+- Disponibilidad (Availability): Uso de redundancia en la persistencia de datos (Cloud Storage para archivos) y excepciones controladas en la comunicación con servicios de terceros (como el PDF Generator) para evitar fallos en cascada.
+
+- Seguridad (Security): Autenticación estricta mediante JSON Web Tokens (JWT) gestionada por el Identity & Access BC, además de obligar al uso de HTTPS para todo el tráfico entre la SPA, la Landing Page y la API.
+
+- Modificabilidad (Modifiability): La alta cohesión lograda al separar la API en 7 Bounded Contexts distintos permite modificar, por ejemplo, la lógica de inventario (Catalog BC) sin impactar la lógica de despachos (Fulfillment BC).
+
+## 4.2 Architectural Drivers
+
+### 4.2.1 Design Purpose
+
+El propósito arquitectónico de FuelBridge es proporcionar una plataforma B2B centralizada y altamente confiable que digitalice el flujo completo de pedido, pago y despacho de combustible. Se busca reemplazar los canales informales (WhatsApp, llamadas, hojas de Excel) para reducir errores operativos, brindar trazabilidad en tiempo real y optimizar los tiempos de gestión logística para empresas de los sectores de minería y construcción.
+
+### 4.2.2 Primary Functionality (Primary User Stories)
+
+La arquitectura debe dar soporte prioritario a las historias de usuario y endpoints core identificados con mayor valor de negocio en el Product Backlog:
+
+- US-05 / TS-04: Registrar un nuevo pedido de combustible (Solicitante) y su creación en la base de datos.
+
+- US-11 / TS-14: Aprobar pedidos condicionados a la validación de los pagos correspondientes (Proveedor).
+
+- US-46 / TS-17: Asignar recursos físicos (vehículo y conductor) al despacho en una sola operación.
+
+- US-47: Despliegue de un Dashboard principal para el proveedor con KPIs y métricas en tiempo real.
+
+### 4.2.3 Quality Attribute Scenarios
+
+Basado en los requerimientos del sector B2B, los atributos de calidad críticos son:
+
+Usabilidad (Usability): Dado que los usuarios transicionan desde herramientas manuales, el frontend (SPA) debe ser extremadamente intuitivo. Al registrar un pedido (US-05) o asignar flota (US-46), el sistema debe brindar feedback visual inmediato sin superar los tiempos cognitivos de espera.
+
+Disponibilidad y Trazabilidad (Availability & Traceability): El seguimiento del pedido es el dolor principal de los clientes. Si el proveedor actualiza el estado de una orden a "Despachado", el Notification BC debe asegurar que la alerta llegue a la plataforma del cliente sin pérdida de eventos, garantizando visibilidad 24/7.
+
+Desempeño (Performance): La carga de interfaces analíticas (como el Dashboard del proveedor y el historial del cliente) requiere procesar múltiples registros. El diseño de la base de datos MySQL debe soportar índices eficientes para evitar bloqueos durante consultas de rango de fechas.
+
+### 4.2.4 Constraints
+
+- Tecnológicas: El backend se restringe al uso del entorno ASP.NET Core 8 para la exposición de la REST API y MySQL para la persistencia transaccional.
+
+- Integración de Terceros: El sistema tiene dependencias externas estrictas para el envío de correos, almacenamiento de vouchers (Cloud Storage) y generación de reportes (PDF Generator), por lo que las interfaces de red deben manejar latencias.
+
+- Plazos (Time-to-market): El proyecto cuenta con un límite de tiempo estructurado en 4 Sprints, obligando a un desarrollo ágil y priorización del MVP.
+
+### 4.2.5 Architectural Concerns
+
+- Gestión Segura del Estado: Coordinar el flujo transaccional entre el pedido, el pago y la liberación de inventario (Ordering BC, Payment BC y Catalog BC) garantizando que un despacho no ocurra si el pago y el stock no están debidamente verificados.
+
+- Desacoplamiento de Servicios Bloqueantes: Extraer tareas pesadas o de latencia variable (generación de PDFs o envío masivo de correos) fuera del hilo principal de ejecución HTTP para no afectar la experiencia del usuario.
+
+- Mantenimiento del Código: Asegurar convenciones claras de nombrado, estructuración por dominios y un pipeline de CI/CD que soporte integraciones continuas conforme avance el equipo durante los Sprints establecidos.
+
+## 4.3 ADD Iterations
+
+### 4.3.1 Iteration 1: Estructura Global del Sistema
+
+#### 4.3.1.1 Architectural Design Backlog 1
+
+| **ID** | **Decisión de Diseño**                                                                   | **Driver Relacionado**                                       | **Prioridad** | **Estado**   |
+|--------|------------------------------------------------------------------------------------------|--------------------------------------------------------------|---------------|--------------|
+| ADD-01 | Definir los contenedores principales del sistema y sus responsabilidades                 | QA-1 (Availability & Traceability), QA-3 (Usability)         | Alta          | Por resolver |
+| ADD-02 | Establecer el estilo arquitectónico base (SPA + API REST + BCs)                          | QA-2 (Performance), Constraint Tecnológica                   | Alta          | Por resolver |
+| ADD-03 | Definir la estrategia de comunicación entre contenedores (sincrónica o. asincrónica)     | QA-1 (Availability & Traceability), Concern: Desacoplamiento | Alta          | Por resolver |
+| ADD-04 | Establecer la separación en Bounded Contexts dentro de la API                            | QA-2 (Performance), Concern: Gestión Segura del Estado       | Media         | Por resolver |
+| ADD-05 | Definir la Landing Page como contenedor estático separado de la FuelBridge Web Application | QA-3 (Usability), Concern: Separación de responsabilidades   | Media         | Por resolver |
+
+#### 4.3.1.2 Establish Iteration Goal by Selecting Drivers
+
+El objetivo de esta primera iteración es establecer la estructura global del sistema desde cero, definiendo los contenedores principales que lo componen y las relaciones entre ellos.
+
+Drivers trabajados en Iteración 1: QA-1 Availability & Traceability, QA-3 Usability y Constraint Tecnológica ASP.NET Core 8 + MySQL. :
+
+**QA-1 Availability & Traceability:** Es el driver de mayor impacto para el negocio. Los clientes del sector B2B (minería y construcción) dependen de la visibilidad del estado de sus pedidos en tiempo real. Una arquitectura que no garantice la entrega confiable de eventos de cambio de estado compromete el valor principal de la plataforma. Por ello, la estructura global debe contemplar desde el inicio un mecanismo asincrónico que desacople la notificación del flujo principal del pedido.
+
+**QA-3 Usability:** Los usuarios de FuelBridge provienen de entornos manuales (Excel, WhatsApp). La arquitectura debe soportar una interfaz de usuario fluida y sin interrupciones, lo que justifica la elección de una SPA como contenedor de frontend separado de la API, permitiendo actualizaciones parciales de la vista sin recargas completas.
+
+**Constraint Tecnológica:** El equipo está restringido al uso de ASP.NET Core 8 para el backend y MySQL para la persistencia. Esta restricción condiciona directamente las decisiones de contenedores y patrones de acceso a datos.
+
+Los drivers QA-2 (Performance) y los Concerns de gestión del estado quedan registrados en el backlog pero se abordan en la Iteración 2, donde se profundizará en los componentes internos de la API.
+
+#### 4.3.1.3 Choose One or More Elements of the System to Refine
+
+El elemento refinado en esta iteración es el sistema FuelBridge en su totalidad, abordado como una unidad que se descompone por primera vez en sus contenedores desplegables. Se identifican como puntos de decisión:
+
+- La separación entre el frontend y el backend como contenedores independientes.
+
+- La estructura interna de la API y su división en Bounded Contexts.
+
+- Las integraciones con sistemas externos (Email Service, Cloud Storage, PDF Generator Service) y el tipo de comunicación que cada una requiere.
+
+#### 4.3.1.4 Choose One or More Design Concepts That Satisfy the Selected Drivers
+
+| **Concepto evaluado**                           | **Decisión** | **Razón**                                                                                                                   |
+|-------------------------------------------------|--------------|-----------------------------------------------------------------------------------------------------------------------------|
+| Monolito MVC server-side                        | Rechazado    | Las recargas completas de página son incompatibles con la experiencia requerida en paneles de control en tiempo real (QA-3) |
+| SPA + REST API desacoplada                      | Seleccionado | Permite actualizaciones parciales de la vista y desacopla el ciclo de despliegue del frontend del backend                   |
+| Microservicios distribuidos                     | Rechazado    | Complejidad operativa incompatible con el plazo de 4 Sprints (Constraint: Time-to-market)                                   |
+| Monolito Modular (API única con BCs internos)   | Seleccionado | Compatible con ASP.NET Core 8 y MySQL; permite cohesión por dominio sin overhead de infraestructura distribuida             |
+| Observer/Pub-Sub interno para eventos entre BCs | Seleccionado | Desacopla el Notification BC del flujo transaccional del Ordering BC sin requerir un message broker externo en esta etapa   |
+
+Decisión adoptada: arquitectura de Monolito Modular con SPA desacoplada. La API centralizada en ASP.NET Core 8 se divide internamente en 7 Bounded Contexts que comparten una base de datos MySQL. La comunicación entre BCs que requiere desacoplamiento se implementa mediante Observer/Pub-Sub interno.
+
+#### 4.3.1.5 Instantiate Architectural Elements, Allocate Responsibilities, and Define Interfaces
+
+**Contenedores del sistema:**
+
+| **Elemento**             | **Tipo**                 | **Responsabilidad**                                                                                                 | **Interfaz**                                                                                  |
+|--------------------------|--------------------------|---------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
+| Landing Page             | Static Web               | Presentación pública de la plataforma y redirección al Web Application                                              | Ninguna, redirección via URL                                                                  |
+| FuelBridge Web Application | SPA (Vue/React)          | Interfaz unificada para clientes y proveedores en la gestión del ciclo de vida del combustible                      | Consume: FuelBridge API (REST/HTTPS)                                                            |
+| FuelBridge API             | ASP.NET Core 8           | Lógica de negocio completa dividida en 7 BCs; procesamiento de pedidos, pagos, despachos, notificaciones y reportes | Expone: REST API (HTTPS/JSON). Consume: MySQL DB, Email Service, Cloud Storage, PDF Generator |
+| MySQL Database           | Base de datos relacional | Persistencia transaccional de todos los dominios del sistema                                                        | Consumida por FuelBridge API via Entity Framework Core                                          |
+| Email Service            | Sistema externo          | Envío de correos de recuperación de contraseña                                                                      | Consumido por Identity & Access BC via REST API                                               |
+| Cloud Storage            | Sistema externo          | Almacenamiento de vouchers de pago                                                                                  | Consumido por Payment BC via REST API                                                         |
+| PDF Generator Service    | Sistema externo          | Generación de reportes en PDF                                                                                       | Consumido por Reporting & Analytics BC via REST API                                           |
+
+**Bounded Contexts de la FuelBridge API:**
+
+| **Bounded Context**      | **Responsabilidad**                                                        |
+|--------------------------|----------------------------------------------------------------------------|
+| Identity & Access BC     | Registro, autenticación JWT y recuperación de contraseña                   |
+| Ordering BC              | Ciclo de vida del pedido: creación, aprobación, rechazo, despacho y cierre |
+| Payment BC               | Registro de comprobantes de pago y validación de montos                    |
+| Catalog BC               | Gestión de inventario de combustible: stock y precios                      |
+| Fulfillment BC           | Gestión de flota (vehículos y conductores) y asignación a despachos        |
+| Notification BC          | Generación de notificaciones in-app ante cambios de estado de pedidos      |
+| Reporting & Analytics BC | Agregación de datos para KPIs del dashboard y generación de reportes PDF   |
+
+#### 4.3.1.6 Sketch Views (C4 & UML) and Record Design Decisions
+
+**C4 Context Diagram**
+
+<div align="center">
+  <img src="assets/chapter-4/image20.png" width="700" />
+</div>
+
+**Diagrama de Secuencia UML**
+
+<div align="center">
+  <img src="assets/chapter-4/image28.png" width="700" />
+</div>
+
+**Diagrama de Componentes - Estructura del Monolito**
+
+**Component Diagram – FuelBridge API**
+
+<div align="center">
+  <img src="assets/chapter-4/image30.png" width="700" />
+</div>
+
+El diagrama de componentes representa la estructura interna del Monolito Modular implementado en FuelBridge API. La lógica de negocio se divide en siete Bounded Contexts con responsabilidades independientes: Identity & Access, Ordering, Payment, Catalog, Fulfillment, Notification y Reporting & Analytics. Todos los componentes se ejecutan dentro de una única API ASP.NET Core 8 y comparten una base de datos MySQL. Las integraciones externas se mantienen asociadas al contexto responsable: Identity & Access consume Email Service, Payment utiliza Cloud Storage y Reporting & Analytics utiliza PDF Generator Service. Asimismo, Ordering BC se comunica con Notification BC mediante Observer/Pub-Sub interno para reducir el acoplamiento del flujo de notificaciones.
+
+**C4 Component Diagram – FuelBridge Web Application**
+
+<div align="center">
+  <img src="assets/chapter-4/image25.png" width="700" />
+</div>
+
+El diagrama de componentes de FuelBridge Web Application representa la organización interna de la SPA utilizada por clientes, proveedores y administradores. La interfaz se divide en componentes asociados a las principales funcionalidades del sistema, como autenticación, pedidos, catálogo, pagos, despachos, notificaciones y reportes. Todas las operaciones hacia el backend se centralizan mediante API Client, que consume FuelBridge API utilizando REST sobre HTTPS. Shared UI Components reúne elementos reutilizables de interfaz para evitar duplicación y mantener consistencia visual.
+
+**C4 Component Diagram – Landing Page**
+
+<div align="center">
+  <img src="assets/chapter-4/image5.png" width="700" />
+</div>
+
+El diagrama de componentes de la Landing Page representa la estructura del sitio público de FuelBridge. Al tratarse de una aplicación web estática, sus componentes se limitan a responsabilidades de presentación y navegación. Navigation permite acceder a las distintas secciones, Hero Section comunica la propuesta principal, Platform Information presenta las características de la solución y Access CTA redirige hacia FuelBridge Web Application. Esta separación mantiene la Landing Page independiente de la lógica transaccional del sistema.
+
+| **ID** | **Decisión**                                                  | **Alternativa descartada**        | **Justificación**                                                                        | **Consecuencia**                                                                |
+|--------|---------------------------------------------------------------|-----------------------------------|------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
+| ADR-01 | SPA desacoplada del backend                                   | Monolito MVC server-side          | Soporte de actualizaciones parciales de vista sin recargas para paneles en tiempo real   | El frontend requiere pipeline de despliegue independiente                       |
+| ADR-02 | Monolito Modular como estilo del backend                      | Microservicios distribuidos       | Viable dentro del plazo de 4 Sprints; modificabilidad por dominio sin overhead operativo | Riesgo de acoplamiento si los BCs no mantienen límites claros en el código      |
+| ADR-03 | Observer/Pub-Sub interno para eventos Ordering → Notification | Message broker externo (RabbitMQ) | Satisface QA-1 sin infraestructura adicional en el MVP                                   | Si el volumen de eventos crece, se requerirá migrar a un message broker externo |
+| ADR-04 | Base de datos MySQL compartida entre todos los BCs            | Base de datos por BC              | Compatible con la Constraint Tecnológica y el time-to-market                             | Cambios en tablas compartidas requieren coordinación entre BCs                  |
+
+#### 4.3.1.7 Analysis of Current Design and Review Iteration Goal (Kanban Board)
+
+Al cierre de esta iteración, los objetivos planteados en el backlog quedan en el siguiente estado:
+
+| **Tarea**                                                   | **Estado** |
+|-------------------------------------------------------------|------------|
+| Definir contenedores principales del sistema                | Done       |
+| Establecer estilo arquitectónico base                       | Done       |
+| Definir estrategia de comunicación entre contenedores       | Done       |
+| Separar API en Bounded Contexts y asignar responsabilidades | Done       |
+| Elaborar C4 Level 1 Context Diagram                         | Done       |
+| Elaborar C4 Level 2 Container Diagram                       | Done       |
+| Elaborar C4 Level 3 Component Diagram (FuelBridge API)        | Done       |
+| Registrar decisiones de diseño (ADR-01 al ADR-04)           | Done       |
+| Abordar QA-2 (Performance) a nivel de componentes internos  | Pendiente  |
+
+Los drivers QA-1 y QA-3 quedan satisfechos a nivel estructural. QA-2 se traslada a la Iteración 2 donde se abordará la estructura interna del Ordering BC y el Reporting & Analytics BC.
+
+### 4.3.2 Iteration 2: Performance y Procesamiento Asíncrono de Pedidos, Notificaciones y Reportes
+
+#### 4.3.2.1 Architectural Design Backlog 2
+
+| **Decisión de diseño**                                                                  | **Driver relacionado**                                      | **ID** | **Prioridad** | **Estado**   |
+|-----------------------------------------------------------------------------------------|-------------------------------------------------------------|--------|---------------|--------------|
+| Optimizar consultas del Dashboard y reportes                                            | QA-2 Performance                                            | ADD-06 | Alta          | Por resolver |
+| Definir procesamiento asíncrono para notificaciones y reportes PDF                      | QA-1 Availability & Traceability / Concern: Desacoplamiento | ADD-07 | Alta          | Por resolver |
+| Refinar componentes internos de Ordering BC, Notification BC y Reporting & Analytics BC | QA-2 Performance / Modificabilidad                          | ADD-08 | Alta          | Por resolver |
+| Definir interfaces internas entre BCs mediante eventos de dominio                       | Concern: Gestión Segura del Estado                          | ADD-09 | Media         | Por resolver |
+| Establecer estrategia de índices y consultas para MySQL                                 | QA-2 Performance                                            | ADD-10 | Media         | Por resolver |
+
+#### 4.3.2.2 Establish Iteration Goal by Selecting Drivers
+
+El objetivo de esta segunda iteración es refinar los componentes internos de la FuelBridge/FuelBridge API, priorizando el desempeño del Dashboard, el procesamiento de reportes y el desacoplamiento de notificaciones generadas por cambios de estado de pedidos. Los drivers seleccionados son QA-2 Performance, porque el Dashboard y el historial requieren consultar múltiples registros sin bloquear la operación; QA-1 Availability & Traceability, porque cada cambio de estado del pedido debe generar notificaciones sin pérdida de eventos; y el concern de Desacoplamiento de Servicios Bloqueantes, porque la generación de PDFs y envío de correos no deben ejecutarse dentro del flujo principal HTTP. Estos drivers ya estaban identificados en la sección 4.2 y quedaron pendientes al cierre de la Iteración 1.
+
+#### 4.3.2.3 Choose One or More Elements of the System to Refine
+
+En esta iteración se refina el contenedor FuelBridge/FuelBridge API, específicamente los Bounded Contexts internos que soportan el flujo transaccional y analítico:
+
+- Ordering BC: ciclo de vida del pedido.
+
+- Notification BC: generación de notificaciones por cambios de estado.
+
+- Reporting & Analytics BC: KPIs, dashboard y reportes PDF.
+
+- Payment BC: validación de pagos antes de aprobación.
+
+- Catalog BC: verificación de stock antes del despacho.
+
+Estos elementos se seleccionan porque concentran los puntos de mayor riesgo: pedidos, pagos, stock, notificaciones y reportes.
+
+#### 4.3.2.4 Choose One or More Design Concepts That Satisfy the Selected Drivers
+
+| **Concepto evaluado**                      | **Decisión** | **Razón**                                                                                         |
+|--------------------------------------------|--------------|---------------------------------------------------------------------------------------------------|
+| Procesamiento síncrono completo            | Rechazado    | Puede bloquear la API al generar PDFs o enviar notificaciones.                                    |
+| Observer/Pub-Sub interno                   | Seleccionado | Permite que Notification BC y Reporting BC reaccionen a eventos sin acoplarse al flujo principal. |
+| Repository Pattern                         | Seleccionado | Abstrae acceso a MySQL y mejora mantenibilidad.                                                   |
+| Índices en MySQL para consultas frecuentes | Seleccionado | Reduce tiempos de búsqueda en Dashboard e historial                                               |
+| Message broker externo                     | Postergado   | Útil a futuro, pero aumenta complejidad para el MVP de 4 sprints.                                 |
+
+Decisión adoptada: mantener el Monolito Modular con eventos internos mediante Observer/Pub-Sub, aplicar Repository Pattern para acceso a datos e incorporar optimización de consultas mediante índices en MySQL. Esta decisión mantiene bajo el costo operativo y mejora performance sin introducir infraestructura distribuida.
+
+#### 4.3.2.5 Instantiate Architectural Elements, Allocate Responsibilities, and Define Interfaces
+
+| **Elemento**             | **Tipo**               | **Responsabilidad**                                   | **Interfaz**                                      |
+|--------------------------|------------------------|-------------------------------------------------------|---------------------------------------------------|
+| Ordering BC              | Componente API         | Crear, aprobar, rechazar, despachar y cerrar pedidos  | Expone endpoints REST. Publica eventos internos.  |
+| Payment BC               | Componente API         | Registrar vouchers y validar montos de pago.          | Consume Cloud Storage. Expone validación interna. |
+| Catalog BC               | Componente API         | Gestionar stock, precios e inventario de combustible. | Consulta/actualiza MySQL mediante repositorios.   |
+| Fulfillment BC           | Componente API         | Asignar vehículos y conductores al despacho.          | Consume pedidos aprobados desde Ordering BC.      |
+| Notification BC          | Componente API         | Generar notificaciones in-app ante cambios de estado. | Consume eventos internos de Ordering BC           |
+| Reporting & Analytics BC | Componente API         | Calcular KPIs, métricas y solicitar PDFs.             | Consulta MySQL y consume PDF Generator Service.   |
+| Domain Event Dispatcher  | Componente interno     | Publicar eventos internos entre BCs.                  | Interfaz publish/subscribe interna.               |
+| Domain Event Dispatcher  | Componente de datos    | Consultar pedidos por usuario, estado y fechas.       | Entity Framework Core hacia MySQL.                |
+| Order Repository         | Componente de consulta | Optimizar consultas para Dashboard y reportes.        | SQL/EF Core con índices.                          |
+
+#### 4.3.2.6 Sketch Views (C4 & UML) and Record Design Decisions
+
+**C4 Component Diagram – FuelBridge/FuelBridge API  
+**El diagrama de componentes de esta iteración debe mostrar la estructura interna de la API, refinando los Bounded Contexts más críticos: Ordering, Payment, Catalog, Fulfillment, Notification y Reporting & Analytics. Ordering BC actúa como núcleo del ciclo de pedido y publica eventos internos cuando un pedido cambia de estado. Notification BC consume esos eventos para generar alertas in-app, mientras Reporting & Analytics BC consulta MySQL para mostrar KPIs y solicitar reportes PDF al servicio externo. Esta vista permite evidenciar el uso de bajo acoplamiento, alta cohesión y procesamiento asíncrono interno.
+
+| **ID** | **Decisión**                                         | **Alternativa descartada**                | **Justificación**                                  | **Consecuencia**                                         |
+|--------|------------------------------------------------------|-------------------------------------------|----------------------------------------------------|----------------------------------------------------------|
+| ADR-05 | Usar Observer/Pub-Sub interno para eventos de pedido | Llamadas directas entre BCs               | Reduce acoplamiento entre Ordering y Notification. | Si crece el volumen, podría requerirse broker externo.   |
+| ADR-06 | Aplicar Repository Pattern con EF Core               | Consultas SQL directas en controladores   | Centraliza acceso a datos y mejora mantenibilidad. | Requiere disciplina para no duplicar lógica de consulta. |
+| ADR-07 | Optimizar Dashboard con consultas indexadas          | Consultas sin estrategia de índices       | Mejora performance en reportes e historial.        | Se deben mantener índices según evolución del modelo.    |
+| ADR-08 | Mantener generación de PDF fuera del flujo principal | Generar PDF dentro del endpoint principal | Evita bloqueo de la API ante latencia externa.     | Requiere manejo de estados o errores de generación.      |
+
+#### 4.3.2.7 Analysis of Current Design and Review Iteration Goal (Kanban Board)
+
+| **Tarea**                                                        | **Estado** |
+|------------------------------------------------------------------|------------|
+| Refinar componentes internos de FuelBridge/FuelBridge API          | Done       |
+| Definir comunicación interna entre Ordering BC y Notification BC | Done       |
+| Definir estrategia de consultas para Dashboard y reportes        | Done       |
+| Registrar ADR-05 a ADR-08                                        | Done       |
+| Aplicar Repository Pattern con Entity Framework Core             | Done       |
+| Evaluar futura migración a broker externo                        | Pendiente  |
+| Validar performance real con pruebas de carga                    | Pendiente  |
+
+Al cierre de esta iteración, los objetivos principales quedan cubiertos: se refinó la estructura interna de la API, se definió comunicación asíncrona interna mediante eventos de dominio y se estableció una estrategia inicial para mejorar el desempeño de Dashboard y reportes. Quedan pendientes pruebas de carga y evaluación futura de un broker externo si el volumen de eventos supera lo esperado.
+
+#### 4.3.2.8 C4 Y DIAGRAMA UML
+
+**C4 Component Diagram – FuelBridge API refinado**
+
+<div align="center">
+  <img src="assets/chapter-4/image7.png" width="700" />
+</div>
+
+El diagrama muestra el refinamiento interno de la FuelBridge API durante la segunda iteración. Se representan los Bounded Contexts principales relacionados con pedidos, pagos, stock, despachos, notificaciones y reportes, además del Domain Event Dispatcher y los repositorios. La estructura busca reducir el acoplamiento entre componentes y mejorar el acceso a datos y el rendimiento de las consultas.
+
+**UML Sequence Diagram – Aprobación y despacho de pedido**
+
+<div align="center">
+  <img src="assets/chapter-4/image18.png" width="700" />
+</div>
+
+El diagrama de secuencia representa el flujo de aprobación de un pedido, incluyendo la validación del pago y stock, la asignación del despacho y la actualización del estado. Luego, el sistema publica eventos internos para generar notificaciones y actualizar la información de reportes, mostrando la interacción entre los principales componentes de la API.
+
+---
+
+# Referencias bibliográficas
+
+- Adzic, G. (s.f.). Impact Mapping. Recuperado de [https://www.impactmapping.org/](https://www.impactmapping.org/)
+
+- Brandolini, A. (s.f.). Introducing EventStorming. Recuperado de [https://www.eventstorming.com/](https://www.eventstorming.com/)
+
+- CareerFoundry. (s.f.). What are User Flows in User Experience (UX) Design?. Recuperado de [https://careerfoundry.com/en/blog/ux-design/what-are-user-flows/](https://careerfoundry.com/en/blog/ux-design/what-are-user-flows/)
+
+- Cohn, M. (s.f.). User Stories. Mountain Goat Software. Recuperado de [https://www.mountaingoatsoftware.com/agile/user-stories](https://www.mountaingoatsoftware.com/agile/user-stories)
+
+- Cone, M. (s.f.). The Markdown Guide. Recuperado de [https://www.markdownguide.org/](https://www.markdownguide.org/)
+
+- Conventional Commits. (s.f.). Conventional Commits. Recuperado de [https://www.conventionalcommits.org/](https://www.conventionalcommits.org/)
+
+- Cucumber. (s.f.). Gherkin Reference. Recuperado de [https://cucumber.io/docs/gherkin/reference/](https://cucumber.io/docs/gherkin/reference/)
+
+- Driessen, V. (2010). A successful Git branching model. nvie.com. Recuperado de [https://nvie.com/posts/a-successful-git-branching-model/](https://nvie.com/posts/a-successful-git-branching-model/)
+
+- DZone. (s.f.). Acceptance Criteria in Scrum: Explanation, Examples, and Template. Recuperado de [https://dzone.com/articles/acceptance-criteria-in-software-explanation-exampl](https://dzone.com/articles/acceptance-criteria-in-software-explanation-exampl)
+
+- Evans, E. (2004). Domain-Driven Design: Tackling Complexity in the Heart of Software. Addison-Wesley Professional. Recuperado de [https://www.oreilly.com/library/view/domain-driven-design-tackling/0321125215/](https://www.oreilly.com/library/view/domain-driven-design-tackling/0321125215/)
+
+- Fowler, M. (2006). Ubiquitous Language. Recuperado de [https://martinfowler.com/bliki/UbiquitousLanguage.html](https://martinfowler.com/bliki/UbiquitousLanguage.html)
+
+- Google. (s.f.). Google HTML/CSS Style Guide. Recuperado de [https://google.github.io/styleguide/htmlcssguide.html](https://google.github.io/styleguide/htmlcssguide.html)
+
+- Google. (s.f.). Google JavaScript Style Guide. Recuperado de [https://google.github.io/styleguide/jsguide.html](https://google.github.io/styleguide/jsguide.html)
+
+- Gothelf, J., & Seiden, J. (2021). Lean UX: Designing Great Products with Agile Teams (3rd ed.). O'Reilly Media. Recuperado de [https://www.oreilly.com/library/view/lean-ux-2nd/9781491953594/](https://www.oreilly.com/library/view/lean-ux-2nd/9781491953594/)
+
+- HubSpot. (s.f.). Full List of Meta Tags, Why They Matter for SEO & How to Write Them. Recuperado de [https://blog.hubspot.com/marketing/meta-tags](https://blog.hubspot.com/marketing/meta-tags)
+
+- IBM Design. (s.f.). Empathy Map. Enterprise Design Thinking. Recuperado de [https://www.ibm.com/design/thinking/page/toolkit/activity/empathy-map](https://www.ibm.com/design/thinking/page/toolkit/activity/empathy-map)
+
+- IBM Design. (s.f.). As-is Scenario Map. Enterprise Design Thinking. Recuperado de [https://www.ibm.com/design/thinking/page/toolkit/activity/as-is-scenario-map](https://www.ibm.com/design/thinking/page/toolkit/activity/as-is-scenario-map)
+
+- Martin, R. C. (2017). Clean Architecture: A Craftsman's Guide to Software Structure and Design. Prentice Hall. Recuperado de [https://www.oreilly.com/library/view/clean-architecture-a/9780134494272/](https://www.oreilly.com/library/view/clean-architecture-a/9780134494272/)
+
+- Mendel, J. (s.f.). Seriously, what's your (startup's) problem?. Medium. Recuperado de [4](https://medium.com/@jakemendel/seriously-whats-your-startup-s-problem-b3a884c54ab4)
+
+- Nielsen Norman Group. (1994). 10 Usability Heuristics for User Interface Design. Recuperado de [https://www.nngroup.com/articles/ten-usability-heuristics/](https://www.nngroup.com/articles/ten-usability-heuristics/)
+
+- Nielsen Norman Group. (2016). The Four Dimensions of Tone of Voice. Recuperado de [https://www.nngroup.com/articles/tone-of-voice-dimensions/](https://www.nngroup.com/articles/tone-of-voice-dimensions/)
+
+- Preston-Werner, T. (s.f.). Semantic Versioning 2.0.0. Recuperado de [https://semver.org/](https://semver.org/)
+
+- Progressa Lean. (s.f.). 5W+2H - Técnica de análisis de problemas. Recuperado de [https://www.progressalean.com/5w2h-tecnica-de-analisis-de-problemas/](https://www.progressalean.com/5w2h-tecnica-de-analisis-de-problemas/)
+
+- Refactoring.Guru. (s.f.). Design Patterns. Recuperado de [https://refactoring.guru/es/design-patterns](https://refactoring.guru/es/design-patterns)
+
+- UXPressia. (s.f.). User vs. Buyer Persona: Differences and free template. Recuperado de [https://uxpressia.com/blog/user-persona-vs-buyer-persona-difference](https://uxpressia.com/blog/user-persona-vs-buyer-persona-difference)
+
+- Vernon, V. (2016). Domain-Driven Design Distilled. Addison-Wesley Professional. Recuperado de [https://www.oreilly.com/library/view/domain-driven-design-distilled/9780134434964/](https://www.oreilly.com/library/view/domain-driven-design-distilled/9780134434964/)
+
+- Vernon, V. (s.f.). Domain-Driven Design Reference. Recuperado de [https://domainlanguage.com/ddd/reference/](https://domainlanguage.com/ddd/reference/)
