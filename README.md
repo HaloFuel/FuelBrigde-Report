@@ -1834,7 +1834,7 @@ El Diagrama de Contenedores detalla la arquitectura de alto nivel y las piezas d
 </div>
 
 <div align="center">
-  <img src="assets/chapter-4/Componentsiteration2.png" width="700" />
+  <img src="assets/chapter-4/ComponentsIteration2.png" width="700" />
 </div>
 
 A nivel de componentes, la FuelBridge API se descompone en los siguientes Bounded Contexts (BC) para mantener alta cohesión:
@@ -2173,7 +2173,7 @@ Decisión adoptada: arquitectura de Monolito Modular con SPA desacoplada. La API
 **Component Diagram – FuelBridge API**
 
 <div align="center">
-  <img src="assets/chapter-4/Componentsiteration1.png" width="700" />
+  <img src="assets/chapter-4/ComponentsIteration1.png" width="700" />
 </div>
 
 El diagrama de componentes representa la estructura interna del Monolito Modular implementado en FuelBridge API. La lógica de negocio se divide en nueve Bounded Contexts con responsabilidades independientes: Identity & Access, Ordering, Payment, Inventory, Catalog, Fulfillment, Notification, Reporting & Analytics y Equipment. Todos los componentes se ejecutan dentro de una única API Spring Boot y comparten una base de datos MySQL. Las integraciones externas se mantienen asociadas al contexto responsable: Identity & Access consume Email Service, Payment utiliza Cloud Storage y Reporting & Analytics utiliza PDF Generator Service. Asimismo, Ordering BC se comunica con Notification BC mediante Observer/Pub-Sub interno para reducir el acoplamiento del flujo de notificaciones.
@@ -2346,7 +2346,7 @@ QA-2 (Performance) queda **cubierto y validado**: se ejecutó una prueba de carg
 **C4 Component Diagram – FuelBridge API refinado**
 
 <div align="center">
-  <img src="assets/chapter-4/Componentsiteration2.png" width="700" />
+  <img src="assets/chapter-4/ComponentsIteration2.png" width="700" />
 </div>
 
 El diagrama muestra el refinamiento interno de la FuelBridge API durante la segunda iteración. Se representan los Bounded Contexts principales relacionados con pedidos, pagos, stock, despachos, notificaciones y reportes, además del Domain Event Dispatcher y los repositorios. La estructura busca reducir el acoplamiento entre componentes y mejorar el acceso a datos y el rendimiento de las consultas.
