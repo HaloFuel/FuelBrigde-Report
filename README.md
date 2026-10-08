@@ -1788,7 +1788,7 @@ Para resolver la problemática de comunicación informal y trazabilidad en el se
 ### 4.1.3 Context Diagram
 
 <div align="center">
-  <img src="assets/chapter-4/image2.png" width="700" />
+  <img src="assets/chapter-4/SystemContext.png" width="700" />
 </div>
 
 El Diagrama de Contexto de FuelBridge define los límites del sistema y sus interacciones principales con los usuarios y sistemas externos:
@@ -1816,7 +1816,7 @@ FuelBridge Platform: Sistema web para la gestión de distribución de combustibl
 ### 4.1.4 Approach Driven ViewPoints Diagrams
 
 <div align="center">
-  <img src="assets/chapter-4/image19.png" width="700" />
+  <img src="assets/chapter-4/Containers.png" width="700" />
 </div>
 
 El Diagrama de Contenedores detalla la arquitectura de alto nivel y las piezas de software desplegables:
@@ -1830,7 +1830,11 @@ El Diagrama de Contenedores detalla la arquitectura de alto nivel y las piezas d
 - MySQL Database: Base de datos relacional centralizada que almacena la información de dominio (usuarios, clientes, proveedores, pedidos, pagos, flota, despachos, etc.), accedida desde la API mediante Spring Data JPA / Hibernate.
 
 <div align="center">
-  <img src="assets/chapter-4/image15.png" width="700" />
+  <img src="assets/chapter-4/Componentsiteration1.png" width="700" />
+</div>
+
+<div align="center">
+  <img src="assets/chapter-4/Componentsiteration2.png" width="700" />
 </div>
 
 A nivel de componentes, la FuelBridge API se descompone en los siguientes Bounded Contexts (BC) para mantener alta cohesión:
@@ -2096,7 +2100,7 @@ Drivers trabajados en Iteración 1: QA-1 Availability & Traceability, QA-3 Usabi
 
 **QA-3 Usability:** Los usuarios de FuelBridge provienen de entornos manuales (Excel, WhatsApp). La arquitectura debe soportar una interfaz de usuario fluida y sin interrupciones, lo que justifica la elección de una SPA como contenedor de frontend separado de la API, permitiendo actualizaciones parciales de la vista sin recargas completas.
 
-**CON-1 (Tecnológicas):** El equipo está restringido al uso de ASP.NET Core 8 para el backend y MySQL para la persistencia. Esta restricción condiciona directamente las decisiones de contenedores y patrones de acceso a datos.
+**CON-1 (Tecnológicas):** El equipo está restringido al uso de Spring Boot (Java) para el backend y MySQL para la persistencia. Esta restricción condiciona directamente las decisiones de contenedores y patrones de acceso a datos.
 
 Los drivers QA-2 (Performance) y los Concerns de gestión del estado quedan registrados en el backlog pero se abordan en la Iteración 2, donde se profundizará en los componentes internos de la API.
 
@@ -2155,7 +2159,7 @@ Decisión adoptada: arquitectura de Monolito Modular con SPA desacoplada. La API
 **C4 Context Diagram**
 
 <div align="center">
-  <img src="assets/chapter-4/image20.png" width="700" />
+  <img src="assets/chapter-4/SystemContext.png" width="700" />
 </div>
 
 **Diagrama de Secuencia UML**
@@ -2169,7 +2173,7 @@ Decisión adoptada: arquitectura de Monolito Modular con SPA desacoplada. La API
 **Component Diagram – FuelBridge API**
 
 <div align="center">
-  <img src="assets/chapter-4/image30.png" width="700" />
+  <img src="assets/chapter-4/Componentsiteration1.png" width="700" />
 </div>
 
 El diagrama de componentes representa la estructura interna del Monolito Modular implementado en FuelBridge API. La lógica de negocio se divide en nueve Bounded Contexts con responsabilidades independientes: Identity & Access, Ordering, Payment, Inventory, Catalog, Fulfillment, Notification, Reporting & Analytics y Equipment. Todos los componentes se ejecutan dentro de una única API Spring Boot y comparten una base de datos MySQL. Las integraciones externas se mantienen asociadas al contexto responsable: Identity & Access consume Email Service, Payment utiliza Cloud Storage y Reporting & Analytics utiliza PDF Generator Service. Asimismo, Ordering BC se comunica con Notification BC mediante Observer/Pub-Sub interno para reducir el acoplamiento del flujo de notificaciones.
@@ -2202,7 +2206,7 @@ El diagrama de componentes de la Landing Page representa la estructura del sitio
 El tablero Kanban de la Iteración 1 se gestiona en Trello: **[Tablero FuelBridge — Iteración 1](https://trello.com/invite/b/69e2fd01ee5b055b2d967a45/ATTI05a9ebca4c1da02108fc92fa76bfa07e412172F6/fulltank)**. Al cierre de esta iteración, las tareas del backlog ADD-01 a ADD-05 quedan distribuidas así:
 
 <div align="center">
-  <img src="assets/chapter-4/image32.png" width="700" />
+  <img src="assets/chapter-4/TrelloIteracion1.png" width="700" />
 </div>
 
 | **To Do** | **In Progress** | **Done** |
@@ -2308,9 +2312,8 @@ El tablero Kanban de la Iteración 2 se gestiona en el mismo tablero Trello refe
 (#4317-analysis-of-current-design-and-review-iteration-goal-kanban-board). Al cierre de esta iteración, las tareas del backlog ADD-06 a ADD-10 quedan distribuidas así:
 
 <div align="center">
-  <img src="assets/chapter-4/image32.png" width="700" />
+  <img src="assets/chapter-4/TrelloIteracion2.png" width="700" />
 </div>
-
 
 
 | **To Do** | **In Progress** | **Done** |
@@ -2343,7 +2346,7 @@ QA-2 (Performance) queda **cubierto y validado**: se ejecutó una prueba de carg
 **C4 Component Diagram – FuelBridge API refinado**
 
 <div align="center">
-  <img src="assets/chapter-4/image7.png" width="700" />
+  <img src="assets/chapter-4/Componentsiteration2.png" width="700" />
 </div>
 
 El diagrama muestra el refinamiento interno de la FuelBridge API durante la segunda iteración. Se representan los Bounded Contexts principales relacionados con pedidos, pagos, stock, despachos, notificaciones y reportes, además del Domain Event Dispatcher y los repositorios. La estructura busca reducir el acoplamiento entre componentes y mejorar el acceso a datos y el rendimiento de las consultas.
