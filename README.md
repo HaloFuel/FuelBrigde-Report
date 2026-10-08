@@ -1768,7 +1768,7 @@ El diseño arquitectónico de FuelBridge (desarrollado por HaloFuel) se rige baj
 
 | **ID** | **Principio**              | **Descripción**                                                                                                                                                                                 | **Driver relacionado**                 |
 |--------|-----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------|
-| P-1    | Domain-Driven Design (DDD)  | El software está estrictamente alineado con los procesos de negocio de compra y distribución de combustible. El sistema se divide en Bounded Contexts claramente definidos (Identity & Access, Ordering, Payment, Catalog, Fulfillment, Notification, Reporting & Analytics) para aislar la complejidad del dominio. | QA-2 Performance, CONC-3 (Mantenimiento del Código) |
+| P-1    | Domain-Driven Design (DDD)  | El software está estrictamente alineado con los procesos de negocio de compra y distribución de combustible. El sistema se divide en Bounded Contexts claramente definidos (Identity & Access, Ordering, Payment, Inventory, Catalog, Fulfillment, Notification, Reporting & Analytics, Equipment) para aislar la complejidad del dominio. | QA-2 Performance, CONC-3 (Mantenimiento del Código) |
 | P-2    | Separation of Concerns (SoC) | El sistema se divide en distintas capas (Presentación, Lógica de Negocio mediante APIs y Acceso a Datos) asegurando que cada componente tenga una responsabilidad única.                      | QA-2 Performance, CONC-3 (Mantenimiento del Código) |
 | P-3    | API-First Design            | Todo el acceso a la lógica de negocio y a los datos se expone mediante una API REST centralizada, permitiendo que múltiples interfaces consuman los mismos servicios y facilitando integraciones futuras. | QA-1 Availability & Traceability        |
 | P-4    | Diseño centrado en el usuario | Priorización de interfaces limpias, fluidas y de respuesta rápida (Single Page Application) orientadas a resolver problemas prácticos del día a día logístico y asegurar la satisfacción del usuario final. | QA-3 Usability                          |
@@ -1779,7 +1779,7 @@ Para resolver la problemática de comunicación informal y trazabilidad en el se
 
 | **ID**  | **Estilo**                              | **Descripción**                                                                                                                             | **Driver relacionado**                        |
 |---------|-------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------|
-| ST-1    | Monolito Modular por Bounded Contexts    | El backend se estructura internamente en 7 Bounded Contexts independientes por dominio (ver ADR-02), facilitando la escalabilidad y el mantenimiento concurrente dentro de una única API desplegable. | QA-2 Performance, CON-1 (Tecnológicas)        |
+| ST-1    | Monolito Modular por Bounded Contexts    | El backend se estructura internamente en 9 Bounded Contexts independientes por dominio (ver ADR-02), facilitando la escalabilidad y el mantenimiento concurrente dentro de una única API desplegable. | QA-2 Performance, CON-1 (Tecnológicas)        |
 | ST-2    | Single Page Application (SPA)             | El frontend utiliza un estilo de aplicación de página única para brindar una experiencia fluida sin recargas, crucial para paneles de control en tiempo real. | QA-3 Usability                                  |
 | ST-3    | Event-Driven interno (Observer/Pub-Sub)   | Implementado para la orquestación asíncrona entre Bounded Contexts, como el disparo de notificaciones o la generación de reportes PDF cuando un pedido cambia de estado en el sistema. | QA-1 Availability & Traceability, CONC-2 (Desacoplamiento de Servicios Bloqueantes) |
 
@@ -1825,9 +1825,9 @@ El Diagrama de Contenedores detalla la arquitectura de alto nivel y las piezas d
 
 - FuelBridge Web Application: Una Single Page Application (SPA) ejecutada en el navegador del usuario, que sirve como la interfaz gráfica unificada para que clientes y proveedores gestionen el ciclo de vida del combustible.
 
-- FuelBridge API: Desarrollada en ASP.NET Core 8, es la API RESTful central que contiene toda la lógica de negocio, procesa las peticiones del frontend y orquesta los diferentes Bounded Contexts.
+- FuelBridge API: Desarrollada en Spring Boot (Java 26), es la API RESTful central que contiene toda la lógica de negocio, procesa las peticiones del frontend y orquesta los diferentes Bounded Contexts.
 
-- MySQL Database: Base de datos relacional centralizada que almacena la información de dominio (usuarios, clientes, proveedores, pedidos, pagos, flota, despachos, etc.), accedida desde la API mediante Entity Framework Core.
+- MySQL Database: Base de datos relacional centralizada que almacena la información de dominio (usuarios, clientes, proveedores, pedidos, pagos, flota, despachos, etc.), accedida desde la API mediante Spring Data JPA / Hibernate.
 
 <div align="center">
   <img src="assets/chapter-4/image15.png" width="700" />
@@ -1839,7 +1839,9 @@ A nivel de componentes, la FuelBridge API se descompone en los siguientes Bounde
 
 - Ordering BC: Orquesta el ciclo de vida del pedido (creación, aprobación, rechazo, despacho y cierre).
 
-- Catalog BC: Administra el inventario del proveedor, niveles de stock y precios.
+- Inventory BC: Administra el catálogo de productos de combustible de cada proveedor (nombre, tipo, precio por unidad, capacidad y stock disponible).
+
+- Catalog BC: Gestiona las calificaciones (1 a 5 estrellas) que un Client otorga a un Provider tras completar un pedido, dando visibilidad de reputación dentro del marketplace.
 
 - Payment BC: Registra comprobantes de pago y valida los montos.
 
@@ -1848,6 +1850,8 @@ A nivel de componentes, la FuelBridge API se descompone en los siguientes Bounde
 - Notification BC: Crea notificaciones in-app ante cambios de estado de los pedidos.
 
 - Reporting & Analytics BC: Agrega datos para generar gráficos y solicitar PDFs de ventas.
+
+- Equipment BC: Administra los equipos del Client (tanques, vehículos propios), su nivel de combustible, umbral de auto-refill y proveedor favorito asociado.
 
 **Domain Class Diagram (Ordering BC)**
 
@@ -1957,10 +1961,12 @@ El modelo de datos relacional de la plataforma está normalizado para garantizar
 | Identity & Access BC       | USER, CLIENT, PROVIDER                      | La tabla central USER almacena credenciales y roles. De esta se derivan lógicamente los perfiles especializados CLIENT (empresa solicitante) y PROVIDER (distribuidor), que incluyen datos comerciales específicos. |
 | Ordering BC                 | REQUEST, REQUEST_DETAILS, ORDER             | La interacción comercial inicia en la tabla REQUEST y se detalla en REQUEST_DETAILS. Una vez aceptada, se consolida en la tabla transaccional ORDER, que centraliza estados y tiempos (aprobado, despachado, entregado). |
 | Payment BC                  | PAYMENT, DEPOSIT                            | Los pagos se registran en la tabla PAYMENT (asociada a una orden), además de considerar depósitos pre-aprobados en DEPOSIT.             |
-| Catalog BC                  | INVENTORY                                   | Controla el stock de combustible de cada proveedor.                                                                                    |
+| Inventory BC                | FUEL_PRODUCT                                | Controla el catálogo y el stock de combustible de cada proveedor: nombre, tipo, precio por unidad, capacidad y disponibilidad.         |
+| Catalog BC                  | PROVIDER_RATING                             | Almacena las calificaciones (1 a 5) que un cliente otorga a un proveedor tras un pedido completado.                                    |
 | Fulfillment BC              | DISPATCH, TRANSPORT, DRIVER                 | La tabla DISPATCH actúa como el núcleo operativo, vinculando un pedido aprobado (ORDER) con los recursos físicos de la tabla TRANSPORT (vehículos, placas, capacidad) y DRIVER (conductores y licencias). |
 | Notification BC             | NOTIFICATION                                | Permite el historial de alertas por usuario.                                                                                           |
 | Reporting & Analytics BC    | REPORT                                      | Consolida la metadata de los archivos generados en el sistema.                                                                         |
+| Equipment BC                 | EQUIPMENT                                   | Almacena los equipos (tanques/vehículos) del cliente: capacidad, nivel actual, umbral y configuración de auto-refill, y proveedor favorito. |
 
 Las referencias entre esquemas de distintos BC (por ejemplo, DISPATCH → ORDER, o PAYMENT → ORDER) se mantienen como foreign keys dentro de la misma base MySQL, consistente con la decisión ADR-04 de no separar la base de datos por BC durante el MVP.
 
@@ -1968,10 +1974,10 @@ Las referencias entre esquemas de distintos BC (por ejemplo, DISPATCH → ORDER,
 
 | **ID**  | **Patrón**                   | **Aplicación**                                                                                                                       | **Driver relacionado**                           |
 |---------|-------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------|
-| PAT-1   | Repository Pattern            | Aplicado en el acceso a datos para abstraer las consultas a MySQL vía Entity Framework Core, permitiendo modificaciones en el motor de persistencia sin alterar los controladores de la API. | QA-2 Performance, CONC-3 (Mantenimiento del Código) |
+| PAT-1   | Repository Pattern            | Aplicado en el acceso a datos para abstraer las consultas a MySQL vía Spring Data JPA, permitiendo modificaciones en el motor de persistencia sin alterar los controladores de la API. | QA-2 Performance, CONC-3 (Mantenimiento del Código) |
 | PAT-2   | Observer (Publish-Subscribe)  | Empleado internamente (Domain Event Dispatcher) para que el Notification BC y Reporting & Analytics BC reaccionen asíncronamente a los eventos del Ordering BC (ej. cuando se aprueba o despacha una orden). | QA-1 Availability & Traceability, CONC-2 (Desacoplamiento de Servicios Bloqueantes) |
 | PAT-3   | MVC / MVVM                    | Patrones aplicados en el diseño de la SPA en el frontend para separar la lógica de presentación de la lógica de consumo de servicios REST. | QA-3 Usability                                      |
-| PAT-4   | Unit of Work                  | Agrupa las operaciones de escritura de un mismo caso de uso (ej. aprobar pedido + registrar despacho) en una única transacción de Entity Framework Core, evitando estados inconsistentes entre tablas de distintos BC. | CONC-1 (Gestión Segura del Estado)                  |
+| PAT-4   | Unit of Work                  | Agrupa las operaciones de escritura de un mismo caso de uso (ej. aprobar pedido + registrar despacho) en una única transacción de Spring (@Transactional), evitando estados inconsistentes entre tablas de distintos BC. | CONC-1 (Gestión Segura del Estado)                  |
 
 ```mermaid
 flowchart LR
@@ -1991,7 +1997,7 @@ flowchart LR
 |---------|----------------------------------|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|-----------------------|
 | TAC-1   | Disponibilidad (Availability)   | Detect Faults → Recover from Faults    | Uso de redundancia en la persistencia de datos (Cloud Storage para archivos) y excepciones controladas (circuit-breaker simple) en la comunicación con servicios de terceros (como el PDF Generator) para evitar fallos en cascada. | QA-1                 |
 | TAC-2   | Seguridad (Security)            | Resist Attacks                         | Autenticación estricta mediante JSON Web Tokens (JWT) gestionada por el Identity & Access BC, además de obligar al uso de HTTPS para todo el tráfico entre la SPA, la Landing Page y la API. | Constraint: Integración de Terceros |
-| TAC-3   | Modificabilidad (Modifiability) | Increase Cohesion / Reduce Coupling    | La alta cohesión lograda al separar la API en 7 Bounded Contexts distintos permite modificar, por ejemplo, la lógica de inventario (Catalog BC) sin impactar la lógica de despachos (Fulfillment BC). | CONC-3 (Mantenimiento del Código) |
+| TAC-3   | Modificabilidad (Modifiability) | Increase Cohesion / Reduce Coupling    | La alta cohesión lograda al separar la API en 9 Bounded Contexts distintos permite modificar, por ejemplo, la lógica de inventario (Inventory BC) sin impactar la lógica de despachos (Fulfillment BC). | CONC-3 (Mantenimiento del Código) |
 | TAC-4   | Desempeño (Performance)         | Manage Resources / Resource Pooling    | Índices en las columnas de búsqueda frecuente de ORDER (estado, fecha, cliente) y paginación en los endpoints de Dashboard para acotar el volumen de datos procesado por consulta. | QA-2                 |
 
 ## 4.2 Architectural Drivers
@@ -2053,7 +2059,7 @@ Basado en los requerimientos del sector B2B, se definen tres Quality Attribute S
 
 | **ID**   | **Restricción**            | **Descripción**                                                                                                                 |
 |----------|------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| CON-1    | Tecnológicas                 | El backend se restringe al uso del entorno ASP.NET Core 8 para la exposición de la REST API y MySQL para la persistencia transaccional. |
+| CON-1    | Tecnológicas                 | El backend se restringe al uso del entorno Spring Boot (Java) para la exposición de la REST API y MySQL para la persistencia transaccional. |
 | CON-2    | Integración de Terceros      | El sistema tiene dependencias externas estrictas para el envío de correos, almacenamiento de vouchers (Cloud Storage) y generación de reportes (PDF Generator), por lo que las interfaces de red deben manejar latencias. |
 | CON-3    | Plazos (Time-to-market)      | El proyecto cuenta con un límite de tiempo estructurado en 4 Sprints, obligando a un desarrollo ágil y priorización del MVP.          |
 
@@ -2084,7 +2090,7 @@ Basado en los requerimientos del sector B2B, se definen tres Quality Attribute S
 
 El objetivo de esta primera iteración es establecer la estructura global del sistema desde cero, definiendo los contenedores principales que lo componen y las relaciones entre ellos.
 
-Drivers trabajados en Iteración 1: QA-1 Availability & Traceability, QA-3 Usability y CON-1 (Tecnológicas: ASP.NET Core 8 + MySQL).
+Drivers trabajados en Iteración 1: QA-1 Availability & Traceability, QA-3 Usability y CON-1 (Tecnológicas: Spring Boot + MySQL).
 
 **QA-1 Availability & Traceability:** Es el driver de mayor impacto para el negocio. Los clientes del sector B2B (minería y construcción) dependen de la visibilidad del estado de sus pedidos en tiempo real. Una arquitectura que no garantice la entrega confiable de eventos de cambio de estado compromete el valor principal de la plataforma. Por ello, la estructura global debe contemplar desde el inicio un mecanismo asincrónico que desacople la notificación del flujo principal del pedido.
 
@@ -2111,10 +2117,10 @@ El elemento refinado en esta iteración es el sistema FuelBridge en su totalidad
 | Monolito MVC server-side                        | Rechazado    | Las recargas completas de página son incompatibles con la experiencia requerida en paneles de control en tiempo real (QA-3) |
 | SPA + REST API desacoplada                      | Seleccionado | Permite actualizaciones parciales de la vista y desacopla el ciclo de despliegue del frontend del backend                   |
 | Microservicios distribuidos                     | Rechazado    | Complejidad operativa incompatible con el plazo de 4 Sprints (Constraint: Time-to-market)                                   |
-| Monolito Modular (API única con BCs internos)   | Seleccionado | Compatible con ASP.NET Core 8 y MySQL; permite cohesión por dominio sin overhead de infraestructura distribuida             |
+| Monolito Modular (API única con BCs internos)   | Seleccionado | Compatible con Spring Boot y MySQL; permite cohesión por dominio sin overhead de infraestructura distribuida             |
 | Observer/Pub-Sub interno para eventos entre BCs | Seleccionado | Desacopla el Notification BC del flujo transaccional del Ordering BC sin requerir un message broker externo en esta etapa   |
 
-Decisión adoptada: arquitectura de Monolito Modular con SPA desacoplada. La API centralizada en ASP.NET Core 8 se divide internamente en 7 Bounded Contexts que comparten una base de datos MySQL. La comunicación entre BCs que requiere desacoplamiento se implementa mediante Observer/Pub-Sub interno.
+Decisión adoptada: arquitectura de Monolito Modular con SPA desacoplada. La API centralizada en Spring Boot se divide internamente en 9 Bounded Contexts que comparten una base de datos MySQL. La comunicación entre BCs que requiere desacoplamiento se implementa mediante Observer/Pub-Sub interno.
 
 #### 4.3.1.5 Instantiate Architectural Elements, Allocate Responsibilities, and Define Interfaces
 
@@ -2124,8 +2130,8 @@ Decisión adoptada: arquitectura de Monolito Modular con SPA desacoplada. La API
 |--------------------------|--------------------------|---------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
 | Landing Page             | Static Web               | Presentación pública de la plataforma y redirección al Web Application                                              | Ninguna, redirección via URL                                                                  |
 | FuelBridge Web Application | SPA (Vue/React)          | Interfaz unificada para clientes y proveedores en la gestión del ciclo de vida del combustible                      | Consume: FuelBridge API (REST/HTTPS)                                                            |
-| FuelBridge API             | ASP.NET Core 8           | Lógica de negocio completa dividida en 7 BCs; procesamiento de pedidos, pagos, despachos, notificaciones y reportes | Expone: REST API (HTTPS/JSON). Consume: MySQL DB, Email Service, Cloud Storage, PDF Generator |
-| MySQL Database           | Base de datos relacional | Persistencia transaccional de todos los dominios del sistema                                                        | Consumida por FuelBridge API via Entity Framework Core                                          |
+| FuelBridge API             | Spring Boot (Java)       | Lógica de negocio completa dividida en 9 BCs; procesamiento de pedidos, pagos, inventario, despachos, notificaciones y reportes | Expone: REST API (HTTPS/JSON). Consume: MySQL DB, Email Service, Cloud Storage, PDF Generator |
+| MySQL Database           | Base de datos relacional | Persistencia transaccional de todos los dominios del sistema                                                        | Consumida por FuelBridge API via Spring Data JPA                                                |
 | Email Service            | Sistema externo          | Envío de correos de recuperación de contraseña                                                                      | Consumido por Identity & Access BC via REST API                                               |
 | Cloud Storage            | Sistema externo          | Almacenamiento de vouchers de pago                                                                                  | Consumido por Payment BC via REST API                                                         |
 | PDF Generator Service    | Sistema externo          | Generación de reportes en PDF                                                                                       | Consumido por Reporting & Analytics BC via REST API                                           |
@@ -2137,10 +2143,12 @@ Decisión adoptada: arquitectura de Monolito Modular con SPA desacoplada. La API
 | Identity & Access BC     | Registro, autenticación JWT y recuperación de contraseña                   |
 | Ordering BC              | Ciclo de vida del pedido: creación, aprobación, rechazo, despacho y cierre |
 | Payment BC               | Registro de comprobantes de pago y validación de montos                    |
-| Catalog BC               | Gestión de inventario de combustible: stock y precios                      |
+| Inventory BC             | Gestión del catálogo de productos de combustible: stock y precios          |
+| Catalog BC               | Calificaciones (1-5) de proveedores otorgadas por clientes                 |
 | Fulfillment BC           | Gestión de flota (vehículos y conductores) y asignación a despachos        |
 | Notification BC          | Generación de notificaciones in-app ante cambios de estado de pedidos      |
 | Reporting & Analytics BC | Agregación de datos para KPIs del dashboard y generación de reportes PDF   |
+| Equipment BC             | Equipos del cliente (tanques/vehículos), auto-refill y proveedor favorito  |
 
 #### 4.3.1.6 Sketch Views (C4 & UML) and Record Design Decisions
 
@@ -2164,7 +2172,7 @@ Decisión adoptada: arquitectura de Monolito Modular con SPA desacoplada. La API
   <img src="assets/chapter-4/image30.png" width="700" />
 </div>
 
-El diagrama de componentes representa la estructura interna del Monolito Modular implementado en FuelBridge API. La lógica de negocio se divide en siete Bounded Contexts con responsabilidades independientes: Identity & Access, Ordering, Payment, Catalog, Fulfillment, Notification y Reporting & Analytics. Todos los componentes se ejecutan dentro de una única API ASP.NET Core 8 y comparten una base de datos MySQL. Las integraciones externas se mantienen asociadas al contexto responsable: Identity & Access consume Email Service, Payment utiliza Cloud Storage y Reporting & Analytics utiliza PDF Generator Service. Asimismo, Ordering BC se comunica con Notification BC mediante Observer/Pub-Sub interno para reducir el acoplamiento del flujo de notificaciones.
+El diagrama de componentes representa la estructura interna del Monolito Modular implementado en FuelBridge API. La lógica de negocio se divide en nueve Bounded Contexts con responsabilidades independientes: Identity & Access, Ordering, Payment, Inventory, Catalog, Fulfillment, Notification, Reporting & Analytics y Equipment. Todos los componentes se ejecutan dentro de una única API Spring Boot y comparten una base de datos MySQL. Las integraciones externas se mantienen asociadas al contexto responsable: Identity & Access consume Email Service, Payment utiliza Cloud Storage y Reporting & Analytics utiliza PDF Generator Service. Asimismo, Ordering BC se comunica con Notification BC mediante Observer/Pub-Sub interno para reducir el acoplamiento del flujo de notificaciones.
 
 **C4 Component Diagram – FuelBridge Web Application**
 
@@ -2216,7 +2224,7 @@ El tablero Kanban de la Iteración 1 se gestiona en Trello: **[Tablero FuelBridg
 | QA-1, QA-3 | ADD-01      | —       | Todos los contenedores          |
 | CON-1      | ADD-02      | ADR-02  | FuelBridge API                  |
 | CONC-2     | ADD-03      | ADR-03  | Domain Event Dispatcher         |
-| QA-2, CONC-1 | ADD-04    | ADR-02  | FuelBridge API (7 BCs)          |
+| QA-2, CONC-1 | ADD-04    | ADR-02  | FuelBridge API (9 BCs)          |
 | QA-3, CONC-4 | ADD-05    | ADR-01  | Landing Page                    |
 
 
@@ -2277,8 +2285,8 @@ Decisión adoptada: mantener el Monolito Modular con eventos internos mediante O
 | Notification BC          | Componente API         | Generar notificaciones in-app ante cambios de estado. | Consume eventos internos de Ordering BC           |
 | Reporting & Analytics BC | Componente API         | Calcular KPIs, métricas y solicitar PDFs.             | Consulta MySQL y consume PDF Generator Service.   |
 | Domain Event Dispatcher  | Componente interno     | Publicar eventos internos entre BCs (PAT-2).           | Interfaz publish/subscribe interna.               |
-| Order Repository         | Componente de datos    | Consultar pedidos por usuario, estado y fechas.       | Entity Framework Core hacia MySQL (PAT-1).        |
-| Reporting Query Repository | Componente de consulta | Optimizar consultas para Dashboard y reportes.        | SQL/EF Core con índices (ADR-07).                 |
+| Order Repository         | Componente de datos    | Consultar pedidos por usuario, estado y fechas.       | Spring Data JPA hacia MySQL (PAT-1).              |
+| Reporting Query Repository | Componente de consulta | Optimizar consultas para Dashboard y reportes.        | SQL/Spring Data JPA con índices (ADR-07).         |
 
 #### 4.3.2.6 Sketch Views (C4 & UML) and Record Design Decisions
 
@@ -2289,27 +2297,36 @@ El diagrama de componentes de esta iteración muestra la estructura interna de l
 | **ID** | **Decisión**                                         | **Alternativa descartada**                | **Driver** | **Componente**              | **Justificación**                                  | **Consecuencia**                                         |
 |--------|--------------------------------------------------------|---------------------------------------------|-------------|--------------------------------|------------------------------------------------------|--------------------------------------------------------------|
 | ADR-05 | Usar Observer/Pub-Sub interno para eventos de pedido | Llamadas directas entre BCs               | QA-1        | Domain Event Dispatcher        | Reduce acoplamiento entre Ordering y Notification. | Si crece el volumen, podría requerirse broker externo.   |
-| ADR-06 | Aplicar Repository Pattern con EF Core               | Consultas SQL directas en controladores   | CONC-3      | Order Repository                | Centraliza acceso a datos y mejora mantenibilidad. | Requiere disciplina para no duplicar lógica de consulta. |
+| ADR-06 | Aplicar Repository Pattern con Spring Data JPA       | Consultas SQL directas en controladores   | CONC-3      | Order Repository                | Centraliza acceso a datos y mejora mantenibilidad. | Requiere disciplina para no duplicar lógica de consulta. |
 | ADR-07 | Optimizar Dashboard con consultas indexadas          | Consultas sin estrategia de índices       | QA-2        | Reporting Query Repository     | Mejora performance en reportes e historial.        | Se deben mantener índices según evolución del modelo.    |
 | ADR-08 | Mantener generación de PDF fuera del flujo principal | Generar PDF dentro del endpoint principal | CONC-2      | Reporting & Analytics BC       | Evita bloqueo de la API ante latencia externa.     | Requiere manejo de estados o errores de generación.      |
 
 #### 4.3.2.7 Analysis of Current Design and Review Iteration Goal (Kanban Board)
 
-El tablero Kanban de la Iteración 2 se gestiona en el mismo tablero Trello referenciado en [4.3.1.7](#4317-analysis-of-current-design-and-review-iteration-goal-kanban-board). Al cierre de esta iteración, las tareas del backlog ADD-06 a ADD-10 quedan distribuidas así:
+El tablero Kanban de la Iteración 2 se gestiona en el mismo tablero Trello referenciado en [4.3.1.7]
+
+(#4317-analysis-of-current-design-and-review-iteration-goal-kanban-board). Al cierre de esta iteración, las tareas del backlog ADD-06 a ADD-10 quedan distribuidas así:
 
 <div align="center">
   <img src="assets/chapter-4/image32.png" width="700" />
 </div>
 
+
+
 | **To Do** | **In Progress** | **Done** |
 |-----------|------------------|----------|
-| — | Validar performance real con pruebas de carga contra la medida de QA-2 (95% < 2s, ver 4.2.3) | Refinar componentes internos de FuelBridge API (ADD-08) |
-| | Evaluar futura migración a broker externo si el volumen de eventos supera lo estimado | Definir comunicación interna entre Ordering BC y Notification BC (ADD-09) |
+| — | Evaluar futura migración a broker externo si el volumen de eventos supera lo estimado | Refinar componentes internos de FuelBridge API (ADD-08) |
+| | | Definir comunicación interna entre Ordering BC y Notification BC (ADD-09) |
 | | | Definir estrategia de consultas para Dashboard y reportes (ADD-06) |
 | | | Registrar ADR-05 a ADR-08 |
-| | | Aplicar Repository Pattern con Entity Framework Core |
+| | | Aplicar Repository Pattern con Spring Data JPA |
+| | | Validar performance real con pruebas de carga contra la medida de QA-2 (95% < 2s, ver 4.2.3) |
 
-QA-2 (Performance) queda **parcialmente cubierto**: la decisión arquitectónica (índices + Repository Pattern + paginación, ADR-07) está tomada e implementada a nivel de diseño, pero la medida de respuesta definida en 4.2.3 (95% de consultas en menos de 2 segundos con 50 usuarios concurrentes) todavía no se valida con una prueba de carga real; esa validación queda como tarea abierta para el Sprint de implementación.
+QA-2 (Performance) queda **cubierto y validado**: se ejecutó una prueba de carga real contra `GET /api/v1/analytics/platform` desplegado en Railway, con 200 peticiones en tandas de 50 concurrentes. Resultado: mínimo 331.7 ms, máximo 988.9 ms, percentil 95 en 705.6 ms, muy por debajo del umbral de 2000 ms definido en 4.2.3.
+
+<div align="center">
+  <img src="assets/chapter-4/qa2-load-test.png" width="700" />
+</div>
 
 **Trazabilidad driver → decisión → componente (Iteración 2)**
 
@@ -2317,13 +2334,11 @@ QA-2 (Performance) queda **parcialmente cubierto**: la decisión arquitectónica
 |------------|-------------|---------|---------------------------------|
 | QA-2       | ADD-06      | ADR-07  | Reporting Query Repository      |
 | QA-1, CONC-2 | ADD-07    | ADR-08  | Reporting & Analytics BC        |
-| QA-2       | ADD-08      | ADR-06  | Order BC, Payment BC, Catalog BC |
+| CONC-3     | ADD-08      | ADR-06  | Order Repository                 |
 | CONC-1     | ADD-09      | ADR-05  | Domain Event Dispatcher         |
 | QA-2       | ADD-10      | ADR-07  | MySQL Database                  |
 
-
-
-#### 4.3.2.8 C4 Y DIAGRAMA UML
+### 4.3.2.8 C4 Y DIAGRAMA UML
 
 **C4 Component Diagram – FuelBridge API refinado**
 
