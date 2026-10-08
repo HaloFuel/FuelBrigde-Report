@@ -2193,6 +2193,10 @@ El diagrama de componentes de la Landing Page representa la estructura del sitio
 
 El tablero Kanban de la Iteración 1 se gestiona en Trello: **[Tablero FuelBridge — Iteración 1](https://trello.com/invite/b/69e2fd01ee5b055b2d967a45/ATTI05a9ebca4c1da02108fc92fa76bfa07e412172F6/fulltank)**. Al cierre de esta iteración, las tareas del backlog ADD-01 a ADD-05 quedan distribuidas así:
 
+<div align="center">
+  <img src="assets/chapter-4/image32.png" width="700" />
+</div>
+
 | **To Do** | **In Progress** | **Done** |
 |-----------|------------------|----------|
 | Abordar QA-2 (Performance) a nivel de componentes internos (pasa a Iteración 2) | — | Definir contenedores principales del sistema (ADD-01) |
@@ -2292,6 +2296,10 @@ El diagrama de componentes de esta iteración muestra la estructura interna de l
 #### 4.3.2.7 Analysis of Current Design and Review Iteration Goal (Kanban Board)
 
 El tablero Kanban de la Iteración 2 se gestiona en el mismo tablero Trello referenciado en [4.3.1.7](#4317-analysis-of-current-design-and-review-iteration-goal-kanban-board). Al cierre de esta iteración, las tareas del backlog ADD-06 a ADD-10 quedan distribuidas así:
+
+<div align="center">
+  <img src="assets/chapter-4/image32.png" width="700" />
+</div>
 
 | **To Do** | **In Progress** | **Done** |
 |-----------|------------------|----------|
