@@ -2410,8 +2410,15 @@ La primera versión funcional de FuelBridge se despliega desde los repositorios 
 | Build / Run | Build del proyecto frontend para producción | Compilación y ejecución de la API Spring Boot |
 | Variables de entorno | Configuradas para la conexión con la API y servicios del cliente | Configuradas para la conexión a base de datos y servicios internos |
 | Estado | Frontend funcional y accesible desde la URL pública del proyecto | Backend funcional y consumido por la aplicación web |
+|URL pública| https://fuel-brigde-frontend.vercel.app/home | https://fuelbrigde-backend-production.up.railway.app/swagger-ui/index.html |
 
 La evidencia de despliegue corresponde a la versión de Sprint Review de la solución digital, donde el frontend y el backend operan de manera desacoplada pero integrados para la validación del flujo principal del producto.
+
+![Configuración del despliegue]()
+
+![Despliegue exitoso]()
+
+**Landing Page desplegado:** []()
 
 #### 5.3.1.7 Team Collaboration Insights during Sprint
 
