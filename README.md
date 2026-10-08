@@ -64,9 +64,9 @@
     <tr><td>1.0</td><td>04/09/2026</td><td>Sebastian Andres Aiquipa Poma</td><td>Análisis y Desarrollo de Lean UX Hypothesis Statements</td></tr>
     <tr><td>1.1</td><td>08/09/2026</td><td>Milenko Rubén Cayanchi Avila</td><td>Desarrollo de entrevistas</td></tr>
     <tr><td>1.1</td><td>09/09/2026</td><td>Diego Fernando Herrera Enriquez</td><td>Desarrollo de entrevistas</td></tr>
-    <tr><td>1.2</td><td>03/09/2026</td><td>Schneider Carlos Alberto Delgado Carrasco</td><td>Análisis de entrevistas</td></tr>
-    <tr><td>1.3</td><td>04/09/2026</td><td>Carlos Alberto Lopez Goitia</td><td>User Stories</td></tr>
-    <tr><td>1.3</td><td>04/09/2026</td><td>Sebastian Andres Aiquipa Poma</td><td>Product Backlog</td></tr>
+    <tr><td>1.2</td><td>13/09/2026</td><td>Schneider Carlos Alberto Delgado Carrasco</td><td>Análisis de entrevistas</td></tr>
+    <tr><td>1.3</td><td>14/09/2026</td><td>Carlos Alberto Lopez Goitia</td><td>User Stories</td></tr>
+    <tr><td>1.3</td><td>14/09/2026</td><td>Sebastian Andres Aiquipa Poma</td><td>Product Backlog</td></tr>
     <tr><td>1.4</td><td>20/09/2026</td><td>Diego Fernando Herrera Enriquez</td><td>Design Concepts and Architectural Drivers</td></tr>
     <tr><td>1.4</td><td>20/09/2026</td><td>Sebastian Andres Aiquipa Poma</td><td>Iteration 1</td></tr>
     <tr><td>1.4</td><td>20/09/2026</td><td>Carlos Alberto Lopez Goitia</td><td>Iteration 1</td></tr>
@@ -1733,7 +1733,7 @@ A partir de estos impactos se definieron los Deliverables que la plataforma Fuel
   <img src="assets/chapter-3/image8.png" width="700" />
 </div>
 
-Link del Trello: **[https://trello.com/invite/b/69e2fd01ee5b055b2d967a45/ATTI05a9ebca4c1da02108fc92fa76bfa07e412172F6/fulltank](https://trello.com/invite/b/69e2fd01ee5b055b2d967a45/ATTI05a9ebca4c1da02108fc92fa76bfa07e412172F6/fulltank)**
+El tablero Kanban de seguimiento (Trello) se referencia en la sección [4.3.1.7](#4317-analysis-of-current-design-and-review-iteration-goal-kanban-board) del Capítulo IV, junto con el estado de cada tarea por iteración.
 
 ---
 
@@ -1743,25 +1743,26 @@ Link del Trello: **[https://trello.com/invite/b/69e2fd01ee5b055b2d967a45/ATTI05a
 
 ### 4.1.1 Principles Statements
 
-El diseño arquitectónico de FuelBridge (desarrollado por HaloFuel) se rige bajo principios fundamentales de ingeniería de software para garantizar escalabilidad, mantenibilidad y una experiencia de usuario óptima:
+El diseño arquitectónico de FuelBridge (desarrollado por HaloFuel) se rige bajo principios fundamentales de ingeniería de software para garantizar escalabilidad, mantenibilidad y una experiencia de usuario óptima. Cada principio se vincula a los Quality Attribute Scenarios definidos en la sección [4.2.3](#423-quality-attribute-scenarios):
 
-- Domain-Driven Design (DDD): El software está estrictamente alineado con los procesos de negocio de compra y distribución de combustible. El sistema se divide en Bounded Contexts claramente definidos (como Ordering, Payment, Fulfillment y Catalog) para aislar la complejidad del dominio.
-
-- Separation of Concerns (SoC): El sistema se divide en distintas capas (Presentación, Lógica de Negocio mediante APIs y Acceso a Datos) asegurando que cada componente tenga una responsabilidad única.
-
-- API-First Design: Todo el acceso a la lógica de negocio y a los datos se expone mediante una API REST centralizada, permitiendo que múltiples interfaces consuman los mismos servicios y facilitando integraciones futuras.
-
-- Diseño centrado en el usuario: Priorización de interfaces limpias, fluidas y de respuesta rápida (Single Page Application) orientadas a resolver problemas prácticos del día a día logístico y asegurar la satisfacción del usuario final.
+| **ID** | **Principio**              | **Descripción**                                                                                                                                                                                 | **Driver relacionado**                 |
+|--------|-----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------|
+| P-1    | Domain-Driven Design (DDD)  | El software está estrictamente alineado con los procesos de negocio de compra y distribución de combustible. El sistema se divide en Bounded Contexts claramente definidos (Identity & Access, Ordering, Payment, Catalog, Fulfillment, Notification, Reporting & Analytics) para aislar la complejidad del dominio. | QA-2 Performance, CONC-3 (Mantenimiento del Código) |
+| P-2    | Separation of Concerns (SoC) | El sistema se divide en distintas capas (Presentación, Lógica de Negocio mediante APIs y Acceso a Datos) asegurando que cada componente tenga una responsabilidad única.                      | QA-2 Performance, CONC-3 (Mantenimiento del Código) |
+| P-3    | API-First Design            | Todo el acceso a la lógica de negocio y a los datos se expone mediante una API REST centralizada, permitiendo que múltiples interfaces consuman los mismos servicios y facilitando integraciones futuras. | QA-1 Availability & Traceability        |
+| P-4    | Diseño centrado en el usuario | Priorización de interfaces limpias, fluidas y de respuesta rápida (Single Page Application) orientadas a resolver problemas prácticos del día a día logístico y asegurar la satisfacción del usuario final. | QA-3 Usability                          |
 
 ### 4.1.2 Approaches Statements Architectural Styles & Patterns
 
-Para resolver la problemática de comunicación informal y trazabilidad en el sector energético, se adoptan los siguientes estilos:
+Para resolver la problemática de comunicación informal y trazabilidad en el sector energético, se adoptan los siguientes estilos. La decisión final entre estilos candidatos se formaliza en la sección [4.3.1.4](#4314-choose-one-or-more-design-concepts-that-satisfy-the-selected-drivers), donde Monolito Modular es seleccionado sobre Microservicios distribuidos:
 
-- Arquitectura basada en Componentes / Microservicios lógicos: El backend se estructura internamente en módulos independientes por dominio, facilitando la escalabilidad y el mantenimiento concurrente.
+| **ID**  | **Estilo**                              | **Descripción**                                                                                                                             | **Driver relacionado**                        |
+|---------|-------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------|
+| ST-1    | Monolito Modular por Bounded Contexts    | El backend se estructura internamente en 7 Bounded Contexts independientes por dominio (ver ADR-02), facilitando la escalabilidad y el mantenimiento concurrente dentro de una única API desplegable. | QA-2 Performance, CON-1 (Tecnológicas)        |
+| ST-2    | Single Page Application (SPA)             | El frontend utiliza un estilo de aplicación de página única para brindar una experiencia fluida sin recargas, crucial para paneles de control en tiempo real. | QA-3 Usability                                  |
+| ST-3    | Event-Driven interno (Observer/Pub-Sub)   | Implementado para la orquestación asíncrona entre Bounded Contexts, como el disparo de notificaciones o la generación de reportes PDF cuando un pedido cambia de estado en el sistema. | QA-1 Availability & Traceability, CONC-2 (Desacoplamiento de Servicios Bloqueantes) |
 
-- Single Page Application (SPA): El frontend utiliza un estilo de aplicación de página única para brindar una experiencia fluida sin recargas, crucial para paneles de control en tiempo real.
-
-- Event-Driven (Parcial): Implementado para la orquestación asíncrona, como el disparo de notificaciones o la generación de reportes PDF cuando un pedido cambia de estado en el sistema.
+> Nota: en una versión previa de este capítulo, ST-1 se describía como "Microservicios lógicos", lo cual entraba en contradicción con la decisión adoptada en 4.3.1.4 (Monolito Modular, microservicios distribuidos rechazados por Constraint de time-to-market). Se corrige aquí para mantener consistencia entre el estilo declarado y la decisión arquitectónica final.
 
 ### 4.1.3 Context Diagram
 
@@ -1803,9 +1804,9 @@ El Diagrama de Contenedores detalla la arquitectura de alto nivel y las piezas d
 
 - FuelBridge Web Application: Una Single Page Application (SPA) ejecutada en el navegador del usuario, que sirve como la interfaz gráfica unificada para que clientes y proveedores gestionen el ciclo de vida del combustible.
 
-- FuelBridge API: Desarrollada en ASP.NET Core 8, es la API RESTful central que contiene toda la lógica de negocio, procesa las peticiones del frontend y orquesta los diferentes Bounded Contents.
+- FuelBridge API: Desarrollada en ASP.NET Core 8, es la API RESTful central que contiene toda la lógica de negocio, procesa las peticiones del frontend y orquesta los diferentes Bounded Contexts.
 
-- MySQL Database: Base de datos relacional centralizada que almacena la información de dominio (usuarios, clientes, proveedores, pedidos, pagos, flota, despachos, etc.) utilizando Spring Data JPA.
+- MySQL Database: Base de datos relacional centralizada que almacena la información de dominio (usuarios, clientes, proveedores, pedidos, pagos, flota, despachos, etc.), accedida desde la API mediante Entity Framework Core.
 
 <div align="center">
   <img src="assets/chapter-4/image15.png" width="700" />
@@ -1827,39 +1828,150 @@ A nivel de componentes, la FuelBridge API se descompone en los siguientes Bounde
 
 - Reporting & Analytics BC: Agrega datos para generar gráficos y solicitar PDFs de ventas.
 
+**Domain Class Diagram (Ordering BC)**
+
+```mermaid
+classDiagram
+    class Order {
+        +int Id
+        +int ClientId
+        +int ProviderId
+        +OrderStatus Status
+        +DateTime CreatedAt
+        +DateTime UpdatedAt
+        +decimal TotalAmount
+        +Approve()
+        +Reject()
+        +Dispatch()
+        +Close()
+    }
+    class OrderDetail {
+        +int Id
+        +int OrderId
+        +int ProductId
+        +decimal Quantity
+        +decimal UnitPrice
+    }
+    class Payment {
+        +int Id
+        +int OrderId
+        +decimal Amount
+        +PaymentStatus Status
+        +string VoucherUrl
+        +Validate()
+    }
+    class Dispatch {
+        +int Id
+        +int OrderId
+        +int VehicleId
+        +int DriverId
+        +DateTime DispatchedAt
+        +DateTime DeliveredAt
+    }
+    class Client {
+        +int Id
+        +string CompanyName
+        +string Ruc
+    }
+    class Provider {
+        +int Id
+        +string CompanyName
+        +string Ruc
+    }
+    Order "1" --> "1..*" OrderDetail
+    Order "1" --> "0..1" Payment
+    Order "1" --> "0..1" Dispatch
+    Order "*" --> "1" Client
+    Order "*" --> "1" Provider
+```
+
+**State Diagram – Ciclo de vida del pedido (Order)**
+
+```mermaid
+stateDiagram-v2
+    [*] --> Pending : Cliente crea el pedido (US-05)
+    Pending --> Approved : Proveedor valida stock y pago (US-11)
+    Pending --> Rejected : Proveedor rechaza el pedido
+    Approved --> Dispatched : Se asigna vehículo y conductor (US-46)
+    Dispatched --> Delivered : Conductor confirma entrega
+    Delivered --> Closed : Sistema cierra el pedido
+    Rejected --> [*]
+    Closed --> [*]
+```
+
+**Activity Diagram – Aprobación y despacho de un pedido**
+
+```mermaid
+flowchart TD
+    A[Cliente crea pedido] --> B{Pago registrado?}
+    B -- No --> B1[Cliente sube voucher]
+    B1 --> B
+    B -- Sí --> C{Pago válido?}
+    C -- No --> C1[Proveedor rechaza pedido]
+    C -- Sí --> D{Stock suficiente?}
+    D -- No --> C1
+    D -- Sí --> E[Proveedor aprueba pedido]
+    E --> F[Sistema asigna vehículo y conductor]
+    F --> G[Ordering BC publica evento OrderApproved]
+    G --> H[Notification BC notifica al cliente]
+    G --> I[Reporting BC actualiza KPIs]
+    F --> J[Despacho en ruta]
+    J --> K[Conductor confirma entrega]
+    K --> L[Sistema cierra pedido]
+    C1 --> M[Notification BC notifica rechazo]
+```
+
+Estas tres vistas complementan el Component Diagram de la API (4.1.4): el diagrama de clases detalla el modelo del Ordering BC (el BC core del sistema), el diagrama de estados formaliza las transiciones válidas de un pedido, y el diagrama de actividad muestra el flujo entre Ordering, Payment, Catalog, Fulfillment, Notification y Reporting & Analytics BC para el caso de uso principal del sistema.
+
 ### 4.1.5 Relational/Non Relational Database Diagram
 
 <div align="center">
   <img src="assets/chapter-4/image14.png" width="700" />
 </div>
 
-El modelo de datos relacional de la plataforma está normalizado para garantizar la integridad referencial y soportar las transacciones de los diferentes Bounded Contexts. El esquema se articula de la siguiente manera:
+El modelo de datos relacional de la plataforma está normalizado para garantizar la integridad referencial y soportar las transacciones de los diferentes Bounded Contexts. Cada grupo de tablas pertenece y es administrado por un único BC (Database per Bounded Context dentro del esquema compartido MySQL, ver ADR-04):
 
-- Identidad y Perfiles: La tabla central USER almacena credenciales y roles. De esta se derivan lógicamente los perfiles especializados CLIENT (empresa solicitante) y PROVIDER (distribuidor), que incluyen datos comerciales específicos.
+| **Bounded Context**       | **Tablas**                                | **Responsabilidad del esquema**                                                                                                     |
+|----------------------------|--------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
+| Identity & Access BC       | USER, CLIENT, PROVIDER                      | La tabla central USER almacena credenciales y roles. De esta se derivan lógicamente los perfiles especializados CLIENT (empresa solicitante) y PROVIDER (distribuidor), que incluyen datos comerciales específicos. |
+| Ordering BC                 | REQUEST, REQUEST_DETAILS, ORDER             | La interacción comercial inicia en la tabla REQUEST y se detalla en REQUEST_DETAILS. Una vez aceptada, se consolida en la tabla transaccional ORDER, que centraliza estados y tiempos (aprobado, despachado, entregado). |
+| Payment BC                  | PAYMENT, DEPOSIT                            | Los pagos se registran en la tabla PAYMENT (asociada a una orden), además de considerar depósitos pre-aprobados en DEPOSIT.             |
+| Catalog BC                  | INVENTORY                                   | Controla el stock de combustible de cada proveedor.                                                                                    |
+| Fulfillment BC              | DISPATCH, TRANSPORT, DRIVER                 | La tabla DISPATCH actúa como el núcleo operativo, vinculando un pedido aprobado (ORDER) con los recursos físicos de la tabla TRANSPORT (vehículos, placas, capacidad) y DRIVER (conductores y licencias). |
+| Notification BC             | NOTIFICATION                                | Permite el historial de alertas por usuario.                                                                                           |
+| Reporting & Analytics BC    | REPORT                                      | Consolida la metadata de los archivos generados en el sistema.                                                                         |
 
-- Ciclo de Pedidos: La interacción comercial inicia en la tabla REQUEST y se detalla en REQUEST_DETAILS. Una vez aceptada, se consolida en la tabla transaccional ORDER, que centraliza estados y tiempos (aprobado, despachado, entregado).
-
-- Finanzas e Inventario: Los pagos se registran en la tabla PAYMENT (asociada a una orden), además de considerar depósitos pre-aprobados en DEPOSIT. La tabla INVENTORY controla el stock de combustible de cada proveedor.
-
-- Logística y Despacho: La tabla DISPATCH actúa como el núcleo operativo, vinculando un pedido aprobado (ORDER) con los recursos físicos de la tabla TRANSPORT (vehículos, placas, capacidad) y DRIVER (conductores y licencias).
-
-- Notificaciones y Reportes: Tablas auxiliares como NOTIFICATION permiten el historial de alertas por usuario, y REPORT consolida la metadata de los archivos generados en el sistema.
+Las referencias entre esquemas de distintos BC (por ejemplo, DISPATCH → ORDER, o PAYMENT → ORDER) se mantienen como foreign keys dentro de la misma base MySQL, consistente con la decisión ADR-04 de no separar la base de datos por BC durante el MVP.
 
 ### 4.1.6 Design Patterns
 
-- Repository Pattern: Aplicado en el acceso a datos para abstraer las consultas a MySQL, permitiendo modificaciones en el motor de persistencia sin alterar los controladores de la API.
+| **ID**  | **Patrón**                   | **Aplicación**                                                                                                                       | **Driver relacionado**                           |
+|---------|-------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------|
+| PAT-1   | Repository Pattern            | Aplicado en el acceso a datos para abstraer las consultas a MySQL vía Entity Framework Core, permitiendo modificaciones en el motor de persistencia sin alterar los controladores de la API. | QA-2 Performance, CONC-3 (Mantenimiento del Código) |
+| PAT-2   | Observer (Publish-Subscribe)  | Empleado internamente (Domain Event Dispatcher) para que el Notification BC y Reporting & Analytics BC reaccionen asíncronamente a los eventos del Ordering BC (ej. cuando se aprueba o despacha una orden). | QA-1 Availability & Traceability, CONC-2 (Desacoplamiento de Servicios Bloqueantes) |
+| PAT-3   | MVC / MVVM                    | Patrones aplicados en el diseño de la SPA en el frontend para separar la lógica de presentación de la lógica de consumo de servicios REST. | QA-3 Usability                                      |
+| PAT-4   | Unit of Work                  | Agrupa las operaciones de escritura de un mismo caso de uso (ej. aprobar pedido + registrar despacho) en una única transacción de Entity Framework Core, evitando estados inconsistentes entre tablas de distintos BC. | CONC-1 (Gestión Segura del Estado)                  |
 
-- Observer (Publish-Subscribe): Empleado internamente para que el Notification BC y Reporting & Analytics BC reaccionen asíncronamente a los eventos del Ordering BC (ej. cuando se aprueba o despacha una orden).
-
-- MVC / MVVM: Patrones aplicados en el diseño de la SPA en el frontend para separar la lógica de presentación de la lógica de consumo de servicios REST.
+```mermaid
+flowchart LR
+    Controller["API Controller"] --> Repo["Repository (PAT-1)"]
+    Controller --> UoW["Unit of Work (PAT-4)"]
+    UoW --> Repo
+    Repo --> DB[(MySQL)]
+    Controller --> Dispatcher["Domain Event Dispatcher (PAT-2)"]
+    Dispatcher --> Notif["Notification BC"]
+    Dispatcher --> Report["Reporting & Analytics BC"]
+    SPA["SPA (PAT-3: MVVM)"] --> Controller
+```
 
 ### 4.1.7 Tactics
 
-- Disponibilidad (Availability): Uso de redundancia en la persistencia de datos (Cloud Storage para archivos) y excepciones controladas en la comunicación con servicios de terceros (como el PDF Generator) para evitar fallos en cascada.
-
-- Seguridad (Security): Autenticación estricta mediante JSON Web Tokens (JWT) gestionada por el Identity & Access BC, además de obligar al uso de HTTPS para todo el tráfico entre la SPA, la Landing Page y la API.
-
-- Modificabilidad (Modifiability): La alta cohesión lograda al separar la API en 7 Bounded Contexts distintos permite modificar, por ejemplo, la lógica de inventario (Catalog BC) sin impactar la lógica de despachos (Fulfillment BC).
+| **ID**  | **Atributo de calidad**        | **Categoría táctica (Bass et al.)** | **Táctica aplicada**                                                                                                                 | **QA relacionado** |
+|---------|----------------------------------|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|-----------------------|
+| TAC-1   | Disponibilidad (Availability)   | Detect Faults → Recover from Faults    | Uso de redundancia en la persistencia de datos (Cloud Storage para archivos) y excepciones controladas (circuit-breaker simple) en la comunicación con servicios de terceros (como el PDF Generator) para evitar fallos en cascada. | QA-1                 |
+| TAC-2   | Seguridad (Security)            | Resist Attacks                         | Autenticación estricta mediante JSON Web Tokens (JWT) gestionada por el Identity & Access BC, además de obligar al uso de HTTPS para todo el tráfico entre la SPA, la Landing Page y la API. | Constraint: Integración de Terceros |
+| TAC-3   | Modificabilidad (Modifiability) | Increase Cohesion / Reduce Coupling    | La alta cohesión lograda al separar la API en 7 Bounded Contexts distintos permite modificar, por ejemplo, la lógica de inventario (Catalog BC) sin impactar la lógica de despachos (Fulfillment BC). | CONC-3 (Mantenimiento del Código) |
+| TAC-4   | Desempeño (Performance)         | Manage Resources / Resource Pooling    | Índices en las columnas de búsqueda frecuente de ORDER (estado, fecha, cliente) y paginación en los endpoints de Dashboard para acotar el volumen de datos procesado por consulta. | QA-2                 |
 
 ## 4.2 Architectural Drivers
 
@@ -1869,41 +1981,69 @@ El propósito arquitectónico de FuelBridge es proporcionar una plataforma B2B c
 
 ### 4.2.2 Primary Functionality (Primary User Stories)
 
-La arquitectura debe dar soporte prioritario a las historias de usuario y endpoints core identificados con mayor valor de negocio en el Product Backlog:
+La arquitectura debe dar soporte prioritario a las historias de usuario y endpoints core identificados con mayor valor de negocio en el Product Backlog. Cada una exige una decisión estructural específica, no solo funcional:
 
-- US-05 / TS-04: Registrar un nuevo pedido de combustible (Solicitante) y su creación en la base de datos.
+- US-05 / TS-04: Registrar un nuevo pedido de combustible (Solicitante) y su creación en la base de datos. Exige que el Ordering BC exponga un endpoint transaccional que valide stock (Catalog BC) antes de confirmar el REQUEST, lo cual condiciona la comunicación entre BCs definida en 4.3.1.3.
 
-- US-11 / TS-14: Aprobar pedidos condicionados a la validación de los pagos correspondientes (Proveedor).
+- US-11 / TS-14: Aprobar pedidos condicionados a la validación de los pagos correspondientes (Proveedor). Requiere una dependencia síncrona entre Ordering BC y Payment BC antes de permitir la transición de estado Pending → Approved (ver diagrama de estados en 4.1.4).
 
-- US-46 / TS-17: Asignar recursos físicos (vehículo y conductor) al despacho en una sola operación.
+- US-46 / TS-17: Asignar recursos físicos (vehículo y conductor) al despacho en una sola operación. Obliga a que Fulfillment BC consulte disponibilidad de TRANSPORT y DRIVER de forma atómica, lo que motiva el patrón Unit of Work (PAT-4, ver 4.1.6).
 
-- US-47: Despliegue de un Dashboard principal para el proveedor con KPIs y métricas en tiempo real.
+- US-47: Despliegue de un Dashboard principal para el proveedor con KPIs y métricas en tiempo real. Es el origen directo del driver QA-2 (Performance) y de la decisión de indexar y optimizar las consultas de Reporting & Analytics BC (ver ADD-06 y ADR-07).
 
 ### 4.2.3 Quality Attribute Scenarios
 
-Basado en los requerimientos del sector B2B, los atributos de calidad críticos son:
+Basado en los requerimientos del sector B2B, se definen tres Quality Attribute Scenarios siguiendo el formato de 6 partes (Bass, Clements & Kazman). Los IDs QA-1, QA-2 y QA-3 asignados aquí son los mismos referenciados en los Architectural Design Backlogs de la sección 4.3:
 
-Usabilidad (Usability): Dado que los usuarios transicionan desde herramientas manuales, el frontend (SPA) debe ser extremadamente intuitivo. Al registrar un pedido (US-05) o asignar flota (US-46), el sistema debe brindar feedback visual inmediato sin superar los tiempos cognitivos de espera.
+**QA-1 — Disponibilidad y Trazabilidad (Availability & Traceability)**
 
-Disponibilidad y Trazabilidad (Availability & Traceability): El seguimiento del pedido es el dolor principal de los clientes. Si el proveedor actualiza el estado de una orden a "Despachado", el Notification BC debe asegurar que la alerta llegue a la plataforma del cliente sin pérdida de eventos, garantizando visibilidad 24/7.
+| **Parte**              | **Descripción**                                                                                   |
+|-------------------------|-----------------------------------------------------------------------------------------------------|
+| Fuente del estímulo     | Provider (desde la Web Application)                                                                 |
+| Estímulo                | Actualiza el estado de una orden a "Despachado"                                                     |
+| Entorno                 | Sistema en operación normal, carga nominal                                                          |
+| Artefacto                 | Notification BC y Ordering BC                                                                       |
+| Respuesta                | El cambio de estado se publica como evento de dominio (Observer/Pub-Sub) y genera una notificación in-app para el Client correspondiente |
+| Medida de respuesta      | El 100% de los eventos de cambio de estado generan una notificación visible para el cliente en menos de 5 segundos, sin pérdida de eventos |
 
-Desempeño (Performance): La carga de interfaces analíticas (como el Dashboard del proveedor y el historial del cliente) requiere procesar múltiples registros. El diseño de la base de datos MySQL debe soportar índices eficientes para evitar bloqueos durante consultas de rango de fechas.
+**QA-2 — Desempeño (Performance)**
+
+| **Parte**              | **Descripción**                                                                                   |
+|-------------------------|-----------------------------------------------------------------------------------------------------|
+| Fuente del estímulo     | Provider (desde el Dashboard) o Client (desde el historial de pedidos)                              |
+| Estímulo                | Solicita la carga del Dashboard principal o del historial de pedidos                                |
+| Entorno                 | Operación normal, hasta 50 usuarios concurrentes consultando reportes                               |
+| Artefacto                 | Reporting & Analytics BC y la base de datos MySQL                                                   |
+| Respuesta                | El sistema consulta ORDER y tablas relacionadas usando índices por estado y fecha (ver ADR-07) y devuelve el resultado paginado |
+| Medida de respuesta      | El 95% de las consultas del Dashboard y del historial responden en menos de 2 segundos bajo carga de 50 usuarios concurrentes (pendiente de validar con pruebas de carga, ver 4.3.2.7) |
+
+**QA-3 — Usabilidad (Usability)**
+
+| **Parte**              | **Descripción**                                                                                   |
+|-------------------------|-----------------------------------------------------------------------------------------------------|
+| Fuente del estímulo     | Client o Provider, usuarios que transicionan desde herramientas manuales (WhatsApp, Excel)          |
+| Estímulo                | Registra un nuevo pedido (US-05) o asigna flota a un despacho (US-46)                               |
+| Entorno                 | Primer uso o uso recurrente de la SPA, sin entrenamiento previo formal                              |
+| Artefacto                 | FuelBridge Web Application (SPA)                                                                     |
+| Respuesta                | La interfaz valida el formulario en el cliente y muestra confirmación visual inmediata del resultado de la acción |
+| Medida de respuesta      | El sistema brinda feedback visual en menos de 300 ms tras la acción del usuario, y un usuario nuevo completa el registro de un pedido en menos de 2 minutos sin asistencia |
 
 ### 4.2.4 Constraints
 
-- Tecnológicas: El backend se restringe al uso del entorno ASP.NET Core 8 para la exposición de la REST API y MySQL para la persistencia transaccional.
-
-- Integración de Terceros: El sistema tiene dependencias externas estrictas para el envío de correos, almacenamiento de vouchers (Cloud Storage) y generación de reportes (PDF Generator), por lo que las interfaces de red deben manejar latencias.
-
-- Plazos (Time-to-market): El proyecto cuenta con un límite de tiempo estructurado en 4 Sprints, obligando a un desarrollo ágil y priorización del MVP.
+| **ID**   | **Restricción**            | **Descripción**                                                                                                                 |
+|----------|------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
+| CON-1    | Tecnológicas                 | El backend se restringe al uso del entorno ASP.NET Core 8 para la exposición de la REST API y MySQL para la persistencia transaccional. |
+| CON-2    | Integración de Terceros      | El sistema tiene dependencias externas estrictas para el envío de correos, almacenamiento de vouchers (Cloud Storage) y generación de reportes (PDF Generator), por lo que las interfaces de red deben manejar latencias. |
+| CON-3    | Plazos (Time-to-market)      | El proyecto cuenta con un límite de tiempo estructurado en 4 Sprints, obligando a un desarrollo ágil y priorización del MVP.          |
 
 ### 4.2.5 Architectural Concerns
 
-- Gestión Segura del Estado: Coordinar el flujo transaccional entre el pedido, el pago y la liberación de inventario (Ordering BC, Payment BC y Catalog BC) garantizando que un despacho no ocurra si el pago y el stock no están debidamente verificados.
-
-- Desacoplamiento de Servicios Bloqueantes: Extraer tareas pesadas o de latencia variable (generación de PDFs o envío masivo de correos) fuera del hilo principal de ejecución HTTP para no afectar la experiencia del usuario.
-
-- Mantenimiento del Código: Asegurar convenciones claras de nombrado, estructuración por dominios y un pipeline de CI/CD que soporte integraciones continuas conforme avance el equipo durante los Sprints establecidos.
+| **ID**    | **Concern**                              | **Descripción**                                                                                                                             |
+|-----------|---------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
+| CONC-1    | Gestión Segura del Estado                    | Coordinar el flujo transaccional entre el pedido, el pago y la liberación de inventario (Ordering BC, Payment BC y Catalog BC) garantizando que un despacho no ocurra si el pago y el stock no están debidamente verificados. |
+| CONC-2    | Desacoplamiento de Servicios Bloqueantes     | Extraer tareas pesadas o de latencia variable (generación de PDFs o envío masivo de correos) fuera del hilo principal de ejecución HTTP para no afectar la experiencia del usuario. |
+| CONC-3    | Mantenimiento del Código                     | Asegurar convenciones claras de nombrado, estructuración por dominios y un pipeline de CI/CD que soporte integraciones continuas conforme avance el equipo durante los Sprints establecidos. |
+| CONC-4    | Separación de Responsabilidades              | Mantener la Landing Page (contenedor estático de presentación) completamente desacoplada de la lógica transaccional de la Web Application y la API, evitando que cambios de marketing/contenido requieran un despliegue de la plataforma transaccional. |
 
 ## 4.3 ADD Iterations
 
@@ -1914,22 +2054,22 @@ Desempeño (Performance): La carga de interfaces analíticas (como el Dashboard 
 | **ID** | **Decisión de Diseño**                                                                   | **Driver Relacionado**                                       | **Prioridad** | **Estado**   |
 |--------|------------------------------------------------------------------------------------------|--------------------------------------------------------------|---------------|--------------|
 | ADD-01 | Definir los contenedores principales del sistema y sus responsabilidades                 | QA-1 (Availability & Traceability), QA-3 (Usability)         | Alta          | Por resolver |
-| ADD-02 | Establecer el estilo arquitectónico base (SPA + API REST + BCs)                          | QA-2 (Performance), Constraint Tecnológica                   | Alta          | Por resolver |
-| ADD-03 | Definir la estrategia de comunicación entre contenedores (sincrónica o. asincrónica)     | QA-1 (Availability & Traceability), Concern: Desacoplamiento | Alta          | Por resolver |
-| ADD-04 | Establecer la separación en Bounded Contexts dentro de la API                            | QA-2 (Performance), Concern: Gestión Segura del Estado       | Media         | Por resolver |
-| ADD-05 | Definir la Landing Page como contenedor estático separado de la FuelBridge Web Application | QA-3 (Usability), Concern: Separación de responsabilidades   | Media         | Por resolver |
+| ADD-02 | Establecer el estilo arquitectónico base (SPA + API REST + BCs)                          | QA-2 (Performance), CON-1 (Tecnológicas)                   | Alta          | Por resolver |
+| ADD-03 | Definir la estrategia de comunicación entre contenedores (sincrónica o. asincrónica)     | QA-1 (Availability & Traceability), CONC-2 (Desacoplamiento de Servicios Bloqueantes) | Alta          | Por resolver |
+| ADD-04 | Establecer la separación en Bounded Contexts dentro de la API                            | QA-2 (Performance), CONC-1 (Gestión Segura del Estado)       | Media         | Por resolver |
+| ADD-05 | Definir la Landing Page como contenedor estático separado de la FuelBridge Web Application | QA-3 (Usability), CONC-4 (Separación de Responsabilidades)   | Media         | Por resolver |
 
 #### 4.3.1.2 Establish Iteration Goal by Selecting Drivers
 
 El objetivo de esta primera iteración es establecer la estructura global del sistema desde cero, definiendo los contenedores principales que lo componen y las relaciones entre ellos.
 
-Drivers trabajados en Iteración 1: QA-1 Availability & Traceability, QA-3 Usability y Constraint Tecnológica ASP.NET Core 8 + MySQL. :
+Drivers trabajados en Iteración 1: QA-1 Availability & Traceability, QA-3 Usability y CON-1 (Tecnológicas: ASP.NET Core 8 + MySQL).
 
 **QA-1 Availability & Traceability:** Es el driver de mayor impacto para el negocio. Los clientes del sector B2B (minería y construcción) dependen de la visibilidad del estado de sus pedidos en tiempo real. Una arquitectura que no garantice la entrega confiable de eventos de cambio de estado compromete el valor principal de la plataforma. Por ello, la estructura global debe contemplar desde el inicio un mecanismo asincrónico que desacople la notificación del flujo principal del pedido.
 
 **QA-3 Usability:** Los usuarios de FuelBridge provienen de entornos manuales (Excel, WhatsApp). La arquitectura debe soportar una interfaz de usuario fluida y sin interrupciones, lo que justifica la elección de una SPA como contenedor de frontend separado de la API, permitiendo actualizaciones parciales de la vista sin recargas completas.
 
-**Constraint Tecnológica:** El equipo está restringido al uso de ASP.NET Core 8 para el backend y MySQL para la persistencia. Esta restricción condiciona directamente las decisiones de contenedores y patrones de acceso a datos.
+**CON-1 (Tecnológicas):** El equipo está restringido al uso de ASP.NET Core 8 para el backend y MySQL para la persistencia. Esta restricción condiciona directamente las decisiones de contenedores y patrones de acceso a datos.
 
 Los drivers QA-2 (Performance) y los Concerns de gestión del estado quedan registrados en el backlog pero se abordan en la Iteración 2, donde se profundizará en los componentes internos de la API.
 
@@ -2021,28 +2161,39 @@ El diagrama de componentes de FuelBridge Web Application representa la organizac
 
 El diagrama de componentes de la Landing Page representa la estructura del sitio público de FuelBridge. Al tratarse de una aplicación web estática, sus componentes se limitan a responsabilidades de presentación y navegación. Navigation permite acceder a las distintas secciones, Hero Section comunica la propuesta principal, Platform Information presenta las características de la solución y Access CTA redirige hacia FuelBridge Web Application. Esta separación mantiene la Landing Page independiente de la lógica transaccional del sistema.
 
-| **ID** | **Decisión**                                                  | **Alternativa descartada**        | **Justificación**                                                                        | **Consecuencia**                                                                |
-|--------|---------------------------------------------------------------|-----------------------------------|------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
-| ADR-01 | SPA desacoplada del backend                                   | Monolito MVC server-side          | Soporte de actualizaciones parciales de vista sin recargas para paneles en tiempo real   | El frontend requiere pipeline de despliegue independiente                       |
-| ADR-02 | Monolito Modular como estilo del backend                      | Microservicios distribuidos       | Viable dentro del plazo de 4 Sprints; modificabilidad por dominio sin overhead operativo | Riesgo de acoplamiento si los BCs no mantienen límites claros en el código      |
-| ADR-03 | Observer/Pub-Sub interno para eventos Ordering → Notification | Message broker externo (RabbitMQ) | Satisface QA-1 sin infraestructura adicional en el MVP                                   | Si el volumen de eventos crece, se requerirá migrar a un message broker externo |
-| ADR-04 | Base de datos MySQL compartida entre todos los BCs            | Base de datos por BC              | Compatible con la Constraint Tecnológica y el time-to-market                             | Cambios en tablas compartidas requieren coordinación entre BCs                  |
+| **ID** | **Decisión**                                                  | **Alternativa descartada**        | **Driver**    | **Componente**             | **Justificación**                                                                        | **Consecuencia**                                                                |
+|--------|---------------------------------------------------------------|-----------------------------------|-----------------|-------------------------------|------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
+| ADR-01 | SPA desacoplada del backend                                   | Monolito MVC server-side          | QA-3            | FuelBridge Web Application     | Soporte de actualizaciones parciales de vista sin recargas para paneles en tiempo real   | El frontend requiere pipeline de despliegue independiente                       |
+| ADR-02 | Monolito Modular como estilo del backend                      | Microservicios distribuidos       | CON-3, QA-2     | FuelBridge API                 | Viable dentro del plazo de 4 Sprints; modificabilidad por dominio sin overhead operativo | Riesgo de acoplamiento si los BCs no mantienen límites claros en el código      |
+| ADR-03 | Observer/Pub-Sub interno para eventos Ordering → Notification | Message broker externo (RabbitMQ) | QA-1            | Domain Event Dispatcher        | Satisface QA-1 sin infraestructura adicional en el MVP                                   | Si el volumen de eventos crece, se requerirá migrar a un message broker externo |
+| ADR-04 | Base de datos MySQL compartida entre todos los BCs            | Base de datos por BC              | CON-1, CON-3    | MySQL Database                 | Compatible con CON-1 (Tecnológicas) y CON-3 (Time-to-market)                             | Cambios en tablas compartidas requieren coordinación entre BCs                  |
 
 #### 4.3.1.7 Analysis of Current Design and Review Iteration Goal (Kanban Board)
 
-Al cierre de esta iteración, los objetivos planteados en el backlog quedan en el siguiente estado:
+El tablero Kanban de la Iteración 1 se gestiona en Trello: **[Tablero FuelBridge — Iteración 1](https://trello.com/invite/b/69e2fd01ee5b055b2d967a45/ATTI05a9ebca4c1da02108fc92fa76bfa07e412172F6/fulltank)**. Al cierre de esta iteración, las tareas del backlog ADD-01 a ADD-05 quedan distribuidas así:
 
-| **Tarea**                                                   | **Estado** |
-|-------------------------------------------------------------|------------|
-| Definir contenedores principales del sistema                | Done       |
-| Establecer estilo arquitectónico base                       | Done       |
-| Definir estrategia de comunicación entre contenedores       | Done       |
-| Separar API en Bounded Contexts y asignar responsabilidades | Done       |
-| Elaborar C4 Level 1 Context Diagram                         | Done       |
-| Elaborar C4 Level 2 Container Diagram                       | Done       |
-| Elaborar C4 Level 3 Component Diagram (FuelBridge API)        | Done       |
-| Registrar decisiones de diseño (ADR-01 al ADR-04)           | Done       |
-| Abordar QA-2 (Performance) a nivel de componentes internos  | Pendiente  |
+| **To Do** | **In Progress** | **Done** |
+|-----------|------------------|----------|
+| Abordar QA-2 (Performance) a nivel de componentes internos (pasa a Iteración 2) | — | Definir contenedores principales del sistema (ADD-01) |
+| | | Establecer estilo arquitectónico base (ADD-02) |
+| | | Definir estrategia de comunicación entre contenedores (ADD-03) |
+| | | Separar API en Bounded Contexts y asignar responsabilidades (ADD-04) |
+| | | Definir la Landing Page como contenedor separado (ADD-05) |
+| | | Elaborar C4 Level 1 Context Diagram |
+| | | Elaborar C4 Level 2 Container Diagram |
+| | | Elaborar C4 Level 3 Component Diagram (FuelBridge API) |
+| | | Registrar decisiones de diseño (ADR-01 al ADR-04) |
+
+**Trazabilidad driver → decisión → componente (Iteración 1)**
+
+| **Driver** | **Backlog** | **ADR** | **Componente**             |
+|------------|-------------|---------|--------------------------------|
+| QA-1, QA-3 | ADD-01      | —       | Todos los contenedores          |
+| CON-1      | ADD-02      | ADR-02  | FuelBridge API                  |
+| CONC-2     | ADD-03      | ADR-03  | Domain Event Dispatcher         |
+| QA-2, CONC-1 | ADD-04    | ADR-02  | FuelBridge API (7 BCs)          |
+| QA-3, CONC-4 | ADD-05    | ADR-01  | Landing Page                    |
+
 
 Los drivers QA-1 y QA-3 quedan satisfechos a nivel estructural. QA-2 se traslada a la Iteración 2 donde se abordará la estructura interna del Ordering BC y el Reporting & Analytics BC.
 
@@ -2053,9 +2204,9 @@ Los drivers QA-1 y QA-3 quedan satisfechos a nivel estructural. QA-2 se traslada
 | **Decisión de diseño**                                                                  | **Driver relacionado**                                      | **ID** | **Prioridad** | **Estado**   |
 |-----------------------------------------------------------------------------------------|-------------------------------------------------------------|--------|---------------|--------------|
 | Optimizar consultas del Dashboard y reportes                                            | QA-2 Performance                                            | ADD-06 | Alta          | Por resolver |
-| Definir procesamiento asíncrono para notificaciones y reportes PDF                      | QA-1 Availability & Traceability / Concern: Desacoplamiento | ADD-07 | Alta          | Por resolver |
+| Definir procesamiento asíncrono para notificaciones y reportes PDF                      | QA-1 Availability & Traceability / CONC-2 (Desacoplamiento de Servicios Bloqueantes) | ADD-07 | Alta          | Por resolver |
 | Refinar componentes internos de Ordering BC, Notification BC y Reporting & Analytics BC | QA-2 Performance / Modificabilidad                          | ADD-08 | Alta          | Por resolver |
-| Definir interfaces internas entre BCs mediante eventos de dominio                       | Concern: Gestión Segura del Estado                          | ADD-09 | Media         | Por resolver |
+| Definir interfaces internas entre BCs mediante eventos de dominio                       | CONC-1 (Gestión Segura del Estado)                          | ADD-09 | Media         | Por resolver |
 | Establecer estrategia de índices y consultas para MySQL                                 | QA-2 Performance                                            | ADD-10 | Media         | Por resolver |
 
 #### 4.3.2.2 Establish Iteration Goal by Selecting Drivers
@@ -2100,35 +2251,48 @@ Decisión adoptada: mantener el Monolito Modular con eventos internos mediante O
 | Fulfillment BC           | Componente API         | Asignar vehículos y conductores al despacho.          | Consume pedidos aprobados desde Ordering BC.      |
 | Notification BC          | Componente API         | Generar notificaciones in-app ante cambios de estado. | Consume eventos internos de Ordering BC           |
 | Reporting & Analytics BC | Componente API         | Calcular KPIs, métricas y solicitar PDFs.             | Consulta MySQL y consume PDF Generator Service.   |
-| Domain Event Dispatcher  | Componente interno     | Publicar eventos internos entre BCs.                  | Interfaz publish/subscribe interna.               |
-| Domain Event Dispatcher  | Componente de datos    | Consultar pedidos por usuario, estado y fechas.       | Entity Framework Core hacia MySQL.                |
-| Order Repository         | Componente de consulta | Optimizar consultas para Dashboard y reportes.        | SQL/EF Core con índices.                          |
+| Domain Event Dispatcher  | Componente interno     | Publicar eventos internos entre BCs (PAT-2).           | Interfaz publish/subscribe interna.               |
+| Order Repository         | Componente de datos    | Consultar pedidos por usuario, estado y fechas.       | Entity Framework Core hacia MySQL (PAT-1).        |
+| Reporting Query Repository | Componente de consulta | Optimizar consultas para Dashboard y reportes.        | SQL/EF Core con índices (ADR-07).                 |
 
 #### 4.3.2.6 Sketch Views (C4 & UML) and Record Design Decisions
 
-**C4 Component Diagram – FuelBridge/FuelBridge API  
-**El diagrama de componentes de esta iteración debe mostrar la estructura interna de la API, refinando los Bounded Contexts más críticos: Ordering, Payment, Catalog, Fulfillment, Notification y Reporting & Analytics. Ordering BC actúa como núcleo del ciclo de pedido y publica eventos internos cuando un pedido cambia de estado. Notification BC consume esos eventos para generar alertas in-app, mientras Reporting & Analytics BC consulta MySQL para mostrar KPIs y solicitar reportes PDF al servicio externo. Esta vista permite evidenciar el uso de bajo acoplamiento, alta cohesión y procesamiento asíncrono interno.
+**C4 Component Diagram – FuelBridge API refinado (Iteración 2)**
 
-| **ID** | **Decisión**                                         | **Alternativa descartada**                | **Justificación**                                  | **Consecuencia**                                         |
-|--------|------------------------------------------------------|-------------------------------------------|----------------------------------------------------|----------------------------------------------------------|
-| ADR-05 | Usar Observer/Pub-Sub interno para eventos de pedido | Llamadas directas entre BCs               | Reduce acoplamiento entre Ordering y Notification. | Si crece el volumen, podría requerirse broker externo.   |
-| ADR-06 | Aplicar Repository Pattern con EF Core               | Consultas SQL directas en controladores   | Centraliza acceso a datos y mejora mantenibilidad. | Requiere disciplina para no duplicar lógica de consulta. |
-| ADR-07 | Optimizar Dashboard con consultas indexadas          | Consultas sin estrategia de índices       | Mejora performance en reportes e historial.        | Se deben mantener índices según evolución del modelo.    |
-| ADR-08 | Mantener generación de PDF fuera del flujo principal | Generar PDF dentro del endpoint principal | Evita bloqueo de la API ante latencia externa.     | Requiere manejo de estados o errores de generación.      |
+El diagrama de componentes de esta iteración muestra la estructura interna de la API, refinando los Bounded Contexts más críticos: Ordering, Payment, Catalog, Fulfillment, Notification y Reporting & Analytics. Ordering BC actúa como núcleo del ciclo de pedido y publica eventos internos (vía Domain Event Dispatcher) cuando un pedido cambia de estado. Notification BC consume esos eventos para generar alertas in-app, mientras Reporting & Analytics BC consulta MySQL a través de Reporting Query Repository para mostrar KPIs y solicitar reportes PDF al servicio externo. Esta vista evidencia bajo acoplamiento, alta cohesión y procesamiento asíncrono interno.
+
+| **ID** | **Decisión**                                         | **Alternativa descartada**                | **Driver** | **Componente**              | **Justificación**                                  | **Consecuencia**                                         |
+|--------|--------------------------------------------------------|---------------------------------------------|-------------|--------------------------------|------------------------------------------------------|--------------------------------------------------------------|
+| ADR-05 | Usar Observer/Pub-Sub interno para eventos de pedido | Llamadas directas entre BCs               | QA-1        | Domain Event Dispatcher        | Reduce acoplamiento entre Ordering y Notification. | Si crece el volumen, podría requerirse broker externo.   |
+| ADR-06 | Aplicar Repository Pattern con EF Core               | Consultas SQL directas en controladores   | CONC-3      | Order Repository                | Centraliza acceso a datos y mejora mantenibilidad. | Requiere disciplina para no duplicar lógica de consulta. |
+| ADR-07 | Optimizar Dashboard con consultas indexadas          | Consultas sin estrategia de índices       | QA-2        | Reporting Query Repository     | Mejora performance en reportes e historial.        | Se deben mantener índices según evolución del modelo.    |
+| ADR-08 | Mantener generación de PDF fuera del flujo principal | Generar PDF dentro del endpoint principal | CONC-2      | Reporting & Analytics BC       | Evita bloqueo de la API ante latencia externa.     | Requiere manejo de estados o errores de generación.      |
 
 #### 4.3.2.7 Analysis of Current Design and Review Iteration Goal (Kanban Board)
 
-| **Tarea**                                                        | **Estado** |
-|------------------------------------------------------------------|------------|
-| Refinar componentes internos de FuelBridge/FuelBridge API          | Done       |
-| Definir comunicación interna entre Ordering BC y Notification BC | Done       |
-| Definir estrategia de consultas para Dashboard y reportes        | Done       |
-| Registrar ADR-05 a ADR-08                                        | Done       |
-| Aplicar Repository Pattern con Entity Framework Core             | Done       |
-| Evaluar futura migración a broker externo                        | Pendiente  |
-| Validar performance real con pruebas de carga                    | Pendiente  |
+El tablero Kanban de la Iteración 2 se gestiona en el mismo tablero Trello referenciado en [4.3.1.7](#4317-analysis-of-current-design-and-review-iteration-goal-kanban-board). Al cierre de esta iteración, las tareas del backlog ADD-06 a ADD-10 quedan distribuidas así:
 
-Al cierre de esta iteración, los objetivos principales quedan cubiertos: se refinó la estructura interna de la API, se definió comunicación asíncrona interna mediante eventos de dominio y se estableció una estrategia inicial para mejorar el desempeño de Dashboard y reportes. Quedan pendientes pruebas de carga y evaluación futura de un broker externo si el volumen de eventos supera lo esperado.
+| **To Do** | **In Progress** | **Done** |
+|-----------|------------------|----------|
+| — | Validar performance real con pruebas de carga contra la medida de QA-2 (95% < 2s, ver 4.2.3) | Refinar componentes internos de FuelBridge API (ADD-08) |
+| | Evaluar futura migración a broker externo si el volumen de eventos supera lo estimado | Definir comunicación interna entre Ordering BC y Notification BC (ADD-09) |
+| | | Definir estrategia de consultas para Dashboard y reportes (ADD-06) |
+| | | Registrar ADR-05 a ADR-08 |
+| | | Aplicar Repository Pattern con Entity Framework Core |
+
+QA-2 (Performance) queda **parcialmente cubierto**: la decisión arquitectónica (índices + Repository Pattern + paginación, ADR-07) está tomada e implementada a nivel de diseño, pero la medida de respuesta definida en 4.2.3 (95% de consultas en menos de 2 segundos con 50 usuarios concurrentes) todavía no se valida con una prueba de carga real; esa validación queda como tarea abierta para el Sprint de implementación.
+
+**Trazabilidad driver → decisión → componente (Iteración 2)**
+
+| **Driver** | **Backlog** | **ADR** | **Componente**              |
+|------------|-------------|---------|---------------------------------|
+| QA-2       | ADD-06      | ADR-07  | Reporting Query Repository      |
+| QA-1, CONC-2 | ADD-07    | ADR-08  | Reporting & Analytics BC        |
+| QA-2       | ADD-08      | ADR-06  | Order BC, Payment BC, Catalog BC |
+| CONC-1     | ADD-09      | ADR-05  | Domain Event Dispatcher         |
+| QA-2       | ADD-10      | ADR-07  | MySQL Database                  |
+
+
 
 #### 4.3.2.8 C4 Y DIAGRAMA UML
 
