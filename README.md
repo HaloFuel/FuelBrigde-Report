@@ -90,7 +90,7 @@
       - [1.2.3.3. Lean UX Hypothesis](#1233-lean-ux-hypothesis)
       - [1.2.3.4. Lean UX Canvas](#1234-lean-ux-canvas)
   - [1.3. Segmentos objetivo](#13-segmentos-objetivo)
-- [Capítulo II: Requirements Elicitation & Analysis](#capítulo-ii-requirements-elicitation--analysis)
+- [Capítulo II: Requirements & Analysis](#capítulo-ii-requirements--analysis)
   - [2.1. Competidores](#21-competidores)
     - [2.1.1. Análisis competitivo](#211-análisis-competitivo)
     - [2.1.2. Estrategias y tácticas frente a competidores](#212-estrategias-y-tácticas-frente-a-competidores)
@@ -393,7 +393,7 @@ Optimizar la planificación logística y distribución.
 
 ---
 
-# Capítulo II: Requirements Elicitation & Analysis
+# Capítulo II: Requirements & Analysis
 
 ## 2.1 Competidores
 
