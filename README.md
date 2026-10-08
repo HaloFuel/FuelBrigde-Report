@@ -1861,96 +1861,131 @@ A nivel de componentes, la FuelBridge API se descompone en los siguientes Bounde
 
 ```mermaid
 classDiagram
-    class Order {
-        +int Id
-        +int ClientId
-        +int ProviderId
-        +OrderStatus Status
-        +DateTime CreatedAt
-        +DateTime UpdatedAt
-        +decimal TotalAmount
-        +Approve()
-        +Reject()
-        +Dispatch()
-        +Close()
-    }
-    class OrderDetail {
-        +int Id
-        +int OrderId
-        +int ProductId
-        +decimal Quantity
-        +decimal UnitPrice
+    class FuelOrder {
+        +Long id
+        +Long requestId
+        +Long companyId
+        +Long providerId
+        +Long fuelProductId
+        +Long equipmentId
+        +Double requestedQuantity
+        +Double totalPrice
+        +OrderStatus status
+        +String deliveryAddress
+        +LocalDate scheduledDate
+        +confirm()
+        +cancel()
+        +dispatch()
+        +receive()
+        +markPaid()
     }
     class Payment {
-        +int Id
-        +int OrderId
-        +decimal Amount
-        +PaymentStatus Status
-        +string VoucherUrl
-        +Validate()
+        +Long id
+        +Long orderId
+        +Long companyId
+        +Double amount
+        +PaymentStatus status
+        +PaymentMethod paymentMethod
+        +String transactionReference
+        +LocalDateTime paidAt
+        +complete(transactionReference)
+        +refund()
+        +fail()
     }
-    class Dispatch {
-        +int Id
-        +int OrderId
-        +int VehicleId
-        +int DriverId
-        +DateTime DispatchedAt
-        +DateTime DeliveredAt
+    class Delivery {
+        +Long id
+        +Long orderId
+        +Long providerId
+        +Long driverId
+        +Long vehicleId
+        +DeliveryStatus status
+        +String scheduledDate
+        +LocalDateTime dispatchedAt
+        +LocalDateTime deliveredAt
+        +String notes
+        +dispatch()
+        +complete()
+        +fail(reason)
     }
-    class Client {
-        +int Id
-        +string CompanyName
-        +string Ruc
+    class BuyerCompany {
+        +Long id
+        +String name
+        +String ruc
+        +String sector
+        +String address
+        +String contactEmail
+        +String phone
     }
-    class Provider {
-        +int Id
-        +string CompanyName
-        +string Ruc
+    class ProviderCompany {
+        +Long id
+        +String name
+        +String ruc
+        +Double rating
+        +String address
+        +String phone
+        +List~String~ fuelTypesOffered
+        +String description
     }
-    Order "1" --> "1..*" OrderDetail
-    Order "1" --> "0..1" Payment
-    Order "1" --> "0..1" Dispatch
-    Order "*" --> "1" Client
-    Order "*" --> "1" Provider
+    FuelOrder "1" --> "0..1" Payment : orderId
+    FuelOrder "1" --> "0..1" Delivery : orderId
+    FuelOrder "*" --> "1" BuyerCompany : companyId
+    FuelOrder "*" --> "1" ProviderCompany : providerId
 ```
+
+**Nota de implementación:** a diferencia de una versión anterior de este diagrama, el agregado `FuelOrder` no tiene una clase `OrderDetail` asociada — es un agregado plano con un único `fuelProductId` y `requestedQuantity` por pedido (un pedido = un producto, no una lista de líneas). `BuyerCompany` y `ProviderCompany` son las clases reales de Identity & Access BC (antes referidas genéricamente como "Client" y "Provider"); no exponen métodos de cambio de estado propios más allá del constructor. Las clases `Client` y `Provider` de la versión anterior no existen en el código.
 
 **State Diagram – Ciclo de vida del pedido (Order)**
 
 ```mermaid
 stateDiagram-v2
-    [*] --> Pending : Cliente crea el pedido (US-05)
-    Pending --> Approved : Proveedor valida stock y pago (US-11)
-    Pending --> Rejected : Proveedor rechaza el pedido
-    Approved --> Dispatched : Se asigna vehículo y conductor (US-46)
-    Dispatched --> Delivered : Conductor confirma entrega
-    Delivered --> Closed : Sistema cierra el pedido
-    Rejected --> [*]
-    Closed --> [*]
+    [*] --> PENDING : Se crea el pedido
+ 
+    PENDING --> DISPATCHED : dispatch() [solo si está PENDING]
+    PENDING --> CONFIRMED : confirm()
+    PENDING --> CANCELLED : cancel()
+ 
+    DISPATCHED --> PENDING_PAYMENT : receive() [solo si está DISPATCHED]
+    DISPATCHED --> CANCELLED : cancel()
+ 
+    CONFIRMED --> CANCELLED : cancel()
+    CONFIRMED --> PAID : markPaid() [bloqueado si está CANCELLED]
+ 
+    PENDING_PAYMENT --> PAID : markPaid() [bloqueado si está CANCELLED]
+ 
+    PAID --> [*]
+    CANCELLED --> [*]
 ```
+ 
+**Nota de implementación:** `dispatch()` y `receive()` sí validan el estado previo del pedido (lanzan `IllegalStateException` si se invocan fuera de orden). `confirm()`, `cancel()` y `markPaid()` no tienen esa validación en el código actual — pueden invocarse desde cualquier estado (markPaid() solo bloquea si el pedido ya está `CANCELLED`). Los estados `IN_PROGRESS` y `DELIVERED`, declarados en `OrderStatus`, no están conectados a ningún método del agregado todavía.
 
 **Activity Diagram – Aprobación y despacho de un pedido**
 
 ```mermaid
 flowchart TD
-    A[Cliente crea pedido] --> B{Pago registrado?}
-    B -- No --> B1[Cliente sube voucher]
-    B1 --> B
-    B -- Sí --> C{Pago válido?}
-    C -- No --> C1[Proveedor rechaza pedido]
-    C -- Sí --> D{Stock suficiente?}
-    D -- No --> C1
-    D -- Sí --> E[Proveedor aprueba pedido]
-    E --> F[Sistema asigna vehículo y conductor]
-    F --> G[Ordering BC publica evento OrderApproved]
-    G --> H[Notification BC notifica al cliente]
-    G --> I[Reporting BC actualiza KPIs]
-    F --> J[Despacho en ruta]
-    J --> K[Conductor confirma entrega]
-    K --> L[Sistema cierra pedido]
-    C1 --> M[Notification BC notifica rechazo]
+    A[Cliente envía FuelRequest] --> B{Producto pertenece al proveedor indicado?}
+    B -- No --> B1[Sistema rechaza la solicitud]
+    B -- Sí --> C[Request queda en estado PENDING]
+    C --> D{Proveedor decide}
+    D -- Rechazar --> E{Incluyó un motivo?}
+    E -- No --> E1[Sistema exige un motivo obligatorio]
+    E -- Sí --> F[Request pasa a REJECTED]
+    D -- Aceptar --> G{El producto todavía existe?}
+    G -- No --> G1[Sistema rechaza la aceptación]
+    G -- Sí --> H[Se crea FuelOrder en PENDING, vinculado al Request]
+    H --> I[Request pasa a APPROVED]
+    I --> J{Acción posterior sobre el FuelOrder}
+    J -- confirm&#40;&#41; --> K[Order pasa a CONFIRMED]
+    J -- cancel&#40;&#41; --> L[Order pasa a CANCELLED]
+    J -- "dispatch&#40;&#41; si está PENDING" --> M[Order pasa a DISPATCHED]
+    M --> N{receive&#40;&#41;}
+    N -- "si está DISPATCHED" --> O[Order pasa a PENDING_PAYMENT]
+    O --> P{"markPaid&#40;&#41; si no está CANCELLED"}
+    P --> Q[Order pasa a PAID]
 ```
 
-Estas tres vistas complementan el Component Diagram de la API (4.1.4): el diagrama de clases detalla el modelo del Ordering BC (el BC core del sistema), el diagrama de estados formaliza las transiciones válidas de un pedido, y el diagrama de actividad muestra el flujo entre Ordering, Payment, Catalog, Fulfillment, Notification y Reporting & Analytics BC para el caso de uso principal del sistema.
+**Nota de implementación:** este diagrama refleja el flujo real tal como está en `FuelRequestService` y `FuelOrderCommandServiceImpl`. No hay validación automática de stock ni de pago antes de la aceptación del proveedor (`accept()` solo valida que el producto todavía exista), y `confirm()`, `cancel()`, `dispatch()`, `receive()` y `markPaid()` son operaciones independientes invocadas por separado vía API, no un pipeline orquestado automáticamente.
+ 
+`confirm()`, `cancel()` y `dispatch()` publican un evento de dominio (`FuelOrderConfirmedEvent`, `FuelOrderCancelledEvent`, `FuelOrderDispatchedEvent`) a través del mecanismo de Spring Data (`AbstractAggregateRoot` + `ApplicationEventPublisher`, publicado manualmente en `FuelOrderRepositoryImpl.save()` dado que el agregado se mapea a una entidad de persistencia aparte). Un listener en Notification BC (`FuelOrderNotificationEventHandler`) escucha esos tres eventos y crea una notificación real para el usuario dueño de la empresa compradora. `receive()` y `markPaid()` todavía no publican eventos ni generan notificaciones.
 
 ### 4.1.5 Relational/Non Relational Database Diagram
 
