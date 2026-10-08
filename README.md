@@ -125,6 +125,27 @@
   - [4.3. ADD Iterations](#43-add-iterations)
     - [4.3.1. Iteration 1: Estructura Global del Sistema](#431-iteration-1-estructura-global-del-sistema)
     - [4.3.2. Iteration 2: Performance y Procesamiento Asíncrono de Pedidos, Notificaciones y Reportes](#432-iteration-2-performance-y-procesamiento-asíncrono-de-pedidos-notificaciones-y-reportes)
+- [Capítulo V: Product Implementation, Validation & Deployment](#capítulo-v-product-implementation-validation--deployment)
+  - [5.1. Testing Suites & General Patterns](#51-testing-suites--general-patterns)
+    - [5.1.1. Backend Application Core Testing Suite](#511-backend-application-core-testing-suite)
+    - [5.1.2. Pattern Based Backend Application(s)](#512-pattern-based-backend-applications)
+    - [5.1.3. Pattern Based Custom Software Library](#513-pattern-based-custom-software-library)
+    - [5.1.4. Framework Pattern Driven Refactoring Report](#514-framework-pattern-driven-refactoring-report)
+  - [5.2. Software Configuration Management](#52-software-configuration-management)
+    - [5.2.1. Software Development Environment Configuration](#521-software-development-environment-configuration)
+    - [5.2.2. Source Code Management](#522-source-code-management)
+    - [5.2.3. Source Code Style Guide & Conventions](#523-source-code-style-guide--conventions)
+    - [5.2.4. Software Deployment Configuration](#524-software-deployment-configuration)
+  - [5.3. Microservices Implementation](#53-microservices-implementation)
+    - [5.2.1. Sprint 1](#521-sprint-1)
+      - [5.2.1.1. Sprint Backlog 1](#5211-sprint-backlog-1)
+      - [5.2.1.2. Development Evidence for Sprint Review](#5212-development-evidence-for-sprint-review)
+      - [5.2.1.3. Testing Suite Evidence for Sprint Review](#5213-testing-suite-evidence-for-sprint-review)
+      - [5.2.1.4. Execution Evidence for Sprint Review](#5214-execution-evidence-for-sprint-review)
+      - [5.2.1.5. Microservices Documentation Evidence for Sprint Review](#5215-microservices-documentation-evidence-for-sprint-review)
+      - [5.2.1.6. Software Deployment Evidence for Sprint Review](#5216-software-deployment-evidence-for-sprint-review)
+      - [5.2.1.7. Team Collaboration Insights during Sprint](#5217-team-collaboration-insights-during-sprint)
+      - [5.2.1.8. Kanban Board](#5218-kanban-board)
 - [Referencias bibliográficas](#referencias-bibliográficas)
 
 ## Student Outcome
@@ -2313,6 +2334,48 @@ El diagrama muestra el refinamiento interno de la FuelBridge API durante la segu
 El diagrama de secuencia representa el flujo de aprobación de un pedido, incluyendo la validación del pago y stock, la asignación del despacho y la actualización del estado. Luego, el sistema publica eventos internos para generar notificaciones y actualizar la información de reportes, mostrando la interacción entre los principales componentes de la API.
 
 ---
+
+# Capítulo V: Product Implementation, Validation & Deployment
+
+## 5.1 Testing Suites & General Patterns
+
+### 5.1.1 Backend Application Core Testing Suite
+
+### 5.1.2 Pattern Based Backend Application(s)
+
+### 5.1.3 Pattern Based Custom Software Library
+
+### 5.1.4 Framework Pattern Driven Refactoring Report
+
+## 5.2 Software Configuration Management
+
+### 5.2.1 Software Development Environment Configuration
+
+### 5.2.2 Source Code Management
+
+### 5.2.3 Source Code Style Guide & Conventions
+
+### 5.2.4 Software Deployment Configuration
+
+## 5.3 Microservices Implementation
+
+### 5.2.1 Sprint 1
+
+#### 5.2.1.1 Sprint Backlog 1
+
+#### 5.2.1.2 Development Evidence for Sprint Review
+
+#### 5.2.1.3 Testing Suite Evidence for Sprint Review
+
+#### 5.2.1.4 Execution Evidence for Sprint Review
+
+#### 5.2.1.5 Microservices Documentation Evidence for Sprint Review
+
+#### 5.2.1.6 Software Deployment Evidence for Sprint Review
+
+#### 5.2.1.7 Team Collaboration Insights during Sprint
+
+#### 5.2.1.8 Kanban Board
 
 # Referencias bibliográficas
 
