@@ -2385,23 +2385,37 @@ El diagrama de secuencia representa el flujo de aprobación de un pedido, incluy
 
 ## 5.3 Microservices Implementation
 
-### 5.2.1 Sprint 1
+### 5.3.1 Sprint 1
 
-#### 5.2.1.1 Sprint Backlog 1
+#### 5.3.1.1 Sprint Backlog 1
 
-#### 5.2.1.2 Development Evidence for Sprint Review
+#### 5.3.1.2 Development Evidence for Sprint Review 
 
-#### 5.2.1.3 Testing Suite Evidence for Sprint Review
+#### 5.3.1.3 Testing Suite Evidence for Sprint Review
 
-#### 5.2.1.4 Execution Evidence for Sprint Review
+#### 5.3.1.4 Execution Evidence for Sprint Review
 
-#### 5.2.1.5 Microservices Documentation Evidence for Sprint Review
+#### 5.3.1.5 Microservices Documentation Evidence for Sprint Review
 
-#### 5.2.1.6 Software Deployment Evidence for Sprint Review
+#### 5.3.1.6 Software Deployment Evidence for Sprint Review
 
-#### 5.2.1.7 Team Collaboration Insights during Sprint
+La primera versión funcional de FuelBridge se despliega desde los repositorios de desarrollo del frontend y del backend, no desde la landing page. Durante esta etapa, la aplicación quedó disponible para validación con la interfaz web consumiendo la API desplegada del sistema.
 
-#### 5.2.1.8 Kanban Board
+| Elemento | Frontend | Backend |
+| -------- | -------- | ------- |
+| Producto | FuelBridge Web App / FuelBridge Frontend | FuelBridge API / FuelBridge Backend |
+| Repositorio | FuelBridge-Frontend | FuelBridge-Backend |
+| Plataforma de despliegue | Vercel | Plataforma de despliegue configurada para Spring Boot/API |
+| Rama desplegada | main | main |
+| Build / Run | Build del proyecto frontend para producción | Compilación y ejecución de la API Spring Boot |
+| Variables de entorno | Configuradas para la conexión con la API y servicios del cliente | Configuradas para la conexión a base de datos y servicios internos |
+| Estado | Frontend funcional y accesible desde la URL pública del proyecto | Backend funcional y consumido por la aplicación web |
+
+La evidencia de despliegue corresponde a la versión de Sprint Review de la solución digital, donde el frontend y el backend operan de manera desacoplada pero integrados para la validación del flujo principal del producto.
+
+#### 5.3.1.7 Team Collaboration Insights during Sprint
+
+#### 5.3.1.8 Kanban Board
 
 # Referencias bibliográficas
 
