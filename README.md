@@ -239,7 +239,7 @@
 <tr class="header">
 <th><img src="assets/chapter-1/image11.png" width="300" /></th>
 <th><p>Nombre: Sebastian Andres Aiquipa Poma</p>
-<p>Soy estudiante de Ingeniería de Software y desarrollador full-stack. Tengo experiencia construyendo plataformas web completas — desde la arquitectura hasta el despliegue — utilizando tecnologías como React, Node.js, Express y PostgreSQL. Actualmente, mi objetivo es seguir consolidando mis habilidades técnicas para desempeñarme con confianza en el entorno laboral. Me interesa participar en proyectos donde pueda aplicar lo que sé y aportar soluciones prácticas a problemas reales.</p></th>
+<p>Soy estudiante de Ingeniería de Software y desarrollador full-stack. Tengo experiencia construyendo plataformas web completas - desde la arquitectura hasta el despliegue - utilizando tecnologías como React, Node.js, Express y PostgreSQL. Actualmente, mi objetivo es seguir consolidando mis habilidades técnicas para desempeñarme con confianza en el entorno laboral. Me interesa participar en proyectos donde pueda aplicar lo que sé y aportar soluciones prácticas a problemas reales.</p></th>
 </tr>
 <tr class="odd">
 <th><img src="assets/chapter-1/image26.png" width="300" /></th>
@@ -294,9 +294,9 @@ El estado actual de la gestión de pedidos de combustible se ha apoyado principa
 
 - Mis clientes iniciales son:
 
-  - Segmento B2B — Solicitantes: empresas medianas y grandes de construcción y minería que requieren abastecimiento constante de combustible.
+  - Segmento B2B - Solicitantes: empresas medianas y grandes de construcción y minería que requieren abastecimiento constante de combustible.
 
-  - Segmento B2B — Proveedores: empresas distribuidoras de combustible que atienden clientes corporativos e industriales.
+  - Segmento B2B - Proveedores: empresas distribuidoras de combustible que atienden clientes corporativos e industriales.
 
 - El principal valor que un cliente quiere obtener de mi servicio es reducir errores y tiempos de gestión en el ciclo pedido-entrega de combustible, con visibilidad total del estado de cada operación.
 
@@ -310,7 +310,7 @@ El estado actual de la gestión de pedidos de combustible se ha apoyado principa
 
 - Ganaré dinero mediante un modelo SaaS de suscripción mensual o anual por empresa, según el volumen de pedidos gestionados.
 
-- Mi principal competencia en el mercado será la coordinación manual vía llamadas, correos y mensajería, así como plataformas de gestión logística genéricas no especializadas en combustible (Zavgar, FuelCloud, Wialon — ver Cap. II, Competidores).
+- Mi principal competencia en el mercado será la coordinación manual vía llamadas, correos y mensajería, así como plataformas de gestión logística genéricas no especializadas en combustible (Zavgar, FuelCloud, Wialon - ver Cap. II, Competidores).
 
 - Superaremos a la competencia debido a nuestra especialización en el ciclo completo del pedido de combustible (registro, confirmación, despacho, seguimiento), y no solo en telemetría de flota genérica.
 
@@ -364,19 +364,19 @@ El estado actual de la gestión de pedidos de combustible se ha apoyado principa
 
 #### 1.2.3.3 Lean UX Hypothesis
 
-**Hipótesis 1 — Registro y Confirmación Centralizada de Pedidos**
+**Hipótesis 1 - Registro y Confirmación Centralizada de Pedidos**
 
 Creemos que lograremos que más del 70% de los pedidos sean confirmados sin necesidad de correcciones posteriores durante los primeros tres meses de uso Si las empresas solicitantes y los proveedores de combustible Obtienen un canal único para registrar, confirmar y validar cada pedido sin depender de llamadas o correos dispersos Con el módulo de registro y confirmación centralizada de pedidos
 
-**Hipótesis 2 — Seguimiento en Tiempo Real del Estado del Pedido**
+**Hipótesis 2 - Seguimiento en Tiempo Real del Estado del Pedido**
 
 Creemos que lograremos una reducción del 30% en llamadas de seguimiento realizadas por las empresas solicitantes Si las empresas solicitantes de combustible Obtienen visibilidad continua del estado de su pedido sin necesidad de contactar al proveedor Con el módulo de seguimiento en tiempo real del estado del pedido
 
-**Hipótesis 3 — Asignación y Notificación de Despacho**
+**Hipótesis 3 - Asignación y Notificación de Despacho**
 
 Creemos que los proveedores lograrán reducir en un 20% el tiempo promedio entre confirmación y entrega de pedidos Si los proveedores de combustible Obtienen un flujo estructurado para asignar y notificar despachos apenas se confirma un pedido Con el módulo de asignación y notificación de despacho
 
-**Hipótesis 4 — Notificaciones Automáticas de Estado**
+**Hipótesis 4 - Notificaciones Automáticas de Estado**
 
 Creemos que lograremos reducir en un 40% las solicitudes de información de clientes y en un 60% el tiempo promedio de atención Si las empresas solicitantes y los proveedores de combustible Obtienen alertas automáticas ante cada cambio de estado del pedido, sin depender de operadores comerciales de alta disponibilidad Con el módulo de notificaciones automáticas de estado de pedido
 
@@ -390,7 +390,7 @@ Creemos que lograremos reducir en un 40% las solicitudes de información de clie
 
 **A. Empresas solicitantes de combustible**
 
-Empresas medianas y grandes que requieren combustible de forma constante para el desarrollo de sus operaciones (maquinaria pesada, vehículos, equipos), principalmente en los sectores de construcción y minería — los mismos sectores representados en las entrevistas realizadas (Cap. II). Según el Ministerio de la Producción (Produce), del total de 2,346,592 empresas formales registradas en Perú al cierre de 2024, el sector construcción representa el 3.5% (~82,100 empresas) y el sector minería el 0.8% (~18,800 empresas) — universo de mercado potencial para el segmento solicitante. Estas empresas suelen mantener contratos de exclusividad con un proveedor de combustible, lo que les da un flujo constante de pedidos y una relación comercial estable.
+Empresas medianas y grandes que requieren combustible de forma constante para el desarrollo de sus operaciones (maquinaria pesada, vehículos, equipos), principalmente en los sectores de construcción y minería - los mismos sectores representados en las entrevistas realizadas (Cap. II). Según el Ministerio de la Producción (Produce), del total de 2,346,592 empresas formales registradas en Perú al cierre de 2024, el sector construcción representa el 3.5% (~82,100 empresas) y el sector minería el 0.8% (~18,800 empresas) - universo de mercado potencial para el segmento solicitante. Estas empresas suelen mantener contratos de exclusividad con un proveedor de combustible, lo que les da un flujo constante de pedidos y una relación comercial estable.
 
 **Necesidades:**
 
@@ -402,7 +402,7 @@ Mantener comunicación constante con proveedores.
 
 **B. Proveedores de combustible**
 
-Empresas dedicadas a la distribución de combustibles, atendiendo principalmente a clientes corporativos o industriales. Según la Asociación de Grifos y Estaciones de Servicio del Perú (GESP), el país cuenta con aproximadamente 600 estaciones de servicio operativas, de las cuales el 60% son empresas familiares — un segmento con alta necesidad de digitalización y bajo nivel de sistematización actual. (Cifra de referencia sectorial; se recomienda validar con datos actualizados de OSINERGMIN antes de la entrega final.)
+Empresas dedicadas a la distribución de combustibles, atendiendo principalmente a clientes corporativos o industriales. Según la Asociación de Grifos y Estaciones de Servicio del Perú (GESP), el país cuenta con aproximadamente 600 estaciones de servicio operativas, de las cuales el 60% son empresas familiares - un segmento con alta necesidad de digitalización y bajo nivel de sistematización actual. (Cifra de referencia sectorial; se recomienda validar con datos actualizados de OSINERGMIN antes de la entrega final.)
 
 **Motivaciones:**
 
@@ -2026,7 +2026,7 @@ La arquitectura debe dar soporte prioritario a las historias de usuario y endpoi
 
 Basado en los requerimientos del sector B2B, se definen tres Quality Attribute Scenarios siguiendo el formato de 6 partes (Bass, Clements & Kazman). Los IDs QA-1, QA-2 y QA-3 asignados aquí son los mismos referenciados en los Architectural Design Backlogs de la sección 4.3:
 
-**QA-1 — Disponibilidad y Trazabilidad (Availability & Traceability)**
+**QA-1 - Disponibilidad y Trazabilidad (Availability & Traceability)**
 
 | **Parte**              | **Descripción**                                                                                   |
 |-------------------------|-----------------------------------------------------------------------------------------------------|
@@ -2037,7 +2037,7 @@ Basado en los requerimientos del sector B2B, se definen tres Quality Attribute S
 | Respuesta                | El cambio de estado se publica como evento de dominio (Observer/Pub-Sub) y genera una notificación in-app para el Client correspondiente |
 | Medida de respuesta      | El 100% de los eventos de cambio de estado generan una notificación visible para el cliente en menos de 5 segundos, sin pérdida de eventos |
 
-**QA-2 — Desempeño (Performance)**
+**QA-2 - Desempeño (Performance)**
 
 | **Parte**              | **Descripción**                                                                                   |
 |-------------------------|-----------------------------------------------------------------------------------------------------|
@@ -2048,7 +2048,7 @@ Basado en los requerimientos del sector B2B, se definen tres Quality Attribute S
 | Respuesta                | El sistema consulta ORDER y tablas relacionadas usando índices por estado y fecha (ver ADR-07) y devuelve el resultado paginado |
 | Medida de respuesta      | El 95% de las consultas del Dashboard y del historial responden en menos de 2 segundos bajo carga de 50 usuarios concurrentes (pendiente de validar con pruebas de carga, ver 4.3.2.7) |
 
-**QA-3 — Usabilidad (Usability)**
+**QA-3 - Usabilidad (Usability)**
 
 | **Parte**              | **Descripción**                                                                                   |
 |-------------------------|-----------------------------------------------------------------------------------------------------|
@@ -2203,7 +2203,7 @@ El diagrama de componentes de la Landing Page representa la estructura del sitio
 
 #### 4.3.1.7 Analysis of Current Design and Review Iteration Goal (Kanban Board)
 
-El tablero Kanban de la Iteración 1 se gestiona en Trello: **[Tablero FuelBridge — Iteración 1](https://trello.com/invite/b/69e2fd01ee5b055b2d967a45/ATTI05a9ebca4c1da02108fc92fa76bfa07e412172F6/fulltank)**. Al cierre de esta iteración, las tareas del backlog ADD-01 a ADD-05 quedan distribuidas así:
+El tablero Kanban de la Iteración 1 se gestiona en Trello: **[Tablero FuelBridge - Iteración 1](https://trello.com/invite/b/69e2fd01ee5b055b2d967a45/ATTI05a9ebca4c1da02108fc92fa76bfa07e412172F6/fulltank)**. Al cierre de esta iteración, las tareas del backlog ADD-01 a ADD-05 quedan distribuidas así:
 
 <div align="center">
   <img src="assets/chapter-4/TrelloIteracion1.png" width="700" />
@@ -2211,7 +2211,7 @@ El tablero Kanban de la Iteración 1 se gestiona en Trello: **[Tablero FuelBridg
 
 | **To Do** | **In Progress** | **Done** |
 |-----------|------------------|----------|
-| Abordar QA-2 (Performance) a nivel de componentes internos (pasa a Iteración 2) | — | Definir contenedores principales del sistema (ADD-01) |
+| Abordar QA-2 (Performance) a nivel de componentes internos (pasa a Iteración 2) | - | Definir contenedores principales del sistema (ADD-01) |
 | | | Establecer estilo arquitectónico base (ADD-02) |
 | | | Definir estrategia de comunicación entre contenedores (ADD-03) |
 | | | Separar API en Bounded Contexts y asignar responsabilidades (ADD-04) |
@@ -2225,7 +2225,7 @@ El tablero Kanban de la Iteración 1 se gestiona en Trello: **[Tablero FuelBridg
 
 | **Driver** | **Backlog** | **ADR** | **Componente**             |
 |------------|-------------|---------|--------------------------------|
-| QA-1, QA-3 | ADD-01      | —       | Todos los contenedores          |
+| QA-1, QA-3 | ADD-01      | -       | Todos los contenedores          |
 | CON-1      | ADD-02      | ADR-02  | FuelBridge API                  |
 | CONC-2     | ADD-03      | ADR-03  | Domain Event Dispatcher         |
 | QA-2, CONC-1 | ADD-04    | ADR-02  | FuelBridge API (9 BCs)          |
@@ -2318,7 +2318,7 @@ El tablero Kanban de la Iteración 2 se gestiona en el mismo tablero Trello refe
 
 | **To Do** | **In Progress** | **Done** |
 |-----------|------------------|----------|
-| — | Evaluar futura migración a broker externo si el volumen de eventos supera lo estimado | Refinar componentes internos de FuelBridge API (ADD-08) |
+| - | Evaluar futura migración a broker externo si el volumen de eventos supera lo estimado | Refinar componentes internos de FuelBridge API (ADD-08) |
 | | | Definir comunicación interna entre Ordering BC y Notification BC (ADD-09) |
 | | | Definir estrategia de consultas para Dashboard y reportes (ADD-06) |
 | | | Registrar ADR-05 a ADR-08 |
