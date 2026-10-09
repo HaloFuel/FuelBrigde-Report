@@ -2475,6 +2475,117 @@ El backend aplica cuatro patrones de diseño de forma consistente en los 9 Bound
 
 ### 5.2.4 Software Deployment Configuration
 
+La configuración de despliegue de **FuelBridge**, desarrollada por la startup **HaloFuel**, se basa en una infraestructura cloud que permite alojar y ejecutar los diferentes componentes de la plataforma. Para ello, se utilizan servicios de alojamiento web, ejecución de aplicaciones backend y almacenamiento de datos.
+
+La solución emplea **Vercel** para el despliegue del frontend desarrollado con Angular, mientras que **Railway** aloja la API REST implementada con Spring Boot y la base de datos MySQL. Esta distribución permite administrar los componentes de manera separada y mantener la comunicación entre ellos mediante interfaces REST.
+
+#### Vercel para el Frontend
+
+**Hosting:** Vercel es una plataforma cloud que permite desplegar aplicaciones web y distribuir archivos estáticos mediante su infraestructura de entrega de contenido. En FuelBridge, se utiliza para alojar el frontend desarrollado con Angular 21 y TypeScript.
+
+La plataforma permite publicar la aplicación web y acceder a ella desde un navegador mediante HTTPS. Asimismo, facilita la distribución de los archivos HTML, CSS y JavaScript generados durante la compilación de Angular.
+
+**Integración con GitHub:** El proyecto se encuentra conectado con su repositorio de GitHub, utilizando la rama `main` como fuente del despliegue de producción. Esto permite actualizar el frontend mediante nuevos despliegues asociados a los cambios del código fuente.
+
+**Configuración del despliegue:** Para generar la versión de producción se utiliza el comando `npm run build`, que ejecuta el proceso de compilación de Angular. El frontend consume la API REST publicada en Railway mediante las rutas configuradas en los archivos de entorno del proyecto.
+
+**URL del frontend:** https://fuel-brigde-frontend.vercel.app
+
+<div align="center">
+  <img src="assets/chapter-5/VercelDeployment.png" width="700" />
+</div>
+
+*Figura 1. Despliegue de producción del frontend de FuelBridge en Vercel, mostrando el estado Ready, el dominio público y la integración con GitHub.*
+
+#### Railway para el Backend
+
+**Hosting:** Railway es una plataforma cloud que permite desplegar aplicaciones backend y administrar servicios de infraestructura. En FuelBridge, se utiliza para ejecutar la API REST desarrollada con Java 26 y Spring Boot 4.
+
+El backend implementa una arquitectura de monolito modular, organizada mediante Bounded Contexts siguiendo los principios de Domain-Driven Design (DDD). Entre sus principales módulos se encuentran IAM, Ordering, Inventory, Catalog, Payment, Fulfillment, Notification, Reporting y Equipment.
+
+**Contenedorización:** El backend utiliza Docker para facilitar su construcción y ejecución. Su archivo `Dockerfile` implementa una construcción en múltiples etapas, utilizando una imagen con JDK 26 para compilar el proyecto mediante Maven y otra con JRE 26 para ejecutar la aplicación.
+
+Este procedimiento permite empaquetar la aplicación en un archivo JAR y ejecutarla dentro del entorno de Railway. La construcción Docker actual omite la ejecución de pruebas mediante `-DskipTests`, por lo que estas deben validarse independientemente.
+
+**Configuración de Variables de Entorno:** Railway permite establecer variables para configurar la conexión con MySQL, el puerto de ejecución, la autenticación JWT y los orígenes autorizados para consumir la API.
+
+Las principales variables contempladas por la aplicación son:
+
+| Variable | Descripción |
+|---|---|
+| `PORT` | Puerto asignado al servicio backend |
+| `MYSQLHOST` | Dirección del servidor MySQL |
+| `MYSQLPORT` | Puerto de conexión con MySQL |
+| `MYSQLDATABASE` | Nombre de la base de datos |
+| `MYSQLUSER` | Usuario de acceso a MySQL |
+| `MYSQLPASSWORD` | Contraseña de acceso a MySQL |
+| `AUTHORIZATION_JWT_SECRET` | Clave utilizada para la firma de tokens JWT |
+| `CORS_ALLOWED_ORIGINS` | Orígenes permitidos para acceder a la API |
+
+Estas configuraciones permiten adaptar la aplicación al entorno de despliegue sin necesidad de modificar directamente su código fuente. Los valores sensibles deben mantenerse protegidos y no incluirse en el repositorio.
+
+**Documentación de API:** El backend incorpora Swagger/OpenAPI para documentar y consultar los endpoints REST correspondientes a los diferentes módulos de FuelBridge.
+
+**URL del backend:** https://fuelbrigde-backend-production.up.railway.app
+
+#### Railway MySQL para la Base de Datos
+
+**Base de Datos:** FuelBridge utiliza MySQL como sistema de gestión de bases de datos relacionales para almacenar la información relacionada con usuarios, empresas, solicitudes, pedidos de combustible, inventarios, pagos, vehículos y entregas.
+
+La base de datos se encuentra desplegada como un servicio independiente dentro del proyecto de Railway y se comunica con el backend mediante el controlador JDBC de MySQL y Spring Data JPA/Hibernate.
+
+**Persistencia:** La instancia utiliza almacenamiento persistente mediante un volumen denominado `mysql-volume`, lo que permite conservar los datos independientemente del ciclo de vida del contenedor de la base de datos.
+
+**Configuración:** El servicio MySQL utiliza una imagen Docker de MySQL 9. La conexión con el backend se administra mediante las variables de entorno correspondientes a la dirección, puerto, nombre de la base de datos y credenciales de acceso.
+
+**Estado del Despliegue:** En la evidencia obtenida desde Railway se observan los servicios FuelBridge-Backend y MySQL en estado `Online`. Asimismo, el despliegue de MySQL presenta el estado `ACTIVE` y el mensaje `Deployment successful`.
+
+<div align="center">
+  <img src="assets/chapter-5/RailwayMySQLDeployment.png" width="700" />
+</div>
+
+*Figura 2. Infraestructura cloud de FuelBridge en Railway, mostrando los servicios Backend y MySQL, el volumen persistente y el despliegue exitoso de la base de datos.*
+
+#### C4 Deployment Diagram
+
+El diagrama de despliegue C4 representa la distribución de los componentes de FuelBridge dentro de su infraestructura de producción, identificando los entornos donde se ejecutan las aplicaciones y los mecanismos de comunicación utilizados.
+
+La arquitectura contempla los siguientes elementos:
+
+- **Vercel Cloud:** aloja y distribuye los archivos estáticos del frontend Angular.
+- **Navegador del usuario:** ejecuta la aplicación Angular y permite interactuar con las funcionalidades de la plataforma.
+- **Railway Backend:** ejecuta la API REST desarrollada con Java 26 y Spring Boot 4, encargada de procesar las operaciones del negocio.
+- **Railway MySQL:** almacena la información persistente mediante una base de datos relacional MySQL 9.
+
+El proceso de comunicación comienza cuando el usuario accede a la aplicación web publicada en Vercel mediante HTTPS. Los archivos del frontend son descargados y ejecutados en el navegador, desde donde se realizan solicitudes HTTP a la API REST del backend desplegado en Railway.
+
+Posteriormente, el backend procesa las operaciones del negocio y utiliza JDBC y Spring Data JPA para consultar o modificar la información almacenada en MySQL.
+
+Esta distribución permite mantener el frontend separado del backend a nivel de despliegue, mientras que el backend conserva una arquitectura interna de monolito modular basada en DDD.
+
+<div align="center">
+  <img src="assets/chapter-5/FuelBridgeDeploymentDiagram.png" width="700" />
+</div>
+
+*Figura 3. C4 Deployment Diagram de FuelBridge, representando la infraestructura de producción en Vercel y Railway, así como la comunicación entre el frontend Angular, la API Spring Boot y MySQL.*
+
+#### Validación de la Configuración de Despliegue
+
+Para verificar la infraestructura de producción se consideran las siguientes comprobaciones:
+
+| Componente | Evidencia de despliegue |
+|---|---|
+| Frontend Angular | Despliegue en Vercel con estado `Ready` |
+| Backend Spring Boot | Servicio FuelBridge-Backend con estado `Online` en Railway |
+| Base de datos MySQL | Servicio MySQL con estado `Online` y despliegue `ACTIVE` |
+| Persistencia | Volumen `mysql-volume` asociado a MySQL |
+| Comunicación | Frontend configurado para consumir la API REST de Railway |
+| Infraestructura | Diagrama C4 que representa los nodos y sus conexiones |
+
+Las evidencias permiten identificar la infraestructura utilizada y el estado de los servicios al momento de realizar las capturas. La validación funcional completa requiere comprobar adicionalmente las operaciones entre frontend, backend y base de datos.
+
+En conjunto, la configuración de despliegue de FuelBridge proporciona una infraestructura centralizada para la lógica del negocio y la persistencia, manteniendo independiente la publicación del frontend y facilitando el mantenimiento de los componentes de la solución.
+
 ## 5.3 Microservices Implementation
 
 ### 5.3.1 Sprint 1
