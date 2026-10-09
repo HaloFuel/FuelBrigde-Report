@@ -2469,6 +2469,99 @@ El backend aplica cuatro patrones de diseño de forma consistente en los 9 Bound
 
 ### 5.2.1 Software Development Environment Configuration
 
+En esta sección se especifican los productos de software utilizados por el equipo de HaloFuel para colaborar en el ciclo de vida de FuelBridge, organizados por tipo de actividad.
+
+#### Project Management
+
+| Producto | Tipo | Propósito | URL |
+|---|---|---|---|
+| Trello | SaaS | Gestión del Sprint Backlog y tablero Kanban | https://trello.com |
+| GitHub | SaaS | Repositorio central y coordinación del equipo | https://github.com |
+
+#### Requirements Management
+
+| Producto | Tipo | Propósito | URL |
+|---|---|---|---|
+| GitHub Issues | SaaS | Registro y seguimiento de requerimientos e incidencias | https://github.com |
+
+#### Product UX/UI Design
+
+| Producto | Tipo | Propósito | URL |
+|---|---|---|---|
+| Figma | SaaS | Diseño de wireframes y prototipos de la interfaz | https://figma.com |
+
+#### Software Development Landing Page
+
+La landing page de FuelBridge es un sitio estático desarrollado con tecnologías web nativas, sin framework ni herramienta de build.
+
+| Producto | Tipo | Propósito | URL |
+|---|---|---|---|
+| HTML5 / CSS3 / JavaScript | — | Lenguajes base del sitio estático | — |
+| Google Fonts (Inter) | SaaS | Tipografía del sitio | https://fonts.google.com |
+| Visual Studio Code | Local | Editor de código | https://code.visualstudio.com/download |
+
+#### Software Development — Frontend (Angular SPA)
+
+| Producto | Versión | Tipo | Propósito | URL |
+|---|---|---|---|---|
+| Node.js + npm | npm 11.12.1 | Local | Entorno de ejecución y gestor de paquetes | https://nodejs.org/en/download |
+| Angular CLI | 21.2.7 | Local (npm) | Toolchain oficial para generación, build y serve | https://angular.dev/tools/cli |
+| Angular | 21.2.9 | Local (npm) | Framework principal de la SPA | https://angular.dev |
+| Angular Material + CDK | 21.2.7 | Local (npm) | Biblioteca de componentes de UI | https://material.angular.io |
+| RxJS | 7.8.0 | Local (npm) | Programación reactiva y manejo de estado | https://rxjs.dev |
+| @ngx-translate/core | 17.0.0 | Local (npm) | Internacionalización (i18n) | https://github.com/ngx-translate/core |
+| Chart.js + ng2-charts | 4.5.1 | Local (npm) | Visualización de datos en Reporting | https://www.chartjs.org |
+| Firebase | 12.13.0 | Local (npm) | Servicios de autenticación y base de datos en tiempo real | https://firebase.google.com |
+| TypeScript | 5.9.3 | Local (npm) | Lenguaje tipado base de Angular | https://www.typescriptlang.org |
+| JSON Server | 0.17.4 | Local (npm) | Mock de API REST para desarrollo local | https://github.com/typicode/json-server |
+| Visual Studio Code | — | Local | Editor principal para desarrollo frontend | https://code.visualstudio.com/download |
+
+#### Software Development — Backend (Spring Boot API)
+
+| Producto | Versión | Tipo | Propósito | URL |
+|---|---|---|---|---|
+| Java JDK | 26 | Local | Lenguaje principal del backend | https://www.oracle.com/java/technologies/downloads/ |
+| Spring Boot | 4.0.6 | Local (Maven) | Framework base para la API REST | https://spring.io/projects/spring-boot |
+| Maven | — | Local | Build tool y gestión de dependencias | https://maven.apache.org/download.cgi |
+| IntelliJ IDEA | — | Local | IDE principal para desarrollo Java | https://www.jetbrains.com/idea/download/ |
+| Lombok | — | Local (Maven) | Reducción de boilerplate en entidades y DTOs | https://projectlombok.org/ |
+| Spring Security | — | Local (Maven) | Autenticación y autorización de la API | https://spring.io/projects/spring-security |
+| jjwt | 0.12.6 | Local (Maven) | Generación y validación de tokens JWT | https://github.com/jwtk/jjwt |
+| springdoc-openapi | 3.0.3 | Local (Maven) | Generación automática de documentación OpenAPI / Swagger UI | https://springdoc.org |
+| MySQL Workbench | — | Local | Administración y consulta de la base de datos | https://dev.mysql.com/downloads/workbench/ |
+
+#### Software Testing
+
+| Producto | Versión | Tipo | Propósito | URL |
+|---|---|---|---|---|
+| JUnit 5 | — | Local (Maven) | Pruebas unitarias del dominio backend | https://junit.org/junit5/ |
+| H2 Database | — | Local (Maven) | Base de datos en memoria para el perfil de test | https://www.h2database.com/html/download.html |
+| Karma + Jasmine | 6.4.0 / 5.9.0 | Local (npm) | Pruebas unitarias del frontend Angular | https://karma-runner.github.io |
+| Postman | — | Local | Pruebas manuales de endpoints REST | https://www.postman.com/downloads/ |
+
+#### Software Deployment
+
+| Producto | Tipo | Propósito | URL |
+|---|---|---|---|
+| Railway | SaaS | Despliegue del backend (Spring Boot + MySQL) | https://railway.app |
+| Vercel | SaaS | Despliegue del frontend Angular y la Landing Page | https://vercel.com |
+
+#### Software Documentation
+
+| Producto | Versión | Tipo | Propósito | URL |
+|---|---|---|---|---|
+| springdoc-openapi | 3.0.3 | Local (Maven) | Generación automática de la especificación OpenAPI y Swagger UI | https://springdoc.org |
+| GitHub | — | SaaS | Documentación del repositorio vía README | https://github.com/HaloFuel |
+
+#### Source Code Management
+
+| Producto | Tipo | Propósito | URL |
+|---|---|---|---|
+| Git | Local | Control de versiones distribuido | https://git-scm.com/downloads |
+| GitHub | SaaS | Repositorio remoto y colaboración (org: HaloFuel) | https://github.com/HaloFuel |
+
+---
+
 ### 5.2.2 Source Code Management
 
 ### 5.2.3 Source Code Style Guide & Conventions
@@ -2821,7 +2914,117 @@ Durante este sprint se trabajó sobre el backend (`HaloFuel/FuelBrigde-Backend`)
 
 #### 5.3.1.4 Execution Evidence for Sprint Review
 
+Durante el Sprint 1, el equipo de HaloFuel implementó los Web Services del backend de FuelBridge, cubriendo los bounded contexts de IAM, Buyer Companies, Provider Companies, Fuel Products, Fuel Orders y Payments. A continuación se presentan las principales operaciones ejecutadas sobre los servicios, interactuando con la API REST mediante Postman.
+
+**Registro de usuario (Sign Up)**
+
+Se validó el endpoint de registro de usuarios con el rol `ROLE_BUYER`, obteniendo un response `201 Created` con los datos del usuario creado.
+
+![Sign Up](assets/chapter-5/sign-up.png)
+
+**Autenticación (Sign In)**
+
+Se verificó el endpoint de autenticación, el cual retorna un token JWT requerido para acceder a los endpoints protegidos de la API.
+
+![Sign In](assets/chapter-5/sign-in.png)
+
+**Registro de empresa compradora**
+
+Se registró la empresa compradora MineraCorp Perú SAC, obteniendo un response `201 Created`.
+
+![Buyer Company POST](assets/chapter-5/buyer-company-post.png)
+
+**Registro de empresa proveedora**
+
+Se registró la empresa proveedora DistribFuel SAC con los tipos de combustible que ofrece, obteniendo un response `201 Created`.
+
+![Provider Company POST](assets/chapter-5/provider-company-post.png)
+
+**Registro de producto de combustible**
+
+Se creó el producto Diesel B5 Premium asociado al proveedor, con stock disponible y precio por unidad, obteniendo un response `201 Created`.
+
+![Fuel Product POST](assets/chapter-5/fuel-product-post.png)
+
+**Creación de pedido de combustible**
+
+Se registró un pedido de 500 galones de Diesel B5 con dirección de entrega y fecha programada, obteniendo un response `201 Created` con el pedido en estado `PENDING`.
+
+![Fuel Order POST](assets/chapter-5/fuel-order-post.png)
+
+**Confirmación de pedido**
+
+Se ejecutó la confirmación del pedido por parte del proveedor, actualizando el estado a `CONFIRMED` con un response `200 OK`.
+
+![Fuel Order Confirm](assets/chapter-5/fuel-order-confirm.png)
+
+**Registro de pago**
+
+Se registró el pago correspondiente al pedido mediante transferencia bancaria, obteniendo un response `201 Created` con el pago en estado `PENDING`.
+
+![Payment POST](assets/chapter-5/payment-post.png)
+
+**Video de demostración Sprint 1:** [URL pendiente de publicación]
+
+---
+
 #### 5.3.1.5 Microservices Documentation Evidence for Sprint Review
+
+Durante el Sprint 1 se documentaron los Web Services de FuelBridge utilizando OpenAPI 3.0 a través de la dependencia `springdoc-openapi` (v3.0.3), generando automáticamente la especificación de la API y exponiéndola mediante Swagger UI. La documentación cubre un total de 9 grupos de endpoints con 73 rutas implementadas.
+
+- **Swagger UI:** https://fuelbrigde-backend-production.up.railway.app/swagger-ui/index.html
+- **OpenAPI JSON:** https://fuelbrigde-backend-production.up.railway.app/api-docs
+- **Repositorio Backend:** https://github.com/HaloFuel/FuelBrigde-Backend
+
+A continuación se presenta la vista general de la documentación generada:
+
+![Swagger Overview](assets/chapter-5/swagger-overview.png)
+
+![Swagger Controllers](assets/chapter-5/swagger-controllers.png)
+
+A continuación se presenta la tabla de endpoints documentados relacionados con el alcance del Sprint 1:
+
+| Bounded Context | Endpoint | Verbo HTTP | Descripción | Response |
+|---|---|---|---|---|
+| IAM | `/api/v1/authentication/sign-up` | POST | Registro de nuevo usuario con rol y empresa asociada | `201 Created` — usuario con id y roles |
+| IAM | `/api/v1/authentication/sign-in` | POST | Autenticación y obtención de token JWT | `200 OK` — id, username y Bearer token |
+| Buyer Companies | `/api/v1/buyer-companies` | POST | Registro de empresa compradora | `201 Created` — empresa con id generado |
+| Buyer Companies | `/api/v1/buyer-companies` | GET | Listado de empresas compradoras | `200 OK` — array de empresas |
+| Buyer Companies | `/api/v1/buyer-companies/{companyId}` | GET | Consulta de empresa por ID | `200 OK` — datos de la empresa |
+| Buyer Companies | `/api/v1/buyer-companies/{companyId}` | PUT | Actualización de empresa compradora | `200 OK` — empresa actualizada |
+| Provider Companies | `/api/v1/provider-companies` | POST | Registro de empresa proveedora | `201 Created` — proveedor con id |
+| Provider Companies | `/api/v1/provider-companies` | GET | Listado de empresas proveedoras | `200 OK` — array de proveedores |
+| Provider Companies | `/api/v1/provider-companies/{providerId}` | GET | Consulta de proveedor por ID | `200 OK` — datos del proveedor |
+| Provider Companies | `/api/v1/provider-companies/{providerId}` | PUT | Actualización de empresa proveedora | `200 OK` — proveedor actualizado |
+| Fuel Products | `/api/v1/fuel-products` | POST | Registro de producto de combustible | `201 Created` — producto con id |
+| Fuel Products | `/api/v1/fuel-products` | GET | Listado de productos de combustible | `200 OK` — array de productos |
+| Fuel Products | `/api/v1/fuel-products/{fuelProductId}` | GET | Consulta de producto por ID | `200 OK` — datos del producto |
+| Fuel Products | `/api/v1/fuel-products/{fuelProductId}` | PUT | Actualización de producto | `200 OK` — producto actualizado |
+| Fuel Products | `/api/v1/fuel-products/{fuelProductId}` | DELETE | Eliminación de producto | `204 No Content` |
+| Fuel Products | `/api/v1/fuel-products/{fuelProductId}/update-stock` | POST | Actualización de stock disponible | `200 OK` — producto con stock actualizado |
+| Fuel Orders | `/api/v1/fuel-orders` | POST | Creación de pedido de combustible | `201 Created` — pedido en estado `PENDING` |
+| Fuel Orders | `/api/v1/fuel-orders` | GET | Listado de todos los pedidos | `200 OK` — array de pedidos |
+| Fuel Orders | `/api/v1/fuel-orders/{orderId}` | GET | Consulta de pedido por ID | `200 OK` — pedido con estado actual |
+| Fuel Orders | `/api/v1/fuel-orders/company/{companyId}` | GET | Pedidos de una empresa compradora | `200 OK` — array de pedidos filtrados |
+| Fuel Orders | `/api/v1/fuel-orders/provider/{providerId}` | GET | Pedidos asignados a un proveedor | `200 OK` — array de pedidos filtrados |
+| Fuel Orders | `/api/v1/fuel-orders/{orderId}/confirm` | POST | Confirmación del pedido por el proveedor | `200 OK` — pedido en estado `CONFIRMED` |
+| Fuel Orders | `/api/v1/fuel-orders/{orderId}/cancel` | POST | Cancelación del pedido | `200 OK` — pedido en estado `CANCELLED` |
+| Payments | `/api/v1/payments` | POST | Registro de pago asociado a un pedido | `201 Created` — pago en estado `PENDING` |
+| Payments | `/api/v1/payments/{paymentId}/complete` | POST | Confirmación de pago con referencia de transacción | `200 OK` — pago en estado `COMPLETED` |
+| Payments | `/api/v1/payments/order/{orderId}` | GET | Consulta de pago por pedido | `200 OK` — datos del pago |
+
+A continuación se muestra el schema del endpoint principal del bounded context Fuel Orders y la interacción con datos de muestra:
+
+![Swagger Fuel Order Schema](assets/chapter-5/swagger-fuel-order-schema.png)
+
+![Fuel Orders GET Response](assets/chapter-5/swagger-fuel-orders-get.png)
+
+**Commits relacionados con documentación Sprint 1:**
+
+| Repository | Branch | Commit Id | Commit Message | Committed on |
+|---|---|---|---|---|
+| HaloFuel/FuelBrigde-Backend | main | `7b09f4d` | fix: Swagger server URL to point to Railway production | 2026-10-08 |
+| HaloFuel/FuelBrigde-Backend | main | `404707d` | Rename startup/product from PrimeFuel/FullTank to HaloFuel/FuelBridge across package, pom, config and docs | 2026-10-08 |
 
 #### 5.3.1.6 Software Deployment Evidence for Sprint Review
 
