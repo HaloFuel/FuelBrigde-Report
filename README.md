@@ -2481,6 +2481,33 @@ El backend aplica cuatro patrones de diseño de forma consistente en los 9 Bound
 
 #### 5.3.1.1 Sprint Backlog 1
 
+**Objetivo del Sprint 1:** cerrar las brechas entre lo diseñado en el Capítulo IV y lo realmente implementado en el backend: exponer el flujo de despacho de pedidos, conectar el patrón Observer para generar notificaciones al solicitante, cubrir el dominio con pruebas unitarias y dejar la primera versión funcional desplegada (frontend en Vercel y API en Railway).
+
+**Drivers atendidos:** QA-1 (Availability & Traceability), QA-3 (Usability) y CON-1 (Spring Boot + MySQL).
+
+| Sprint # | Sprint 1 |
+| -------- | -------- |
+
+| User Story / TS | Título | Task Id | Título de la tarea | Descripción | Estimado (horas) | Asignado a | Estado |
+| --------------- | ------ | ------- | ------------------ | ----------- | ---------------- | ---------- | ------ |
+| US-12 | Marcar pedido como despachado | T01.01 | Crear `DispatchFuelOrderCommand` | Definir el comando de dominio para despachar un pedido. | 2 | Milenko Rubén Cayanchi Avila | Done |
+| US-12 | Marcar pedido como despachado | T01.02 | Manejar el comando en `FuelOrderCommandServiceImpl` | Invocar `dispatch()` del agregado y persistir el cambio. | 3 | Carlos Alberto Lopez Goitia | Done |
+| US-12 / TS-17 | Marcar pedido como despachado | T01.03 | Exponer `POST /api/v1/fuel-orders/{orderId}/dispatch` | Endpoint en `FuelOrdersController` siguiendo el patrón de `confirm` y `cancel`. | 2 | Sebastian Andres Aiquipa Poma | Done |
+| US-30 | Notificación de pedido despachado | T02.01 | Registrar eventos de dominio en `FuelOrder` | Emitir `FuelOrderConfirmedEvent`, `FuelOrderCancelledEvent` y `FuelOrderDispatchedEvent` al cambiar de estado. | 3 | Diego Fernando Herrera Enriquez | Done |
+| US-30 | Notificación de pedido despachado | T02.02 | Publicar eventos en `FuelOrderRepositoryImpl.save()` | Usar `ApplicationEventPublisher` al guardar el agregado. | 3 | Schneider Carlos Alberto Delgado Carrasco | Done |
+| US-29 / US-30 | Notificaciones de aprobación y despacho | T02.03 | Crear `FuelOrderNotificationEventHandler` | Listener en Notification BC que genera la notificación al usuario. | 4 | Milenko Rubén Cayanchi Avila | Done |
+| TS-04 / TS-14 | Endpoints de pedidos | T03.01 | Pruebas unitarias de `FuelOrder` | 9 escenarios sobre estados y excepciones (JUnit 5 + AssertJ). | 4 | Sebastian Andres Aiquipa Poma | Done |
+| TS-20 | Registrar y procesar pagos | T03.02 | Pruebas unitarias de `Payment` | 4 escenarios: creación, completar, reembolsar y fallar. | 2 | Carlos Alberto Lopez Goitia | Done |
+| Técnica | Calidad del entorno de pruebas | T03.03 | Corregir `contextLoads()` con perfil de test | Perfil `application-test.properties` con H2 en memoria. | 2 | Diego Fernando Herrera Enriquez | Done |
+| Técnica | Despliegue | T04.01 | Corregir configuración del perfil MySQL para Railway | Leer `MYSQLHOST`, `MYSQLPORT`, `MYSQLUSER`, `MYSQLPASSWORD` y `${PORT}`. | 2 | Schneider Carlos Alberto Delgado Carrasco | Done |
+| Técnica | Despliegue | T04.02 | Desplegar backend en Railway | API publicada con Swagger UI disponible. | 3 | Milenko Rubén Cayanchi Avila | Done |
+| Técnica | Despliegue | T04.03 | Desplegar frontend en Vercel | Rama `main` conectada a la API desplegada. | 2 | Sebastian Andres Aiquipa Poma | Done |
+| Técnica | Documentación | T05.01 | Documentar el sprint en el informe | Evidencias de desarrollo, pruebas y despliegue. | 2 | Diego Fernando Herrera Enriquez | Done |
+
+**Total estimado:** 34 horas.
+
+---
+
 ##### 5.3.1.2 Development Evidence for Sprint Review
  
 Durante este sprint se trabajó sobre el backend (`HaloFuel/FuelBrigde-Backend`), cerrando brechas entre lo documentado en el Capítulo IV y lo que estaba realmente implementado.
