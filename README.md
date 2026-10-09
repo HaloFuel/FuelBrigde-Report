@@ -2910,7 +2910,155 @@ Durante este sprint se trabajó sobre el backend (`HaloFuel/FuelBrigde-Backend`)
   <img src="assets/chapter-5/commit-history.png" width="700" />
 </div>
 
+
 #### 5.3.1.3 Testing Suite Evidence for Sprint Review
+
+Durante el Sprint 1 de FuelBridge, la startup HaloFuel desarrolló y ejecutó pruebas automatizadas para verificar las funcionalidades implementadas en el backend de la plataforma, principalmente aquellas relacionadas con la gestión de pedidos de combustible, procesamiento de pagos y generación de notificaciones.
+
+Para ello, se utilizaron JUnit 5, AssertJ, Cucumber, Gherkin y Spring Boot Test. Las pruebas permiten verificar tanto el comportamiento de los componentes del dominio como el cumplimiento de los criterios de aceptación asociados a las historias de usuario del Sprint 1.
+
+Las pruebas de aceptación siguen el enfoque Behavior-Driven Development (BDD), utilizando escenarios estructurados mediante Given, When y Then, lo que facilita la validación de las funcionalidades desde la perspectiva del usuario.
+
+**URL del repositorio:** https://github.com/HaloFuel/FuelBrigde-Backend
+
+**Ramas utilizadas:**
+- `main`
+- `feature/sprint1-bdd-tests`
+
+**URL de la rama BDD:** https://github.com/HaloFuel/FuelBrigde-Backend/tree/feature/sprint1-bdd-tests
+
+##### Registro de Commits de Testing
+
+La siguiente tabla presenta las pruebas automatizadas verificadas, indicando el repositorio, la rama, el identificador del commit, el mensaje registrado y la fecha correspondiente.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed On (Date) | Prueba asociada |
+|---|---|---|---|---|---|---|
+| FuelBrigde-Backend | main | f70edda | test: add Payment unit tests and H2 profile for contextLoads | - | 08/10/2026 | Payment - Creación de pago |
+| FuelBrigde-Backend | main | f70edda | test: add Payment unit tests and H2 profile for contextLoads | - | 08/10/2026 | Payment - Completar pago |
+| FuelBrigde-Backend | main | f70edda | test: add Payment unit tests and H2 profile for contextLoads | - | 08/10/2026 | Payment - Reembolsar pago |
+| FuelBrigde-Backend | main | f70edda | test: add Payment unit tests and H2 profile for contextLoads | - | 08/10/2026 | Payment - Registrar pago fallido |
+| FuelBrigde-Backend | main | f70edda | test: add Payment unit tests and H2 profile for contextLoads | - | 08/10/2026 | Spring Boot - contextLoads() |
+| FuelBrigde-Backend | feature/sprint1-bdd-tests | e6e5a0f | test: add cucumber BDD acceptance test for fuel order dispatch | - | 08/10/2026 | US-12 - Despacho de pedidos |
+| FuelBrigde-Backend | feature/sprint1-bdd-tests | ca13a7c | test: add BDD acceptance test for fuel order dispatch notifications | - | 08/10/2026 | US-30 - Notificaciones de despacho |
+
+**Enlaces de los commits:**
+
+- [Commit f70edda - Pruebas unitarias de Payment y configuración H2](https://github.com/HaloFuel/FuelBrigde-Backend/commit/f70edda47e)
+- [Commit e6e5a0f - Prueba BDD de despacho de pedidos](https://github.com/HaloFuel/FuelBrigde-Backend/commit/e6e5a0f)
+- [Commit ca13a7c - Prueba BDD de notificaciones](https://github.com/HaloFuel/FuelBrigde-Backend/commit/ca13a7c)
+
+##### Pruebas Unitarias del Backend
+
+**Pruebas del Bounded Context Payment**
+
+Se implementaron cuatro pruebas unitarias utilizando JUnit 5 y AssertJ para verificar el comportamiento del agregado `Payment`, correspondiente al procesamiento de pagos de combustible.
+
+Las pruebas implementadas comprueban las siguientes operaciones:
+
+1. **Creación de pago:** Verifica que un pago se inicialice correctamente con los datos proporcionados y el estado `PENDING`.
+
+2. **Completar pago:** Comprueba que la operación `complete()` cambie el estado del pago a `COMPLETED`, registrando la referencia de transacción y la fecha correspondiente.
+
+3. **Reembolsar pago:** Verifica que la operación `refund()` actualice correctamente el estado del pago a `REFUNDED`.
+
+4. **Registrar pago fallido:** Comprueba que la operación `fail()` cambie el estado del pago a `FAILED`.
+
+Estas pruebas permiten validar las principales transiciones de estado del agregado Payment sin depender de servicios externos.
+
+**Prueba de Inicialización de Spring Boot**
+
+También se ejecutó la prueba `contextLoads()`, perteneciente a `FuelBridgePlatformApplicationTests`, que verifica la inicialización del contexto de Spring Boot.
+
+Para esta prueba se utilizó el perfil `test`, configurado mediante `application-test.properties`, empleando una base de datos H2 en memoria.
+
+Esta configuración permite ejecutar las pruebas sin depender de una conexión a la base de datos MySQL de producción.
+
+##### Pruebas de Aceptación BDD con Cucumber
+
+Durante el Sprint 1 también se implementaron pruebas de aceptación para validar las historias de usuario US-12 y US-30, relacionadas directamente con el flujo de despacho y las notificaciones automáticas de FuelBridge.
+
+**US-12 - Marcar pedido como despachado**
+
+Se desarrolló el archivo `fuel-order-dispatch.feature`, correspondiente al Bounded Context Ordering.
+
+El escenario de aceptación comprueba que un proveedor autenticado pueda despachar un pedido mediante el endpoint REST:
+
+`POST /api/v1/fuel-orders/{orderId}/dispatch`
+
+La prueba verifica las siguientes condiciones:
+
+- Existe un pedido registrado con estado `PENDING`.
+- Se utiliza un usuario autenticado de prueba.
+- Se ejecuta una solicitud HTTP POST al endpoint de despacho.
+- El servidor responde con el código HTTP 200.
+- El pedido cambia correctamente al estado `DISPATCHED`.
+
+La prueba fue ejecutada satisfactoriamente mediante Cucumber y Spring Boot Test, verificando el comportamiento del endpoint y la persistencia del nuevo estado.
+
+**US-30 - Notificación de pedido despachado**
+
+Se implementó el archivo `fuel-order-notification.feature`, correspondiente al Bounded Context Notification.
+
+El escenario verifica que, cuando un pedido de combustible cambia al estado `DISPATCHED`, se publique el evento `FuelOrderDispatchedEvent` y se genere una notificación para el comprador asociado.
+
+La prueba comprueba las siguientes condiciones:
+
+- Existe un comprador asociado a una empresa.
+- Existe un pedido de combustible con estado `PENDING`.
+- El pedido es despachado correctamente.
+- Se publica el evento `FuelOrderDispatchedEvent`.
+- Se crea una notificación de tipo `ORDER_DISPATCHED` para el comprador.
+
+Esta prueba permite validar la comunicación mediante eventos entre los Bounded Contexts Ordering y Notification, siguiendo el patrón Observer implementado durante el Sprint 1.
+
+##### Resultados de Ejecución de las Pruebas
+
+Las pruebas automatizadas se ejecutaron mediante Maven, utilizando el siguiente comando:
+
+`.\mvnw.cmd test`
+
+La ejecución finalizó con el mensaje `BUILD SUCCESS`, registrando siete pruebas exitosas, sin errores, fallos ni pruebas omitidas.
+
+| Testing Suite | Pruebas ejecutadas | Exitosas | Fallidas | Estado |
+|---|---:|---:|---:|---|
+| PaymentTest | 4 | 4 | 0 | Passed |
+| FuelBridgePlatformApplicationTests | 1 | 1 | 0 | Passed |
+| Cucumber - US-12 | 1 | 1 | 0 | Passed |
+| Cucumber - US-30 | 1 | 1 | 0 | Passed |
+| **Total** | **7** | **7** | **0** | **Passed** |
+
+<div align="center">
+  <img src="assets/chapter-5/CucumberTestResults.png" width="700" />
+</div>
+
+*Figura 1. Resultado de ejecución de las pruebas automatizadas mediante Maven, mostrando siete pruebas exitosas y el mensaje BUILD SUCCESS.*
+
+##### Evidencia del Reporte HTML de Cucumber
+
+Cucumber generó un reporte HTML en el archivo `target/cucumber-report.html`, que permite visualizar detalladamente los escenarios ejecutados y sus resultados.
+
+El reporte registra dos escenarios BDD ejecutados satisfactoriamente, correspondientes a las historias de usuario US-12 y US-30.
+
+Ambos escenarios completaron sus cinco pasos Gherkin, obteniéndose un total de diez pasos aprobados y un porcentaje de éxito del 100%.
+
+<div align="center">
+  <img src="assets/chapter-5/CucumberBDDTestResults.png" width="700" />
+</div>
+
+*Figura 2. Reporte HTML de Cucumber con los escenarios de aceptación US-12 y US-30 aprobados al 100%.*
+
+##### Evaluación de los Resultados del Sprint Review
+
+Los resultados obtenidos permiten evidenciar el correcto funcionamiento de las funcionalidades evaluadas durante el Sprint 1.
+
+Las pruebas del agregado Payment verificaron las principales operaciones de procesamiento de pagos, mientras que la prueba `contextLoads()` confirmó la inicialización del contexto de Spring Boot.
+
+Asimismo, las pruebas BDD permitieron comprobar el flujo de despacho de pedidos y la generación automática de notificaciones mediante eventos de dominio, validando la integración entre los Bounded Contexts Ordering y Notification.
+
+Estas pruebas se ejecutaron utilizando el entorno de testing de Spring Boot, con H2 como base de datos en memoria, evitando modificaciones en la información de producción.
+
+En conjunto, las evidencias obtenidas contribuyen a verificar las funcionalidades implementadas durante el Sprint 1 y proporcionan una base para ampliar la cobertura de pruebas automatizadas en los siguientes sprints.
+
 
 #### 5.3.1.4 Execution Evidence for Sprint Review
 
