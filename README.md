@@ -2463,7 +2463,24 @@ El backend aplica cuatro patrones de diseño de forma consistente en los 9 Bound
 
 ### 5.1.3 Pattern Based Custom Software Library
 
+El backend ya contiene tipos transversales para representar resultados y errores de aplicación, como `Result<T, ApplicationError>`, dentro de `shared.application.result`. Estos tipos son candidatos a reutilización porque los consumen servicios de distintos Bounded Contexts y no representan una regla propia de Ordering, Payment ni de otro dominio.
+
+**Estado actual y alcance de la extracción:** en el código documentado, estos tipos forman parte del backend; la evidencia disponible no demuestra que ya estén empaquetados como una librería independiente. Por ello, se propone extraerlos a un módulo Java reutilizable llamado `fuelbridge-shared-kernel`, publicado como un artefacto JAR Maven (por ejemplo, `com.halofuel:fuelbridge-shared-kernel`). El backend y futuros servicios podrán declararlo como dependencia en lugar de copiar las clases. Esta sección documenta el alcance de la librería propuesta y no afirma que el artefacto ya haya sido publicado.
+
+El patrón creacional seleccionado es **Static Factory Method** para construir resultados válidos de forma explícita, mediante operaciones como `Result.success(value)` y `Result.failure(error)`, si estas fábricas no existen aún en la implementación actual. Antes de presentar el patrón como aplicado, se debe implementar y probarlo en la librería. El contrato debe conservar la representación que ya espera el backend y evitar estados ambiguos, como un resultado simultáneamente exitoso y fallido.
+
+La librería debe contener únicamente abstracciones genéricas de aplicación, por ejemplo `Result` y `ApplicationError` cuando su definición no dependa de un Bounded Context. No se deben extraer agregados, eventos de dominio, entidades JPA, repositorios concretos, controladores ni clases que dependan de Spring o de HTTP. Así se mantiene el módulo independiente del framework y apto para ser referenciado por otros servicios.
+
+
 ### 5.1.4 Framework Pattern Driven Refactoring Report
+
+Esta refactorización conecta el cambio de estado de los pedidos con la generación de notificaciones mediante el mecanismo de eventos de Spring. Se aplica **Observer (Publish-Subscribe)** usando `ApplicationEventPublisher` y `@EventListener`, componentes nativos de Spring Boot, sin añadir una librería de Mediator ni trasladar esta solución a ASP.NET Core.
+
+**Antes:** según el historial de cambios descrito para el Sprint 1, Ordering actualizaba y persistía el pedido, pero los eventos de dominio no estaban conectados con Notification BC. En consecuencia, un cambio de estado no originaba por sí mismo la notificación correspondiente. Para la captura del estado anterior, se debe usar el código del commit inmediatamente anterior a la refactorización; no se debe reconstruir un fragmento hipotético como si hubiera sido código real.
+
+**Después:** `FuelOrder` registra eventos de dominio al confirmar, cancelar o despachar un pedido. `FuelOrderRepositoryImpl` publica los eventos registrados mediante `ApplicationEventPublisher` al guardar el agregado y limpia la lista de eventos publicados. `FuelOrderNotificationEventHandler`, ubicado en Notification BC, recibe los eventos con `@EventListener`, obtiene al usuario asociado a la empresa compradora y solicita la creación de la notificación mediante `NotificationCommandService`. Las dependencias del handler se reciben por constructor.
+
+La mejora reduce el acoplamiento entre los contextos: Ordering publica hechos del dominio sin depender directamente de Notification BC, y el handler puede evolucionar sin modificar el agregado. También concentra la reacción a los eventos en un componente dedicado, lo que facilita mantener y probar la integración. Los eventos de Spring usados aquí son locales al mismo proceso y, por defecto, se procesan sincrónicamente; no equivalen a mensajería durable ni a comunicación entre microservicios. Si la notificación debe ejecutarse únicamente después de confirmar la transacción de base de datos, se debe evaluar `@TransactionalEventListener(phase = TransactionPhase.AFTER_COMMIT)` y documentar ese cambio cuando se implemente.
 
 ## 5.2 Software Configuration Management
 
@@ -2565,11 +2582,8 @@ La primera versión funcional de FuelBridge se despliega desde los repositorios 
 
 La evidencia de despliegue corresponde a la versión de Sprint Review de la solución digital, donde el frontend y el backend operan de manera desacoplada pero integrados para la validación del flujo principal del producto.
 
-![Configuración del despliegue]()
+**Landing Page desplegado:** [https://fuelbridgelandingpage.vercel.app/](https://fuelbridgelandingpage.vercel.app/)
 
-![Despliegue exitoso]()
-
-**Landing Page desplegado:** []()
 
 #### 5.3.1.7 Team Collaboration Insights during Sprint
 
