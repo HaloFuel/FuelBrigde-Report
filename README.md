@@ -2486,11 +2486,379 @@ La mejora reduce el acoplamiento entre los contextos: Ordering publica hechos de
 
 ### 5.2.1 Software Development Environment Configuration
 
+En esta sección se especifican los productos de software utilizados por el equipo de HaloFuel para colaborar en el ciclo de vida de FuelBridge, organizados por tipo de actividad.
+
+#### Project Management
+
+| Producto | Tipo | Propósito | URL |
+|---|---|---|---|
+| Trello | SaaS | Gestión del Sprint Backlog y tablero Kanban | https://trello.com |
+| GitHub | SaaS | Repositorio central y coordinación del equipo | https://github.com |
+
+#### Requirements Management
+
+| Producto | Tipo | Propósito | URL |
+|---|---|---|---|
+| GitHub Issues | SaaS | Registro y seguimiento de requerimientos e incidencias | https://github.com |
+
+#### Product UX/UI Design
+
+| Producto | Tipo | Propósito | URL |
+|---|---|---|---|
+| Figma | SaaS | Diseño de wireframes y prototipos de la interfaz | https://figma.com |
+
+#### Software Development Landing Page
+
+La landing page de FuelBridge es un sitio estático desarrollado con tecnologías web nativas, sin framework ni herramienta de build.
+
+| Producto | Tipo | Propósito | URL |
+|---|---|---|---|
+| HTML5 / CSS3 / JavaScript | — | Lenguajes base del sitio estático | — |
+| Google Fonts (Inter) | SaaS | Tipografía del sitio | https://fonts.google.com |
+| Visual Studio Code | Local | Editor de código | https://code.visualstudio.com/download |
+
+#### Software Development — Frontend (Angular SPA)
+
+| Producto | Versión | Tipo | Propósito | URL |
+|---|---|---|---|---|
+| Node.js + npm | npm 11.12.1 | Local | Entorno de ejecución y gestor de paquetes | https://nodejs.org/en/download |
+| Angular CLI | 21.2.7 | Local (npm) | Toolchain oficial para generación, build y serve | https://angular.dev/tools/cli |
+| Angular | 21.2.9 | Local (npm) | Framework principal de la SPA | https://angular.dev |
+| Angular Material + CDK | 21.2.7 | Local (npm) | Biblioteca de componentes de UI | https://material.angular.io |
+| RxJS | 7.8.0 | Local (npm) | Programación reactiva y manejo de estado | https://rxjs.dev |
+| @ngx-translate/core | 17.0.0 | Local (npm) | Internacionalización (i18n) | https://github.com/ngx-translate/core |
+| Chart.js + ng2-charts | 4.5.1 | Local (npm) | Visualización de datos en Reporting | https://www.chartjs.org |
+| Firebase | 12.13.0 | Local (npm) | Servicios de autenticación y base de datos en tiempo real | https://firebase.google.com |
+| TypeScript | 5.9.3 | Local (npm) | Lenguaje tipado base de Angular | https://www.typescriptlang.org |
+| JSON Server | 0.17.4 | Local (npm) | Mock de API REST para desarrollo local | https://github.com/typicode/json-server |
+| Visual Studio Code | — | Local | Editor principal para desarrollo frontend | https://code.visualstudio.com/download |
+
+#### Software Development — Backend (Spring Boot API)
+
+| Producto | Versión | Tipo | Propósito | URL |
+|---|---|---|---|---|
+| Java JDK | 26 | Local | Lenguaje principal del backend | https://www.oracle.com/java/technologies/downloads/ |
+| Spring Boot | 4.0.6 | Local (Maven) | Framework base para la API REST | https://spring.io/projects/spring-boot |
+| Maven | — | Local | Build tool y gestión de dependencias | https://maven.apache.org/download.cgi |
+| IntelliJ IDEA | — | Local | IDE principal para desarrollo Java | https://www.jetbrains.com/idea/download/ |
+| Lombok | — | Local (Maven) | Reducción de boilerplate en entidades y DTOs | https://projectlombok.org/ |
+| Spring Security | — | Local (Maven) | Autenticación y autorización de la API | https://spring.io/projects/spring-security |
+| jjwt | 0.12.6 | Local (Maven) | Generación y validación de tokens JWT | https://github.com/jwtk/jjwt |
+| springdoc-openapi | 3.0.3 | Local (Maven) | Generación automática de documentación OpenAPI / Swagger UI | https://springdoc.org |
+| MySQL Workbench | — | Local | Administración y consulta de la base de datos | https://dev.mysql.com/downloads/workbench/ |
+
+#### Software Testing
+
+| Producto | Versión | Tipo | Propósito | URL |
+|---|---|---|---|---|
+| JUnit 5 | — | Local (Maven) | Pruebas unitarias del dominio backend | https://junit.org/junit5/ |
+| H2 Database | — | Local (Maven) | Base de datos en memoria para el perfil de test | https://www.h2database.com/html/download.html |
+| Karma + Jasmine | 6.4.0 / 5.9.0 | Local (npm) | Pruebas unitarias del frontend Angular | https://karma-runner.github.io |
+| Postman | — | Local | Pruebas manuales de endpoints REST | https://www.postman.com/downloads/ |
+
+#### Software Deployment
+
+| Producto | Tipo | Propósito | URL |
+|---|---|---|---|
+| Railway | SaaS | Despliegue del backend (Spring Boot + MySQL) | https://railway.app |
+| Vercel | SaaS | Despliegue del frontend Angular y la Landing Page | https://vercel.com |
+
+#### Software Documentation
+
+| Producto | Versión | Tipo | Propósito | URL |
+|---|---|---|---|---|
+| springdoc-openapi | 3.0.3 | Local (Maven) | Generación automática de la especificación OpenAPI y Swagger UI | https://springdoc.org |
+| GitHub | — | SaaS | Documentación del repositorio vía README | https://github.com/HaloFuel |
+
+#### Source Code Management
+
+| Producto | Tipo | Propósito | URL |
+|---|---|---|---|
+| Git | Local | Control de versiones distribuido | https://git-scm.com/downloads |
+| GitHub | SaaS | Repositorio remoto y colaboración (org: HaloFuel) | https://github.com/HaloFuel |
+
+---
+
 ### 5.2.2 Source Code Management
 
 ### 5.2.3 Source Code Style Guide & Conventions
 
+Para garantizar la consistencia, legibilidad y mantenibilidad del código fuente de FuelBridge, la startup HaloFuel establece una guía de estilos y convenciones de programación aplicable al desarrollo del backend y frontend de la plataforma.
+
+Estas convenciones toman como referencia Google Java Style Guide, Google TypeScript Style Guide y Angular Style Guide, además de los principios de Domain-Driven Design (DDD). Su propósito es facilitar la colaboración entre los desarrolladores, mantener una organización uniforme y reducir la complejidad durante la implementación y mantenimiento del software.
+
+**Convenciones de Nombres**
+
+**Clases e Interfaces:** Se utiliza la nomenclatura PascalCase,
+donde cada palabra comienza con mayúscula. Los nombres deben
+expresar claramente la responsabilidad de la clase o interfaz,
+evitando abreviaturas innecesarias.
+
+En FuelBridge se emplean clases como `FuelOrdersController` e
+interfaces como `FuelOrderCommandService` y
+`FuelOrderQueryService`, pertenecientes al Bounded Context Ordering.
+
+<div align="center">
+  <img src="assets/chapter-5/classes-pascalcase.png" width="700" />
+</div>
+
+*Figura 1. Aplicación de la convención PascalCase en clases e interfaces del backend de FuelBridge.*
+
+
+**Métodos y Variables:** Se utiliza camelCase, comenzando con minúscula y escribiendo las palabras siguientes con mayúscula inicial. Los métodos deben describir claramente las operaciones que ejecutan.
+
+Por ejemplo, el controlador `FuelOrdersController` utiliza métodos como `createFuelOrder()`, `confirmOrder()`, `cancelOrder()` y `getOrdersByCompany()` para representar las operaciones relacionadas con la gestión de pedidos de combustible.
+
+<div align="center">
+  <img src="assets/chapter-5/FuelOrdersControllerMethods.png" width="700" />
+</div>
+
+*Figura 2. Convención camelCase en métodos del controlador FuelOrdersController de FuelBridge.*
+
+
+**Constantes:** Las constantes se escriben utilizando UPPER_SNAKE_CASE, separando las palabras mediante guiones bajos. Esta convención permite identificarlas y diferenciarlas de las variables convencionales.
+
+Un ejemplo presente en el backend es la constante `MESSAGES_BASENAME`, declarada dentro de `GlobalExceptionHandler`.
+
+**Enumeraciones (Enums):** Las enumeraciones utilizan PascalCase para sus nombres y UPPER_SNAKE_CASE para los valores definidos.
+
+Por ejemplo, `OrderStatus` contiene valores como `PENDING`, `CONFIRMED`, `DISPATCHED`, `PENDING_PAYMENT`, `PAID` y `CANCELLED`, entre otros.
+
+<div align="center">
+  <img src="assets/chapter-5/GlobalExceptionHandlerConstant.png" width="700" />
+
+  <img src="assets/chapter-5/OrderStatusEnum.png" width="700" />
+</div>
+
+*Figura 3. Aplicación de las convenciones UPPER_SNAKE_CASE y PascalCase en constantes y enumeraciones del backend de FuelBridge.*
+
+
+**Diseño del Código**
+
+**Indentación:** Se utilizan espacios en lugar de tabulaciones para mantener una presentación consistente del código fuente. En los archivos Java se sigue una indentación habitual de cuatro espacios por nivel, mientras que el frontend utiliza dos espacios, según la configuración del archivo `.editorconfig`.
+
+**Llaves:** Se emplea el estilo de llaves en la misma línea de apertura de las clases, métodos y estructuras de control. La llave de cierre se coloca en una línea independiente, manteniendo la organización visual del código.
+
+**Longitud de Línea:** Se busca evitar líneas demasiado extensas para facilitar su lectura. En el frontend se utiliza Prettier con una longitud objetivo de 100 caracteres, configurada mediante la propiedad `printWidth`.
+
+**Formato de TypeScript:** El archivo `.prettierrc` establece el uso de comillas simples y un formato específico para las plantillas HTML de Angular.
+
+<div align="center">
+  <img src="assets/chapter-5/EditorConfig.png" width="700" />
+  <img src="assets/chapter-5/PrettierConfig.png" width="700" />
+</div>
+
+*Figura 4. Configuración de indentación, longitud de línea y formato de código mediante EditorConfig y Prettier en el frontend de FuelBridge.*
+
+
+**Comentarios y Documentación**
+
+**Comentarios en Línea:** Se recomienda utilizar comentarios breves que expliquen decisiones de negocio, restricciones o comportamientos complejos que no puedan entenderse fácilmente mediante la lectura del código.
+
+Los comentarios deben utilizarse con moderación, evitando repetir información evidente de los nombres de clases, métodos o variables.
+
+**Comentarios de Documentación:** Para las clases y métodos cuya funcionalidad requiera una explicación adicional, se utilizan bloques de documentación. En Java se emplea el formato Javadoc y en TypeScript pueden utilizarse comentarios JSDoc.
+
+En FuelBridge se encuentran ejemplos de documentación mediante etiquetas como `@summary`, `@remarks` y `@author` en las clases del proyecto.
+
+Estas descripciones permiten explicar las responsabilidades de los componentes y facilitan su comprensión por otros integrantes del equipo.
+
+<div align="center">
+  <img src="assets/chapter-5/PaymentTestDocumentation.png" width="700" />
+  <img src="assets/chapter-5/DeliveryEntityDocumentation.png" width="700" />
+</div>
+
+*Figura 5. Documentación de clases mediante comentarios estructurados en Java y TypeScript del proyecto FuelBridge.*
+
+
+**Comentarios TODO:** Se establece el uso de comentarios `TODO` cuando sea necesario identificar tareas pendientes, mejoras futuras o secciones que requieran revisión. Estos comentarios deben acompañarse de una descripción clara para facilitar su seguimiento.
+
+**Estructura de Archivos**
+
+**Organización por Bounded Contexts:** El backend de FuelBridge utiliza una estructura modular basada en Domain-Driven Design (DDD), agrupando el código fuente según las responsabilidades del negocio.
+
+Se identifican los siguientes contextos: IAM, Ordering, Inventory, Catalog, Payment, Fulfillment, Notification, Reporting y Equipment.
+
+Dentro de cada contexto se organizan las siguientes capas:
+
+| Capa | Responsabilidad |
+|---|---|
+| Domain | Entidades, agregados, objetos de valor y reglas de negocio |
+| Application | Servicios de aplicación, comandos y consultas |
+| Infrastructure | Persistencia, configuraciones y adaptadores técnicos |
+| Interfaces | Controladores REST, recursos y transformadores |
+
+Esta estructura favorece la separación de responsabilidades y facilita la evolución de los módulos sin mezclar directamente la lógica del negocio con los detalles técnicos.
+
+<div align="center">
+  <img src="assets/chapter-5/BackendDDDStructure.png" width="700" />
+</div>
+
+*Figura 6. Organización modular del backend de FuelBridge mediante Bounded Contexts y capas DDD.*
+
+
+**Organización del Frontend:** El frontend Angular utiliza una organización similar, separando las funcionalidades por contextos y distribuyendo sus componentes en capas de presentación, aplicación, dominio e infraestructura.
+
+Los archivos TypeScript emplean nombres descriptivos en kebab-case, como `fulfillment.store.ts`, `delivery.entity.ts` y `order-list.ts`.
+
+<div align="center">
+  <img src="assets/chapter-5/FrontendDDDStructure.png" width="700" />
+</div>
+
+*Figura 7. Organización modular del frontend de FuelBridge mediante Bounded Contexts y capas DDD.*
+
+
+**Manejo de Errores**
+
+**Manejo de Excepciones:** El backend centraliza el tratamiento de excepciones mediante la clase `GlobalExceptionHandler`, utilizando la anotación `@RestControllerAdvice` de Spring Boot.
+
+Esta implementación contempla el tratamiento de errores de validación, argumentos incorrectos y excepciones inesperadas, permitiendo convertirlos en respuestas HTTP.
+
+**Respuestas de Error:** El proyecto incorpora la estructura `ErrorResource`, que permite representar los errores mediante atributos como `code`, `message` y `details`.
+
+Se recomienda utilizar mensajes descriptivos, mantener respuestas consistentes y evitar exponer información sensible o detalles internos del servidor.
+
+<div align="center">
+  <img src="assets/chapter-5/GlobalExceptionHandler.png" width="700" />
+  <img src="assets/chapter-5/ErrorResource.png" width="700" />
+</div>
+
+*Figura 8. Implementación del manejo centralizado de excepciones y estructura de respuestas de error en el backend de FuelBridge.*
+
+**Integración con Control de Versiones**
+
+**Políticas de Check-in:** Los cambios realizados en el código fuente deben registrarse mediante commits descriptivos y relacionados con las funcionalidades implementadas.
+
+El proyecto utiliza Git y GitHub para almacenar el código y mantener el historial de modificaciones.
+
+**Convenciones de Commits:** Se adopta la especificación Conventional Commits, utilizando prefijos como `feat:`, `fix:`, `test:`, `docs:` y `refactor:` para identificar el propósito de cada modificación.
+
+**Revisión de Código:** Como buena práctica de colaboración, se establece la revisión de los cambios antes de incorporarlos a las ramas principales del proyecto, verificando que respeten la arquitectura y las convenciones de desarrollo.
+
+**Prácticas de Programación**
+
+**Separación de Responsabilidades:** Cada componente debe concentrarse en funciones relacionadas con su propósito, manteniendo alta cohesión y reduciendo el acoplamiento innecesario.
+
+**Reutilización de Código:** Se promueve la reutilización de componentes y servicios compartidos cuando una funcionalidad resulta necesaria para varios módulos.
+
+**Uso de Patrones:** Se aplican patrones de diseño cuando permiten resolver problemas concretos de la arquitectura, evitando introducir complejidad innecesaria.
+
+**Código Mantenible:** Se prioriza la claridad, el uso de nombres descriptivos y la organización modular antes que optimizaciones prematuras.
+
+Estas prácticas buscan mantener un código coherente con los principios arquitectónicos del proyecto y facilitar su evolución durante los siguientes sprints.
+
 ### 5.2.4 Software Deployment Configuration
+
+La configuración de despliegue de **FuelBridge**, desarrollada por la startup **HaloFuel**, se basa en una infraestructura cloud que permite alojar y ejecutar los diferentes componentes de la plataforma. Para ello, se utilizan servicios de alojamiento web, ejecución de aplicaciones backend y almacenamiento de datos.
+
+La solución emplea **Vercel** para el despliegue del frontend desarrollado con Angular, mientras que **Railway** aloja la API REST implementada con Spring Boot y la base de datos MySQL. Esta distribución permite administrar los componentes de manera separada y mantener la comunicación entre ellos mediante interfaces REST.
+
+#### Vercel para el Frontend
+
+**Hosting:** Vercel es una plataforma cloud que permite desplegar aplicaciones web y distribuir archivos estáticos mediante su infraestructura de entrega de contenido. En FuelBridge, se utiliza para alojar el frontend desarrollado con Angular 21 y TypeScript.
+
+La plataforma permite publicar la aplicación web y acceder a ella desde un navegador mediante HTTPS. Asimismo, facilita la distribución de los archivos HTML, CSS y JavaScript generados durante la compilación de Angular.
+
+**Integración con GitHub:** El proyecto se encuentra conectado con su repositorio de GitHub, utilizando la rama `main` como fuente del despliegue de producción. Esto permite actualizar el frontend mediante nuevos despliegues asociados a los cambios del código fuente.
+
+**Configuración del despliegue:** Para generar la versión de producción se utiliza el comando `npm run build`, que ejecuta el proceso de compilación de Angular. El frontend consume la API REST publicada en Railway mediante las rutas configuradas en los archivos de entorno del proyecto.
+
+**URL del frontend:** https://fuel-brigde-frontend.vercel.app
+
+<div align="center">
+  <img src="assets/chapter-5/VercelDeployment.png" width="700" />
+</div>
+
+*Figura 1. Despliegue de producción del frontend de FuelBridge en Vercel, mostrando el estado Ready, el dominio público y la integración con GitHub.*
+
+#### Railway para el Backend
+
+**Hosting:** Railway es una plataforma cloud que permite desplegar aplicaciones backend y administrar servicios de infraestructura. En FuelBridge, se utiliza para ejecutar la API REST desarrollada con Java 26 y Spring Boot 4.
+
+El backend implementa una arquitectura de monolito modular, organizada mediante Bounded Contexts siguiendo los principios de Domain-Driven Design (DDD). Entre sus principales módulos se encuentran IAM, Ordering, Inventory, Catalog, Payment, Fulfillment, Notification, Reporting y Equipment.
+
+**Contenedorización:** El backend utiliza Docker para facilitar su construcción y ejecución. Su archivo `Dockerfile` implementa una construcción en múltiples etapas, utilizando una imagen con JDK 26 para compilar el proyecto mediante Maven y otra con JRE 26 para ejecutar la aplicación.
+
+Este procedimiento permite empaquetar la aplicación en un archivo JAR y ejecutarla dentro del entorno de Railway. La construcción Docker actual omite la ejecución de pruebas mediante `-DskipTests`, por lo que estas deben validarse independientemente.
+
+**Configuración de Variables de Entorno:** Railway permite establecer variables para configurar la conexión con MySQL, el puerto de ejecución, la autenticación JWT y los orígenes autorizados para consumir la API.
+
+Las principales variables contempladas por la aplicación son:
+
+| Variable | Descripción |
+|---|---|
+| `PORT` | Puerto asignado al servicio backend |
+| `MYSQLHOST` | Dirección del servidor MySQL |
+| `MYSQLPORT` | Puerto de conexión con MySQL |
+| `MYSQLDATABASE` | Nombre de la base de datos |
+| `MYSQLUSER` | Usuario de acceso a MySQL |
+| `MYSQLPASSWORD` | Contraseña de acceso a MySQL |
+| `AUTHORIZATION_JWT_SECRET` | Clave utilizada para la firma de tokens JWT |
+| `CORS_ALLOWED_ORIGINS` | Orígenes permitidos para acceder a la API |
+
+Estas configuraciones permiten adaptar la aplicación al entorno de despliegue sin necesidad de modificar directamente su código fuente. Los valores sensibles deben mantenerse protegidos y no incluirse en el repositorio.
+
+**Documentación de API:** El backend incorpora Swagger/OpenAPI para documentar y consultar los endpoints REST correspondientes a los diferentes módulos de FuelBridge.
+
+**URL del backend:** https://fuelbrigde-backend-production.up.railway.app
+
+#### Railway MySQL para la Base de Datos
+
+**Base de Datos:** FuelBridge utiliza MySQL como sistema de gestión de bases de datos relacionales para almacenar la información relacionada con usuarios, empresas, solicitudes, pedidos de combustible, inventarios, pagos, vehículos y entregas.
+
+La base de datos se encuentra desplegada como un servicio independiente dentro del proyecto de Railway y se comunica con el backend mediante el controlador JDBC de MySQL y Spring Data JPA/Hibernate.
+
+**Persistencia:** La instancia utiliza almacenamiento persistente mediante un volumen denominado `mysql-volume`, lo que permite conservar los datos independientemente del ciclo de vida del contenedor de la base de datos.
+
+**Configuración:** El servicio MySQL utiliza una imagen Docker de MySQL 9. La conexión con el backend se administra mediante las variables de entorno correspondientes a la dirección, puerto, nombre de la base de datos y credenciales de acceso.
+
+**Estado del Despliegue:** En la evidencia obtenida desde Railway se observan los servicios FuelBridge-Backend y MySQL en estado `Online`. Asimismo, el despliegue de MySQL presenta el estado `ACTIVE` y el mensaje `Deployment successful`.
+
+<div align="center">
+  <img src="assets/chapter-5/RailwayMySQLDeployment.png" width="700" />
+</div>
+
+*Figura 2. Infraestructura cloud de FuelBridge en Railway, mostrando los servicios Backend y MySQL, el volumen persistente y el despliegue exitoso de la base de datos.*
+
+#### C4 Deployment Diagram
+
+El diagrama de despliegue C4 representa la distribución de los componentes de FuelBridge dentro de su infraestructura de producción, identificando los entornos donde se ejecutan las aplicaciones y los mecanismos de comunicación utilizados.
+
+La arquitectura contempla los siguientes elementos:
+
+- **Vercel Cloud:** aloja y distribuye los archivos estáticos del frontend Angular.
+- **Navegador del usuario:** ejecuta la aplicación Angular y permite interactuar con las funcionalidades de la plataforma.
+- **Railway Backend:** ejecuta la API REST desarrollada con Java 26 y Spring Boot 4, encargada de procesar las operaciones del negocio.
+- **Railway MySQL:** almacena la información persistente mediante una base de datos relacional MySQL 9.
+
+El proceso de comunicación comienza cuando el usuario accede a la aplicación web publicada en Vercel mediante HTTPS. Los archivos del frontend son descargados y ejecutados en el navegador, desde donde se realizan solicitudes HTTP a la API REST del backend desplegado en Railway.
+
+Posteriormente, el backend procesa las operaciones del negocio y utiliza JDBC y Spring Data JPA para consultar o modificar la información almacenada en MySQL.
+
+Esta distribución permite mantener el frontend separado del backend a nivel de despliegue, mientras que el backend conserva una arquitectura interna de monolito modular basada en DDD.
+
+<div align="center">
+  <img src="assets/chapter-5/FuelBridgeDeploymentDiagram.png" width="700" />
+</div>
+
+*Figura 3. C4 Deployment Diagram de FuelBridge, representando la infraestructura de producción en Vercel y Railway, así como la comunicación entre el frontend Angular, la API Spring Boot y MySQL.*
+
+#### Validación de la Configuración de Despliegue
+
+Para verificar la infraestructura de producción se consideran las siguientes comprobaciones:
+
+| Componente | Evidencia de despliegue |
+|---|---|
+| Frontend Angular | Despliegue en Vercel con estado `Ready` |
+| Backend Spring Boot | Servicio FuelBridge-Backend con estado `Online` en Railway |
+| Base de datos MySQL | Servicio MySQL con estado `Online` y despliegue `ACTIVE` |
+| Persistencia | Volumen `mysql-volume` asociado a MySQL |
+| Comunicación | Frontend configurado para consumir la API REST de Railway |
+| Infraestructura | Diagrama C4 que representa los nodos y sus conexiones |
+
+Las evidencias permiten identificar la infraestructura utilizada y el estado de los servicios al momento de realizar las capturas. La validación funcional completa requiere comprobar adicionalmente las operaciones entre frontend, backend y base de datos.
+
+En conjunto, la configuración de despliegue de FuelBridge proporciona una infraestructura centralizada para la lógica del negocio y la persistencia, manteniendo independiente la publicación del frontend y facilitando el mantenimiento de los componentes de la solución.
 
 ## 5.3 Microservices Implementation
 
@@ -2559,11 +2927,291 @@ Durante este sprint se trabajó sobre el backend (`HaloFuel/FuelBrigde-Backend`)
   <img src="assets/chapter-5/commit-history.png" width="700" />
 </div>
 
+
 #### 5.3.1.3 Testing Suite Evidence for Sprint Review
+
+Durante el Sprint 1 de FuelBridge, la startup HaloFuel desarrolló y ejecutó pruebas automatizadas para verificar las funcionalidades implementadas en el backend de la plataforma, principalmente aquellas relacionadas con la gestión de pedidos de combustible, procesamiento de pagos y generación de notificaciones.
+
+Para ello, se utilizaron JUnit 5, AssertJ, Cucumber, Gherkin y Spring Boot Test. Las pruebas permiten verificar tanto el comportamiento de los componentes del dominio como el cumplimiento de los criterios de aceptación asociados a las historias de usuario del Sprint 1.
+
+Las pruebas de aceptación siguen el enfoque Behavior-Driven Development (BDD), utilizando escenarios estructurados mediante Given, When y Then, lo que facilita la validación de las funcionalidades desde la perspectiva del usuario.
+
+**URL del repositorio:** https://github.com/HaloFuel/FuelBrigde-Backend
+
+**Ramas utilizadas:**
+- `main`
+- `feature/sprint1-bdd-tests`
+
+**URL de la rama BDD:** https://github.com/HaloFuel/FuelBrigde-Backend/tree/feature/sprint1-bdd-tests
+
+##### Registro de Commits de Testing
+
+La siguiente tabla presenta las pruebas automatizadas verificadas, indicando el repositorio, la rama, el identificador del commit, el mensaje registrado y la fecha correspondiente.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed On (Date) | Prueba asociada |
+|---|---|---|---|---|---|---|
+| FuelBrigde-Backend | main | f70edda | test: add Payment unit tests and H2 profile for contextLoads | - | 08/10/2026 | Payment - Creación de pago |
+| FuelBrigde-Backend | main | f70edda | test: add Payment unit tests and H2 profile for contextLoads | - | 08/10/2026 | Payment - Completar pago |
+| FuelBrigde-Backend | main | f70edda | test: add Payment unit tests and H2 profile for contextLoads | - | 08/10/2026 | Payment - Reembolsar pago |
+| FuelBrigde-Backend | main | f70edda | test: add Payment unit tests and H2 profile for contextLoads | - | 08/10/2026 | Payment - Registrar pago fallido |
+| FuelBrigde-Backend | main | f70edda | test: add Payment unit tests and H2 profile for contextLoads | - | 08/10/2026 | Spring Boot - contextLoads() |
+| FuelBrigde-Backend | feature/sprint1-bdd-tests | e6e5a0f | test: add cucumber BDD acceptance test for fuel order dispatch | - | 08/10/2026 | US-12 - Despacho de pedidos |
+| FuelBrigde-Backend | feature/sprint1-bdd-tests | ca13a7c | test: add BDD acceptance test for fuel order dispatch notifications | - | 08/10/2026 | US-30 - Notificaciones de despacho |
+
+**Enlaces de los commits:**
+
+- [Commit f70edda - Pruebas unitarias de Payment y configuración H2](https://github.com/HaloFuel/FuelBrigde-Backend/commit/f70edda47e)
+- [Commit e6e5a0f - Prueba BDD de despacho de pedidos](https://github.com/HaloFuel/FuelBrigde-Backend/commit/e6e5a0f)
+- [Commit ca13a7c - Prueba BDD de notificaciones](https://github.com/HaloFuel/FuelBrigde-Backend/commit/ca13a7c)
+
+##### Pruebas Unitarias del Backend
+
+**Pruebas del Bounded Context Payment**
+
+Se implementaron cuatro pruebas unitarias utilizando JUnit 5 y AssertJ para verificar el comportamiento del agregado `Payment`, correspondiente al procesamiento de pagos de combustible.
+
+Las pruebas implementadas comprueban las siguientes operaciones:
+
+1. **Creación de pago:** Verifica que un pago se inicialice correctamente con los datos proporcionados y el estado `PENDING`.
+
+2. **Completar pago:** Comprueba que la operación `complete()` cambie el estado del pago a `COMPLETED`, registrando la referencia de transacción y la fecha correspondiente.
+
+3. **Reembolsar pago:** Verifica que la operación `refund()` actualice correctamente el estado del pago a `REFUNDED`.
+
+4. **Registrar pago fallido:** Comprueba que la operación `fail()` cambie el estado del pago a `FAILED`.
+
+Estas pruebas permiten validar las principales transiciones de estado del agregado Payment sin depender de servicios externos.
+
+**Prueba de Inicialización de Spring Boot**
+
+También se ejecutó la prueba `contextLoads()`, perteneciente a `FuelBridgePlatformApplicationTests`, que verifica la inicialización del contexto de Spring Boot.
+
+Para esta prueba se utilizó el perfil `test`, configurado mediante `application-test.properties`, empleando una base de datos H2 en memoria.
+
+Esta configuración permite ejecutar las pruebas sin depender de una conexión a la base de datos MySQL de producción.
+
+##### Pruebas de Aceptación BDD con Cucumber
+
+Durante el Sprint 1 también se implementaron pruebas de aceptación para validar las historias de usuario US-12 y US-30, relacionadas directamente con el flujo de despacho y las notificaciones automáticas de FuelBridge.
+
+**US-12 - Marcar pedido como despachado**
+
+Se desarrolló el archivo `fuel-order-dispatch.feature`, correspondiente al Bounded Context Ordering.
+
+El escenario de aceptación comprueba que un proveedor autenticado pueda despachar un pedido mediante el endpoint REST:
+
+`POST /api/v1/fuel-orders/{orderId}/dispatch`
+
+La prueba verifica las siguientes condiciones:
+
+- Existe un pedido registrado con estado `PENDING`.
+- Se utiliza un usuario autenticado de prueba.
+- Se ejecuta una solicitud HTTP POST al endpoint de despacho.
+- El servidor responde con el código HTTP 200.
+- El pedido cambia correctamente al estado `DISPATCHED`.
+
+La prueba fue ejecutada satisfactoriamente mediante Cucumber y Spring Boot Test, verificando el comportamiento del endpoint y la persistencia del nuevo estado.
+
+**US-30 - Notificación de pedido despachado**
+
+Se implementó el archivo `fuel-order-notification.feature`, correspondiente al Bounded Context Notification.
+
+El escenario verifica que, cuando un pedido de combustible cambia al estado `DISPATCHED`, se publique el evento `FuelOrderDispatchedEvent` y se genere una notificación para el comprador asociado.
+
+La prueba comprueba las siguientes condiciones:
+
+- Existe un comprador asociado a una empresa.
+- Existe un pedido de combustible con estado `PENDING`.
+- El pedido es despachado correctamente.
+- Se publica el evento `FuelOrderDispatchedEvent`.
+- Se crea una notificación de tipo `ORDER_DISPATCHED` para el comprador.
+
+Esta prueba permite validar la comunicación mediante eventos entre los Bounded Contexts Ordering y Notification, siguiendo el patrón Observer implementado durante el Sprint 1.
+
+##### Resultados de Ejecución de las Pruebas
+
+Las pruebas automatizadas se ejecutaron mediante Maven, utilizando el siguiente comando:
+
+`.\mvnw.cmd test`
+
+La ejecución finalizó con el mensaje `BUILD SUCCESS`, registrando siete pruebas exitosas, sin errores, fallos ni pruebas omitidas.
+
+| Testing Suite | Pruebas ejecutadas | Exitosas | Fallidas | Estado |
+|---|---:|---:|---:|---|
+| PaymentTest | 4 | 4 | 0 | Passed |
+| FuelBridgePlatformApplicationTests | 1 | 1 | 0 | Passed |
+| Cucumber - US-12 | 1 | 1 | 0 | Passed |
+| Cucumber - US-30 | 1 | 1 | 0 | Passed |
+| **Total** | **7** | **7** | **0** | **Passed** |
+
+<div align="center">
+  <img src="assets/chapter-5/CucumberTestResults.png" width="700" />
+</div>
+
+*Figura 1. Resultado de ejecución de las pruebas automatizadas mediante Maven, mostrando siete pruebas exitosas y el mensaje BUILD SUCCESS.*
+
+##### Evidencia del Reporte HTML de Cucumber
+
+Cucumber generó un reporte HTML en el archivo `target/cucumber-report.html`, que permite visualizar detalladamente los escenarios ejecutados y sus resultados.
+
+El reporte registra dos escenarios BDD ejecutados satisfactoriamente, correspondientes a las historias de usuario US-12 y US-30.
+
+Ambos escenarios completaron sus cinco pasos Gherkin, obteniéndose un total de diez pasos aprobados y un porcentaje de éxito del 100%.
+
+<div align="center">
+  <img src="assets/chapter-5/CucumberBDDTestResults.png" width="700" />
+</div>
+
+*Figura 2. Reporte HTML de Cucumber con los escenarios de aceptación US-12 y US-30 aprobados al 100%.*
+
+##### Evaluación de los Resultados del Sprint Review
+
+Los resultados obtenidos permiten evidenciar el correcto funcionamiento de las funcionalidades evaluadas durante el Sprint 1.
+
+Las pruebas del agregado Payment verificaron las principales operaciones de procesamiento de pagos, mientras que la prueba `contextLoads()` confirmó la inicialización del contexto de Spring Boot.
+
+Asimismo, las pruebas BDD permitieron comprobar el flujo de despacho de pedidos y la generación automática de notificaciones mediante eventos de dominio, validando la integración entre los Bounded Contexts Ordering y Notification.
+
+Estas pruebas se ejecutaron utilizando el entorno de testing de Spring Boot, con H2 como base de datos en memoria, evitando modificaciones en la información de producción.
+
+En conjunto, las evidencias obtenidas contribuyen a verificar las funcionalidades implementadas durante el Sprint 1 y proporcionan una base para ampliar la cobertura de pruebas automatizadas en los siguientes sprints.
+
 
 #### 5.3.1.4 Execution Evidence for Sprint Review
 
+Durante el Sprint 1, el equipo de HaloFuel implementó los Web Services del backend de FuelBridge, cubriendo los bounded contexts de IAM, Buyer Companies, Provider Companies, Fuel Products, Fuel Orders y Payments. A continuación se presentan las principales operaciones ejecutadas sobre los servicios, interactuando con la API REST mediante Postman.
+
+**Registro de usuario (Sign Up)**
+
+Se validó el endpoint de registro de usuarios con el rol `ROLE_BUYER`, obteniendo un response `201 Created` con los datos del usuario creado.
+
+![Sign Up](assets/chapter-5/sign-up.png)
+*Figura 3. Registro de usuario con rol ROLE_BUYER mediante POST /api/v1/authentication/sign-up — response 201 Created.*
+
+
+**Autenticación (Sign In)**
+
+Se verificó el endpoint de autenticación, el cual retorna un token JWT requerido para acceder a los endpoints protegidos de la API.
+
+![Sign In](assets/chapter-5/sign-in.png)
+*Figura 4. Autenticación de usuario y obtención de token JWT mediante POST /api/v1/authentication/sign-in — response 200 OK.*
+
+
+**Registro de empresa compradora**
+
+Se registró la empresa compradora MineraCorp Perú SAC, obteniendo un response `201 Created`.
+
+![Buyer Company POST](assets/chapter-5/buyer-company-post.png)
+*Figura 5. Registro de empresa compradora MineraCorp Perú SAC mediante POST /api/v1/buyer-companies — response 201 Created.*
+
+
+**Registro de empresa proveedora**
+
+Se registró la empresa proveedora DistribFuel SAC con los tipos de combustible que ofrece, obteniendo un response `201 Created`.
+
+![Provider Company POST](assets/chapter-5/provider-company-post.png)
+*Figura 6. Registro de empresa proveedora DistribFuel SAC mediante POST /api/v1/provider-companies — response 201 Created.*
+
+
+**Registro de producto de combustible**
+
+Se creó el producto Diesel B5 Premium asociado al proveedor, con stock disponible y precio por unidad, obteniendo un response `201 Created`.
+
+![Fuel Product POST](assets/chapter-5/fuel-product-post.png)
+*Figura 7. Registro del producto Diesel B5 Premium mediante POST /api/v1/fuel-products — response 201 Created.*
+
+
+**Creación de pedido de combustible**
+
+Se registró un pedido de 500 galones de Diesel B5 con dirección de entrega y fecha programada, obteniendo un response `201 Created` con el pedido en estado `PENDING`.
+
+![Fuel Order POST](assets/chapter-5/fuel-order-post.png)
+*Figura 8. Creación de pedido de 500 galones de Diesel B5 mediante POST /api/v1/fuel-orders — response 201 Created con estado PENDING.*
+
+
+**Confirmación de pedido**
+
+Se ejecutó la confirmación del pedido por parte del proveedor, actualizando el estado a `CONFIRMED` con un response `200 OK`.
+
+![Fuel Order Confirm](assets/chapter-5/fuel-order-confirm.png)
+*Figura 9. Confirmación del pedido por el proveedor mediante POST /api/v1/fuel-orders/1/confirm — response 200 OK con estado CONFIRMED.*
+
+
+**Registro de pago**
+
+Se registró el pago correspondiente al pedido mediante transferencia bancaria, obteniendo un response `201 Created` con el pago en estado `PENDING`.
+
+![Payment POST](assets/chapter-5/payment-post.png)
+*Figura 10. Registro de pago por transferencia bancaria mediante POST /api/v1/payments — response 201 Created con estado PENDING.*
+
+**Video de demostración Sprint 1:** [FuelBridge - Sprint 1 Execution Evidence](https://upcedupe-my.sharepoint.com/:v:/g/personal/u201916755_upc_edu_pe/IQAZur5nW4MhT5HGJjhtCbeaAZn0lYXzxUy-fxJNBNcOWbs?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=3qQurr)
+
+---
+
 #### 5.3.1.5 Microservices Documentation Evidence for Sprint Review
+
+Durante el Sprint 1 se documentaron los Web Services de FuelBridge utilizando OpenAPI 3.0 a través de la dependencia `springdoc-openapi` (v3.0.3), generando automáticamente la especificación de la API y exponiéndola mediante Swagger UI. La documentación cubre un total de 9 grupos de endpoints con 73 rutas implementadas.
+
+- **Swagger UI:** https://fuelbrigde-backend-production.up.railway.app/swagger-ui/index.html
+- **OpenAPI JSON:** https://fuelbrigde-backend-production.up.railway.app/api-docs
+- **Repositorio Backend:** https://github.com/HaloFuel/FuelBrigde-Backend
+
+A continuación se presenta la vista general de la documentación generada:
+
+![Swagger Overview](assets/chapter-5/swagger-overview.png)
+*Figura 11. Vista general del Swagger UI de FuelBridge Platform v0.0.1-SNAPSHOT, mostrando el servidor de producción en Railway y los grupos de endpoints documentados.*
+
+
+![Swagger Controllers](assets/chapter-5/swagger-controllers.png)
+*Figura 12. Listado de controllers documentados en la especificación OpenAPI 3.0, incluyendo los bounded contexts Analytics, Fuel Products y Provider Companies.*
+
+
+A continuación se presenta la tabla de endpoints documentados relacionados con el alcance del Sprint 1:
+
+| Bounded Context | Endpoint | Verbo HTTP | Descripción | Response |
+|---|---|---|---|---|
+| IAM | `/api/v1/authentication/sign-up` | POST | Registro de nuevo usuario con rol y empresa asociada | `201 Created` — usuario con id y roles |
+| IAM | `/api/v1/authentication/sign-in` | POST | Autenticación y obtención de token JWT | `200 OK` — id, username y Bearer token |
+| Buyer Companies | `/api/v1/buyer-companies` | POST | Registro de empresa compradora | `201 Created` — empresa con id generado |
+| Buyer Companies | `/api/v1/buyer-companies` | GET | Listado de empresas compradoras | `200 OK` — array de empresas |
+| Buyer Companies | `/api/v1/buyer-companies/{companyId}` | GET | Consulta de empresa por ID | `200 OK` — datos de la empresa |
+| Buyer Companies | `/api/v1/buyer-companies/{companyId}` | PUT | Actualización de empresa compradora | `200 OK` — empresa actualizada |
+| Provider Companies | `/api/v1/provider-companies` | POST | Registro de empresa proveedora | `201 Created` — proveedor con id |
+| Provider Companies | `/api/v1/provider-companies` | GET | Listado de empresas proveedoras | `200 OK` — array de proveedores |
+| Provider Companies | `/api/v1/provider-companies/{providerId}` | GET | Consulta de proveedor por ID | `200 OK` — datos del proveedor |
+| Provider Companies | `/api/v1/provider-companies/{providerId}` | PUT | Actualización de empresa proveedora | `200 OK` — proveedor actualizado |
+| Fuel Products | `/api/v1/fuel-products` | POST | Registro de producto de combustible | `201 Created` — producto con id |
+| Fuel Products | `/api/v1/fuel-products` | GET | Listado de productos de combustible | `200 OK` — array de productos |
+| Fuel Products | `/api/v1/fuel-products/{fuelProductId}` | GET | Consulta de producto por ID | `200 OK` — datos del producto |
+| Fuel Products | `/api/v1/fuel-products/{fuelProductId}` | PUT | Actualización de producto | `200 OK` — producto actualizado |
+| Fuel Products | `/api/v1/fuel-products/{fuelProductId}` | DELETE | Eliminación de producto | `204 No Content` |
+| Fuel Products | `/api/v1/fuel-products/{fuelProductId}/update-stock` | POST | Actualización de stock disponible | `200 OK` — producto con stock actualizado |
+| Fuel Orders | `/api/v1/fuel-orders` | POST | Creación de pedido de combustible | `201 Created` — pedido en estado `PENDING` |
+| Fuel Orders | `/api/v1/fuel-orders` | GET | Listado de todos los pedidos | `200 OK` — array de pedidos |
+| Fuel Orders | `/api/v1/fuel-orders/{orderId}` | GET | Consulta de pedido por ID | `200 OK` — pedido con estado actual |
+| Fuel Orders | `/api/v1/fuel-orders/company/{companyId}` | GET | Pedidos de una empresa compradora | `200 OK` — array de pedidos filtrados |
+| Fuel Orders | `/api/v1/fuel-orders/provider/{providerId}` | GET | Pedidos asignados a un proveedor | `200 OK` — array de pedidos filtrados |
+| Fuel Orders | `/api/v1/fuel-orders/{orderId}/confirm` | POST | Confirmación del pedido por el proveedor | `200 OK` — pedido en estado `CONFIRMED` |
+| Fuel Orders | `/api/v1/fuel-orders/{orderId}/cancel` | POST | Cancelación del pedido | `200 OK` — pedido en estado `CANCELLED` |
+| Payments | `/api/v1/payments` | POST | Registro de pago asociado a un pedido | `201 Created` — pago en estado `PENDING` |
+| Payments | `/api/v1/payments/{paymentId}/complete` | POST | Confirmación de pago con referencia de transacción | `200 OK` — pago en estado `COMPLETED` |
+| Payments | `/api/v1/payments/order/{orderId}` | GET | Consulta de pago por pedido | `200 OK` — datos del pago |
+
+A continuación se muestra el schema del endpoint principal del bounded context Fuel Orders y la interacción con datos de muestra:
+
+![Swagger Fuel Order Schema](assets/chapter-5/swagger-fuel-order-schema.png)
+*Figura 13. Endpoint POST /api/v1/fuel-orders expandido en Swagger UI, mostrando el schema del request body y los códigos de respuesta documentados.*
+
+
+![Fuel Orders GET Response](assets/chapter-5/swagger-fuel-orders-get.png)
+*Figura 14. Consulta GET /api/v1/fuel-orders ejecutada desde Postman, mostrando el response 200 OK con el pedido en estado PAID y datos de muestra reales.*
+
+**Commits relacionados con documentación Sprint 1:**
+
+| Repository | Branch | Commit Id | Commit Message | Committed on |
+|---|---|---|---|---|
+| HaloFuel/FuelBrigde-Backend | main | `7b09f4d` | fix: Swagger server URL to point to Railway production | 2026-10-08 |
+| HaloFuel/FuelBrigde-Backend | main | `404707d` | Rename startup/product from PrimeFuel/FullTank to HaloFuel/FuelBridge across package, pom, config and docs | 2026-10-08 |
 
 #### 5.3.1.6 Software Deployment Evidence for Sprint Review
 
@@ -2587,7 +3235,37 @@ La evidencia de despliegue corresponde a la versión de Sprint Review de la solu
 
 #### 5.3.1.7 Team Collaboration Insights during Sprint
 
-#### 5.3.1.8 Kanban Board
+
+##### 5.3.1.8 Kanban Board
+
+Para la organización y seguimiento de las actividades correspondientes al Sprint 1 de FuelBridge, la startup HaloFuel implementó un tablero Kanban utilizando la herramienta Trello.
+
+Este tablero permitió representar visualmente las tareas establecidas en el Sprint Backlog, facilitando su organización, la identificación de responsables y el seguimiento del trabajo del equipo.
+
+El tablero se encuentra organizado en cinco columnas:
+
+- **Backlog:** Actividades identificadas para su desarrollo.
+- **Por hacer:** Tareas seleccionadas y pendientes de iniciar.
+- **En proceso:** Actividades que se encuentran en desarrollo.
+- **En revisión:** Tareas pendientes de validación.
+- **Terminado (Done):** Actividades registradas como completadas.
+
+Se incorporaron 13 tareas del Sprint 1, con una estimación total de 34 horas, relacionadas con la gestión de pedidos, notificaciones, pruebas automatizadas, despliegue y documentación.
+
+Además, se utilizaron etiquetas de colores para diferenciar los Bounded Contexts y las áreas de trabajo, permitiendo identificar fácilmente las responsabilidades de cada actividad.
+
+Al cierre del Sprint 1, las 13 tareas figuraban como completadas según el Sprint Backlog, por lo que fueron ubicadas en la columna Terminado (Done).
+
+**Link del tablero Trello:**
+
+https://trello.com/invite/b/6ac87274106e25821de46ae4/ATTI3087071ed1bfa2ed167e7dcdba4149dd6FCBE38D/fuelbridge-sprint-1-kanban-board
+
+<div align="center">
+  <img src="assets/chapter-5/KanbanBoardSprint1.png" width="900" />
+</div>
+
+*Figura. Tablero Kanban del Sprint 1 de FuelBridge, elaborado en Trello, mostrando las tareas organizadas según su estado final.*
+
 
 # Referencias bibliográficas
 
