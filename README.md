@@ -2473,6 +2473,170 @@ El backend aplica cuatro patrones de diseño de forma consistente en los 9 Bound
 
 ### 5.2.3 Source Code Style Guide & Conventions
 
+Para garantizar la consistencia, legibilidad y mantenibilidad del código fuente de FuelBridge, la startup HaloFuel establece una guía de estilos y convenciones de programación aplicable al desarrollo del backend y frontend de la plataforma.
+
+Estas convenciones toman como referencia Google Java Style Guide, Google TypeScript Style Guide y Angular Style Guide, además de los principios de Domain-Driven Design (DDD). Su propósito es facilitar la colaboración entre los desarrolladores, mantener una organización uniforme y reducir la complejidad durante la implementación y mantenimiento del software.
+
+**Convenciones de Nombres**
+
+**Clases e Interfaces:** Se utiliza la nomenclatura PascalCase,
+donde cada palabra comienza con mayúscula. Los nombres deben
+expresar claramente la responsabilidad de la clase o interfaz,
+evitando abreviaturas innecesarias.
+
+En FuelBridge se emplean clases como `FuelOrdersController` e
+interfaces como `FuelOrderCommandService` y
+`FuelOrderQueryService`, pertenecientes al Bounded Context Ordering.
+
+<div align="center">
+  <img src="assets/chapter-5/classes-pascalcase.png" width="700" />
+</div>
+
+*Figura 1. Aplicación de la convención PascalCase en clases e interfaces del backend de FuelBridge.*
+
+
+**Métodos y Variables:** Se utiliza camelCase, comenzando con minúscula y escribiendo las palabras siguientes con mayúscula inicial. Los métodos deben describir claramente las operaciones que ejecutan.
+
+Por ejemplo, el controlador `FuelOrdersController` utiliza métodos como `createFuelOrder()`, `confirmOrder()`, `cancelOrder()` y `getOrdersByCompany()` para representar las operaciones relacionadas con la gestión de pedidos de combustible.
+
+<div align="center">
+  <img src="assets/chapter-5/FuelOrdersControllerMethods.png" width="700" />
+</div>
+
+*Figura 2. Convención camelCase en métodos del controlador FuelOrdersController de FuelBridge.*
+
+
+**Constantes:** Las constantes se escriben utilizando UPPER_SNAKE_CASE, separando las palabras mediante guiones bajos. Esta convención permite identificarlas y diferenciarlas de las variables convencionales.
+
+Un ejemplo presente en el backend es la constante `MESSAGES_BASENAME`, declarada dentro de `GlobalExceptionHandler`.
+
+**Enumeraciones (Enums):** Las enumeraciones utilizan PascalCase para sus nombres y UPPER_SNAKE_CASE para los valores definidos.
+
+Por ejemplo, `OrderStatus` contiene valores como `PENDING`, `CONFIRMED`, `DISPATCHED`, `PENDING_PAYMENT`, `PAID` y `CANCELLED`, entre otros.
+
+<div align="center">
+  <img src="assets/chapter-5/GlobalExceptionHandlerConstant.png" width="700" />
+
+  <img src="assets/chapter-5/OrderStatusEnum.png" width="700" />
+</div>
+
+*Figura 3. Aplicación de las convenciones UPPER_SNAKE_CASE y PascalCase en constantes y enumeraciones del backend de FuelBridge.*
+
+
+**Diseño del Código**
+
+**Indentación:** Se utilizan espacios en lugar de tabulaciones para mantener una presentación consistente del código fuente. En los archivos Java se sigue una indentación habitual de cuatro espacios por nivel, mientras que el frontend utiliza dos espacios, según la configuración del archivo `.editorconfig`.
+
+**Llaves:** Se emplea el estilo de llaves en la misma línea de apertura de las clases, métodos y estructuras de control. La llave de cierre se coloca en una línea independiente, manteniendo la organización visual del código.
+
+**Longitud de Línea:** Se busca evitar líneas demasiado extensas para facilitar su lectura. En el frontend se utiliza Prettier con una longitud objetivo de 100 caracteres, configurada mediante la propiedad `printWidth`.
+
+**Formato de TypeScript:** El archivo `.prettierrc` establece el uso de comillas simples y un formato específico para las plantillas HTML de Angular.
+
+<div align="center">
+  <img src="assets/chapter-5/EditorConfig.png" width="700" />
+  <img src="assets/chapter-5/PrettierConfig.png" width="700" />
+</div>
+
+*Figura 4. Configuración de indentación, longitud de línea y formato de código mediante EditorConfig y Prettier en el frontend de FuelBridge.*
+
+
+**Comentarios y Documentación**
+
+**Comentarios en Línea:** Se recomienda utilizar comentarios breves que expliquen decisiones de negocio, restricciones o comportamientos complejos que no puedan entenderse fácilmente mediante la lectura del código.
+
+Los comentarios deben utilizarse con moderación, evitando repetir información evidente de los nombres de clases, métodos o variables.
+
+**Comentarios de Documentación:** Para las clases y métodos cuya funcionalidad requiera una explicación adicional, se utilizan bloques de documentación. En Java se emplea el formato Javadoc y en TypeScript pueden utilizarse comentarios JSDoc.
+
+En FuelBridge se encuentran ejemplos de documentación mediante etiquetas como `@summary`, `@remarks` y `@author` en las clases del proyecto.
+
+Estas descripciones permiten explicar las responsabilidades de los componentes y facilitan su comprensión por otros integrantes del equipo.
+
+<div align="center">
+  <img src="assets/chapter-5/PaymentTestDocumentation.png" width="700" />
+  <img src="assets/chapter-5/DeliveryEntityDocumentation.png" width="700" />
+</div>
+
+*Figura 5. Documentación de clases mediante comentarios estructurados en Java y TypeScript del proyecto FuelBridge.*
+
+
+**Comentarios TODO:** Se establece el uso de comentarios `TODO` cuando sea necesario identificar tareas pendientes, mejoras futuras o secciones que requieran revisión. Estos comentarios deben acompañarse de una descripción clara para facilitar su seguimiento.
+
+**Estructura de Archivos**
+
+**Organización por Bounded Contexts:** El backend de FuelBridge utiliza una estructura modular basada en Domain-Driven Design (DDD), agrupando el código fuente según las responsabilidades del negocio.
+
+Se identifican los siguientes contextos: IAM, Ordering, Inventory, Catalog, Payment, Fulfillment, Notification, Reporting y Equipment.
+
+Dentro de cada contexto se organizan las siguientes capas:
+
+| Capa | Responsabilidad |
+|---|---|
+| Domain | Entidades, agregados, objetos de valor y reglas de negocio |
+| Application | Servicios de aplicación, comandos y consultas |
+| Infrastructure | Persistencia, configuraciones y adaptadores técnicos |
+| Interfaces | Controladores REST, recursos y transformadores |
+
+Esta estructura favorece la separación de responsabilidades y facilita la evolución de los módulos sin mezclar directamente la lógica del negocio con los detalles técnicos.
+
+<div align="center">
+  <img src="assets/chapter-5/BackendDDDStructure.png" width="700" />
+</div>
+
+*Figura 6. Organización modular del backend de FuelBridge mediante Bounded Contexts y capas DDD.*
+
+
+**Organización del Frontend:** El frontend Angular utiliza una organización similar, separando las funcionalidades por contextos y distribuyendo sus componentes en capas de presentación, aplicación, dominio e infraestructura.
+
+Los archivos TypeScript emplean nombres descriptivos en kebab-case, como `fulfillment.store.ts`, `delivery.entity.ts` y `order-list.ts`.
+
+<div align="center">
+  <img src="assets/chapter-5/FrontendDDDStructure.png" width="700" />
+</div>
+
+*Figura 7. Organización modular del frontend de FuelBridge mediante Bounded Contexts y capas DDD.*
+
+
+**Manejo de Errores**
+
+**Manejo de Excepciones:** El backend centraliza el tratamiento de excepciones mediante la clase `GlobalExceptionHandler`, utilizando la anotación `@RestControllerAdvice` de Spring Boot.
+
+Esta implementación contempla el tratamiento de errores de validación, argumentos incorrectos y excepciones inesperadas, permitiendo convertirlos en respuestas HTTP.
+
+**Respuestas de Error:** El proyecto incorpora la estructura `ErrorResource`, que permite representar los errores mediante atributos como `code`, `message` y `details`.
+
+Se recomienda utilizar mensajes descriptivos, mantener respuestas consistentes y evitar exponer información sensible o detalles internos del servidor.
+
+<div align="center">
+  <img src="assets/chapter-5/GlobalExceptionHandler.png" width="700" />
+  <img src="assets/chapter-5/ErrorResource.png" width="700" />
+</div>
+
+*Figura 8. Implementación del manejo centralizado de excepciones y estructura de respuestas de error en el backend de FuelBridge.*
+
+**Integración con Control de Versiones**
+
+**Políticas de Check-in:** Los cambios realizados en el código fuente deben registrarse mediante commits descriptivos y relacionados con las funcionalidades implementadas.
+
+El proyecto utiliza Git y GitHub para almacenar el código y mantener el historial de modificaciones.
+
+**Convenciones de Commits:** Se adopta la especificación Conventional Commits, utilizando prefijos como `feat:`, `fix:`, `test:`, `docs:` y `refactor:` para identificar el propósito de cada modificación.
+
+**Revisión de Código:** Como buena práctica de colaboración, se establece la revisión de los cambios antes de incorporarlos a las ramas principales del proyecto, verificando que respeten la arquitectura y las convenciones de desarrollo.
+
+**Prácticas de Programación**
+
+**Separación de Responsabilidades:** Cada componente debe concentrarse en funciones relacionadas con su propósito, manteniendo alta cohesión y reduciendo el acoplamiento innecesario.
+
+**Reutilización de Código:** Se promueve la reutilización de componentes y servicios compartidos cuando una funcionalidad resulta necesaria para varios módulos.
+
+**Uso de Patrones:** Se aplican patrones de diseño cuando permiten resolver problemas concretos de la arquitectura, evitando introducir complejidad innecesaria.
+
+**Código Mantenible:** Se prioriza la claridad, el uso de nombres descriptivos y la organización modular antes que optimizaciones prematuras.
+
+Estas prácticas buscan mantener un código coherente con los principios arquitectónicos del proyecto y facilitar su evolución durante los siguientes sprints.
+
 ### 5.2.4 Software Deployment Configuration
 
 La configuración de despliegue de **FuelBridge**, desarrollada por la startup **HaloFuel**, se basa en una infraestructura cloud que permite alojar y ejecutar los diferentes componentes de la plataforma. Para ello, se utilizan servicios de alojamiento web, ejecución de aplicaciones backend y almacenamiento de datos.
