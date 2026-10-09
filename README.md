@@ -3069,48 +3069,63 @@ Durante el Sprint 1, el equipo de HaloFuel implementó los Web Services del back
 Se validó el endpoint de registro de usuarios con el rol `ROLE_BUYER`, obteniendo un response `201 Created` con los datos del usuario creado.
 
 ![Sign Up](assets/chapter-5/sign-up.png)
+*Figura 3. Registro de usuario con rol ROLE_BUYER mediante POST /api/v1/authentication/sign-up — response 201 Created.*
+
 
 **Autenticación (Sign In)**
 
 Se verificó el endpoint de autenticación, el cual retorna un token JWT requerido para acceder a los endpoints protegidos de la API.
 
 ![Sign In](assets/chapter-5/sign-in.png)
+*Figura 4. Autenticación de usuario y obtención de token JWT mediante POST /api/v1/authentication/sign-in — response 200 OK.*
+
 
 **Registro de empresa compradora**
 
 Se registró la empresa compradora MineraCorp Perú SAC, obteniendo un response `201 Created`.
 
 ![Buyer Company POST](assets/chapter-5/buyer-company-post.png)
+*Figura 5. Registro de empresa compradora MineraCorp Perú SAC mediante POST /api/v1/buyer-companies — response 201 Created.*
+
 
 **Registro de empresa proveedora**
 
 Se registró la empresa proveedora DistribFuel SAC con los tipos de combustible que ofrece, obteniendo un response `201 Created`.
 
 ![Provider Company POST](assets/chapter-5/provider-company-post.png)
+*Figura 6. Registro de empresa proveedora DistribFuel SAC mediante POST /api/v1/provider-companies — response 201 Created.*
+
 
 **Registro de producto de combustible**
 
 Se creó el producto Diesel B5 Premium asociado al proveedor, con stock disponible y precio por unidad, obteniendo un response `201 Created`.
 
 ![Fuel Product POST](assets/chapter-5/fuel-product-post.png)
+*Figura 7. Registro del producto Diesel B5 Premium mediante POST /api/v1/fuel-products — response 201 Created.*
+
 
 **Creación de pedido de combustible**
 
 Se registró un pedido de 500 galones de Diesel B5 con dirección de entrega y fecha programada, obteniendo un response `201 Created` con el pedido en estado `PENDING`.
 
 ![Fuel Order POST](assets/chapter-5/fuel-order-post.png)
+*Figura 8. Creación de pedido de 500 galones de Diesel B5 mediante POST /api/v1/fuel-orders — response 201 Created con estado PENDING.*
+
 
 **Confirmación de pedido**
 
 Se ejecutó la confirmación del pedido por parte del proveedor, actualizando el estado a `CONFIRMED` con un response `200 OK`.
 
 ![Fuel Order Confirm](assets/chapter-5/fuel-order-confirm.png)
+*Figura 9. Confirmación del pedido por el proveedor mediante POST /api/v1/fuel-orders/1/confirm — response 200 OK con estado CONFIRMED.*
+
 
 **Registro de pago**
 
 Se registró el pago correspondiente al pedido mediante transferencia bancaria, obteniendo un response `201 Created` con el pago en estado `PENDING`.
 
 ![Payment POST](assets/chapter-5/payment-post.png)
+*Figura 10. Registro de pago por transferencia bancaria mediante POST /api/v1/payments — response 201 Created con estado PENDING.*
 
 **Video de demostración Sprint 1:** [FuelBridge - Sprint 1 Execution Evidence](https://upcedupe-my.sharepoint.com/:v:/g/personal/u201916755_upc_edu_pe/IQAZur5nW4MhT5HGJjhtCbeaAZn0lYXzxUy-fxJNBNcOWbs?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=3qQurr)
 
@@ -3127,8 +3142,12 @@ Durante el Sprint 1 se documentaron los Web Services de FuelBridge utilizando Op
 A continuación se presenta la vista general de la documentación generada:
 
 ![Swagger Overview](assets/chapter-5/swagger-overview.png)
+*Figura 11. Vista general del Swagger UI de FuelBridge Platform v0.0.1-SNAPSHOT, mostrando el servidor de producción en Railway y los grupos de endpoints documentados.*
+
 
 ![Swagger Controllers](assets/chapter-5/swagger-controllers.png)
+*Figura 12. Listado de controllers documentados en la especificación OpenAPI 3.0, incluyendo los bounded contexts Analytics, Fuel Products y Provider Companies.*
+
 
 A continuación se presenta la tabla de endpoints documentados relacionados con el alcance del Sprint 1:
 
@@ -3164,8 +3183,11 @@ A continuación se presenta la tabla de endpoints documentados relacionados con 
 A continuación se muestra el schema del endpoint principal del bounded context Fuel Orders y la interacción con datos de muestra:
 
 ![Swagger Fuel Order Schema](assets/chapter-5/swagger-fuel-order-schema.png)
+*Figura 13. Endpoint POST /api/v1/fuel-orders expandido en Swagger UI, mostrando el schema del request body y los códigos de respuesta documentados.*
+
 
 ![Fuel Orders GET Response](assets/chapter-5/swagger-fuel-orders-get.png)
+*Figura 14. Consulta GET /api/v1/fuel-orders ejecutada desde Postman, mostrando el response 200 OK con el pedido en estado PAID y datos de muestra reales.*
 
 **Commits relacionados con documentación Sprint 1:**
 
