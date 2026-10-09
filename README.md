@@ -2401,61 +2401,65 @@ El diagrama de secuencia representa el flujo de aprobación de un pedido, incluy
 ## 5.1 Testing Suites & General Patterns
 
 ### 5.1.1 Backend Application Core Testing Suite
-
-Se desarrollaron pruebas unitarias sobre el núcleo del dominio, cubriendo los agregados centrales de Ordering BC y Payment BC. Las pruebas se escribieron con JUnit 5 y AssertJ, sin levantar el contexto de Spring, para mantenerlas rápidas y aisladas del resto de la infraestructura.
-
+ 
+Se escribieron pruebas unitarias sobre los agregados centrales de Ordering BC y Payment BC, usando JUnit 5 y AssertJ, sin levantar el contexto de Spring para que los tests corran rápido y sin depender de infraestructura externa.
+ 
 **FuelOrder (Ordering BC)** — 9 escenarios cubiertos:
-
+ 
 - Un pedido nuevo nace en estado `PENDING`.
 - `confirm()` mueve el pedido a `CONFIRMED`.
 - `cancel()` mueve el pedido a `CANCELLED`.
 - `dispatch()` mueve un pedido `PENDING` a `DISPATCHED`.
-- `dispatch()` lanza `IllegalStateException` si el pedido no está `PENDING`.
+- `dispatch()` lanza `IllegalStateException` si el pedido no está en `PENDING`.
 - `receive()` mueve un pedido `DISPATCHED` a `PENDING_PAYMENT`.
 - `receive()` lanza `IllegalStateException` si el pedido nunca fue despachado.
-- `markPaid()` marca el pedido como `PAID` si no está cancelado.
+- `markPaid()` marca el pedido como `PAID` cuando no está cancelado.
 - `markPaid()` lanza `IllegalStateException` si el pedido ya está `CANCELLED`.
-
+ 
 **Payment (Payment BC)** — 4 escenarios cubiertos:
-
+ 
 - El constructor copia los datos del comando y el pago nace en estado `PENDING`.
-- `complete()` marca el pago como `COMPLETED` y registra la referencia de transacción y el momento del pago.
+- `complete()` marca el pago como `COMPLETED`, registra la referencia de transacción y guarda el momento exacto del pago.
 - `refund()` marca el pago como `REFUNDED`.
 - `fail()` marca el pago como `FAILED`.
-
-A diferencia de `FuelOrder`, el agregado `Payment` no valida transiciones de estado (cualquier método puede llamarse desde cualquier estado), por lo que no se agregaron pruebas de excepción para él.
-
-Adicionalmente, se corrigió el test `contextLoads()` (generado por defecto por Spring Boot), que fallaba al intentar levantar el contexto completo de la aplicación contra una base de datos MySQL real no disponible en el entorno local. Se configuró un perfil de test aislado (`application-test.properties`) respaldado por H2 en memoria, activado mediante `@ActiveProfiles("test")`, sin modificar los perfiles de desarrollo o producción.
+ 
+A diferencia de `FuelOrder`, `Payment` no restringe transiciones de estado, por lo que no se escribieron tests de excepción para él.
+ 
+También se corrigió el test `contextLoads()` que viene por defecto en Spring Boot, que reventaba porque intentaba conectarse a MySQL real en un entorno local sin base de datos disponible. La solución fue agregar un perfil de test (`application-test.properties`) con H2 en memoria y activarlo con `@ActiveProfiles("test")`, sin tocar los perfiles de desarrollo ni producción.
+ 
+---
 
 ### 5.1.2 Pattern Based Backend Application(s)
-
-La implementación del backend aplica de forma consistente cuatro patrones de diseño a lo largo de los 9 Bounded Contexts, cada uno vinculado a un driver o concern específico definido en el Capítulo IV (4.1.6, 4.2).
-
-- **Patrón Repository:** Crea una capa de abstracción entre la lógica de negocio de la aplicación y el mecanismo de almacenamiento de datos, de modo que el dominio no dependa de detalles de persistencia (anotaciones JPA, dialectos SQL) ni se vea forzado a cambiar si el motor de base de datos cambia en el futuro. Aplicado en los 9 Bounded Contexts mediante una interfaz de dominio (ej. `FuelOrderRepository`) implementada en infraestructura (`FuelOrderRepositoryImpl`), que traduce entre el agregado y una entidad JPA separada a través de un assembler dedicado. Responde directamente a CONC-3 (Mantenimiento del Código): al mantener el dominio libre de código de persistencia, cualquier integrante del equipo puede modificar las reglas de negocio de un Bounded Context sin arriesgar romper el mapeo a base de datos, y viceversa.
-
+ 
+El backend aplica cuatro patrones de diseño de forma consistente en los 9 Bounded Contexts, cada uno respondiendo a un driver concreto del Capítulo IV.
+ 
+- **Patrón Repository:** separa la lógica de negocio del mecanismo de persistencia, de modo que el dominio no depende de anotaciones JPA ni de detalles del motor de base de datos. Cada Bounded Context define una interfaz de repositorio de dominio (ej. `FuelOrderRepository`) implementada en infraestructura (`FuelOrderRepositoryImpl`), que traduce entre el agregado y su entidad JPA a través de un assembler dedicado. Responde a CONC-3 (Mantenimiento del Código): se puede cambiar la lógica de negocio sin tocar el mapeo, y viceversa.
+ 
 <div align="center">
   <img src="assets/chapter-5/Repository.png" width="700" />
 </div>
-
-- **Patrón DTO (Data Transfer Object):** Usado para encapsular un conjunto de datos de modo que puedan ser transferidos entre procesos o capas de la aplicación, por ejemplo desde las peticiones de la capa de presentación, sin exponer directamente la estructura interna de los agregados de dominio. Implementado como clases `Resource` (37 en todo el proyecto, ej. `CreateFuelOrderResource`, `FuelOrderResource`), que desacoplan el contrato público de la API REST de los agregados de dominio. Esto permite evolucionar el modelo interno de un Bounded Context (agregar, renombrar o reorganizar campos) sin romper el contrato que ya consume el frontend, un requisito implícito de QA-3 (Usability): la SPA depende de contratos estables para no degradar la experiencia del usuario con errores de integración.
-
+ 
+- **Patrón DTO (Data Transfer Object):** evita exponer los agregados de dominio directamente en la API. Se implementó como clases `Resource` (37 en el proyecto, ej. `CreateFuelOrderResource`, `FuelOrderResource`), que permiten cambiar el modelo interno de un Bounded Context sin romper el contrato que ya consume el frontend. Responde a QA-3 (Usability): la SPA necesita contratos estables para no romperse con cada cambio interno del backend.
+ 
 <div align="center">
   <img src="assets/chapter-5/DTO.png" width="700" />
 </div>
-
-- **Patrón CQRS (simplificado a nivel de capa de aplicación):** Divide las operaciones del sistema en dos modelos distintos: uno para las consultas (lectura de datos) y otro para los comandos (escritura, actualización y eliminación de datos), evitando que una misma clase concentre responsabilidades de lectura y escritura con reglas de validación distintas. Cada Bounded Context define una interfaz `XxxCommandService` y una `XxxQueryService` separadas (10 de cada una en todo el proyecto), en vez de un único servicio que mezcle ambas responsabilidades. Esta separación es la base sobre la que se apoya la optimización de consultas descrita en ADR-07 (QA-2 Performance): al aislar las operaciones de lectura en su propio servicio, es posible optimizar `Reporting Query Repository` sin tocar la lógica transaccional de escritura. No hay separación física de bases de datos de lectura/escritura, por lo que es una aplicación parcial del patrón, no CQRS completo.
-
+ 
+- **Patrón CQRS (aplicación parcial a nivel de capa de aplicación):** cada Bounded Context define una interfaz `XxxCommandService` para escritura y una `XxxQueryService` para lectura por separado (10 de cada una en el proyecto), en lugar de mezclar ambas responsabilidades en un solo servicio. Esto es la base de la optimización descrita en ADR-07 (QA-2 Performance): se puede optimizar las consultas del dashboard sin tocar la lógica transaccional. No hay separación física de bases de datos de lectura/escritura, así que es CQRS parcial, no completo.
+ 
 <div align="center">
   <img src="assets/chapter-5/FuelOrderCommandService.png" width="700" />
   <img src="assets/chapter-5/FuelOrderQueryService.png" width="700" />
 </div>
-
-- **Patrón Observer (Publish-Subscribe):** Permite que un objeto notifique cambios de estado a otros objetos interesados sin acoplarse directamente a ellos, invirtiendo la dependencia: quien emite el evento no necesita conocer quién lo consume. Implementado con el mecanismo de `AbstractAggregateRoot` de Spring Data: `FuelOrder` registra eventos de dominio (`FuelOrderConfirmedEvent`, `FuelOrderCancelledEvent`, `FuelOrderDispatchedEvent`) al cambiar de estado, `FuelOrderRepositoryImpl` los publica al guardar, y `FuelOrderNotificationEventHandler` (en Notification BC) los escucha para generar notificaciones reales, sin que Ordering BC conozca la existencia de Notification BC. Esta es la implementación concreta de la decisión ADR-03 y satisface directamente QA-1 (Availability & Traceability): cada cambio de estado relevante del pedido llega al cliente como notificación sin que el flujo transaccional de Ordering BC tenga que esperar ni conocer los detalles de cómo se entrega esa notificación.
-
+ 
+- **Patrón Observer (Publish-Subscribe):** `FuelOrder` registra eventos de dominio (`FuelOrderConfirmedEvent`, `FuelOrderCancelledEvent`, `FuelOrderDispatchedEvent`) al cambiar de estado. `FuelOrderRepositoryImpl` los publica al guardar el agregado usando `ApplicationEventPublisher`, y `FuelOrderNotificationEventHandler` (en Notification BC) los escucha para crear notificaciones reales al usuario, sin que Ordering BC sepa que Notification BC existe. Es la implementación concreta de ADR-03 y satisface QA-1 (Availability & Traceability).
+ 
 <div align="center">
   <img src="assets/chapter-5/FuelOrder.png" width="700" />
   <img src="assets/chapter-5/FuelOrderNotificationEventHandler.png" width="700" />
 </div>
+ 
+---
 
 ### 5.1.3 Pattern Based Custom Software Library
 
@@ -2478,31 +2482,35 @@ La implementación del backend aplica de forma consistente cuatro patrones de di
 #### 5.3.1.1 Sprint Backlog 1
 
 ##### 5.3.1.2 Development Evidence for Sprint Review
-
-Durante este sprint se trabajó directamente sobre el backend del proyecto (`HaloFuel/FuelBrigde-Backend`), corrigiendo brechas entre lo documentado en el Capítulo IV y lo efectivamente implementado, y cerrando funcionalidad que quedaba expuesta solo a nivel de dominio sin llegar a la API.
-
-**Corrección de configuración para despliegue en Railway:** se corrigió el perfil `application-mysql.properties`, que tenía el host de base de datos fijo a `localhost` en vez de leer las variables `MYSQLHOST`/`MYSQLPORT`/`MYSQLUSER`/`MYSQLPASSWORD` que Railway inyecta automáticamente, y se agregó lectura del puerto dinámico vía `${PORT}`.
-
+ 
+Durante este sprint se trabajó sobre el backend (`HaloFuel/FuelBrigde-Backend`), cerrando brechas entre lo documentado en el Capítulo IV y lo que estaba realmente implementado.
+ 
+**Corrección de configuración para Railway:** el perfil `application-mysql.properties` tenía el host hardcodeado a `localhost` en vez de leer las variables que Railway inyecta automáticamente (`MYSQLHOST`, `MYSQLPORT`, `MYSQLUSER`, `MYSQLPASSWORD`). También faltaba leer el puerto dinámico con `${PORT}`.
+ 
 <div align="center">
   <img src="assets/chapter-5/railway-deploy.png" width="700" />
 </div>
+ 
 
-**Endpoint faltante en Ordering BC:** se detectó que el método `dispatch()` de `FuelOrder` no tenía ningún endpoint REST que lo expusiera (a diferencia de `confirm()` y `cancel()`, que sí lo tenían). Se agregó `DispatchFuelOrderCommand`, su manejo en `FuelOrderCommandServiceImpl`, y el endpoint `POST /api/v1/fuel-orders/{orderId}/dispatch` en `FuelOrdersController`, siguiendo el mismo patrón ya establecido para los otros dos comandos.
-
+**Endpoint faltante en Ordering BC:** el método `dispatch()` de `FuelOrder` no tenía ningún endpoint que lo expusiera, a diferencia de `confirm()` y `cancel()` que sí tenían el suyo. Se agregó `DispatchFuelOrderCommand`, su manejo en `FuelOrderCommandServiceImpl`, y el endpoint `POST /api/v1/fuel-orders/{orderId}/dispatch` en `FuelOrdersController`, siguiendo el mismo patrón existente.
+ 
 <div align="center">
   <img src="assets/chapter-5/dispatch-endpoint.png" width="700" />
 </div>
+ 
 
-**Implementación real del patrón Observer (PAT-2 / ADR-03):** el Capítulo IV documentaba un Domain Event Dispatcher que no estaba conectado en el código. Se implementó de punta a punta: eventos de dominio en `FuelOrder` (`FuelOrderConfirmedEvent`, `FuelOrderCancelledEvent`, `FuelOrderDispatchedEvent`), publicación real vía `ApplicationEventPublisher` en `FuelOrderRepositoryImpl.save()`, y un listener nuevo en Notification BC (`FuelOrderNotificationEventHandler`) que genera una notificación real para el usuario de la empresa compradora. Detalle completo de la implementación en 5.1.2 (Pattern Based Backend Application(s)).
-
+**Implementación real del patrón Observer (PAT-2 / ADR-03):** el Capítulo IV documentaba un Domain Event Dispatcher que no estaba conectado en el código. Se implementó de punta a punta: eventos de dominio en `FuelOrder`, publicación real en `FuelOrderRepositoryImpl.save()` vía `ApplicationEventPublisher`, y un listener nuevo en Notification BC (`FuelOrderNotificationEventHandler`) que genera una notificación real para el usuario de la empresa compradora. El detalle completo está en 5.1.2.
+ 
 <div align="center">
   <img src="assets/chapter-5/domain-events-commit.png" width="700" />
 </div>
+ 
 
-**Suite de tests del dominio:** se agregaron 13 pruebas unitarias sobre los agregados `FuelOrder` y `Payment` (Ordering BC y Payment BC), y se corrigió el test `contextLoads()` por defecto de Spring Boot, que fallaba al requerir una conexión real a MySQL no disponible en el entorno local, configurando un perfil de test respaldado por H2 en memoria. Detalle completo en 5.1.1 (Backend Application Core Testing Suite).
-
+**Suite de tests del dominio:** se agregaron 13 pruebas unitarias sobre `FuelOrder` y `Payment`, y se corrigió el `contextLoads()` que fallaba por falta de base de datos local, configurando H2 en memoria para el perfil de test. El detalle está en 5.1.1.
+ 
+ 
 **Repositorio y commits:** [github.com/HaloFuel/FuelBrigde-Backend](https://github.com/HaloFuel/FuelBrigde-Backend)
-
+ 
 <div align="center">
   <img src="assets/chapter-5/commit-history.png" width="700" />
 </div>
