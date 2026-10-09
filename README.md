@@ -2964,7 +2964,7 @@ Se registró el pago correspondiente al pedido mediante transferencia bancaria, 
 
 ![Payment POST](assets/chapter-5/payment-post.png)
 
-**Video de demostración Sprint 1:** [URL pendiente de publicación]
+**Video de demostración Sprint 1:** [FuelBridge - Sprint 1 Execution Evidence](https://upcedupe-my.sharepoint.com/:v:/g/personal/u201916755_upc_edu_pe/IQAZur5nW4MhT5HGJjhtCbeaAZn0lYXzxUy-fxJNBNcOWbs?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=3qQurr)
 
 ---
 
