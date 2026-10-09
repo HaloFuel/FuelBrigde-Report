@@ -6,7 +6,7 @@
   <p><strong>Fundamentos de Arquitectura de Software</strong></p>
   <p>NRC</p>
   <p><strong>16723</strong></p>
-  <h2>Informe de Trabajo Final - Avance 2</h2>
+  <h2>Informe de Trabajo Final - Trabajo Parcial 1 </h2>
   <p>Docente</p>
   <p><strong>Marco Antonio Ochante Vicuña</strong></p>
   <p>Startup</p>
@@ -48,6 +48,7 @@
   <p><strong>Período 202620</strong></p>
 </div>
 
+
 ## Registro de Versiones del Informe
 
 <table border>
@@ -72,8 +73,14 @@
     <tr><td>1.4</td><td>20/09/2026</td><td>Carlos Alberto Lopez Goitia</td><td>Iteration 1</td></tr>
     <tr><td>1.5</td><td>26/09/2026</td><td>Milenko Rubén Cayanchi Avila</td><td>Iteration 2</td></tr>
     <tr><td>1.5</td><td>26/09/2026</td><td>Schneider Carlos Alberto Delgado Carrasco</td><td>Iteration 2</td></tr>
+    <tr><td>1.6</td><td>09/10/2026</td><td>Milenko Rubén Cayanchi Avila</td><td>TP1: Desarrollo de Source Code Management (5.2.2), Sprint Backlog 1 (5.3.1.1) y Team Collaboration Insights during Sprint (5.3.1.7).</td></tr>
+    <tr><td>1.6</td><td>09/10/2026</td><td>Sebastian Andres Aiquipa Poma</td><td>TP1: Desarrollo de Software Development Environment Configuration (5.2.1), Execution Evidence for Sprint Review (5.3.1.4) y Microservices Documentation Evidence for Sprint Review (5.3.1.5).</td></tr>
+    <tr><td>1.6</td><td>09/10/2026</td><td>Carlos Alberto Lopez Goitia</td><td>TP1: Desarrollo de Backend Application Core Testing Suite (5.1.1), Pattern Based Backend Application(s) (5.1.2) y Development Evidence for Sprint Review (5.3.1.2).</td></tr>
+    <tr><td>1.6</td><td>09/10/2026</td><td>Diego Fernando Herrera Enriquez</td><td>TP1: Desarrollo de Pattern Based Custom Software Library (5.1.3), Framework Pattern Driven Refactoring Report (5.1.4) y Software Deployment Evidence for Sprint Review (5.3.1.6).</td></tr>
+    <tr><td>1.6</td><td>09/10/2026</td><td>Schneider Carlos Alberto Delgado Carrasco</td><td>TP1: Desarrollo de Source Code Style Guide &amp; Conventions (5.2.3), Software Deployment Configuration (5.2.4), Testing Suite Evidence for Sprint Review (5.3.1.3) y Kanban Board (5.3.1.8).</td></tr>
   </tbody>
 </table>
+
 
 ## Contenido
 
@@ -170,6 +177,7 @@
       - [5.3.1.8 Kanban Board](#5318-kanban-board)
 - [Referencias bibliográficas](#referencias-bibliográficas)
 
+
 ## Student Outcome
 
 <table>
@@ -184,42 +192,106 @@
 <th><strong>Acciones realizadas</strong></th>
 <th><strong>Conclusiones</strong></th>
 </tr>
-<tr class="odd">
-<th>Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software.</th>
-<th><p><strong>Milenko Rubén Cayanchi Avila (AV1):</strong> Investigó e investigó la aplicación del enfoque Lean UX Process en soluciones digitales B2B para el sector energético/logístico, desarrollando el Problem Statement, Assumptions y Hypothesis para validar la problemática de trazabilidad en la compraventa de combustible.</p>
-<p><strong>Sebastian Andres Aiquipa Poma (AV1):</strong> Analizó marcos de trabajo ágiles y herramientas de priorización para maquetar el Product Backlog e estructurar los épicos y User Stories iniciales dentro de plataformas de gestión de proyectos como Jira y Trello.</p>
-<p><strong>Carlos Alberto Lopez Goitia (AV1):</strong> Estudió las mejores prácticas de especificación de requisitos mediante User Stories con sintaxis Gherkin (Dado/Cuando/Entonces) para definir criterios de aceptación detallados en flujos de registro, pedidos y pagos.</p>
-<p><strong>Diego Fernando Herrera Enriquez (AV1):</strong> Investigó metodologías de diseño de experiencia de usuario (Needfinding, User Personas, User Task Matrix y Empathy Maps) aplicadas a perfiles logísticos y comerciales B2B.</p>
-<p><strong>Schneider Carlos Alberto Delgado Carrasco (AV1):</strong> Exploró técnicas de análisis cualitativo y mapeo de procesos (As-Is y To-Be Scenario Mapping) para identificar puntos de dolor en canales informales (WhatsApp, Excel) y estructurar un flujo digitalizado de pedidos.</p>
-<p><strong>Milenko Rubén Cayanchi Avila (AV2):</strong> Participó en la elaboración de la primera iteración de la metodología ADD, definiendo el Architectural Design Backlog, seleccionando drivers arquitectónicos y justificando decisiones relacionadas con la estructura global de FuelBridge. Asimismo, contribuyó en la evaluación del enfoque SPA + REST API y del Monolito Modular como base arquitectónica del sistema.</p>
-<p><strong>Sebastian Andres Aiquipa Poma (AV2):</strong> Desarrolló y revisó vistas de arquitectura mediante el modelo C4, incluyendo el System Context Diagram y el Container Diagram, identificando actores, contenedores principales, sistemas externos y relaciones de comunicación dentro de FuelBridge.</p>
-<p><strong>Carlos Alberto Lopez Goitia (AV2):</strong> Trabajó en la descomposición del Monolito Modular de FuelBridge API mediante Bounded Contexts, definiendo responsabilidades e interfaces para Identity &amp; Access, Ordering, Payment, Catalog, Fulfillment, Notification y Reporting &amp; Analytics. También apoyó en los diagramas de componentes del frontend y de la Landing Page.</p>
-<p><strong>Diego Fernando Herrera Enriquez (AV2):</strong> Participó en la segunda iteración ADD enfocada en Performance y desacoplamiento, analizando alternativas como Observer/Pub-Sub interno, Repository Pattern e índices en MySQL. Además, colaboró en el registro de decisiones arquitectónicas mediante ADR y en la evaluación de riesgos y consecuencias de cada decisión.</p>
-<p><strong>Schneider Carlos Alberto Delgado Carrasco (AV2):</strong> Elaboró y refinó los diagramas de arquitectura en Structurizr y los diagramas UML de secuencia para representar el flujo de aprobación, validación de pago, stock, despacho y notificaciones. Asimismo, participó en la integración de las dos iteraciones ADD, revisión del Kanban y consolidación de decisiones de arquitectura en el informe.</p></th>
-<th><p>AV1: Se logró actualizar e integrar conocimientos clave sobre Lean UX, elicitación de requisitos ágiles y análisis de procesos B2B. Esto permitió pasar de un entorno de comunicación informal y desorganizado a la concepción de una arquitectura de requisitos sólida para la solución FuelBridge.</p>
-<p>AV2: El equipo profundizó en el diseño arquitectónico de FuelBridge mediante la aplicación de ADD, C4, UML y ADR. Esto permitió pasar de una definición general del sistema a una arquitectura más detallada, justificando la selección de contenedores, componentes, Bounded Contexts y mecanismos de comunicación según drivers de disponibilidad, trazabilidad, usabilidad y performance.</p></th>
-</tr>
-<tr class="header">
-<th>Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software.</th>
-<th><p><strong>Milenko Rubén Cayanchi Avila (AV1):</strong> Evaluó e investigó las dinámicas del mercado de combustibles en el Perú (fuentes OSINERGMIN, Produce y GESP) para fundamentar cuantitativamente el tamaño de mercado de los segmentos objetivo de minería, construcción y distribuidores.</p>
-<p><strong>Sebastian Andres Aiquipa Poma (AV1):</strong> Investigó plataformas competidoras en el mercado internacional y local (Zavgar, FuelCloud, Wialon) analizando sus modelos de negocio y características para definir estrategias de diferenciación B2B.</p>
-<p><strong>Carlos Alberto Lopez Goitia (AV1):</strong> Revisó de manera continua la alineación entre los Business Goals, Impacts, Deliverables y User Stories mediante la técnica de Impact Mapping, adaptando el alcance del proyecto según la retroalimentación de las entrevistas.</p>
-<p><strong>Diego Fernando Herrera Enriquez (AV1):</strong> Desarrolló y validó guiones de entrevistas semiestructuradas, adaptando sus técnicas de elicitación de información de acuerdo con el perfil corporativo de los entrevistados (Jefes de Operaciones, Asistentes Comerciales y de Logística).</p>
-<p><strong>Schneider Carlos Alberto Delgado Carrasco (AV1):</strong> Analizó de forma constante la brecha operativa entre el estado actual (As-Is) y el estado futuro deseado (To-Be), aprendiendo a identificar necesidades no verbalizadas durante las entrevistas con usuarios clave del sector.</p>
-<p><strong>Milenko Rubén Cayanchi Avila (AV2):</strong> Profundizó en el uso de la metodología ADD, aprendiendo a organizar decisiones arquitectónicas mediante iteraciones, priorización de drivers y Architectural Design Backlogs para estructurar progresivamente la solución.</p>
-<p><strong>Sebastian Andres Aiquipa Poma (AV2):</strong> Reforzó conocimientos sobre el modelo C4 y el uso de Structurizr para representar diferentes niveles de arquitectura, comprendiendo la diferencia entre contexto, contenedores y componentes.</p>
-<p><strong>Carlos Alberto Lopez Goitia (AV2):</strong> Investigó y aplicó conceptos de Monolito Modular y Bounded Contexts, comprendiendo cómo separar responsabilidades dentro de una misma API sin introducir innecesariamente una arquitectura distribuida.</p>
-<p><strong>Diego Fernando Herrera Enriquez (AV2):</strong> Amplió conocimientos relacionados con performance, procesamiento desacoplado, Repository Pattern, eventos de dominio e índices en MySQL, aplicándolos al refinamiento de la segunda iteración arquitectónica.</p>
-<p><strong>Schneider Carlos Alberto Delgado Carrasco (AV2):</strong> Fortaleció conocimientos en diagramación arquitectónica y comportamiento del sistema mediante C4, Structurizr y UML Sequence Diagram. Además, aplicó ADR y revisión por Kanban para documentar decisiones, consecuencias y trabajo pendiente entre iteraciones.</p></th>
-<th><p>AV1: El equipo reconoció que el desarrollo de soluciones de software en sectores industriales exige una actualización continua sobre el contexto del negocio, los competidores y los estándares de elicitación. El aprendizaje autónomo permitió adaptar las herramientas teóricas a las necesidades reales manifestadas por los usuarios.</p>
-<p>AV2: La segunda entrega permitió al equipo incorporar nuevas herramientas y métodos de arquitectura de software que no se limitan a la implementación técnica. El uso de ADD, C4, UML, ADR y patrones arquitectónicos evidenció la necesidad de actualizar continuamente los conocimientos para tomar decisiones justificadas y adaptar la solución a nuevos requerimientos de calidad, rendimiento y mantenibilidad.</p></th>
-</tr>
 </thead>
 <tbody>
+
+<tr class="odd">
+<th>
+Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software.
+</th>
+
+<th>
+<p><strong>Milenko Rubén Cayanchi Avila (AV1):</strong> Investigó e investigó la aplicación del enfoque Lean UX Process en soluciones digitales B2B para el sector energético/logístico, desarrollando el Problem Statement, Assumptions y Hypothesis para validar la problemática de trazabilidad en la compraventa de combustible.</p>
+
+<p><strong>Sebastian Andres Aiquipa Poma (AV1):</strong> Analizó marcos de trabajo ágiles y herramientas de priorización para maquetar el Product Backlog e estructurar los épicos y User Stories iniciales dentro de plataformas de gestión de proyectos como Jira y Trello.</p>
+
+<p><strong>Carlos Alberto Lopez Goitia (AV1):</strong> Estudió las mejores prácticas de especificación de requisitos mediante User Stories con sintaxis Gherkin (Dado/Cuando/Entonces) para definir criterios de aceptación detallados en flujos de registro, pedidos y pagos.</p>
+
+<p><strong>Diego Fernando Herrera Enriquez (AV1):</strong> Investigó metodologías de diseño de experiencia de usuario (Needfinding, User Personas, User Task Matrix y Empathy Maps) aplicadas a perfiles logísticos y comerciales B2B.</p>
+
+<p><strong>Schneider Carlos Alberto Delgado Carrasco (AV1):</strong> Exploró técnicas de análisis cualitativo y mapeo de procesos (As-Is y To-Be Scenario Mapping) para identificar puntos de dolor en canales informales (WhatsApp, Excel) y estructurar un flujo digitalizado de pedidos.</p>
+
+<p><strong>Milenko Rubén Cayanchi Avila (AV2):</strong> Participó en la elaboración de la primera iteración de la metodología ADD, definiendo el Architectural Design Backlog, seleccionando drivers arquitectónicos y justificando decisiones relacionadas con la estructura global de FuelBridge. Asimismo, contribuyó en la evaluación del enfoque SPA + REST API y del Monolito Modular como base arquitectónica del sistema.</p>
+
+<p><strong>Sebastian Andres Aiquipa Poma (AV2):</strong> Desarrolló y revisó vistas de arquitectura mediante el modelo C4, incluyendo el System Context Diagram y el Container Diagram, identificando actores, contenedores principales, sistemas externos y relaciones de comunicación dentro de FuelBridge.</p>
+
+<p><strong>Carlos Alberto Lopez Goitia (AV2):</strong> Trabajó en la descomposición del Monolito Modular de FuelBridge API mediante Bounded Contexts, definiendo responsabilidades e interfaces para Identity &amp; Access, Ordering, Payment, Catalog, Fulfillment, Notification y Reporting &amp; Analytics. También apoyó en los diagramas de componentes del frontend y de la Landing Page.</p>
+
+<p><strong>Diego Fernando Herrera Enriquez (AV2):</strong> Participó en la segunda iteración ADD enfocada en Performance y desacoplamiento, analizando alternativas como Observer/Pub-Sub interno, Repository Pattern e índices en MySQL. Además, colaboró en el registro de decisiones arquitectónicas mediante ADR y en la evaluación de riesgos y consecuencias de cada decisión.</p>
+
+<p><strong>Schneider Carlos Alberto Delgado Carrasco (AV2):</strong> Elaboró y refinó los diagramas de arquitectura en Structurizr y los diagramas UML de secuencia para representar el flujo de aprobación, validación de pago, stock, despacho y notificaciones. Asimismo, participó en la integración de las dos iteraciones ADD, revisión del Kanban y consolidación de decisiones de arquitectura en el informe.</p>
+
+<p><strong>Milenko Rubén Cayanchi Avila (TP1):</strong> Participó en la planificación y organización del Sprint 1 mediante la elaboración del Sprint Backlog, definiendo las tareas, estimaciones, responsables y actividades necesarias para la implementación de FuelBridge. Asimismo, abordó la gestión del código fuente mediante Git y GitHub en la sección Source Code Management, documentando el uso de repositorios y ramas de desarrollo. También contribuyó a la sección Team Collaboration Insights during Sprint, orientada a registrar la coordinación y colaboración del equipo durante la implementación.</p>
+
+<p><strong>Sebastian Andres Aiquipa Poma (TP1):</strong> Desarrolló la sección Software Development Environment Configuration, documentando las herramientas, tecnologías y configuraciones necesarias para el desarrollo de FuelBridge. Asimismo, elaboró las evidencias de ejecución para el Sprint Review, mostrando los resultados de las funcionalidades implementadas. También participó en la documentación de los servicios del backend mediante la sección Microservices Documentation Evidence for Sprint Review, relacionando los recursos y endpoints de la API con las funcionalidades del sistema.</p>
+
+<p><strong>Carlos Alberto Lopez Goitia (TP1):</strong> Desarrolló la sección Backend Application Core Testing Suite, documentando las pruebas automatizadas utilizadas para verificar el comportamiento de los componentes del backend. Además, trabajó en la sección Pattern Based Backend Application(s), identificando y explicando la aplicación de patrones de diseño dentro de la arquitectura de FuelBridge. Asimismo, consolidó las evidencias de desarrollo del Sprint Review, registrando las funcionalidades implementadas y los avances del código fuente durante el Sprint 1.</p>
+
+<p><strong>Diego Fernando Herrera Enriquez (TP1):</strong> Participó en el desarrollo de la sección Pattern Based Custom Software Library, documentando la organización de funcionalidades reutilizables y su relación con los patrones de diseño empleados en FuelBridge. Asimismo, abordó el Framework Pattern Driven Refactoring Report, analizando la aplicación de patrones y principios de diseño para mejorar la estructura y mantenibilidad del código. También trabajó en la sección Software Deployment Evidence for Sprint Review, recopilando evidencias del despliegue de los componentes de la plataforma.</p>
+
+<p><strong>Schneider Carlos Alberto Delgado Carrasco (TP1):</strong> Desarrolló la sección Source Code Style Guide &amp; Conventions, estableciendo convenciones de nomenclatura, organización de archivos, documentación y manejo de errores para el backend y frontend de FuelBridge. Asimismo, elaboró Software Deployment Configuration, documentando la infraestructura de despliegue mediante Vercel, Railway y MySQL, incluyendo un diagrama C4 de despliegue. Implementó y documentó pruebas automatizadas con JUnit y Cucumber para validar el despacho de pedidos y la generación de notificaciones, incorporando sus resultados en Testing Suite Evidence for Sprint Review. Finalmente, elaboró el Kanban Board del Sprint 1 en Trello, organizando las actividades, responsables y estados del trabajo realizado.</p>
+</th>
+
+<th>
+<p><strong>AV1:</strong> Se logró actualizar e integrar conocimientos clave sobre Lean UX, elicitación de requisitos ágiles y análisis de procesos B2B. Esto permitió pasar de un entorno de comunicación informal y desorganizado a la concepción de una arquitectura de requisitos sólida para la solución FuelBridge.</p>
+
+<p><strong>AV2:</strong> El equipo profundizó en el diseño arquitectónico de FuelBridge mediante la aplicación de ADD, C4, UML y ADR. Esto permitió pasar de una definición general del sistema a una arquitectura más detallada, justificando la selección de contenedores, componentes, Bounded Contexts y mecanismos de comunicación según drivers de disponibilidad, trazabilidad, usabilidad y performance.</p>
+
+<p><strong>TP1:</strong> Durante el Trabajo Parcial 1, el equipo aplicó los conocimientos adquiridos sobre arquitectura de software, patrones de diseño, configuración de entornos, pruebas automatizadas y despliegue de aplicaciones. La elaboración del Sprint Backlog, la documentación de los componentes del backend, las evidencias de implementación y las pruebas permitieron relacionar las decisiones arquitectónicas con el desarrollo de FuelBridge. Asimismo, el uso de Git, GitHub, Trello, JUnit, Cucumber, Railway y Vercel contribuyó a fortalecer la organización, trazabilidad y validación de las actividades del Sprint 1.</p>
+</th>
+</tr>
+
+<tr class="header">
+<th>
+Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software.
+</th>
+
+<th>
+<p><strong>Milenko Rubén Cayanchi Avila (AV1):</strong> Evaluó e investigó las dinámicas del mercado de combustibles en el Perú (fuentes OSINERGMIN, Produce y GESP) para fundamentar cuantitativamente el tamaño de mercado de los segmentos objetivo de minería, construcción y distribuidores.</p>
+
+<p><strong>Sebastian Andres Aiquipa Poma (AV1):</strong> Investigó plataformas competidoras en el mercado internacional y local (Zavgar, FuelCloud, Wialon) analizando sus modelos de negocio y características para definir estrategias de diferenciación B2B.</p>
+
+<p><strong>Carlos Alberto Lopez Goitia (AV1):</strong> Revisó de manera continua la alineación entre los Business Goals, Impacts, Deliverables y User Stories mediante la técnica de Impact Mapping, adaptando el alcance del proyecto según la retroalimentación de las entrevistas.</p>
+
+<p><strong>Diego Fernando Herrera Enriquez (AV1):</strong> Desarrolló y validó guiones de entrevistas semiestructuradas, adaptando sus técnicas de elicitación de información de acuerdo con el perfil corporativo de los entrevistados (Jefes de Operaciones, Asistentes Comerciales y de Logística).</p>
+
+<p><strong>Schneider Carlos Alberto Delgado Carrasco (AV1):</strong> Analizó de forma constante la brecha operativa entre el estado actual (As-Is) y el estado futuro deseado (To-Be), aprendiendo a identificar necesidades no verbalizadas durante las entrevistas con usuarios clave del sector.</p>
+
+<p><strong>Milenko Rubén Cayanchi Avila (AV2):</strong> Profundizó en el uso de la metodología ADD, aprendiendo a organizar decisiones arquitectónicas mediante iteraciones, priorización de drivers y Architectural Design Backlogs para estructurar progresivamente la solución.</p>
+
+<p><strong>Sebastian Andres Aiquipa Poma (AV2):</strong> Reforzó conocimientos sobre el modelo C4 y el uso de Structurizr para representar diferentes niveles de arquitectura, comprendiendo la diferencia entre contexto, contenedores y componentes.</p>
+
+<p><strong>Carlos Alberto Lopez Goitia (AV2):</strong> Investigó y aplicó conceptos de Monolito Modular y Bounded Contexts, comprendiendo cómo separar responsabilidades dentro de una misma API sin introducir innecesariamente una arquitectura distribuida.</p>
+
+<p><strong>Diego Fernando Herrera Enriquez (AV2):</strong> Amplió conocimientos relacionados con performance, procesamiento desacoplado, Repository Pattern, eventos de dominio e índices en MySQL, aplicándolos al refinamiento de la segunda iteración arquitectónica.</p>
+
+<p><strong>Schneider Carlos Alberto Delgado Carrasco (AV2):</strong> Fortaleció conocimientos en diagramación arquitectónica y comportamiento del sistema mediante C4, Structurizr y UML Sequence Diagram. Además, aplicó ADR y revisión por Kanban para documentar decisiones, consecuencias y trabajo pendiente entre iteraciones.</p>
+
+<p><strong>Milenko Rubén Cayanchi Avila (TP1):</strong> Fortaleció sus conocimientos sobre metodologías ágiles, planificación de sprints y gestión colaborativa del código fuente. Mediante la elaboración del Sprint Backlog y el análisis de la colaboración del equipo, profundizó en la importancia de distribuir responsabilidades, estimar esfuerzos y realizar el seguimiento de las actividades. Asimismo, reforzó el uso de Git y GitHub para comprender la gestión de ramas, commits e integración de cambios en proyectos desarrollados de manera colaborativa.</p>
+
+<p><strong>Sebastian Andres Aiquipa Poma (TP1):</strong> Amplió sus conocimientos sobre configuración de entornos de desarrollo y documentación técnica de aplicaciones backend. Durante la elaboración de las evidencias de ejecución, reforzó la importancia de verificar el funcionamiento de las funcionalidades implementadas y registrar resultados reproducibles. Asimismo, profundizó en el uso de APIs REST, documentación de endpoints y herramientas de desarrollo necesarias para facilitar la integración y mantenimiento de los servicios de FuelBridge.</p>
+
+<p><strong>Carlos Alberto Lopez Goitia (TP1):</strong> Profundizó en el uso de herramientas de pruebas automatizadas y patrones de diseño aplicados al backend de FuelBridge. Mediante el desarrollo de la sección Backend Application Core Testing Suite, reforzó conocimientos sobre pruebas unitarias, validación del comportamiento del dominio y verificación de resultados. Además, consolidó su comprensión de la aplicación de patrones arquitectónicos y buenas prácticas de programación para mantener una estructura de código organizada, reutilizable y fácil de mantener.</p>
+
+<p><strong>Diego Fernando Herrera Enriquez (TP1):</strong> Amplió sus conocimientos sobre reutilización de componentes, bibliotecas de software y refactorización basada en patrones de diseño. A través del análisis de la estructura del código, comprendió la importancia de reducir el acoplamiento, mejorar la cohesión y mantener responsabilidades claramente definidas. Asimismo, reforzó conocimientos sobre despliegue de aplicaciones y recopilación de evidencias técnicas para verificar que los componentes desarrollados puedan ejecutarse en entornos cloud.</p>
+
+<p><strong>Schneider Carlos Alberto Delgado Carrasco (TP1):</strong> Fortaleció sus conocimientos sobre estándares de codificación, Domain-Driven Design y documentación de configuraciones de software, aplicándolos a la organización del backend y frontend de FuelBridge. Además, profundizó en el uso de Spring Boot Test, JUnit, Cucumber y Gherkin para implementar pruebas automatizadas basadas en criterios de aceptación, verificando escenarios relacionados con el despacho de pedidos y las notificaciones. Asimismo, adquirió mayor experiencia en la documentación de infraestructura cloud mediante Railway, Vercel y MySQL, y en la gestión visual de actividades mediante Trello, reconociendo la importancia de actualizar continuamente sus conocimientos para mejorar la calidad y mantenibilidad del proyecto.</p>
+</th>
+
+<th>
+<p><strong>AV1:</strong> El equipo reconoció que el desarrollo de soluciones de software en sectores industriales exige una actualización continua sobre el contexto del negocio, los competidores y los estándares de elicitación. El aprendizaje autónomo permitió adaptar las herramientas teóricas a las necesidades reales manifestadas por los usuarios.</p>
+
+<p><strong>AV2:</strong> La segunda entrega permitió al equipo incorporar nuevas herramientas y métodos de arquitectura de software que no se limitan a la implementación técnica. El uso de ADD, C4, UML, ADR y patrones arquitectónicos evidenció la necesidad de actualizar continuamente los conocimientos para tomar decisiones justificadas y adaptar la solución a nuevos requerimientos de calidad, rendimiento y mantenibilidad.</p>
+
+<p><strong>TP1:</strong> El desarrollo del Trabajo Parcial 1 permitió al equipo reconocer la importancia del aprendizaje continuo para afrontar los desafíos técnicos de la implementación de software. La aplicación de patrones de diseño, pruebas automatizadas, herramientas de gestión de versiones, documentación de servicios y plataformas de despliegue evidenció la necesidad de fortalecer constantemente las competencias técnicas. Asimismo, el trabajo colaborativo durante el Sprint 1 permitió identificar oportunidades de mejora relacionadas con la calidad del código, la validación de funcionalidades, la organización de tareas y la integración de componentes, contribuyendo al desarrollo profesional de los integrantes y a la evolución de FuelBridge.</p>
+</th>
+</tr>
+
 </tbody>
 </table>
 
 ---
+
 
 # Capítulo I: Introducción
 
