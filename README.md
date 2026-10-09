@@ -1928,6 +1928,16 @@ FuelBridge Platform: Sistema web para la gestión de distribución de combustibl
 
 - PDF Generator Service: Herramienta externa consumida vía REST API para generar reportes descargables en PDF sobre ventas y resúmenes de consumo.
 
+**C4 System Context — Estado de la Iteración 3**
+
+<div align="center">
+  <img src="assets/chapter-4/iteration3-system-context.png" width="700" />
+</div>
+
+Esta vista complementa la arquitectura objetivo con el estado implementado de la Iteración 3: seis Bounded Contexts permanecen en FuelBridge API y tres fueron extraídos como servicios independientes. Email Service, Cloud Storage y PDF Generator Service permanecen como integraciones planificadas.
+
+> Línea punteada: integración planificada, pendiente de implementación.
+
 ### 4.1.4 Approach Driven ViewPoints Diagrams
 
 <div align="center">
@@ -1952,7 +1962,9 @@ El Diagrama de Contenedores detalla la arquitectura de alto nivel y las piezas d
   <img src="assets/chapter-4/ComponentsIteration2.png" width="700" />
 </div>
 
-A nivel de componentes, la FuelBridge API se descompone en los siguientes Bounded Contexts (BC) para mantener alta cohesión:
+**Vista histórica — Iteraciones 1 y 2**
+
+En esta etapa, FuelBridge API contenía los nueve Bounded Contexts (BC) para mantener alta cohesión:
 
 - Identity & Access BC: Gestiona registro, autenticación, JWT y recuperación de contraseñas.
 
@@ -1971,6 +1983,42 @@ A nivel de componentes, la FuelBridge API se descompone en los siguientes Bounde
 - Reporting & Analytics BC: Agrega datos para generar gráficos y solicitar PDFs de ventas.
 
 - Equipment BC: Administra los equipos del Client (tanques, vehículos propios), su nivel de combustible, umbral de auto-refill y proveedor favorito asociado.
+
+#### C4 Views — Iteración 3: Migración incremental
+
+La Iteración 3 aplica Strangler Fig: Notification, Catalog y Reporting & Analytics se extraen a microservicios Spring Boot/Java 26; Identity & Access, Ordering, Payment, Inventory, Fulfillment y Equipment permanecen en el monolito modular para los siguientes sprints.
+
+**C4 Container Diagram — Iteración 3**
+
+<div align="center">
+  <img src="assets/chapter-4/iteration3-containers.png" width="900" />
+</div>
+
+FuelBridge API consume los tres servicios mediante HTTPS/REST síncrono. Cada servicio posee un schema MySQL propio: `fuelbridge_notification`, `fuelbridge_catalog` y `fuelbridge_reporting`.
+
+**C4 Component Diagram — FuelBridge API**
+
+<div align="center">
+  <img src="assets/chapter-4/iteration3-monolith-components.png" width="850" />
+</div>
+
+**C4 Component Diagram — Notification Service**
+
+<div align="center">
+  <img src="assets/chapter-4/iteration3-notification-components.png" width="800" />
+</div>
+
+**C4 Component Diagram — Catalog Service**
+
+<div align="center">
+  <img src="assets/chapter-4/iteration3-catalog-components.png" width="800" />
+</div>
+
+**C4 Component Diagram — Reporting & Analytics Service**
+
+<div align="center">
+  <img src="assets/chapter-4/iteration3-reporting-components.png" width="800" />
+</div>
 
 **Domain Class Diagram (Ordering BC)**
 
