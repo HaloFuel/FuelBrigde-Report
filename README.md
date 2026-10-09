@@ -155,6 +155,16 @@
     - [5.1.4 Framework Pattern Driven Refactoring Report](#514-framework-pattern-driven-refactoring-report)
   - [5.2 Software Configuration Management](#52-software-configuration-management)
     - [5.2.1 Software Development Environment Configuration](#521-software-development-environment-configuration)
+      - [Project Management](#project-management)
+      - [Requirements Management](#requirements-management)
+      - [Product UX/UI Design](#product-uxui-design)
+      - [Software Development Landing Page](#software-development-landing-page)
+      - [Software Development — Frontend (Angular SPA)](#software-development--frontend-angular-spa)
+      - [Software Development — Backend (Spring Boot API)](#software-development--backend-spring-boot-api)
+      - [Software Testing](#software-testing)
+      - [Software Deployment](#software-deployment)
+      - [Software Documentation](#software-documentation)
+      - [Source Code Management](#source-code-management)
     - [5.2.2 Source Code Management](#522-source-code-management)
       - [Repositorios del proyecto](#repositorios-del-proyecto)
       - [Estrategia de ramas: GitFlow](#estrategia-de-ramas-gitflow)
@@ -165,16 +175,27 @@
       - [Evidencia de commits](#evidencia-de-commits)
     - [5.2.3 Source Code Style Guide \& Conventions](#523-source-code-style-guide--conventions)
     - [5.2.4 Software Deployment Configuration](#524-software-deployment-configuration)
+      - [Vercel para el Frontend](#vercel-para-el-frontend)
+      - [Railway para el Backend](#railway-para-el-backend)
+      - [Railway MySQL para la Base de Datos](#railway-mysql-para-la-base-de-datos)
+      - [C4 Deployment Diagram](#c4-deployment-diagram)
+      - [Validación de la Configuración de Despliegue](#validación-de-la-configuración-de-despliegue)
   - [5.3 Microservices Implementation](#53-microservices-implementation)
     - [5.3.1 Sprint 1](#531-sprint-1)
       - [5.3.1.1 Sprint Backlog 1](#5311-sprint-backlog-1)
         - [5.3.1.2 Development Evidence for Sprint Review](#5312-development-evidence-for-sprint-review)
       - [5.3.1.3 Testing Suite Evidence for Sprint Review](#5313-testing-suite-evidence-for-sprint-review)
+        - [Registro de Commits de Testing](#registro-de-commits-de-testing)
+        - [Pruebas Unitarias del Backend](#pruebas-unitarias-del-backend)
+        - [Pruebas de Aceptación BDD con Cucumber](#pruebas-de-aceptación-bdd-con-cucumber)
+        - [Resultados de Ejecución de las Pruebas](#resultados-de-ejecución-de-las-pruebas)
+        - [Evidencia del Reporte HTML de Cucumber](#evidencia-del-reporte-html-de-cucumber)
+        - [Evaluación de los Resultados del Sprint Review](#evaluación-de-los-resultados-del-sprint-review)
       - [5.3.1.4 Execution Evidence for Sprint Review](#5314-execution-evidence-for-sprint-review)
       - [5.3.1.5 Microservices Documentation Evidence for Sprint Review](#5315-microservices-documentation-evidence-for-sprint-review)
       - [5.3.1.6 Software Deployment Evidence for Sprint Review](#5316-software-deployment-evidence-for-sprint-review)
       - [5.3.1.7 Team Collaboration Insights during Sprint](#5317-team-collaboration-insights-during-sprint)
-      - [5.3.1.8 Kanban Board](#5318-kanban-board)
+        - [5.3.1.8 Kanban Board](#5318-kanban-board)
 - [Referencias bibliográficas](#referencias-bibliográficas)
 
 
@@ -2584,92 +2605,92 @@ En esta sección se especifican los productos de software utilizados por el equi
 
 #### Project Management
 
-| Producto | Tipo | Propósito | URL |
-|---|---|---|---|
-| Trello | SaaS | Gestión del Sprint Backlog y tablero Kanban | https://trello.com |
-| GitHub | SaaS | Repositorio central y coordinación del equipo | https://github.com |
+| Producto | Tipo | Propósito                                     | URL                |
+| -------- | ---- | --------------------------------------------- | ------------------ |
+| Trello   | SaaS | Gestión del Sprint Backlog y tablero Kanban   | https://trello.com |
+| GitHub   | SaaS | Repositorio central y coordinación del equipo | https://github.com |
 
 #### Requirements Management
 
-| Producto | Tipo | Propósito | URL |
-|---|---|---|---|
+| Producto      | Tipo | Propósito                                              | URL                |
+| ------------- | ---- | ------------------------------------------------------ | ------------------ |
 | GitHub Issues | SaaS | Registro y seguimiento de requerimientos e incidencias | https://github.com |
 
 #### Product UX/UI Design
 
-| Producto | Tipo | Propósito | URL |
-|---|---|---|---|
-| Figma | SaaS | Diseño de wireframes y prototipos de la interfaz | https://figma.com |
+| Producto | Tipo | Propósito                                        | URL               |
+| -------- | ---- | ------------------------------------------------ | ----------------- |
+| Figma    | SaaS | Diseño de wireframes y prototipos de la interfaz | https://figma.com |
 
 #### Software Development Landing Page
 
 La landing page de FuelBridge es un sitio estático desarrollado con tecnologías web nativas, sin framework ni herramienta de build.
 
-| Producto | Tipo | Propósito | URL |
-|---|---|---|---|
-| HTML5 / CSS3 / JavaScript | — | Lenguajes base del sitio estático | — |
-| Google Fonts (Inter) | SaaS | Tipografía del sitio | https://fonts.google.com |
-| Visual Studio Code | Local | Editor de código | https://code.visualstudio.com/download |
+| Producto                  | Tipo  | Propósito                         | URL                                    |
+| ------------------------- | ----- | --------------------------------- | -------------------------------------- |
+| HTML5 / CSS3 / JavaScript | —     | Lenguajes base del sitio estático | —                                      |
+| Google Fonts (Inter)      | SaaS  | Tipografía del sitio              | https://fonts.google.com               |
+| Visual Studio Code        | Local | Editor de código                  | https://code.visualstudio.com/download |
 
 #### Software Development — Frontend (Angular SPA)
 
-| Producto | Versión | Tipo | Propósito | URL |
-|---|---|---|---|---|
-| Node.js + npm | npm 11.12.1 | Local | Entorno de ejecución y gestor de paquetes | https://nodejs.org/en/download |
-| Angular CLI | 21.2.7 | Local (npm) | Toolchain oficial para generación, build y serve | https://angular.dev/tools/cli |
-| Angular | 21.2.9 | Local (npm) | Framework principal de la SPA | https://angular.dev |
-| Angular Material + CDK | 21.2.7 | Local (npm) | Biblioteca de componentes de UI | https://material.angular.io |
-| RxJS | 7.8.0 | Local (npm) | Programación reactiva y manejo de estado | https://rxjs.dev |
-| @ngx-translate/core | 17.0.0 | Local (npm) | Internacionalización (i18n) | https://github.com/ngx-translate/core |
-| Chart.js + ng2-charts | 4.5.1 | Local (npm) | Visualización de datos en Reporting | https://www.chartjs.org |
-| Firebase | 12.13.0 | Local (npm) | Servicios de autenticación y base de datos en tiempo real | https://firebase.google.com |
-| TypeScript | 5.9.3 | Local (npm) | Lenguaje tipado base de Angular | https://www.typescriptlang.org |
-| JSON Server | 0.17.4 | Local (npm) | Mock de API REST para desarrollo local | https://github.com/typicode/json-server |
-| Visual Studio Code | — | Local | Editor principal para desarrollo frontend | https://code.visualstudio.com/download |
+| Producto               | Versión     | Tipo        | Propósito                                                 | URL                                     |
+| ---------------------- | ----------- | ----------- | --------------------------------------------------------- | --------------------------------------- |
+| Node.js + npm          | npm 11.12.1 | Local       | Entorno de ejecución y gestor de paquetes                 | https://nodejs.org/en/download          |
+| Angular CLI            | 21.2.7      | Local (npm) | Toolchain oficial para generación, build y serve          | https://angular.dev/tools/cli           |
+| Angular                | 21.2.9      | Local (npm) | Framework principal de la SPA                             | https://angular.dev                     |
+| Angular Material + CDK | 21.2.7      | Local (npm) | Biblioteca de componentes de UI                           | https://material.angular.io             |
+| RxJS                   | 7.8.0       | Local (npm) | Programación reactiva y manejo de estado                  | https://rxjs.dev                        |
+| @ngx-translate/core    | 17.0.0      | Local (npm) | Internacionalización (i18n)                               | https://github.com/ngx-translate/core   |
+| Chart.js + ng2-charts  | 4.5.1       | Local (npm) | Visualización de datos en Reporting                       | https://www.chartjs.org                 |
+| Firebase               | 12.13.0     | Local (npm) | Servicios de autenticación y base de datos en tiempo real | https://firebase.google.com             |
+| TypeScript             | 5.9.3       | Local (npm) | Lenguaje tipado base de Angular                           | https://www.typescriptlang.org          |
+| JSON Server            | 0.17.4      | Local (npm) | Mock de API REST para desarrollo local                    | https://github.com/typicode/json-server |
+| Visual Studio Code     | —           | Local       | Editor principal para desarrollo frontend                 | https://code.visualstudio.com/download  |
 
 #### Software Development — Backend (Spring Boot API)
 
-| Producto | Versión | Tipo | Propósito | URL |
-|---|---|---|---|---|
-| Java JDK | 26 | Local | Lenguaje principal del backend | https://www.oracle.com/java/technologies/downloads/ |
-| Spring Boot | 4.0.6 | Local (Maven) | Framework base para la API REST | https://spring.io/projects/spring-boot |
-| Maven | — | Local | Build tool y gestión de dependencias | https://maven.apache.org/download.cgi |
-| IntelliJ IDEA | — | Local | IDE principal para desarrollo Java | https://www.jetbrains.com/idea/download/ |
-| Lombok | — | Local (Maven) | Reducción de boilerplate en entidades y DTOs | https://projectlombok.org/ |
-| Spring Security | — | Local (Maven) | Autenticación y autorización de la API | https://spring.io/projects/spring-security |
-| jjwt | 0.12.6 | Local (Maven) | Generación y validación de tokens JWT | https://github.com/jwtk/jjwt |
-| springdoc-openapi | 3.0.3 | Local (Maven) | Generación automática de documentación OpenAPI / Swagger UI | https://springdoc.org |
-| MySQL Workbench | — | Local | Administración y consulta de la base de datos | https://dev.mysql.com/downloads/workbench/ |
+| Producto          | Versión | Tipo          | Propósito                                                   | URL                                                 |
+| ----------------- | ------- | ------------- | ----------------------------------------------------------- | --------------------------------------------------- |
+| Java JDK          | 26      | Local         | Lenguaje principal del backend                              | https://www.oracle.com/java/technologies/downloads/ |
+| Spring Boot       | 4.0.6   | Local (Maven) | Framework base para la API REST                             | https://spring.io/projects/spring-boot              |
+| Maven             | —       | Local         | Build tool y gestión de dependencias                        | https://maven.apache.org/download.cgi               |
+| IntelliJ IDEA     | —       | Local         | IDE principal para desarrollo Java                          | https://www.jetbrains.com/idea/download/            |
+| Lombok            | —       | Local (Maven) | Reducción de boilerplate en entidades y DTOs                | https://projectlombok.org/                          |
+| Spring Security   | —       | Local (Maven) | Autenticación y autorización de la API                      | https://spring.io/projects/spring-security          |
+| jjwt              | 0.12.6  | Local (Maven) | Generación y validación de tokens JWT                       | https://github.com/jwtk/jjwt                        |
+| springdoc-openapi | 3.0.3   | Local (Maven) | Generación automática de documentación OpenAPI / Swagger UI | https://springdoc.org                               |
+| MySQL Workbench   | —       | Local         | Administración y consulta de la base de datos               | https://dev.mysql.com/downloads/workbench/          |
 
 #### Software Testing
 
-| Producto | Versión | Tipo | Propósito | URL |
-|---|---|---|---|---|
-| JUnit 5 | — | Local (Maven) | Pruebas unitarias del dominio backend | https://junit.org/junit5/ |
-| H2 Database | — | Local (Maven) | Base de datos en memoria para el perfil de test | https://www.h2database.com/html/download.html |
-| Karma + Jasmine | 6.4.0 / 5.9.0 | Local (npm) | Pruebas unitarias del frontend Angular | https://karma-runner.github.io |
-| Postman | — | Local | Pruebas manuales de endpoints REST | https://www.postman.com/downloads/ |
+| Producto        | Versión       | Tipo          | Propósito                                       | URL                                           |
+| --------------- | ------------- | ------------- | ----------------------------------------------- | --------------------------------------------- |
+| JUnit 5         | —             | Local (Maven) | Pruebas unitarias del dominio backend           | https://junit.org/junit5/                     |
+| H2 Database     | —             | Local (Maven) | Base de datos en memoria para el perfil de test | https://www.h2database.com/html/download.html |
+| Karma + Jasmine | 6.4.0 / 5.9.0 | Local (npm)   | Pruebas unitarias del frontend Angular          | https://karma-runner.github.io                |
+| Postman         | —             | Local         | Pruebas manuales de endpoints REST              | https://www.postman.com/downloads/            |
 
 #### Software Deployment
 
-| Producto | Tipo | Propósito | URL |
-|---|---|---|---|
-| Railway | SaaS | Despliegue del backend (Spring Boot + MySQL) | https://railway.app |
-| Vercel | SaaS | Despliegue del frontend Angular y la Landing Page | https://vercel.com |
+| Producto | Tipo | Propósito                                         | URL                 |
+| -------- | ---- | ------------------------------------------------- | ------------------- |
+| Railway  | SaaS | Despliegue del backend (Spring Boot + MySQL)      | https://railway.app |
+| Vercel   | SaaS | Despliegue del frontend Angular y la Landing Page | https://vercel.com  |
 
 #### Software Documentation
 
-| Producto | Versión | Tipo | Propósito | URL |
-|---|---|---|---|---|
-| springdoc-openapi | 3.0.3 | Local (Maven) | Generación automática de la especificación OpenAPI y Swagger UI | https://springdoc.org |
-| GitHub | — | SaaS | Documentación del repositorio vía README | https://github.com/HaloFuel |
+| Producto          | Versión | Tipo          | Propósito                                                       | URL                         |
+| ----------------- | ------- | ------------- | --------------------------------------------------------------- | --------------------------- |
+| springdoc-openapi | 3.0.3   | Local (Maven) | Generación automática de la especificación OpenAPI y Swagger UI | https://springdoc.org       |
+| GitHub            | —       | SaaS          | Documentación del repositorio vía README                        | https://github.com/HaloFuel |
 
 #### Source Code Management
 
-| Producto | Tipo | Propósito | URL |
-|---|---|---|---|
-| Git | Local | Control de versiones distribuido | https://git-scm.com/downloads |
-| GitHub | SaaS | Repositorio remoto y colaboración (org: HaloFuel) | https://github.com/HaloFuel |
+| Producto | Tipo  | Propósito                                         | URL                           |
+| -------- | ----- | ------------------------------------------------- | ----------------------------- |
+| Git      | Local | Control de versiones distribuido                  | https://git-scm.com/downloads |
+| GitHub   | SaaS  | Repositorio remoto y colaboración (org: HaloFuel) | https://github.com/HaloFuel   |
 
 ---
 
@@ -2885,12 +2906,12 @@ Se identifican los siguientes contextos: IAM, Ordering, Inventory, Catalog, Paym
 
 Dentro de cada contexto se organizan las siguientes capas:
 
-| Capa | Responsabilidad |
-|---|---|
-| Domain | Entidades, agregados, objetos de valor y reglas de negocio |
-| Application | Servicios de aplicación, comandos y consultas |
-| Infrastructure | Persistencia, configuraciones y adaptadores técnicos |
-| Interfaces | Controladores REST, recursos y transformadores |
+| Capa           | Responsabilidad                                            |
+| -------------- | ---------------------------------------------------------- |
+| Domain         | Entidades, agregados, objetos de valor y reglas de negocio |
+| Application    | Servicios de aplicación, comandos y consultas              |
+| Infrastructure | Persistencia, configuraciones y adaptadores técnicos       |
+| Interfaces     | Controladores REST, recursos y transformadores             |
 
 Esta estructura favorece la separación de responsabilidades y facilita la evolución de los módulos sin mezclar directamente la lógica del negocio con los detalles técnicos.
 
@@ -2989,16 +3010,16 @@ Este procedimiento permite empaquetar la aplicación en un archivo JAR y ejecuta
 
 Las principales variables contempladas por la aplicación son:
 
-| Variable | Descripción |
-|---|---|
-| `PORT` | Puerto asignado al servicio backend |
-| `MYSQLHOST` | Dirección del servidor MySQL |
-| `MYSQLPORT` | Puerto de conexión con MySQL |
-| `MYSQLDATABASE` | Nombre de la base de datos |
-| `MYSQLUSER` | Usuario de acceso a MySQL |
-| `MYSQLPASSWORD` | Contraseña de acceso a MySQL |
+| Variable                   | Descripción                                 |
+| -------------------------- | ------------------------------------------- |
+| `PORT`                     | Puerto asignado al servicio backend         |
+| `MYSQLHOST`                | Dirección del servidor MySQL                |
+| `MYSQLPORT`                | Puerto de conexión con MySQL                |
+| `MYSQLDATABASE`            | Nombre de la base de datos                  |
+| `MYSQLUSER`                | Usuario de acceso a MySQL                   |
+| `MYSQLPASSWORD`            | Contraseña de acceso a MySQL                |
 | `AUTHORIZATION_JWT_SECRET` | Clave utilizada para la firma de tokens JWT |
-| `CORS_ALLOWED_ORIGINS` | Orígenes permitidos para acceder a la API |
+| `CORS_ALLOWED_ORIGINS`     | Orígenes permitidos para acceder a la API   |
 
 Estas configuraciones permiten adaptar la aplicación al entorno de despliegue sin necesidad de modificar directamente su código fuente. Los valores sensibles deben mantenerse protegidos y no incluirse en el repositorio.
 
@@ -3051,14 +3072,14 @@ Esta distribución permite mantener el frontend separado del backend a nivel de 
 
 Para verificar la infraestructura de producción se consideran las siguientes comprobaciones:
 
-| Componente | Evidencia de despliegue |
-|---|---|
-| Frontend Angular | Despliegue en Vercel con estado `Ready` |
+| Componente          | Evidencia de despliegue                                    |
+| ------------------- | ---------------------------------------------------------- |
+| Frontend Angular    | Despliegue en Vercel con estado `Ready`                    |
 | Backend Spring Boot | Servicio FuelBridge-Backend con estado `Online` en Railway |
-| Base de datos MySQL | Servicio MySQL con estado `Online` y despliegue `ACTIVE` |
-| Persistencia | Volumen `mysql-volume` asociado a MySQL |
-| Comunicación | Frontend configurado para consumir la API REST de Railway |
-| Infraestructura | Diagrama C4 que representa los nodos y sus conexiones |
+| Base de datos MySQL | Servicio MySQL con estado `Online` y despliegue `ACTIVE`   |
+| Persistencia        | Volumen `mysql-volume` asociado a MySQL                    |
+| Comunicación        | Frontend configurado para consumir la API REST de Railway  |
+| Infraestructura     | Diagrama C4 que representa los nodos y sus conexiones      |
 
 Las evidencias permiten identificar la infraestructura utilizada y el estado de los servicios al momento de realizar las capturas. La validación funcional completa requiere comprobar adicionalmente las operaciones entre frontend, backend y base de datos.
 
@@ -3152,15 +3173,15 @@ Las pruebas de aceptación siguen el enfoque Behavior-Driven Development (BDD), 
 
 La siguiente tabla presenta las pruebas automatizadas verificadas, indicando el repositorio, la rama, el identificador del commit, el mensaje registrado y la fecha correspondiente.
 
-| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed On (Date) | Prueba asociada |
-|---|---|---|---|---|---|---|
-| FuelBrigde-Backend | main | f70edda | test: add Payment unit tests and H2 profile for contextLoads | - | 08/10/2026 | Payment - Creación de pago |
-| FuelBrigde-Backend | main | f70edda | test: add Payment unit tests and H2 profile for contextLoads | - | 08/10/2026 | Payment - Completar pago |
-| FuelBrigde-Backend | main | f70edda | test: add Payment unit tests and H2 profile for contextLoads | - | 08/10/2026 | Payment - Reembolsar pago |
-| FuelBrigde-Backend | main | f70edda | test: add Payment unit tests and H2 profile for contextLoads | - | 08/10/2026 | Payment - Registrar pago fallido |
-| FuelBrigde-Backend | main | f70edda | test: add Payment unit tests and H2 profile for contextLoads | - | 08/10/2026 | Spring Boot - contextLoads() |
-| FuelBrigde-Backend | feature/sprint1-bdd-tests | e6e5a0f | test: add cucumber BDD acceptance test for fuel order dispatch | - | 08/10/2026 | US-12 - Despacho de pedidos |
-| FuelBrigde-Backend | feature/sprint1-bdd-tests | ca13a7c | test: add BDD acceptance test for fuel order dispatch notifications | - | 08/10/2026 | US-30 - Notificaciones de despacho |
+| Repository         | Branch                    | Commit Id | Commit Message                                                      | Commit Message Body | Committed On (Date) | Prueba asociada                    |
+| ------------------ | ------------------------- | --------- | ------------------------------------------------------------------- | ------------------- | ------------------- | ---------------------------------- |
+| FuelBrigde-Backend | main                      | f70edda   | test: add Payment unit tests and H2 profile for contextLoads        | -                   | 08/10/2026          | Payment - Creación de pago         |
+| FuelBrigde-Backend | main                      | f70edda   | test: add Payment unit tests and H2 profile for contextLoads        | -                   | 08/10/2026          | Payment - Completar pago           |
+| FuelBrigde-Backend | main                      | f70edda   | test: add Payment unit tests and H2 profile for contextLoads        | -                   | 08/10/2026          | Payment - Reembolsar pago          |
+| FuelBrigde-Backend | main                      | f70edda   | test: add Payment unit tests and H2 profile for contextLoads        | -                   | 08/10/2026          | Payment - Registrar pago fallido   |
+| FuelBrigde-Backend | main                      | f70edda   | test: add Payment unit tests and H2 profile for contextLoads        | -                   | 08/10/2026          | Spring Boot - contextLoads()       |
+| FuelBrigde-Backend | feature/sprint1-bdd-tests | e6e5a0f   | test: add cucumber BDD acceptance test for fuel order dispatch      | -                   | 08/10/2026          | US-12 - Despacho de pedidos        |
+| FuelBrigde-Backend | feature/sprint1-bdd-tests | ca13a7c   | test: add BDD acceptance test for fuel order dispatch notifications | -                   | 08/10/2026          | US-30 - Notificaciones de despacho |
 
 **Enlaces de los commits:**
 
@@ -3240,13 +3261,13 @@ Las pruebas automatizadas se ejecutaron mediante Maven, utilizando el siguiente 
 
 La ejecución finalizó con el mensaje `BUILD SUCCESS`, registrando siete pruebas exitosas, sin errores, fallos ni pruebas omitidas.
 
-| Testing Suite | Pruebas ejecutadas | Exitosas | Fallidas | Estado |
-|---|---:|---:|---:|---|
-| PaymentTest | 4 | 4 | 0 | Passed |
-| FuelBridgePlatformApplicationTests | 1 | 1 | 0 | Passed |
-| Cucumber - US-12 | 1 | 1 | 0 | Passed |
-| Cucumber - US-30 | 1 | 1 | 0 | Passed |
-| **Total** | **7** | **7** | **0** | **Passed** |
+| Testing Suite                      | Pruebas ejecutadas | Exitosas | Fallidas | Estado     |
+| ---------------------------------- | -----------------: | -------: | -------: | ---------- |
+| PaymentTest                        |                  4 |        4 |        0 | Passed     |
+| FuelBridgePlatformApplicationTests |                  1 |        1 |        0 | Passed     |
+| Cucumber - US-12                   |                  1 |        1 |        0 | Passed     |
+| Cucumber - US-30                   |                  1 |        1 |        0 | Passed     |
+| **Total**                          |              **7** |    **7** |    **0** | **Passed** |
 
 <div align="center">
   <img src="assets/chapter-5/CucumberTestResults.png" width="700" />
@@ -3372,34 +3393,34 @@ A continuación se presenta la vista general de la documentación generada:
 
 A continuación se presenta la tabla de endpoints documentados relacionados con el alcance del Sprint 1:
 
-| Bounded Context | Endpoint | Verbo HTTP | Descripción | Response |
-|---|---|---|---|---|
-| IAM | `/api/v1/authentication/sign-up` | POST | Registro de nuevo usuario con rol y empresa asociada | `201 Created` — usuario con id y roles |
-| IAM | `/api/v1/authentication/sign-in` | POST | Autenticación y obtención de token JWT | `200 OK` — id, username y Bearer token |
-| Buyer Companies | `/api/v1/buyer-companies` | POST | Registro de empresa compradora | `201 Created` — empresa con id generado |
-| Buyer Companies | `/api/v1/buyer-companies` | GET | Listado de empresas compradoras | `200 OK` — array de empresas |
-| Buyer Companies | `/api/v1/buyer-companies/{companyId}` | GET | Consulta de empresa por ID | `200 OK` — datos de la empresa |
-| Buyer Companies | `/api/v1/buyer-companies/{companyId}` | PUT | Actualización de empresa compradora | `200 OK` — empresa actualizada |
-| Provider Companies | `/api/v1/provider-companies` | POST | Registro de empresa proveedora | `201 Created` — proveedor con id |
-| Provider Companies | `/api/v1/provider-companies` | GET | Listado de empresas proveedoras | `200 OK` — array de proveedores |
-| Provider Companies | `/api/v1/provider-companies/{providerId}` | GET | Consulta de proveedor por ID | `200 OK` — datos del proveedor |
-| Provider Companies | `/api/v1/provider-companies/{providerId}` | PUT | Actualización de empresa proveedora | `200 OK` — proveedor actualizado |
-| Fuel Products | `/api/v1/fuel-products` | POST | Registro de producto de combustible | `201 Created` — producto con id |
-| Fuel Products | `/api/v1/fuel-products` | GET | Listado de productos de combustible | `200 OK` — array de productos |
-| Fuel Products | `/api/v1/fuel-products/{fuelProductId}` | GET | Consulta de producto por ID | `200 OK` — datos del producto |
-| Fuel Products | `/api/v1/fuel-products/{fuelProductId}` | PUT | Actualización de producto | `200 OK` — producto actualizado |
-| Fuel Products | `/api/v1/fuel-products/{fuelProductId}` | DELETE | Eliminación de producto | `204 No Content` |
-| Fuel Products | `/api/v1/fuel-products/{fuelProductId}/update-stock` | POST | Actualización de stock disponible | `200 OK` — producto con stock actualizado |
-| Fuel Orders | `/api/v1/fuel-orders` | POST | Creación de pedido de combustible | `201 Created` — pedido en estado `PENDING` |
-| Fuel Orders | `/api/v1/fuel-orders` | GET | Listado de todos los pedidos | `200 OK` — array de pedidos |
-| Fuel Orders | `/api/v1/fuel-orders/{orderId}` | GET | Consulta de pedido por ID | `200 OK` — pedido con estado actual |
-| Fuel Orders | `/api/v1/fuel-orders/company/{companyId}` | GET | Pedidos de una empresa compradora | `200 OK` — array de pedidos filtrados |
-| Fuel Orders | `/api/v1/fuel-orders/provider/{providerId}` | GET | Pedidos asignados a un proveedor | `200 OK` — array de pedidos filtrados |
-| Fuel Orders | `/api/v1/fuel-orders/{orderId}/confirm` | POST | Confirmación del pedido por el proveedor | `200 OK` — pedido en estado `CONFIRMED` |
-| Fuel Orders | `/api/v1/fuel-orders/{orderId}/cancel` | POST | Cancelación del pedido | `200 OK` — pedido en estado `CANCELLED` |
-| Payments | `/api/v1/payments` | POST | Registro de pago asociado a un pedido | `201 Created` — pago en estado `PENDING` |
-| Payments | `/api/v1/payments/{paymentId}/complete` | POST | Confirmación de pago con referencia de transacción | `200 OK` — pago en estado `COMPLETED` |
-| Payments | `/api/v1/payments/order/{orderId}` | GET | Consulta de pago por pedido | `200 OK` — datos del pago |
+| Bounded Context    | Endpoint                                             | Verbo HTTP | Descripción                                          | Response                                   |
+| ------------------ | ---------------------------------------------------- | ---------- | ---------------------------------------------------- | ------------------------------------------ |
+| IAM                | `/api/v1/authentication/sign-up`                     | POST       | Registro de nuevo usuario con rol y empresa asociada | `201 Created` — usuario con id y roles     |
+| IAM                | `/api/v1/authentication/sign-in`                     | POST       | Autenticación y obtención de token JWT               | `200 OK` — id, username y Bearer token     |
+| Buyer Companies    | `/api/v1/buyer-companies`                            | POST       | Registro de empresa compradora                       | `201 Created` — empresa con id generado    |
+| Buyer Companies    | `/api/v1/buyer-companies`                            | GET        | Listado de empresas compradoras                      | `200 OK` — array de empresas               |
+| Buyer Companies    | `/api/v1/buyer-companies/{companyId}`                | GET        | Consulta de empresa por ID                           | `200 OK` — datos de la empresa             |
+| Buyer Companies    | `/api/v1/buyer-companies/{companyId}`                | PUT        | Actualización de empresa compradora                  | `200 OK` — empresa actualizada             |
+| Provider Companies | `/api/v1/provider-companies`                         | POST       | Registro de empresa proveedora                       | `201 Created` — proveedor con id           |
+| Provider Companies | `/api/v1/provider-companies`                         | GET        | Listado de empresas proveedoras                      | `200 OK` — array de proveedores            |
+| Provider Companies | `/api/v1/provider-companies/{providerId}`            | GET        | Consulta de proveedor por ID                         | `200 OK` — datos del proveedor             |
+| Provider Companies | `/api/v1/provider-companies/{providerId}`            | PUT        | Actualización de empresa proveedora                  | `200 OK` — proveedor actualizado           |
+| Fuel Products      | `/api/v1/fuel-products`                              | POST       | Registro de producto de combustible                  | `201 Created` — producto con id            |
+| Fuel Products      | `/api/v1/fuel-products`                              | GET        | Listado de productos de combustible                  | `200 OK` — array de productos              |
+| Fuel Products      | `/api/v1/fuel-products/{fuelProductId}`              | GET        | Consulta de producto por ID                          | `200 OK` — datos del producto              |
+| Fuel Products      | `/api/v1/fuel-products/{fuelProductId}`              | PUT        | Actualización de producto                            | `200 OK` — producto actualizado            |
+| Fuel Products      | `/api/v1/fuel-products/{fuelProductId}`              | DELETE     | Eliminación de producto                              | `204 No Content`                           |
+| Fuel Products      | `/api/v1/fuel-products/{fuelProductId}/update-stock` | POST       | Actualización de stock disponible                    | `200 OK` — producto con stock actualizado  |
+| Fuel Orders        | `/api/v1/fuel-orders`                                | POST       | Creación de pedido de combustible                    | `201 Created` — pedido en estado `PENDING` |
+| Fuel Orders        | `/api/v1/fuel-orders`                                | GET        | Listado de todos los pedidos                         | `200 OK` — array de pedidos                |
+| Fuel Orders        | `/api/v1/fuel-orders/{orderId}`                      | GET        | Consulta de pedido por ID                            | `200 OK` — pedido con estado actual        |
+| Fuel Orders        | `/api/v1/fuel-orders/company/{companyId}`            | GET        | Pedidos de una empresa compradora                    | `200 OK` — array de pedidos filtrados      |
+| Fuel Orders        | `/api/v1/fuel-orders/provider/{providerId}`          | GET        | Pedidos asignados a un proveedor                     | `200 OK` — array de pedidos filtrados      |
+| Fuel Orders        | `/api/v1/fuel-orders/{orderId}/confirm`              | POST       | Confirmación del pedido por el proveedor             | `200 OK` — pedido en estado `CONFIRMED`    |
+| Fuel Orders        | `/api/v1/fuel-orders/{orderId}/cancel`               | POST       | Cancelación del pedido                               | `200 OK` — pedido en estado `CANCELLED`    |
+| Payments           | `/api/v1/payments`                                   | POST       | Registro de pago asociado a un pedido                | `201 Created` — pago en estado `PENDING`   |
+| Payments           | `/api/v1/payments/{paymentId}/complete`              | POST       | Confirmación de pago con referencia de transacción   | `200 OK` — pago en estado `COMPLETED`      |
+| Payments           | `/api/v1/payments/order/{orderId}`                   | GET        | Consulta de pago por pedido                          | `200 OK` — datos del pago                  |
 
 A continuación se muestra el schema del endpoint principal del bounded context Fuel Orders y la interacción con datos de muestra:
 
@@ -3412,10 +3433,10 @@ A continuación se muestra el schema del endpoint principal del bounded context 
 
 **Commits relacionados con documentación Sprint 1:**
 
-| Repository | Branch | Commit Id | Commit Message | Committed on |
-|---|---|---|---|---|
-| HaloFuel/FuelBrigde-Backend | main | `7b09f4d` | fix: Swagger server URL to point to Railway production | 2026-10-08 |
-| HaloFuel/FuelBrigde-Backend | main | `404707d` | Rename startup/product from PrimeFuel/FullTank to HaloFuel/FuelBridge across package, pom, config and docs | 2026-10-08 |
+| Repository                  | Branch | Commit Id | Commit Message                                                                                             | Committed on |
+| --------------------------- | ------ | --------- | ---------------------------------------------------------------------------------------------------------- | ------------ |
+| HaloFuel/FuelBrigde-Backend | main   | `7b09f4d` | fix: Swagger server URL to point to Railway production                                                     | 2026-10-08   |
+| HaloFuel/FuelBrigde-Backend | main   | `404707d` | Rename startup/product from PrimeFuel/FullTank to HaloFuel/FuelBridge across package, pom, config and docs | 2026-10-08   |
 
 #### 5.3.1.6 Software Deployment Evidence for Sprint Review
 
@@ -3437,8 +3458,42 @@ La evidencia de despliegue corresponde a la versión de Sprint Review de la solu
 **Landing Page desplegado:** [https://fuelbridgelandingpage.vercel.app/](https://fuelbridgelandingpage.vercel.app/)
 
 
+
 #### 5.3.1.7 Team Collaboration Insights during Sprint
 
+Durante el Sprint 1, todos los miembros del equipo participaron en la implementación de FuelBridge. A continuación se presentan las métricas de colaboración extraídas de GitHub Insights (historial de commits de la rama `develop`) de los repositorios `FuelBrigde-Backend` y `FuelBrigde-Frontend`, con corte al 09/10/2026.
+
+**Métricas de colaboración (Sprint 1)**
+
+| Miembro del equipo                        | Usuario GitHub | Commits Backend | Commits Frontend | Total commits |
+| ----------------------------------------- | -------------- | --------------- | ---------------- | ------------- |
+| Milenko Rubén Cayanchi Avila              | MaxghZZ        | 3               | 3                | 6             |
+| Sebastian Andres Aiquipa Poma             | S-aiquipa      | 3               | 3                | 6             |
+| Carlos Alberto Lopez Goitia               | CarlosAlb101   | 3               | 3                | 6             |
+| Diego Fernando Herrera Enriquez           | DerDFHE        | 3               | 3                | 6             |
+| Schneider Carlos Alberto Delgado Carrasco | schneiderdc    | 6               | 5                | 11            |
+| **Total**                                 |                | **18**          | **17**           | **35**        |
+
+
+![GitHub Insights - Commits Backend](/assets/chapter-5/commits_backend.png)
+**Commits realizadeos en el backend**
+
+![GitHub Insights - Commits Frontend](/assets/chapter-5/commits_frontend.png)
+**Commits realizadeos en el frontend**
+
+![Tablero Kanban - Sprint 1](/assets/chapter-5/image_sprint.png)
+**Tablero Kanban**
+
+**Análisis de colaboración**
+
+- Todos los integrantes realizaron commits en ambos repositorios, con una distribución equitativa (6 commits por integrante, salvo Schneider con 11 por el trabajo adicional de pruebas y documentación).
+- Milenko Cayanchi implementó el endpoint de creación de pedidos, el registro de usuarios y el login en el backend, además de la integración de servicios API, el diálogo de cancelación de pedidos y el diseño responsive en el frontend.
+- Sebastian Aiquipa desarrolló los endpoints de empresas y de gestión de conductores y vehículos (Fulfillment), la corrección de expiración de token, y las vistas de formulario de pedido, detalle de pedido y lista de notificaciones.
+- Carlos Lopez refactorizó el manejo de comandos de estado de pedidos y la configuración CORS, documentó la autenticación, integró el Pull Request #1 (`feature/sprint1-bdd-tests`) y trabajó filtros de notificaciones, búsqueda de inventario y mejoras del login en el frontend.
+- Diego Herrera implementó el registro de usuarios (IAM) y el endpoint de creación de pedidos en backend, y el formulario de login y la corrección de aprobación/rechazo de pedidos en el frontend.
+- Schneider Delgado se encargó de las pruebas de despacho y de eventos de notificación (US-12, US-29, US-30), la publicación de eventos de dominio y el contador de pedidos despachados y notificaciones no leídas en el frontend.
+- El equipo aplicó GitFlow y Conventional Commits, referenciando historias de usuario y tareas (US-12, US-30, T02.02, TS-04) en los mensajes de commit.
+- El seguimiento del sprint se realizó en un tablero Kanban.
 
 ##### 5.3.1.8 Kanban Board
 
