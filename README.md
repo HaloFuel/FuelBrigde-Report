@@ -3199,7 +3199,37 @@ La evidencia de despliegue corresponde a la versión de Sprint Review de la solu
 
 #### 5.3.1.7 Team Collaboration Insights during Sprint
 
-#### 5.3.1.8 Kanban Board
+
+##### 5.3.1.8 Kanban Board
+
+Para la organización y seguimiento de las actividades correspondientes al Sprint 1 de FuelBridge, la startup HaloFuel implementó un tablero Kanban utilizando la herramienta Trello.
+
+Este tablero permitió representar visualmente las tareas establecidas en el Sprint Backlog, facilitando su organización, la identificación de responsables y el seguimiento del trabajo del equipo.
+
+El tablero se encuentra organizado en cinco columnas:
+
+- **Backlog:** Actividades identificadas para su desarrollo.
+- **Por hacer:** Tareas seleccionadas y pendientes de iniciar.
+- **En proceso:** Actividades que se encuentran en desarrollo.
+- **En revisión:** Tareas pendientes de validación.
+- **Terminado (Done):** Actividades registradas como completadas.
+
+Se incorporaron 13 tareas del Sprint 1, con una estimación total de 34 horas, relacionadas con la gestión de pedidos, notificaciones, pruebas automatizadas, despliegue y documentación.
+
+Además, se utilizaron etiquetas de colores para diferenciar los Bounded Contexts y las áreas de trabajo, permitiendo identificar fácilmente las responsabilidades de cada actividad.
+
+Al cierre del Sprint 1, las 13 tareas figuraban como completadas según el Sprint Backlog, por lo que fueron ubicadas en la columna Terminado (Done).
+
+**Link del tablero Trello:**
+
+https://trello.com/invite/b/6ac87274106e25821de46ae4/ATTI3087071ed1bfa2ed167e7dcdba4149dd6FCBE38D/fuelbridge-sprint-1-kanban-board
+
+<div align="center">
+  <img src="assets/chapter-5/KanbanBoardSprint1.png" width="900" />
+</div>
+
+*Figura. Tablero Kanban del Sprint 1 de FuelBridge, elaborado en Trello, mostrando las tareas organizadas según su estado final.*
+
 
 # Referencias bibliográficas
 
