@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/introduction/logo.png" alt="Logo de la Universidad Peruana de Ciencias Aplicadas"/>
+  <img src="assets/introduction/logo.png" alt="Logo de la Universidad Peruana de Ciencias Aplicadas" width="180" />
   <p>Universidad Peruana de Ciencias Aplicadas</p>
   <p>Carrera de Ingeniería de Software</p>
   <p><strong>1ASI0657</strong></p>
@@ -14,6 +14,8 @@
   <p>Producto</p>
   <p><strong>FuelBridge</strong></p>
 </div>
+
+<div class="page"></div>
 
 <h2 align="center">Integrantes</h2>
 <div align="center">
@@ -48,6 +50,7 @@
   <p><strong>Período 202620</strong></p>
 </div>
 
+<div class="page"></div>
 
 ## Registro de Versiones del Informe
 
@@ -81,6 +84,7 @@
   </tbody>
 </table>
 
+<div class="page"></div>
 
 ## Contenido
 
@@ -159,8 +163,8 @@
       - [Requirements Management](#requirements-management)
       - [Product UX/UI Design](#product-uxui-design)
       - [Software Development Landing Page](#software-development-landing-page)
-      - [Software Development — Frontend (Angular SPA)](#software-development--frontend-angular-spa)
-      - [Software Development — Backend (Spring Boot API)](#software-development--backend-spring-boot-api)
+      - [Software Development - Frontend (Angular SPA)](#software-development--frontend-angular-spa)
+      - [Software Development - Backend (Spring Boot API)](#software-development--backend-spring-boot-api)
       - [Software Testing](#software-testing)
       - [Software Deployment](#software-deployment)
       - [Software Documentation](#software-documentation)
@@ -196,8 +200,12 @@
       - [5.3.1.6 Software Deployment Evidence for Sprint Review](#5316-software-deployment-evidence-for-sprint-review)
       - [5.3.1.7 Team Collaboration Insights during Sprint](#5317-team-collaboration-insights-during-sprint)
         - [5.3.1.8 Kanban Board](#5318-kanban-board)
+        - [5.3.1.9 Evidencia de migración a microservicios](#5319-evidencia-de-migración-a-microservicios)
+        - [5.3.1.10 Evidencia de mejora continua](#53110-evidencia-de-mejora-continua)
+
 - [Referencias bibliográficas](#referencias-bibliográficas)
 
+<div class="page"></div>
 
 ## Student Outcome
 
@@ -313,6 +321,7 @@ Reconoce la necesidad del aprendizaje permanente para el desempeño profesional 
 
 ---
 
+<div class="page"></div>
 
 # Capítulo I: Introducción
 
@@ -338,6 +347,8 @@ Reconoce la necesidad del aprendizaje permanente para el desempeño profesional 
 <th>Foto</th>
 <th>Descripcion</th>
 </tr>
+</thead>
+<tbody>
 <tr class="odd">
 <th><img src="assets/chapter-1/image17.png" width="300" /></th>
 <th><p>Nombre: Milenko Rubén Cayanchi Avila</p>
@@ -360,8 +371,6 @@ Reconoce la necesidad del aprendizaje permanente para el desempeño profesional 
 <th><img src="assets/chapter-1/image26.png" width="300" /></th>
 <th>Soy estudiante de Ingeniería de Software en la UPC, con conocimientos en programación y bases de datos. Me interesa la tecnología, la innovación y el desarrollo de soluciones digitales que mejoren la vida de las personas. Estoy comprometido con mi formación y busco nuevos retos que me permitan crecer a nivel académico y personal.</th>
 </tr>
-</thead>
-<tbody>
 </tbody>
 </table>
 
@@ -528,6 +537,8 @@ Reducir errores en la entrega por información incompleta o mal gestionada.
 Optimizar la planificación logística y distribución.
 
 ---
+
+<div class="page"></div>
 
 # Capítulo II: Requirements & Analysis
 
@@ -763,6 +774,8 @@ Para la elaboración de los Empathy Maps, el equipo partió del conocimiento y o
 
 ---
 
+<div class="page"></div>
+
 # Capítulo III: Requirements Specification
 
 ## 3.1 To-Be Scenario Mapping
@@ -770,6 +783,8 @@ Para la elaboración de los Empathy Maps, el equipo partió del conocimiento y o
 <div align="center">
   <img src="assets/chapter-3/image24.png" width="700" />
 </div>
+
+<div class="page"></div>
 
 ## 3.2 User Stories
 
@@ -790,6 +805,8 @@ Para la elaboración de los Empathy Maps, el equipo partió del conocimiento y o
 <th><strong>Criterios de aceptación</strong></th>
 <th><strong>Relacionado con (Epic ID)</strong></th>
 </tr>
+</thead>
+<tbody>
 <tr class="odd">
 <th>US-01</th>
 <th>Ver sección Home</th>
@@ -1772,8 +1789,6 @@ Para la elaboración de los Empathy Maps, el equipo partió del conocimiento y o
 <th>Ver especificación de analítica.</th>
 <th>EP14</th>
 </tr>
-</thead>
-<tbody>
 </tbody>
 </table>
 
@@ -1781,11 +1796,13 @@ Para la elaboración de los Empathy Maps, el equipo partió del conocimiento y o
 
 En el Impact Mapping del modelo de negocio digital de FuelBridge, desarrollado por la startup HaloFuel, el equipo elaboró el mapa partiendo de un Business Goal principal que cumple los criterios SMART: “Optimizar la gestión y distribución de combustible, alcanzando 300 empresas solicitantes activas y 100 proveedores registrados en el primer año de operación, reduciendo en un 40% los tiempos de gestión de pedidos”. A partir de esta meta se incorporaron como Actors/Personas a los User Personas previamente definidos: Carlos Ramírez (empresa solicitante) y Andrea López (proveedora de combustible). Para cada uno se identificaron los Impacts esperados, es decir, cómo se busca cambiar su comportamiento para lograr el objetivo: en el caso de Carlos, la digitalización del registro de pedidos, la reducción de la dependencia de canales informales, el seguimiento en tiempo real y una mejor toma de decisiones basada en datos; en el caso de Andrea, la centralización de pedidos, la optimización de la planificación logística, la mejora en la comunicación con clientes y el uso de métricas para el control operativo.
 
-A partir de estos impactos se definieron los Deliverables que la plataforma FuelBridge debe ofrecer para generar dichos cambios en los actores. Entre ellos se incluyen el módulo de registro y gestión de pedidos, el sistema de tracking en tiempo real, el panel de control con métricas operativas, la planificación logística automatizada, el historial de pedidos y el sistema de notificaciones y comunicación integrada. Finalmente, en la columna de User Stories se detallaron historias en formato “Como \[persona\] deseo \[acción\] para \[beneficio\]” (por ejemplo, registro de pedidos, consulta de estado, actualización de entregas, coordinación logística y generación de reportes), lo que permite trazar una línea clara desde los objetivos de negocio hasta las funcionalidades del sistema, asegurando la alineación entre Business Goals, Impacts, Deliverables y el desarrollo de la solución.
+A partir de estos impactos se definieron los Deliverables que la plataforma FuelBridge debe ofrecer para generar dichos cambios en los actores. Entre ellos se incluyen el módulo de registro y gestión de pedidos, el sistema de tracking en tiempo real, el panel de control con métricas operativas, la planificación logística automatizada, el historial de pedidos y el sistema de notificaciones y comunicación integrada. Finalmente, en la columna de User Stories se detallaron historias en formato “Como &#91;persona&#93; deseo &#91;acción&#93; para &#91;beneficio&#93;” (por ejemplo, registro de pedidos, consulta de estado, actualización de entregas, coordinación logística y generación de reportes), lo que permite trazar una línea clara desde los objetivos de negocio hasta las funcionalidades del sistema, asegurando la alineación entre Business Goals, Impacts, Deliverables y el desarrollo de la solución.
 
 <div align="center">
   <img src="assets/chapter-3/image23.png" width="700" />
 </div>
+
+<div class="page"></div>
 
 ## 3.4 Product Backlog
 
@@ -1873,6 +1890,8 @@ El tablero Kanban de seguimiento (Trello) se referencia en la sección [4.3.1.7]
 
 ---
 
+<div class="page"></div>
+
 # Capítulo IV: Product Architecture Design
 
 ## 4.1 Design Concepts, ViewPoints & ER Diagrams
@@ -1902,8 +1921,9 @@ Para resolver la problemática de comunicación informal y trazabilidad en el se
 
 ### 4.1.3 Context Diagram
 
+
 <div align="center">
-  <img src="assets/chapter-4/SystemContext.png" width="700" />
+  <img src="assets/chapter-4/ContextoTP1.png" alt="C4 System Context - FuelBridge TP1" width="950" />
 </div>
 
 El Diagrama de Contexto de FuelBridge define los límites del sistema y sus interacciones principales con los usuarios y sistemas externos:
@@ -1940,6 +1960,59 @@ Esta vista complementa la arquitectura objetivo con el estado implementado de la
 
 ### 4.1.4 Approach Driven ViewPoints Diagrams
 
+Las vistas de FuelBridge se organizan según el enfoque Domain-Driven Design y la extracción incremental de capacidades de negocio. La arquitectura actual combina un monolito modular residual con tres microservicios: Notification, Catalog y Reporting & Analytics.
+
+La revisión técnica corresponde a la rama `develop`, commit `3025f97ae508b372076360f34f6b95540e3686df`. Los diagramas representan la estructura descrita para esa revisión; la configuración de aplicaciones independientes no constituye, por sí sola, evidencia de despliegue integrado.
+
+#### Vista de contenedores del backend
+
+El backend está compuesto por cuatro aplicaciones Spring Boot con proyectos Maven, configuración y puntos de entrada propios.
+
+| Aplicación | Bounded Contexts | Responsabilidad |
+| --- | --- | --- |
+| FuelBridge Platform | IAM, Ordering, Payment, Inventory, Fulfillment y Equipment | Autenticación, empresas, solicitudes, pedidos, pagos, productos, stock, flota, entregas y equipos. |
+| Notification Service | Notification | Creación, consulta y lectura de notificaciones. |
+| Catalog Service | Catalog | Registro, consulta y actualización de calificaciones de proveedores. |
+| Reporting Service | Reporting & Analytics | Cálculo de indicadores y agrupaciones mensuales mediante datos obtenidos del monolito por HTTP. |
+
+El siguiente diagrama C4 de nivel 2, exportado desde Structurizr, muestra el frontend Angular, el monolito residual, los tres microservicios independientes, sus comunicaciones HTTP/REST y los contenedores de persistencia lógica. Se conserva como evidencia de la arquitectura implementada durante el TP1.
+
+<div align="center">
+  <img src="assets/chapter-4/ContenedoresTP1.png" alt="C4 Container Diagram - FuelBridge TP1" width="950" />
+</div>
+
+#### Diagramas de componentes C4 — arquitectura TP1
+
+Los siguientes diagramas muestran los componentes del monolito residual y de los tres microservicios extraídos.
+
+**C4 Component Diagram — FuelBridge Platform (TP1)**
+
+<div align="center">
+  <img src="assets/chapter-4/ComponentesMonolito.png" alt="Componentes del monolito residual" width="900" />
+</div>
+
+**C4 Component Diagram — Notification Service (TP1)**
+
+<div align="center">
+  <img src="assets/chapter-4/ComponentesNotification.png" alt="Componentes de Notification Service" width="900" />
+</div>
+
+**C4 Component Diagram — Catalog Service (TP1)**
+
+<div align="center">
+  <img src="assets/chapter-4/ComponentesCatalog.png" alt="Componentes de Catalog Service" width="900" />
+</div>
+
+**C4 Component Diagram — Reporting Service (TP1)**
+
+<div align="center">
+  <img src="assets/chapter-4/ComponentesReporting.png" alt="Componentes de Reporting Service" width="900" />
+</div>
+
+#### Vistas históricas — arquitectura previa a la extracción
+
+Las siguientes figuras documentan el diseño anterior y sus iteraciones. Se conservan como antecedentes, no como representación principal de la arquitectura TP1.
+
 <div align="center">
   <img src="assets/chapter-4/Containers.png" width="700" />
 </div>
@@ -1957,6 +2030,10 @@ El Diagrama de Contenedores detalla la arquitectura de alto nivel y las piezas d
 <div align="center">
   <img src="assets/chapter-4/ComponentsIteration1.png" width="700" />
 </div>
+
+FuelBridge Platform se comunica por HTTP/REST con los tres servicios. Notification y Catalog disponen de esquemas MySQL lógicos propios (`fuelbridge_notification` y `fuelbridge_catalog`); Reporting consulta datos del monolito por HTTP y no declara tablas de negocio propias.
+
+**C4 Component Diagram — FuelBridge API (Iteración 2, vista histórica)**
 
 <div align="center">
   <img src="assets/chapter-4/ComponentsIteration2.png" width="700" />
@@ -1994,7 +2071,7 @@ La Iteración 3 aplica Strangler Fig: Notification, Catalog y Reporting & Analyt
   <img src="assets/chapter-4/iteration3-containers.png" width="900" />
 </div>
 
-FuelBridge API consume los tres servicios mediante HTTPS/REST síncrono. Cada servicio posee un schema MySQL propio: `fuelbridge_notification`, `fuelbridge_catalog` y `fuelbridge_reporting`.
+FuelBridge Platform se comunica por HTTP/REST con los tres servicios. Notification y Catalog disponen de esquemas MySQL lógicos propios (`fuelbridge_notification` y `fuelbridge_catalog`); Reporting consulta datos del monolito por HTTP y no declara tablas de negocio propias.
 
 **C4 Component Diagram — FuelBridge API**
 
@@ -2042,6 +2119,41 @@ classDiagram
         +receive()
         +markPaid()
     }
+
+    class BuyerCompany {
+        &lt;&lt;IAM&gt;&gt;
+        +Long id
+    }
+
+    class ProviderCompany {
+        &lt;&lt;IAM&gt;&gt;
+        +Long id
+    }
+
+    class FuelProduct {
+        &lt;&lt;Inventory&gt;&gt;
+        +Long id
+    }
+
+    class Equipment {
+        &lt;&lt;Equipment BC&gt;&gt;
+        +Long id
+    }
+
+    FuelOrder ..> BuyerCompany : companyId
+    FuelOrder ..> ProviderCompany : providerId
+    FuelOrder ..> FuelProduct : fuelProductId
+    FuelOrder ..> Equipment : equipmentId
+```
+
+**Nota de implementación:** Ordering permanece dentro del monolito. `FuelOrder` representa un pedido de un solo producto mediante `fuelProductId` y `requestedQuantity`; no tiene una clase `OrderDetail` asociada. Las clases externas se muestran únicamente como referencias por ID. `dispatch()` exige `PENDING` y cambia el estado a `DISPATCHED`; `receive()` exige `DISPATCHED` y cambia el estado a `PENDING_PAYMENT`. `confirm()` y `cancel()` no validan el estado previo; `markPaid()` bloquea pedidos cancelados. Existe una discrepancia pendiente: un pedido confirmado como `CONFIRMED` no cumple la precondición actual de despacho.
+
+Las solicitudes se gestionan mediante `FuelRequestService` y `FuelRequestPersistenceEntity`. No se identificó un agregado de dominio `FuelRequest` equivalente a `FuelOrder`; por ello, no se incluye una clase idealizada en este diagrama.
+
+#### Domain Class Diagram (Payment BC)
+
+```mermaid
+classDiagram
     class Payment {
         +Long id
         +Long orderId
@@ -2055,6 +2167,68 @@ classDiagram
         +refund()
         +fail()
     }
+
+    class FuelOrder {
+        &lt;&lt;Ordering&gt;&gt;
+        +Long id
+    }
+
+    class BuyerCompany {
+        &lt;&lt;IAM&gt;&gt;
+        +Long id
+    }
+
+    Payment ..> FuelOrder : orderId
+    Payment ..> BuyerCompany : companyId
+```
+
+**Nota de implementación:** Payment permanece dentro del monolito. El pago se crea en estado `PENDING`; `complete()` establece `COMPLETED` y registra referencia y fecha, mientras `refund()` y `fail()` establecen `REFUNDED` y `FAILED`. Estas operaciones no representan integración con una pasarela externa. El servicio de finalización actualiza el pago y el pedido dentro de una transacción local. No se encontró validación del importe contra el total del pedido ni almacenamiento de vouchers en cloud storage. El reembolso no revierte automáticamente el estado del pedido.
+
+#### Domain Class Diagram (Inventory BC)
+
+```mermaid
+classDiagram
+    class FuelProduct {
+        +Long id
+        +String name
+        +FuelType fuelType
+        +Double pricePerUnit
+        +String unit
+        +Double availableStock
+        +Double capacity
+        +Long providerId
+        +Boolean active
+        +updateStock(newStock)
+        +update(command)
+    }
+
+    class FuelType {
+        &lt;&lt;enumeration&gt;&gt;
+        DIESEL
+        GASOLINE
+        GASOLINE_84
+        GASOLINE_90
+        GASOLINE_95
+        GASOLINE_97
+        GLP
+        GNV
+    }
+
+    class ProviderCompany {
+        &lt;&lt;IAM&gt;&gt;
+        +Long id
+    }
+
+    FuelProduct ..> FuelType : tipo del atributo fuelType
+    FuelProduct ..> ProviderCompany : providerId
+```
+
+**Nota de implementación:** Inventory permanece dentro del monolito y contiene el agregado `FuelProduct`. No existen clases independientes de almacén, movimiento o reserva de stock en el modelo descrito. `updateStock()` reemplaza `availableStock`, sin validar cantidades negativas ni el límite de capacidad. `update()` no modifica `providerId` y conserva `active` cuando el comando lo omite. `providerId` es una columna obligatoria, sin asociación JPA ni FK declarada hacia IAM en la entidad revisada.
+
+#### Domain Class Diagram (Fulfillment BC)
+
+```mermaid
+classDiagram
     class Delivery {
         +Long id
         +Long orderId
@@ -2070,107 +2244,722 @@ classDiagram
         +complete()
         +fail(reason)
     }
-    class BuyerCompany {
+
+    class Driver {
         +Long id
-        +String name
-        +String ruc
-        +String sector
-        +String address
-        +String contactEmail
-        +String phone
+        +Long providerId
+        +String firstName
+        +String lastName
+        +String licenseNumber
+        +String phoneNumber
+        +String email
+        +String status
+        +update(providerId, firstName, lastName, licenseNumber, phoneNumber, email, status)
     }
+
+    class Vehicle {
+        +Long id
+        +Long providerId
+        +String licensePlate
+        +String brand
+        +String model
+        +Double capacity
+        +String unit
+        +String status
+        +update(providerId, licensePlate, brand, model, capacity, unit, status)
+    }
+
+    class DeliveryStatus {
+        &lt;&lt;enumeration&gt;&gt;
+        SCHEDULED
+        DISPATCHED
+        DELIVERED
+        FAILED
+    }
+
+    class FuelOrder {
+        &lt;&lt;Ordering&gt;&gt;
+        +Long id
+    }
+
     class ProviderCompany {
+        &lt;&lt;IAM&gt;&gt;
         +Long id
-        +String name
-        +String ruc
-        +Double rating
-        +String address
-        +String phone
-        +List~String~ fuelTypesOffered
-        +String description
     }
-    FuelOrder "1" --> "0..1" Payment : orderId
-    FuelOrder "1" --> "0..1" Delivery : orderId
-    FuelOrder "*" --> "1" BuyerCompany : companyId
-    FuelOrder "*" --> "1" ProviderCompany : providerId
+
+    Delivery ..> DeliveryStatus : tipo del atributo status
+    Delivery ..> Driver : driverId
+    Delivery ..> Vehicle : vehicleId
+    Delivery ..> FuelOrder : orderId
+    Delivery ..> ProviderCompany : providerId
+    Driver ..> ProviderCompany : providerId
+    Vehicle ..> ProviderCompany : providerId
 ```
 
-**Nota de implementación:** a diferencia de una versión anterior de este diagrama, el agregado `FuelOrder` no tiene una clase `OrderDetail` asociada — es un agregado plano con un único `fuelProductId` y `requestedQuantity` por pedido (un pedido = un producto, no una lista de líneas). `BuyerCompany` y `ProviderCompany` son las clases reales de Identity & Access BC (antes referidas genéricamente como "Client" y "Provider"); no exponen métodos de cambio de estado propios más allá del constructor. Las clases `Client` y `Provider` de la versión anterior no existen en el código.
+**Nota de implementación:** Fulfillment permanece dentro del monolito. `Delivery`, `Driver` y `Vehicle` son agregados independientes; no existe composición ni relación directa conductor–vehículo. Las referencias son identificadores escalares. `Delivery.dispatch()`, `complete()` y `fail()` no validan el estado previo; los estados de Driver y Vehicle son `String`. El constructor de Delivery establece `SCHEDULED`, pero el servicio de creación llama inmediatamente a `dispatch()`.
 
-**State Diagram – Ciclo de vida del pedido (Order)**
+El servicio de creación de entrega comprueba recursos, proveedor, pedido, capacidad, stock y ausencia de otra entrega. La unicidad de entrega por pedido depende de una comprobación de aplicación: no se identificó una restricción `UNIQUE` equivalente en la entidad revisada.
+
+#### Domain Class Diagram (Equipment BC)
+
+```mermaid
+classDiagram
+    class Equipment {
+        +Long id
+        +String name
+        +EquipmentType equipmentType
+        +String licensePlate
+        +FuelType fuelType
+        +Double tankCapacity
+        +Double currentLevel
+        +String location
+        +String status
+        +Boolean autoRefill
+        +Integer refillThreshold
+        +String lastRefillDate
+        +Long companyId
+        +Long favoriteProviderId
+        +update(command)
+        +assignFavoriteProvider(providerId)
+        +receiveFuel(quantity)
+    }
+
+    class EquipmentType {
+        &lt;&lt;enumeration&gt;&gt;
+        TRUCK
+        BUS
+        EXCAVATOR
+        GENERATOR
+        FORKLIFT
+        OTHER
+    }
+
+    class FuelType {
+        &lt;&lt;enumeration&gt;&gt;
+        DIESEL
+        GASOLINE
+        GASOLINE_84
+        GASOLINE_90
+        GASOLINE_95
+        GASOLINE_97
+        GLP
+        GNV
+    }
+
+    class BuyerCompany {
+        &lt;&lt;IAM&gt;&gt;
+        +Long id
+    }
+
+    class ProviderCompany {
+        &lt;&lt;IAM&gt;&gt;
+        +Long id
+    }
+
+    Equipment ..> EquipmentType : tipo del atributo equipmentType
+    Equipment ..> FuelType : enum reutilizado de Inventory
+    Equipment ..> BuyerCompany : companyId
+    Equipment ..> ProviderCompany : favoriteProviderId
+```
+
+**Nota de implementación:** Equipment permanece dentro del monolito. `companyId` y `favoriteProviderId` son identificadores escalares, sin asociaciones JPA ni FKs declaradas hacia IAM en la entidad revisada. `assignFavoriteProvider()` asigna el identificador sin comprobar la existencia del proveedor. `receiveFuel()` limita el resultado a `tankCapacity`, pero no rechaza cantidades negativas. `update()` no modifica `companyId`. `autoRefill` y `refillThreshold` son atributos almacenados; su presencia no demuestra una operación automática de abastecimiento implementada. El enum `FuelType` se reutiliza desde Inventory.
+
+#### Domain Class Diagram (Notification Service)
+
+```mermaid
+classDiagram
+    class Notification {
+        +Long id
+        +Long userId
+        +NotificationType type
+        +String title
+        +String message
+        +boolean read
+        +Long referenceId
+        +Date createdAt
+        +markAsRead()
+    }
+
+    class NotificationType {
+        &lt;&lt;enumeration&gt;&gt;
+        NEW_REQUEST
+        REQUEST_PENDING
+        ORDER_ACCEPTED
+        ORDER_REJECTED
+        ORDER_DISPATCHED
+        ORDER_DELIVERED
+        ORDER_CONFIRMED
+        ORDER_CANCELLED
+        DELIVERY_DISPATCHED
+        DELIVERY_COMPLETED
+        DELIVERY_FAILED
+        PAYMENT_RECEIVED
+        PAYMENT_COMPLETED
+        PAYMENT_REFUNDED
+        GENERAL
+    }
+
+    class User {
+        &lt;&lt;IAM externo&gt;&gt;
+        +Long id
+    }
+
+    Notification ..> NotificationType : tipo del atributo type
+    Notification ..> User : userId
+```
+
+**Nota de implementación:** Notification se ejecuta como una aplicación propia. `User` contextualiza una referencia al IAM del monolito y no pertenece al microservicio. `userId` es una columna obligatoria sin asociación JPA ni FK declarada hacia IAM; `referenceId` es opcional y genérico. Ordering lo utiliza como identificador de pedido, pero no existe una relación tipada con `FuelOrder`.
+
+El constructor establece `read=false`; `markAsRead()` cambia ese valor a `true`. `createdAt` procede de la auditoría de persistencia. El servicio recibe notificaciones mediante HTTP: los listeners de Ordering permanecen en el monolito dentro de `NotificationServiceClient`. La existencia de valores en `NotificationType` no demuestra productores automáticos para todos ellos.
+
+#### Domain Class Diagram (Catalog Service)
+
+```mermaid
+classDiagram
+    class ProviderRating {
+        +Long id
+        +Long companyId
+        +Long providerId
+        +Integer rating
+        +changeRating(rating)
+    }
+
+    class BuyerCompany {
+        &lt;&lt;IAM externo&gt;&gt;
+        +Long id
+    }
+
+    class ProviderCompany {
+        &lt;&lt;IAM externo&gt;&gt;
+        +Long id
+    }
+
+    ProviderRating ..> BuyerCompany : companyId
+    ProviderRating ..> ProviderCompany : providerId
+```
+
+**Nota de implementación:** Catalog se ejecuta como una aplicación propia y su agregado es `ProviderRating`. Las empresas son referencias externas, no clases locales del servicio. Sus identificadores son columnas obligatorias sin asociaciones JPA ni FKs declaradas hacia IAM.
+
+Existe una restricción `UNIQUE(company_id, provider_id)` para una calificación por pareja comprador–proveedor. `changeRating()` valida valores entre 1 y 5 y también se utiliza desde el constructor. La API comprueba la existencia de las empresas mediante HTTP, pero no verifica que exista un pedido completado entre ellas. Catalog administra calificaciones; los productos y el stock pertenecen a Inventory.
+
+#### Domain Class Diagram (Reporting Service)
+
+```mermaid
+classDiagram
+    class PlatformSummary {
+        &lt;&lt;record&gt;&gt;
+        +long totalOrders
+        +long totalDeliveries
+        +long totalPayments
+        +double totalRevenue
+        +long pendingOrders
+        +long completedDeliveries
+    }
+
+    class ProviderAnalytics {
+        &lt;&lt;record&gt;&gt;
+        +Long providerId
+        +long totalOrders
+        +long confirmedOrders
+        +long cancelledOrders
+        +double totalRevenue
+        +List~MonthlyAmount~ monthlyRevenue
+    }
+
+    class BuyerAnalytics {
+        &lt;&lt;record&gt;&gt;
+        +Long companyId
+        +long totalOrders
+        +double totalSpent
+        +long completedPayments
+        +long pendingPayments
+        +List~MonthlyAmount~ monthlySpending
+    }
+
+    class MonthlyAmount {
+        &lt;&lt;record&gt;&gt;
+        +String month
+        +int monthIndex
+        +double amount
+    }
+
+    class ProviderCompany {
+        &lt;&lt;IAM externo&gt;&gt;
+        +Long id
+    }
+
+    class BuyerCompany {
+        &lt;&lt;IAM externo&gt;&gt;
+        +Long id
+    }
+
+    ProviderAnalytics --> "0..*" MonthlyAmount : monthlyRevenue
+    BuyerAnalytics --> "0..*" MonthlyAmount : monthlySpending
+    ProviderAnalytics ..> ProviderCompany : providerId
+    BuyerAnalytics ..> BuyerCompany : companyId
+```
+
+**Nota de implementación:** Reporting se ejecuta como una aplicación propia, pero no tiene agregados ni entidades de negocio persistidas. Su modelo contiene cuatro records de resultados, sin operaciones adicionales de dominio. Las listas de `MonthlyAmount` se representan como asociaciones, sin asumir propiedad exclusiva.
+
+`AnalyticsQueryServiceImpl` realiza cálculos con datos obtenidos del monolito por HTTP. No se identificaron una entidad `Report`, generación PDF, suscripción a eventos distribuidos ni un repositorio SQL propio optimizado para reportes. La interpretación de los indicadores debe reconciliarse con los estados reales del pedido.
+
+#### Vista de comportamiento: despacho y notificación
+
+La extracción de Notification reemplaza una llamada interna al contexto original por comunicación HTTP. El evento de Spring continúa dentro del proceso del monolito.
+
+```mermaid
+sequenceDiagram
+    participant Client as Cliente REST
+    participant Ordering as Ordering y persistencia local
+    participant Adapter as Evento y listener locales
+    participant Notification as Notification Service
+
+    Client->>Ordering: POST /api/v1/fuel-orders/{orderId}/dispatch
+    Ordering->>Ordering: Validar estado PENDING
+    Ordering->>Ordering: Cambiar a DISPATCHED y guardar
+    Ordering->>Adapter: Publicar FuelOrderDispatchedEvent
+    Adapter->>Adapter: Buscar usuario comprador asociado
+
+    alt Existe usuario comprador
+        Adapter->>Notification: POST /api/v1/notifications con JWT técnico
+        Notification->>Notification: Persistir notificación
+        Notification-->>Adapter: Respuesta HTTP o error
+    else No existe usuario asociado
+        Adapter->>Adapter: Omitir envío
+    end
+
+    Adapter-->>Ordering: Resultado o fallo propagado
+    Ordering-->>Client: Resultado de la operación
+```
+
+**Nota de implementación:** el flujo utiliza eventos locales y HTTP síncrono. No se encontraron broker, outbox, reintentos ni transacciones distribuidas. Un fallo de Notification puede propagarse al flujo de Ordering. El guardado del pedido y el de la notificación no participan en una transacción compartida.
+
+#### Vista de estados: transiciones restringidas del pedido
+
+La siguiente vista representa únicamente las transiciones para las que el agregado comprueba una precondición de estado. No describe una máquina de estados completa.
 
 ```mermaid
 stateDiagram-v2
-    [*] --> PENDING : Se crea el pedido
- 
-    PENDING --> DISPATCHED : dispatch() [solo si está PENDING]
-    PENDING --> CONFIRMED : confirm()
-    PENDING --> CANCELLED : cancel()
- 
-    DISPATCHED --> PENDING_PAYMENT : receive() [solo si está DISPATCHED]
-    DISPATCHED --> CANCELLED : cancel()
- 
-    CONFIRMED --> CANCELLED : cancel()
-    CONFIRMED --> PAID : markPaid() [bloqueado si está CANCELLED]
- 
-    PENDING_PAYMENT --> PAID : markPaid() [bloqueado si está CANCELLED]
- 
-    PAID --> [*]
-    CANCELLED --> [*]
+    PENDING --> DISPATCHED: dispatch()
+    DISPATCHED --> PENDING_PAYMENT: receive()
 ```
- 
-**Nota de implementación:** `dispatch()` y `receive()` sí validan el estado previo del pedido (lanzan `IllegalStateException` si se invocan fuera de orden). `confirm()`, `cancel()` y `markPaid()` no tienen esa validación en el código actual — pueden invocarse desde cualquier estado (markPaid() solo bloquea si el pedido ya está `CANCELLED`). Los estados `IN_PROGRESS` y `DELIVERED`, declarados en `OrderStatus`, no están conectados a ningún método del agregado todavía.
 
-**Activity Diagram – Aprobación y despacho de un pedido**
+**Nota de implementación:** `dispatch()` rechaza estados distintos de `PENDING` y `receive()` rechaza estados distintos de `DISPATCHED`. `confirm()` cambia el pedido a `CONFIRMED` sin validar el estado previo; `cancel()` tampoco valida el estado previo. `markPaid()` cambia a `PAID` cuando el pedido no está cancelado, sin exigir `PENDING_PAYMENT`. Por ello, no se representa un pipeline idealizado de confirmación, despacho, recepción y pago.
+
+La operación de dominio `receive()` se utiliza al completar una entrega mediante `POST /api/v1/deliveries/{deliveryId}/complete`; no se identificó un endpoint propio de recepción en `FuelOrdersController`.
+
+#### Vista de actividad: solicitud y aceptación
+
+La aceptación de una solicitud y la confirmación de un pedido son operaciones diferentes en la implementación actual.
 
 ```mermaid
-flowchart TD
-    A[Cliente envía FuelRequest] --> B{Producto pertenece al proveedor indicado?}
-    B -- No --> B1[Sistema rechaza la solicitud]
-    B -- Sí --> C[Request queda en estado PENDING]
-    C --> D{Proveedor decide}
-    D -- Rechazar --> E{Incluyó un motivo?}
-    E -- No --> E1[Sistema exige un motivo obligatorio]
-    E -- Sí --> F[Request pasa a REJECTED]
-    D -- Aceptar --> G{El producto todavía existe?}
-    G -- No --> G1[Sistema rechaza la aceptación]
-    G -- Sí --> H[Se crea FuelOrder en PENDING, vinculado al Request]
-    H --> I[Request pasa a APPROVED]
-    I --> J{Acción posterior sobre el FuelOrder}
-    J -- confirm&#40;&#41; --> K[Order pasa a CONFIRMED]
-    J -- cancel&#40;&#41; --> L[Order pasa a CANCELLED]
-    J -- "dispatch&#40;&#41; si está PENDING" --> M[Order pasa a DISPATCHED]
-    M --> N{receive&#40;&#41;}
-    N -- "si está DISPATCHED" --> O[Order pasa a PENDING_PAYMENT]
-    O --> P{"markPaid&#40;&#41; si no está CANCELLED"}
-    P --> Q[Order pasa a PAID]
+flowchart TB
+    Start["Cliente envía solicitud de combustible"]
+    Product{"¿Producto existe y pertenece al proveedor indicado?"}
+    RejectCreation["Rechazar creación"]
+    Pending["Guardar solicitud PENDING"]
+    Decision{"Decisión del proveedor"}
+    AcceptCheck{"¿Solicitud PENDING y producto existente?"}
+    RejectCheck{"¿Solicitud PENDING y motivo no vacío?"}
+    Approved["Crear FuelOrder PENDING y marcar solicitud APPROVED"]
+    Rejected["Marcar solicitud REJECTED"]
+    Invalid["Rechazar operación"]
+
+    Start --> Product
+    Product -->|"No"| RejectCreation
+    Product -->|"Sí"| Pending
+    Pending --> Decision
+    Decision -->|"Aceptar"| AcceptCheck
+    Decision -->|"Rechazar"| RejectCheck
+    AcceptCheck -->|"Sí"| Approved
+    AcceptCheck -->|"No"| Invalid
+    RejectCheck -->|"Sí"| Rejected
+    RejectCheck -->|"No"| Invalid
 ```
 
-**Nota de implementación:** este diagrama refleja el flujo real tal como está en `FuelRequestService` y `FuelOrderCommandServiceImpl`. No hay validación automática de stock ni de pago antes de la aceptación del proveedor (`accept()` solo valida que el producto todavía exista), y `confirm()`, `cancel()`, `dispatch()`, `receive()` y `markPaid()` son operaciones independientes invocadas por separado vía API, no un pipeline orquestado automáticamente.
- 
-`confirm()`, `cancel()` y `dispatch()` publican un evento de dominio (`FuelOrderConfirmedEvent`, `FuelOrderCancelledEvent`, `FuelOrderDispatchedEvent`) a través del mecanismo de Spring Data (`AbstractAggregateRoot` + `ApplicationEventPublisher`, publicado manualmente en `FuelOrderRepositoryImpl.save()` dado que el agregado se mapea a una entidad de persistencia aparte). Un listener en Notification BC (`FuelOrderNotificationEventHandler`) escucha esos tres eventos y crea una notificación real para el usuario dueño de la empresa compradora. `receive()` y `markPaid()` todavía no publican eventos ni generan notificaciones.
+**Nota de implementación:** aceptar una solicitud no ejecuta `FuelOrder.confirm()` ni genera automáticamente su evento de confirmación. Este flujo no reserva stock ni comprueba pago. La creación de una entrega en Fulfillment sí incorpora validaciones de recursos y stock, pero constituye una operación distinta del endpoint directo de despacho de Ordering.
+
 
 ### 4.1.5 Relational/Non Relational Database Diagram
 
-<div align="center">
-  <img src="assets/chapter-4/image14.png" width="700" />
-</div>
+FuelBridge utiliza persistencia relacional con MySQL. Después de la extracción de Notification, Catalog y Reporting, la propiedad de los datos se distribuye entre el monolito residual y los microservicios extraídos.
 
-El modelo de datos relacional de la plataforma está normalizado para garantizar la integridad referencial y soportar las transacciones de los diferentes Bounded Contexts. Cada grupo de tablas pertenece y es administrado por un único BC (Database per Bounded Context dentro del esquema compartido MySQL, ver ADR-04):
+El modelo presentado corresponde a los mapeos JPA de la rama `develop`, commit `3025f97ae508b372076360f34f6b95540e3686df`. Los nombres de tablas, columnas y restricciones se obtuvieron del código fuente; no se inspeccionó el DDL de una base de datos desplegada.
 
-| **Bounded Context**      | **Tablas**                      | **Responsabilidad del esquema**                                                                                                                                                                                          |
-| ------------------------ | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Identity & Access BC     | USER, CLIENT, PROVIDER          | La tabla central USER almacena credenciales y roles. De esta se derivan lógicamente los perfiles especializados CLIENT (empresa solicitante) y PROVIDER (distribuidor), que incluyen datos comerciales específicos.      |
-| Ordering BC              | REQUEST, REQUEST_DETAILS, ORDER | La interacción comercial inicia en la tabla REQUEST y se detalla en REQUEST_DETAILS. Una vez aceptada, se consolida en la tabla transaccional ORDER, que centraliza estados y tiempos (aprobado, despachado, entregado). |
-| Payment BC               | PAYMENT, DEPOSIT                | Los pagos se registran en la tabla PAYMENT (asociada a una orden), además de considerar depósitos pre-aprobados en DEPOSIT.                                                                                              |
-| Inventory BC             | FUEL_PRODUCT                    | Controla el catálogo y el stock de combustible de cada proveedor: nombre, tipo, precio por unidad, capacidad y disponibilidad.                                                                                           |
-| Catalog BC               | PROVIDER_RATING                 | Almacena las calificaciones (1 a 5) que un cliente otorga a un proveedor tras un pedido completado.                                                                                                                      |
-| Fulfillment BC           | DISPATCH, TRANSPORT, DRIVER     | La tabla DISPATCH actúa como el núcleo operativo, vinculando un pedido aprobado (ORDER) con los recursos físicos de la tabla TRANSPORT (vehículos, placas, capacidad) y DRIVER (conductores y licencias).                |
-| Notification BC          | NOTIFICATION                    | Permite el historial de alertas por usuario.                                                                                                                                                                             |
-| Reporting & Analytics BC | REPORT                          | Consolida la metadata de los archivos generados en el sistema.                                                                                                                                                           |
-| Equipment BC             | EQUIPMENT                       | Almacena los equipos (tanques/vehículos) del cliente: capacidad, nivel actual, umbral y configuración de auto-refill, y proveedor favorito.                                                                              |
+**Distribución de la persistencia**
 
-Las referencias entre esquemas de distintos BC (por ejemplo, DISPATCH → ORDER, o PAYMENT → ORDER) se mantienen como foreign keys dentro de la misma base MySQL, consistente con la decisión ADR-04 de no separar la base de datos por BC durante el MVP.
+| Aplicación | Bounded Contexts | Esquema MySQL predeterminado | Tablas previstas por los mapeos |
+|---|---|---|---|
+| FuelBridge API - monolito residual | Identity & Access, Ordering, Payment, Inventory, Fulfillment y Equipment | `fuelbridge_platform` | 14: 12 tablas de entidades y 2 auxiliares |
+| Notification Service | Notification | `fuelbridge_notification` | `notifications` |
+| Catalog Service | Catalog | `fuelbridge_catalog` | `provider_ratings` |
+| Reporting Service | Reporting & Analytics | `fuelbridge_reporting` | Sin tablas de negocio propias |
+
+Los esquemas anteriores son valores predeterminados de configuración. Las variables de entorno pueden modificar las conexiones. La separación en esquemas no implica necesariamente servidores MySQL diferentes.
+
+No se identificó una base de datos no relacional en la implementación actual. H2 se utiliza en configuraciones de pruebas.
+
+**Convenciones de los diagramas**
+
+- `PK`: clave primaria declarada.
+- `UK`: restricción de unicidad individual declarada.
+- `FK`: columna de unión respaldada por una asociación o colección JPA.
+- Los atributos terminados en `_id` sin marca `FK` son referencias escalares: su nombre no implica una restricción de integridad referencial.
+- Los tipos mostrados corresponden a los atributos Java de persistencia. Su representación SQL depende del mapeo y del dialecto de Hibernate.
+
+| Tipo Java | Representación SQL esperada |
+|---|---|
+| `Long` | `BIGINT` |
+| `Integer` | `INTEGER` |
+| `Double` | `DOUBLE` |
+| `String` | `VARCHAR`, salvo columnas declaradas como `TEXT` |
+| `Boolean` / `boolean` | Tipo booleano compatible con MySQL |
+| `LocalDate` | `DATE` |
+| `LocalDateTime` | Tipo fecha y hora |
+| `Date` | Tipo temporal utilizado para auditoría |
+| Enumeración | Valor nominal mediante `EnumType.STRING`; tipo SQL según configuración |
+
+**Identidad y auditoría compartidas**
+
+Todas las tablas de entidades, excepto `roles`, incluyen las siguientes columnas heredadas de `AuditableAbstractPersistenceEntity`:
+
+| Columna | Tipo Java | Característica |
+|---|---|---|
+| `id` | `Long` | PK con generación `IDENTITY` |
+| `created_at` | `Date` | Obligatoria; gestionada mediante auditoría JPA |
+| `updated_at` | `Date` | Obligatoria; gestionada mediante auditoría JPA |
+
+Para reducir repetición, los diagramas muestran `id` y omiten `created_at` y `updated_at`. Estas dos columnas también forman parte de las tablas representadas, con las excepciones indicadas.
+
+`roles` declara su propio identificador y no incluye auditoría. Las tablas auxiliares `user_roles` y `provider_company_fuel_types` no heredan identificador ni columnas de auditoría.
+
+**Identity & Access BC**
+
+Este bounded context administra las empresas compradoras, empresas proveedoras, usuarios y roles. La asignación de roles se representa mediante una tabla de unión; los combustibles ofrecidos por un proveedor se almacenan como una colección de valores.
+
+```mermaid
+erDiagram
+    buyer_companies {
+        Long id PK
+        String name
+        String ruc UK
+        String sector
+        String address
+        String contact_email
+        String phone
+    }
+
+    provider_companies {
+        Long id PK
+        String name
+        String ruc UK
+        Double rating
+        String address
+        String phone
+        String description
+    }
+
+    users {
+        Long id PK
+        String username UK
+        String password
+        Long company_id
+        Long provider_id
+    }
+
+    roles {
+        Long id PK
+        Roles name UK
+    }
+
+    user_roles {
+        Long user_id FK
+        Long role_id FK
+    }
+
+    provider_company_fuel_types {
+        Long provider_company_id FK
+        String fuel_type
+    }
+
+    users ||--o{ user_roles : "asignaciones"
+    roles ||--o{ user_roles : "asignaciones"
+    provider_companies ||--o{ provider_company_fuel_types : "combustibles ofrecidos"
+```
+
+**Nota de implementación:** `users.roles` utiliza `@ManyToMany` y `@JoinTable`. `provider_companies.fuelTypesOffered` utiliza `@ElementCollection` y `@CollectionTable`.
+
+Los campos `users.company_id` y `users.provider_id` son referencias escalares hacia las empresas, sin asociaciones JPA declaradas. La colección `provider_company_fuel_types` almacena cadenas y no representa una asociación con `fuel_products`.
+
+No se añade una columna `id` ni una clave primaria compuesta a las tablas auxiliares sin comprobar su DDL generado.
+
+**Ordering BC**
+
+Ordering mantiene las solicitudes de combustible y los pedidos creados a partir de su aceptación.
+
+```mermaid
+erDiagram
+    fuel_requests {
+        Long id PK
+        Long buyer_company_id
+        Long provider_id
+        Long equipment_id
+        Long fuel_product_id
+        String fuel_type
+        String product_name
+        Double quantity
+        String unit
+        Double unit_price
+        String delivery_address
+        LocalDate delivery_date
+        RequestStatus status
+        String source
+        String rejection_reason
+    }
+
+    fuel_orders {
+        Long id PK
+        Long request_id UK
+        Long company_id
+        Long provider_id
+        Long fuel_product_id
+        Long equipment_id
+        Double requested_quantity
+        Double total_price
+        OrderStatus status
+        String delivery_address
+        LocalDate scheduled_date
+    }
+```
+
+**Nota de implementación:** `fuel_orders.request_id` permite nulos y declara unicidad mediante `@Column(unique = true)`. Esto limita a un pedido por identificador de solicitud no nulo, pero no declara una FK hacia `fuel_requests`.
+
+Cada solicitud y cada pedido almacenan un único `fuel_product_id`. No existe una tabla de detalles para múltiples productos por pedido. Los campos de empresa, proveedor, producto y equipo son referencias escalares.
+
+**Payment BC**
+
+Payment mantiene el monto, método y estado de los pagos asociados a pedidos.
+
+```mermaid
+erDiagram
+    payments {
+        Long id PK
+        Long order_id
+        Long company_id
+        Double amount
+        PaymentStatus status
+        PaymentMethod payment_method
+        String transaction_reference
+        LocalDateTime paid_at
+    }
+```
+
+**Nota de implementación:** `order_id` y `company_id` son identificadores escalares sin FKs declaradas. La aplicación comprueba la existencia de un pago previo para el pedido, pero la entidad no declara `UNIQUE(order_id)`.
+
+`transaction_reference` y `paid_at` permiten nulos. El monto utiliza `Double`. No se identifica una tabla independiente para archivos de comprobantes o vouchers.
+
+**Inventory BC**
+
+Inventory administra los productos de combustible publicados por los proveedores y su disponibilidad.
+
+```mermaid
+erDiagram
+    fuel_products {
+        Long id PK
+        String name
+        FuelType fuel_type
+        Double price_per_unit
+        String unit
+        Double available_stock
+        Double capacity
+        Long provider_id
+        Boolean active
+    }
+```
+
+**Nota de implementación:** `provider_id` identifica al proveedor administrado por IAM, sin una asociación JPA hacia `provider_companies`.
+
+El stock disponible se almacena en `available_stock`. No se identifican tablas adicionales de movimientos, reservas o almacenes en los mapeos actuales. El atributo `active` tiene un valor inicial en Java; esto no equivale a un valor predeterminado declarado en SQL.
+
+**Fulfillment BC**
+
+Fulfillment mantiene conductores, vehículos y entregas vinculadas a pedidos.
+
+```mermaid
+erDiagram
+    deliveries {
+        Long id PK
+        Long order_id
+        Long provider_id
+        Long driver_id
+        Long vehicle_id
+        DeliveryStatus status
+        LocalDateTime dispatched_at
+        LocalDateTime delivered_at
+        String scheduled_date
+        String notes
+    }
+
+    drivers {
+        Long id PK
+        Long provider_id
+        String first_name
+        String last_name
+        String license_number UK
+        String phone_number
+        String email
+        String status
+    }
+
+    vehicles {
+        Long id PK
+        Long provider_id
+        String license_plate UK
+        String brand
+        String model
+        Double capacity
+        String unit
+        String status
+    }
+```
+
+**Nota de implementación:** `deliveries.order_id`, `driver_id`, `vehicle_id` y `provider_id` son referencias escalares, sin asociaciones JPA declaradas.
+
+La aplicación valida la existencia y pertenencia de los recursos y comprueba que el pedido no tenga una entrega previa. Estas validaciones no equivalen a FKs ni a una restricción `UNIQUE(order_id)`.
+
+`drivers.license_number` y `vehicles.license_plate` declaran unicidad. `scheduled_date` se almacena como texto; `dispatched_at` y `delivered_at` utilizan `LocalDateTime`. La columna `notes` declara tipo SQL `TEXT`.
+
+**Equipment BC**
+
+Equipment mantiene los equipos de las empresas compradoras y su configuración de reabastecimiento.
+
+```mermaid
+erDiagram
+    equipment {
+        Long id PK
+        String name
+        EquipmentType equipment_type
+        String license_plate
+        FuelType fuel_type
+        Double tank_capacity
+        Double current_level
+        String location
+        String status
+        Boolean auto_refill
+        Integer refill_threshold
+        String last_refill_date
+        Long company_id
+        Long favorite_provider_id
+    }
+```
+
+**Nota de implementación:** `company_id` identifica a la empresa compradora y `favorite_provider_id` identifica al proveedor favorito. Ambos son referencias escalares sin FKs declaradas; el proveedor favorito es opcional.
+
+`last_refill_date` se almacena como texto. Los campos `auto_refill` y `refill_threshold` son atributos de configuración y no implican tablas adicionales. El nombre de tabla previsto es `equipment`.
+
+**Notification BC - Notification Service**
+
+Notification mantiene las notificaciones in-app en su propio esquema configurado.
+
+```mermaid
+erDiagram
+    notifications {
+        Long id PK
+        Long user_id
+        NotificationType type
+        String title
+        String message
+        boolean is_read
+        Long reference_id
+    }
+```
+
+**Nota de implementación:** `user_id` identifica a un usuario administrado por IAM del monolito residual. No se declara una FK entre servicios.
+
+`reference_id` es opcional y contextual; no tiene un destino único declarado por JPA. `type` declara `VARCHAR(40)`, `message` declara `TEXT` e `is_read` es obligatorio. No se declaran restricciones de unicidad adicionales en esta tabla.
+
+**Catalog BC - Catalog Service**
+
+Catalog mantiene las calificaciones que las empresas compradoras otorgan a los proveedores.
+
+```mermaid
+erDiagram
+    provider_ratings {
+        Long id PK
+        Long company_id "Parte de unicidad compuesta"
+        Long provider_id "Parte de unicidad compuesta"
+        Integer rating
+    }
+```
+
+**Nota de implementación:** la entidad declara una restricción compuesta:
+
+`UNIQUE(company_id, provider_id)`
+
+Esta restricción permite una calificación por combinación de empresa compradora y proveedor. Ninguno de los dos identificadores es único individualmente.
+
+Ambos identificadores pertenecen al dominio de IAM y se almacenan sin FKs entre servicios. El rango de calificación de 1 a 5 se valida en Java; no se identifica una restricción SQL `CHECK` explícita. La tabla no contiene un identificador de pedido.
+
+**Reporting & Analytics BC - Reporting Service**
+
+Reporting no declara entidades JPA ni tablas de negocio propias. Aunque conserva configuración de datasource para `fuelbridge_reporting`, su clase base `@MappedSuperclass` no genera una tabla por sí sola.
+
+El servicio obtiene pedidos, pagos y entregas mediante consultas HTTP al monolito residual y calcula los indicadores en memoria. `PlatformSummary`, `ProviderAnalytics`, `BuyerAnalytics` y `MonthlyAmount` son objetos de valor no persistidos.
+
+Por este motivo, no corresponde presentar un diagrama de tablas de negocio para Reporting en esta versión. La configuración de conexión no demuestra la existencia de tablas de reportes, proyecciones analíticas ni archivos PDF persistidos.
+
+
+**Diagrama de flujo de datos - Reporting Service**
+
+```mermaid
+flowchart LR
+    Reporting["Reporting Service"]
+    API["API REST"]
+    Platform["FuelBridge Platform"]
+    DB[("MySQL - fuelbridge_platform")]
+
+    Reporting -->|"Consultas HTTP"| API
+    API --> Platform
+    Platform -->|"JPA"| DB
+```
+
+**Nota:** Reporting Service consulta pedidos, pagos y entregas mediante HTTP al monolito residual. No almacena tablas de negocio propias.
+
+
+**Referencias lógicas entre bounded contexts**
+
+Las siguientes referencias explican cómo se vinculan los datos en la aplicación. No representan FKs declaradas en los mapeos revisados.
+
+| Origen | Identificador | Destino lógico |
+|---|---|---|
+| `users` | `company_id`, `provider_id` | Empresas compradoras y proveedoras de IAM |
+| `fuel_requests` | `buyer_company_id`, `provider_id` | Empresas de IAM |
+| `fuel_requests` | `fuel_product_id`, `equipment_id` | Producto de Inventory y equipo de Equipment |
+| `fuel_orders` | `request_id` | Solicitud de Ordering |
+| `fuel_orders` | `company_id`, `provider_id` | Empresas de IAM |
+| `fuel_orders` | `fuel_product_id`, `equipment_id` | Producto de Inventory y equipo de Equipment |
+| `payments` | `order_id`, `company_id` | Pedido de Ordering y empresa compradora de IAM |
+| `fuel_products` | `provider_id` | Empresa proveedora de IAM |
+| `deliveries` | `order_id`, `provider_id` | Pedido de Ordering y empresa proveedora de IAM |
+| `deliveries` | `driver_id`, `vehicle_id` | Conductor y vehículo de Fulfillment |
+| `drivers`, `vehicles` | `provider_id` | Empresa proveedora de IAM |
+| `equipment` | `company_id`, `favorite_provider_id` | Empresas de IAM |
+| `notifications` | `user_id` | Usuario de IAM, externo al microservicio |
+| `notifications` | `reference_id` | Recurso contextual asociado a la notificación |
+| `provider_ratings` | `company_id`, `provider_id` | Empresas de IAM, externas al microservicio |
+
+**Integridad y evolución del esquema**
+
+Las asociaciones JPA respaldan las columnas de unión de `user_roles` y `provider_company_fuel_types`. La existencia física de sus FKs, sus nombres y las acciones de borrado deben comprobarse en el DDL generado.
+
+Los perfiles MySQL revisados utilizan `spring.jpa.hibernate.ddl-auto=update`. Esta configuración permite ajustar el esquema a los mapeos, pero no demuestra una migración de datos históricos entre aplicaciones.
+
+No se identificaron scripts versionados de Flyway/Liquibase ni procedimientos específicos para trasladar notificaciones y calificaciones históricas a los esquemas de los microservicios. Tampoco se comprobó la eliminación de sus tablas antiguas en la base del monolito.
+
+En consecuencia, esta sección documenta la propiedad y estructura de persistencia previstas por el código actual. La validación del esquema desplegado y del traslado de datos constituye una comprobación adicional.
+
+**Fuente de implementación:** [FuelBridge Backend - versión analizada](https://github.com/HaloFuel/FuelBrigde-Backend/tree/3025f97ae508b372076360f34f6b95540e3686df).
+
 
 ### 4.1.6 Design Patterns
 
@@ -2429,7 +3218,6 @@ El tablero Kanban de la Iteración 1 se gestiona en Trello: **[Tablero FuelBridg
 | QA-2, CONC-1 | ADD-04      | ADR-02  | FuelBridge API (9 BCs)  |
 | QA-3, CONC-4 | ADD-05      | ADR-01  | Landing Page            |
 
-
 Los drivers QA-1 y QA-3 quedan satisfechos a nivel estructural. QA-2 se traslada a la Iteración 2 donde se abordará la estructura interna del Ordering BC y el Reporting & Analytics BC.
 
 ### 4.3.2 Iteration 2: Performance y Procesamiento Asíncrono de Pedidos, Notificaciones y Reportes
@@ -2513,7 +3301,6 @@ El tablero Kanban de la Iteración 2 se gestiona en el mismo tablero Trello refe
   <img src="assets/chapter-4/TrelloIteracion2.png" width="700" />
 </div>
 
-
 | **To Do** | **In Progress**                                                                       | **Done**                                                                                     |
 | --------- | ------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 | -         | Evaluar futura migración a broker externo si el volumen de eventos supera lo estimado | Refinar componentes internos de FuelBridge API (ADD-08)                                      |
@@ -2541,7 +3328,7 @@ QA-2 (Performance) queda **cubierto y validado**: se ejecutó una prueba de carg
 
 ### 4.3.2.8 C4 Y DIAGRAMA UML
 
-**C4 Component Diagram – FuelBridge API refinado**
+**C4 Component Diagram – FuelBridge API refinado (Iteración 2, vista histórica)**
 
 <div align="center">
   <img src="assets/chapter-4/ComponentsIteration2.png" width="700" />
@@ -2559,16 +3346,18 @@ El diagrama de secuencia representa el flujo de aprobación de un pedido, incluy
 
 ---
 
+<div class="page"></div>
+
 # Capítulo V: Product Implementation, Validation & Deployment
 
 ## 5.1 Testing Suites & General Patterns
 
 ### 5.1.1 Backend Application Core Testing Suite
- 
+
 Se escribieron pruebas unitarias sobre los agregados centrales de Ordering BC y Payment BC, usando JUnit 5 y AssertJ, sin levantar el contexto de Spring para que los tests corran rápido y sin depender de infraestructura externa.
- 
-**FuelOrder (Ordering BC)** — 9 escenarios cubiertos:
- 
+
+**FuelOrder (Ordering BC)** - 9 escenarios cubiertos:
+
 - Un pedido nuevo nace en estado `PENDING`.
 - `confirm()` mueve el pedido a `CONFIRMED`.
 - `cancel()` mueve el pedido a `CANCELLED`.
@@ -2578,50 +3367,50 @@ Se escribieron pruebas unitarias sobre los agregados centrales de Ordering BC y 
 - `receive()` lanza `IllegalStateException` si el pedido nunca fue despachado.
 - `markPaid()` marca el pedido como `PAID` cuando no está cancelado.
 - `markPaid()` lanza `IllegalStateException` si el pedido ya está `CANCELLED`.
- 
-**Payment (Payment BC)** — 4 escenarios cubiertos:
- 
+
+**Payment (Payment BC)** - 4 escenarios cubiertos:
+
 - El constructor copia los datos del comando y el pago nace en estado `PENDING`.
 - `complete()` marca el pago como `COMPLETED`, registra la referencia de transacción y guarda el momento exacto del pago.
 - `refund()` marca el pago como `REFUNDED`.
 - `fail()` marca el pago como `FAILED`.
- 
+
 A diferencia de `FuelOrder`, `Payment` no restringe transiciones de estado, por lo que no se escribieron tests de excepción para él.
- 
+
 También se corrigió el test `contextLoads()` que viene por defecto en Spring Boot, que reventaba porque intentaba conectarse a MySQL real en un entorno local sin base de datos disponible. La solución fue agregar un perfil de test (`application-test.properties`) con H2 en memoria y activarlo con `@ActiveProfiles("test")`, sin tocar los perfiles de desarrollo ni producción.
- 
+
 ---
 
 ### 5.1.2 Pattern Based Backend Application(s)
- 
+
 El backend aplica cuatro patrones de diseño de forma consistente en los 9 Bounded Contexts, cada uno respondiendo a un driver concreto del Capítulo IV.
- 
+
 - **Patrón Repository:** separa la lógica de negocio del mecanismo de persistencia, de modo que el dominio no depende de anotaciones JPA ni de detalles del motor de base de datos. Cada Bounded Context define una interfaz de repositorio de dominio (ej. `FuelOrderRepository`) implementada en infraestructura (`FuelOrderRepositoryImpl`), que traduce entre el agregado y su entidad JPA a través de un assembler dedicado. Responde a CONC-3 (Mantenimiento del Código): se puede cambiar la lógica de negocio sin tocar el mapeo, y viceversa.
- 
+
 <div align="center">
   <img src="assets/chapter-5/Repository.png" width="700" />
 </div>
- 
+
 - **Patrón DTO (Data Transfer Object):** evita exponer los agregados de dominio directamente en la API. Se implementó como clases `Resource` (37 en el proyecto, ej. `CreateFuelOrderResource`, `FuelOrderResource`), que permiten cambiar el modelo interno de un Bounded Context sin romper el contrato que ya consume el frontend. Responde a QA-3 (Usability): la SPA necesita contratos estables para no romperse con cada cambio interno del backend.
- 
+
 <div align="center">
   <img src="assets/chapter-5/DTO.png" width="700" />
 </div>
- 
+
 - **Patrón CQRS (aplicación parcial a nivel de capa de aplicación):** cada Bounded Context define una interfaz `XxxCommandService` para escritura y una `XxxQueryService` para lectura por separado (10 de cada una en el proyecto), en lugar de mezclar ambas responsabilidades en un solo servicio. Esto es la base de la optimización descrita en ADR-07 (QA-2 Performance): se puede optimizar las consultas del dashboard sin tocar la lógica transaccional. No hay separación física de bases de datos de lectura/escritura, así que es CQRS parcial, no completo.
- 
+
 <div align="center">
   <img src="assets/chapter-5/FuelOrderCommandService.png" width="700" />
   <img src="assets/chapter-5/FuelOrderQueryService.png" width="700" />
 </div>
- 
+
 - **Patrón Observer (Publish-Subscribe):** `FuelOrder` registra eventos de dominio (`FuelOrderConfirmedEvent`, `FuelOrderCancelledEvent`, `FuelOrderDispatchedEvent`) al cambiar de estado. `FuelOrderRepositoryImpl` los publica al guardar el agregado usando `ApplicationEventPublisher`, y `FuelOrderNotificationEventHandler` (en Notification BC) los escucha para crear notificaciones reales al usuario, sin que Ordering BC sepa que Notification BC existe. Es la implementación concreta de ADR-03 y satisface QA-1 (Availability & Traceability).
- 
+
 <div align="center">
   <img src="assets/chapter-5/FuelOrder.png" width="700" />
   <img src="assets/chapter-5/FuelOrderNotificationEventHandler.png" width="700" />
 </div>
- 
+
 ---
 
 ### 5.1.3 Pattern Based Custom Software Library
@@ -2633,7 +3422,6 @@ El backend ya contiene tipos transversales para representar resultados y errores
 El patrón creacional seleccionado es **Static Factory Method** para construir resultados válidos de forma explícita, mediante operaciones como `Result.success(value)` y `Result.failure(error)`, si estas fábricas no existen aún en la implementación actual. Antes de presentar el patrón como aplicado, se debe implementar y probarlo en la librería. El contrato debe conservar la representación que ya espera el backend y evitar estados ambiguos, como un resultado simultáneamente exitoso y fallido.
 
 La librería debe contener únicamente abstracciones genéricas de aplicación, por ejemplo `Result` y `ApplicationError` cuando su definición no dependa de un Bounded Context. No se deben extraer agregados, eventos de dominio, entidades JPA, repositorios concretos, controladores ni clases que dependan de Spring o de HTTP. Así se mantiene el módulo independiente del framework y apto para ser referenciado por otros servicios.
-
 
 ### 5.1.4 Framework Pattern Driven Refactoring Report
 
@@ -2676,11 +3464,11 @@ La landing page de FuelBridge es un sitio estático desarrollado con tecnología
 
 | Producto                  | Tipo  | Propósito                         | URL                                    |
 | ------------------------- | ----- | --------------------------------- | -------------------------------------- |
-| HTML5 / CSS3 / JavaScript | —     | Lenguajes base del sitio estático | —                                      |
+| HTML5 / CSS3 / JavaScript | -     | Lenguajes base del sitio estático | -                                      |
 | Google Fonts (Inter)      | SaaS  | Tipografía del sitio              | https://fonts.google.com               |
 | Visual Studio Code        | Local | Editor de código                  | https://code.visualstudio.com/download |
 
-#### Software Development — Frontend (Angular SPA)
+#### Software Development - Frontend (Angular SPA)
 
 | Producto               | Versión     | Tipo        | Propósito                                                 | URL                                     |
 | ---------------------- | ----------- | ----------- | --------------------------------------------------------- | --------------------------------------- |
@@ -2694,30 +3482,30 @@ La landing page de FuelBridge es un sitio estático desarrollado con tecnología
 | Firebase               | 12.13.0     | Local (npm) | Servicios de autenticación y base de datos en tiempo real | https://firebase.google.com             |
 | TypeScript             | 5.9.3       | Local (npm) | Lenguaje tipado base de Angular                           | https://www.typescriptlang.org          |
 | JSON Server            | 0.17.4      | Local (npm) | Mock de API REST para desarrollo local                    | https://github.com/typicode/json-server |
-| Visual Studio Code     | —           | Local       | Editor principal para desarrollo frontend                 | https://code.visualstudio.com/download  |
+| Visual Studio Code     | -           | Local       | Editor principal para desarrollo frontend                 | https://code.visualstudio.com/download  |
 
-#### Software Development — Backend (Spring Boot API)
+#### Software Development - Backend (Spring Boot API)
 
 | Producto          | Versión | Tipo          | Propósito                                                   | URL                                                 |
 | ----------------- | ------- | ------------- | ----------------------------------------------------------- | --------------------------------------------------- |
 | Java JDK          | 26      | Local         | Lenguaje principal del backend                              | https://www.oracle.com/java/technologies/downloads/ |
 | Spring Boot       | 4.0.6   | Local (Maven) | Framework base para la API REST                             | https://spring.io/projects/spring-boot              |
-| Maven             | —       | Local         | Build tool y gestión de dependencias                        | https://maven.apache.org/download.cgi               |
-| IntelliJ IDEA     | —       | Local         | IDE principal para desarrollo Java                          | https://www.jetbrains.com/idea/download/            |
-| Lombok            | —       | Local (Maven) | Reducción de boilerplate en entidades y DTOs                | https://projectlombok.org/                          |
-| Spring Security   | —       | Local (Maven) | Autenticación y autorización de la API                      | https://spring.io/projects/spring-security          |
+| Maven             | -       | Local         | Build tool y gestión de dependencias                        | https://maven.apache.org/download.cgi               |
+| IntelliJ IDEA     | -       | Local         | IDE principal para desarrollo Java                          | https://www.jetbrains.com/idea/download/            |
+| Lombok            | -       | Local (Maven) | Reducción de boilerplate en entidades y DTOs                | https://projectlombok.org/                          |
+| Spring Security   | -       | Local (Maven) | Autenticación y autorización de la API                      | https://spring.io/projects/spring-security          |
 | jjwt              | 0.12.6  | Local (Maven) | Generación y validación de tokens JWT                       | https://github.com/jwtk/jjwt                        |
 | springdoc-openapi | 3.0.3   | Local (Maven) | Generación automática de documentación OpenAPI / Swagger UI | https://springdoc.org                               |
-| MySQL Workbench   | —       | Local         | Administración y consulta de la base de datos               | https://dev.mysql.com/downloads/workbench/          |
+| MySQL Workbench   | -       | Local         | Administración y consulta de la base de datos               | https://dev.mysql.com/downloads/workbench/          |
 
 #### Software Testing
 
 | Producto        | Versión       | Tipo          | Propósito                                       | URL                                           |
 | --------------- | ------------- | ------------- | ----------------------------------------------- | --------------------------------------------- |
-| JUnit 5         | —             | Local (Maven) | Pruebas unitarias del dominio backend           | https://junit.org/junit5/                     |
-| H2 Database     | —             | Local (Maven) | Base de datos en memoria para el perfil de test | https://www.h2database.com/html/download.html |
+| JUnit 5         | -             | Local (Maven) | Pruebas unitarias del dominio backend           | https://junit.org/junit5/                     |
+| H2 Database     | -             | Local (Maven) | Base de datos en memoria para el perfil de test | https://www.h2database.com/html/download.html |
 | Karma + Jasmine | 6.4.0 / 5.9.0 | Local (npm)   | Pruebas unitarias del frontend Angular          | https://karma-runner.github.io                |
-| Postman         | —             | Local         | Pruebas manuales de endpoints REST              | https://www.postman.com/downloads/            |
+| Postman         | -             | Local         | Pruebas manuales de endpoints REST              | https://www.postman.com/downloads/            |
 
 #### Software Deployment
 
@@ -2731,7 +3519,7 @@ La landing page de FuelBridge es un sitio estático desarrollado con tecnología
 | Producto          | Versión | Tipo          | Propósito                                                       | URL                         |
 | ----------------- | ------- | ------------- | --------------------------------------------------------------- | --------------------------- |
 | springdoc-openapi | 3.0.3   | Local (Maven) | Generación automática de la especificación OpenAPI y Swagger UI | https://springdoc.org       |
-| GitHub            | —       | SaaS          | Documentación del repositorio vía README                        | https://github.com/HaloFuel |
+| GitHub            | -       | SaaS          | Documentación del repositorio vía README                        | https://github.com/HaloFuel |
 
 #### Source Code Management
 
@@ -2743,62 +3531,63 @@ La landing page de FuelBridge es un sitio estático desarrollado con tecnología
 ---
 
 ### 5.2.2 Source Code Management
+
 Para el seguimiento y control de las modificaciones del código fuente se utiliza **Git** como sistema de control de versiones distribuido y **GitHub** como plataforma de alojamiento y colaboración. Todos los productos digitales de FuelBridge se encuentran dentro de la organización **HaloFuel**.
- 
+
 #### Repositorios del proyecto
- 
+
 | Producto                 | Repositorio            | Tecnología principal | URL                                                                                                      |
 | ------------------------ | ---------------------- | -------------------- | -------------------------------------------------------------------------------------------------------- |
-| Organización             | HaloFuel               | —                    | [https://github.com/HaloFuel](https://github.com/HaloFuel)                                               |
+| Organización             | HaloFuel               | -                    | [https://github.com/HaloFuel](https://github.com/HaloFuel)                                               |
 | Landing Page             | FuelBridge_LandingPage | HTML / CSS           | [https://github.com/HaloFuel/FuelBridge_LandingPage](https://github.com/HaloFuel/FuelBridge_LandingPage) |
 | Frontend Web Application | FuelBrigde-Frontend    | Angular / TypeScript | [https://github.com/HaloFuel/FuelBrigde-Frontend](https://github.com/HaloFuel/FuelBrigde-Frontend)       |
 | Backend Web Services     | FuelBrigde-Backend     | Java / Spring Boot   | [https://github.com/HaloFuel/FuelBrigde-Backend](https://github.com/HaloFuel/FuelBrigde-Backend)         |
 | Project Report           | FuelBrigde-Report      | Markdown             | [https://github.com/HaloFuel/FuelBrigde-Report](https://github.com/HaloFuel/FuelBrigde-Report)           |
- 
+
 #### Estrategia de ramas: GitFlow
- 
+
 Se adopta **GitFlow** (Driessen, 2010) como modelo de ramificación, por ser adecuado para un equipo de cinco integrantes que trabaja en paralelo sobre distintos Bounded Contexts y entrega por sprints.
- 
+
 **Ramas permanentes**
- 
+
 | Rama      | Propósito                                                                          | Reglas                                                        |
 | --------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------- |
 | `main`    | Código estable, equivalente a lo desplegado en producción (Vercel / Railway).      | Protegida. Solo recibe merges desde `release/*` y `hotfix/*`. |
 | `develop` | Rama de integración donde se consolidan las funcionalidades terminadas del sprint. | Protegida. Solo recibe merges vía Pull Request.               |
- 
+
 **Ramas temporales**
- 
+
 | Rama        | Se crea desde | Se fusiona hacia   | Uso                                                                   |
 | ----------- | ------------- | ------------------ | --------------------------------------------------------------------- |
 | `feature/*` | `develop`     | `develop`          | Desarrollo de una User Story o Technical Story.                       |
 | `release/*` | `develop`     | `main` y `develop` | Preparación del cierre de sprint: ajustes menores y validación final. |
 | `hotfix/*`  | `main`        | `main` y `develop` | Corrección urgente de errores detectados en producción.               |
- 
+
 #### Convención de nombres de ramas
- 
+
 El formato es `<tipo>/<bounded-context>-<descripcion-corta>`, en minúsculas y separado por guiones. El prefijo del Bounded Context permite identificar rápidamente a qué dominio pertenece el cambio.
- 
+
 | Tipo    | Formato                                   | Ejemplo                              |
 | ------- | ----------------------------------------- | ------------------------------------ |
 | Feature | `feature/<bounded-context>-<descripcion>` | `feature/ordering-dispatch-endpoint` |
 | Feature | `feature/<bounded-context>-<descripcion>` | `feature/notification-order-events`  |
 | Release | `release/<major.minor.patch>`             | `release/0.1.0`                      |
 | Hotfix  | `hotfix/<descripcion>`                    | `hotfix/railway-database-config`     |
- 
+
 Bounded Contexts usados como prefijo: `iam`, `ordering`, `payment`, `catalog`, `fulfillment`, `notification`, `reporting`.
- 
+
 #### Conventional Commits
- 
+
 Los mensajes de commit siguen la especificación **Conventional Commits** (conventionalcommits.org), lo que da un historial legible y trazable hacia las historias de usuario.
- 
+
 ```text
 <tipo>(<alcance>): <descripción en imperativo>
- 
+
 [cuerpo opcional]
- 
+
 [pie opcional: referencia a US / TS]
 ```
- 
+
 | Tipo       | Uso                                                       |
 | ---------- | --------------------------------------------------------- |
 | `feat`     | Nueva funcionalidad.                                      |
@@ -2810,11 +3599,11 @@ Los mensajes de commit siguen la especificación **Conventional Commits** (conve
 | `perf`     | Mejoras de rendimiento.                                   |
 | `build`    | Cambios en dependencias o en el sistema de build.         |
 | `chore`    | Tareas de mantenimiento.                                  |
- 
+
 El **alcance** corresponde al Bounded Context o módulo afectado (`ordering`, `payment`, `notification`, `config`, etc.).
- 
+
 **Ejemplos aplicados al proyecto**
- 
+
 ```text
 feat(ordering): add dispatch endpoint for fuel orders
 feat(notification): handle FuelOrderDispatchedEvent to create user notification
@@ -2823,36 +3612,37 @@ test(ordering): add unit tests for FuelOrder state transitions
 test(payment): add unit tests for Payment aggregate
 docs(report): document Sprint 1 development evidence
 ```
- 
+
 #### Flujo de trabajo y Pull Requests
- 
+
 1. Se crea una rama `feature/*` desde `develop` por cada User Story o Technical Story del Sprint Backlog.
 2. Se desarrolla con commits pequeños siguiendo Conventional Commits.
 3. Al terminar, se abre un **Pull Request** hacia `develop` describiendo el cambio y la historia relacionada.
 4. Otro integrante revisa el PR antes del merge; no se permite hacer push directo a `develop` ni a `main`.
 5. Al cierre del sprint se crea `release/<versión>`, se valida y se fusiona a `main` con su tag.
+
 #### Versionado semántico
- 
+
 Se aplica **Semantic Versioning 2.0.0** con formato `MAJOR.MINOR.PATCH`. Mientras el producto esté en desarrollo se usa `0.x.y`: se incrementa `MINOR` al cerrar cada sprint y `PATCH` al aplicar correcciones.
- 
+
 | Versión  | Hito                     |
 | -------- | ------------------------ |
 | `v0.1.0` | Cierre del Sprint 1      |
 | `v0.2.0` | Cierre del Sprint 2      |
 | `v0.3.0` | Cierre del Sprint 3      |
 | `v1.0.0` | Entrega final (Sprint 4) |
- 
+
 #### Evidencia de commits
- 
+
 Ejemplo de commits representativos del Sprint 1 (backend):
- 
+
 | Repositorio        | Rama                                 | Commit Id | Mensaje                                                                         |
 | ------------------ | ------------------------------------ | --------- | ------------------------------------------------------------------------------- |
 | FuelBrigde-Backend | `feature/ordering-dispatch-endpoint` | `<hash>`  | feat(ordering): add dispatch endpoint for fuel orders                           |
 | FuelBrigde-Backend | `feature/notification-order-events`  | `<hash>`  | feat(notification): handle FuelOrderDispatchedEvent to create user notification |
 | FuelBrigde-Backend | `develop`                            | `<hash>`  | test(ordering): add unit tests for FuelOrder state transitions                  |
 | FuelBrigde-Backend | `develop`                            | `<hash>`  | fix(config): read Railway MySQL environment variables in mysql profile          |
- 
+
 
 ### 5.2.3 Source Code Style Guide & Conventions
 
@@ -2877,7 +3667,6 @@ interfaces como `FuelOrderCommandService` y
 
 *Figura 1. Aplicación de la convención PascalCase en clases e interfaces del backend de FuelBridge.*
 
-
 **Métodos y Variables:** Se utiliza camelCase, comenzando con minúscula y escribiendo las palabras siguientes con mayúscula inicial. Los métodos deben describir claramente las operaciones que ejecutan.
 
 Por ejemplo, el controlador `FuelOrdersController` utiliza métodos como `createFuelOrder()`, `confirmOrder()`, `cancelOrder()` y `getOrdersByCompany()` para representar las operaciones relacionadas con la gestión de pedidos de combustible.
@@ -2887,7 +3676,6 @@ Por ejemplo, el controlador `FuelOrdersController` utiliza métodos como `create
 </div>
 
 *Figura 2. Convención camelCase en métodos del controlador FuelOrdersController de FuelBridge.*
-
 
 **Constantes:** Las constantes se escriben utilizando UPPER_SNAKE_CASE, separando las palabras mediante guiones bajos. Esta convención permite identificarlas y diferenciarlas de las variables convencionales.
 
@@ -2905,7 +3693,6 @@ Por ejemplo, `OrderStatus` contiene valores como `PENDING`, `CONFIRMED`, `DISPAT
 
 *Figura 3. Aplicación de las convenciones UPPER_SNAKE_CASE y PascalCase en constantes y enumeraciones del backend de FuelBridge.*
 
-
 **Diseño del Código**
 
 **Indentación:** Se utilizan espacios en lugar de tabulaciones para mantener una presentación consistente del código fuente. En los archivos Java se sigue una indentación habitual de cuatro espacios por nivel, mientras que el frontend utiliza dos espacios, según la configuración del archivo `.editorconfig`.
@@ -2922,7 +3709,6 @@ Por ejemplo, `OrderStatus` contiene valores como `PENDING`, `CONFIRMED`, `DISPAT
 </div>
 
 *Figura 4. Configuración de indentación, longitud de línea y formato de código mediante EditorConfig y Prettier en el frontend de FuelBridge.*
-
 
 **Comentarios y Documentación**
 
@@ -2942,7 +3728,6 @@ Estas descripciones permiten explicar las responsabilidades de los componentes y
 </div>
 
 *Figura 5. Documentación de clases mediante comentarios estructurados en Java y TypeScript del proyecto FuelBridge.*
-
 
 **Comentarios TODO:** Se establece el uso de comentarios `TODO` cuando sea necesario identificar tareas pendientes, mejoras futuras o secciones que requieran revisión. Estos comentarios deben acompañarse de una descripción clara para facilitar su seguimiento.
 
@@ -2969,17 +3754,15 @@ Esta estructura favorece la separación de responsabilidades y facilita la evolu
 
 *Figura 6. Organización modular del backend de FuelBridge mediante Bounded Contexts y capas DDD.*
 
-
 **Organización del Frontend:** El frontend Angular utiliza una organización similar, separando las funcionalidades por contextos y distribuyendo sus componentes en capas de presentación, aplicación, dominio e infraestructura.
 
 Los archivos TypeScript emplean nombres descriptivos en kebab-case, como `fulfillment.store.ts`, `delivery.entity.ts` y `order-list.ts`.
 
 <div align="center">
-  <img src="assets/chapter-5/FrontendDDDStructure.png" width="700" />
+  <img src="assets/chapter-5/FrontendDDDStructure.png" width="500" />
 </div>
 
 *Figura 7. Organización modular del frontend de FuelBridge mediante Bounded Contexts y capas DDD.*
-
 
 **Manejo de Errores**
 
@@ -3166,40 +3949,53 @@ En conjunto, la configuración de despliegue de FuelBridge proporciona una infra
 
 ---
 
+
+##### Evolución del alcance durante el TP1
+
+El Sprint Backlog 1 registra las actividades planificadas para implementar el flujo de despacho, las notificaciones, las pruebas automatizadas y el despliegue inicial de FuelBridge. Las 13 tareas documentadas corresponden a una estimación total de 34 horas y conservan sus responsables y estados originales.
+
+Durante el desarrollo del TP1, la implementación también evolucionó desde un monolito modular hacia una arquitectura híbrida. Como resultado, Notification, Catalog y Reporting & Analytics fueron extraídos como aplicaciones Spring Boot independientes, mientras que los demás bounded contexts permanecieron en el monolito residual.
+
+Esta evolución introdujo cambios arquitectónicos adicionales que no se encuentran desglosados en las estimaciones originales del Sprint Backlog. Por ello, no se modifican retroactivamente las horas, los responsables ni los estados de las tareas planificadas.
+
+La evidencia de estas modificaciones se presenta en el apartado 5.3.1.9 mediante la identificación de aplicaciones resultantes, los cambios en la comunicación entre servicios y los commits de refactorización. Asimismo, los apartados 5.3.1.4 y 5.3.1.5 documentan las verificaciones locales y los contratos de API asociados a la implementación revisada.
+
+De esta manera, se distingue el alcance inicialmente planificado del trabajo de evolución arquitectónica realizado durante el TP1, manteniendo la trazabilidad entre la planificación, la implementación y las evidencias disponibles.
+
+
 ##### 5.3.1.2 Development Evidence for Sprint Review
- 
+
 Durante este sprint se trabajó sobre el backend (`HaloFuel/FuelBrigde-Backend`), cerrando brechas entre lo documentado en el Capítulo IV y lo que estaba realmente implementado.
- 
+
 **Corrección de configuración para Railway:** el perfil `application-mysql.properties` tenía el host hardcodeado a `localhost` en vez de leer las variables que Railway inyecta automáticamente (`MYSQLHOST`, `MYSQLPORT`, `MYSQLUSER`, `MYSQLPASSWORD`). También faltaba leer el puerto dinámico con `${PORT}`.
- 
+
 <div align="center">
   <img src="assets/chapter-5/railway-deploy.png" width="700" />
 </div>
- 
+
 
 **Endpoint faltante en Ordering BC:** el método `dispatch()` de `FuelOrder` no tenía ningún endpoint que lo expusiera, a diferencia de `confirm()` y `cancel()` que sí tenían el suyo. Se agregó `DispatchFuelOrderCommand`, su manejo en `FuelOrderCommandServiceImpl`, y el endpoint `POST /api/v1/fuel-orders/{orderId}/dispatch` en `FuelOrdersController`, siguiendo el mismo patrón existente.
- 
+
 <div align="center">
   <img src="assets/chapter-5/dispatch-endpoint.png" width="700" />
 </div>
- 
+
 
 **Implementación real del patrón Observer (PAT-2 / ADR-03):** el Capítulo IV documentaba un Domain Event Dispatcher que no estaba conectado en el código. Se implementó de punta a punta: eventos de dominio en `FuelOrder`, publicación real en `FuelOrderRepositoryImpl.save()` vía `ApplicationEventPublisher`, y un listener nuevo en Notification BC (`FuelOrderNotificationEventHandler`) que genera una notificación real para el usuario de la empresa compradora. El detalle completo está en 5.1.2.
- 
+
 <div align="center">
   <img src="assets/chapter-5/domain-events-commit.png" width="700" />
 </div>
- 
+
 
 **Suite de tests del dominio:** se agregaron 13 pruebas unitarias sobre `FuelOrder` y `Payment`, y se corrigió el `contextLoads()` que fallaba por falta de base de datos local, configurando H2 en memoria para el perfil de test. El detalle está en 5.1.1.
- 
- 
+
+
 **Repositorio y commits:** [github.com/HaloFuel/FuelBrigde-Backend](https://github.com/HaloFuel/FuelBrigde-Backend)
- 
+
 <div align="center">
   <img src="assets/chapter-5/commit-history.png" width="700" />
 </div>
-
 
 #### 5.3.1.3 Testing Suite Evidence for Sprint Review
 
@@ -3349,7 +4145,6 @@ Estas pruebas se ejecutaron utilizando el entorno de testing de Spring Boot, con
 
 En conjunto, las evidencias obtenidas contribuyen a verificar las funcionalidades implementadas durante el Sprint 1 y proporcionan una base para ampliar la cobertura de pruebas automatizadas en los siguientes sprints.
 
-
 #### 5.3.1.4 Execution Evidence for Sprint Review
 
 Durante el Sprint 1, el equipo de HaloFuel implementó los Web Services del backend de FuelBridge, cubriendo los bounded contexts de IAM, Buyer Companies, Provider Companies, Fuel Products, Fuel Orders y Payments. A continuación se presentan las principales operaciones ejecutadas sobre los servicios, interactuando con la API REST mediante Postman.
@@ -3359,152 +4154,617 @@ Durante el Sprint 1, el equipo de HaloFuel implementó los Web Services del back
 Se validó el endpoint de registro de usuarios con el rol `ROLE_BUYER`, obteniendo un response `201 Created` con los datos del usuario creado.
 
 ![Sign Up](assets/chapter-5/sign-up.png)
-*Figura 3. Registro de usuario con rol ROLE_BUYER mediante POST /api/v1/authentication/sign-up — response 201 Created.*
-
+*Figura 3. Registro de usuario con rol ROLE_BUYER mediante POST /api/v1/authentication/sign-up - response 201 Created.*
 
 **Autenticación (Sign In)**
 
 Se verificó el endpoint de autenticación, el cual retorna un token JWT requerido para acceder a los endpoints protegidos de la API.
 
 ![Sign In](assets/chapter-5/sign-in.png)
-*Figura 4. Autenticación de usuario y obtención de token JWT mediante POST /api/v1/authentication/sign-in — response 200 OK.*
-
+*Figura 4. Autenticación de usuario y obtención de token JWT mediante POST /api/v1/authentication/sign-in - response 200 OK.*
 
 **Registro de empresa compradora**
 
 Se registró la empresa compradora MineraCorp Perú SAC, obteniendo un response `201 Created`.
 
 ![Buyer Company POST](assets/chapter-5/buyer-company-post.png)
-*Figura 5. Registro de empresa compradora MineraCorp Perú SAC mediante POST /api/v1/buyer-companies — response 201 Created.*
-
+*Figura 5. Registro de empresa compradora MineraCorp Perú SAC mediante POST /api/v1/buyer-companies - response 201 Created.*
 
 **Registro de empresa proveedora**
 
 Se registró la empresa proveedora DistribFuel SAC con los tipos de combustible que ofrece, obteniendo un response `201 Created`.
 
 ![Provider Company POST](assets/chapter-5/provider-company-post.png)
-*Figura 6. Registro de empresa proveedora DistribFuel SAC mediante POST /api/v1/provider-companies — response 201 Created.*
-
+*Figura 6. Registro de empresa proveedora DistribFuel SAC mediante POST /api/v1/provider-companies - response 201 Created.*
 
 **Registro de producto de combustible**
 
 Se creó el producto Diesel B5 Premium asociado al proveedor, con stock disponible y precio por unidad, obteniendo un response `201 Created`.
 
 ![Fuel Product POST](assets/chapter-5/fuel-product-post.png)
-*Figura 7. Registro del producto Diesel B5 Premium mediante POST /api/v1/fuel-products — response 201 Created.*
-
+*Figura 7. Registro del producto Diesel B5 Premium mediante POST /api/v1/fuel-products - response 201 Created.*
 
 **Creación de pedido de combustible**
 
 Se registró un pedido de 500 galones de Diesel B5 con dirección de entrega y fecha programada, obteniendo un response `201 Created` con el pedido en estado `PENDING`.
 
 ![Fuel Order POST](assets/chapter-5/fuel-order-post.png)
-*Figura 8. Creación de pedido de 500 galones de Diesel B5 mediante POST /api/v1/fuel-orders — response 201 Created con estado PENDING.*
-
+*Figura 8. Creación de pedido de 500 galones de Diesel B5 mediante POST /api/v1/fuel-orders - response 201 Created con estado PENDING.*
 
 **Confirmación de pedido**
 
 Se ejecutó la confirmación del pedido por parte del proveedor, actualizando el estado a `CONFIRMED` con un response `200 OK`.
 
 ![Fuel Order Confirm](assets/chapter-5/fuel-order-confirm.png)
-*Figura 9. Confirmación del pedido por el proveedor mediante POST /api/v1/fuel-orders/1/confirm — response 200 OK con estado CONFIRMED.*
-
+*Figura 9. Confirmación del pedido por el proveedor mediante POST /api/v1/fuel-orders/1/confirm - response 200 OK con estado CONFIRMED.*
 
 **Registro de pago**
 
 Se registró el pago correspondiente al pedido mediante transferencia bancaria, obteniendo un response `201 Created` con el pago en estado `PENDING`.
 
 ![Payment POST](assets/chapter-5/payment-post.png)
-*Figura 10. Registro de pago por transferencia bancaria mediante POST /api/v1/payments — response 201 Created con estado PENDING.*
+*Figura 10. Registro de pago por transferencia bancaria mediante POST /api/v1/payments - response 201 Created con estado PENDING.*
 
 **Video de demostración Sprint 1:** [FuelBridge - Sprint 1 Execution Evidence](https://upcedupe-my.sharepoint.com/:v:/g/personal/u201916755_upc_edu_pe/IQAZur5nW4MhT5HGJjhtCbeaAZn0lYXzxUy-fxJNBNcOWbs?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=3qQurr)
 
 ---
 
+##### Verificaciones adicionales del alcance de API
+
+Se ejecutaron ocho operaciones adicionales mediante Swagger UI. Todas devolvieron `200 OK`, con resultados correspondientes a los registros del entorno local.
+
+**Analítica del proveedor - TS-27**
+
+`GET http://localhost:8083/api/v1/analytics/providers/1` devolvió un pedido, ingresos de `1500` y una agrupación mensual para `2026-10` con el mismo importe. Los contadores de pedidos confirmados y cancelados fueron cero.
+
+Esta comprobación complementa las consultas de plataforma y comprador previamente verificadas.
+
+![Analítica del proveedor](assets/chapter-5/reporting-provider-local.png)
+
+*Evidencia R-04. Consulta de indicadores del proveedor ID 1 mediante Reporting Service, con respuesta 200 OK.*
+
+**Consulta de usuarios - TS-07**
+
+Se verificaron el listado de usuarios y la consulta individual del usuario ID `2`. El listado incluyó los usuarios registrados y la consulta individual recuperó `sprint1@fuelbridge.test`, con rol `ROLE_BUYER`.
+
+![Listado de usuarios](assets/chapter-5/users-list-local.png)
+
+*Evidencia U-01. GET /api/v1/users, con respuesta 200 OK.*
+
+![Detalle del usuario](assets/chapter-5/user-detail-local.png)
+
+*Evidencia U-02. GET /api/v1/users/2, con respuesta 200 OK.*
+
+**Consulta de pedidos - TS-13**
+
+Se verificaron las cuatro operaciones previstas: listado general, consulta por ID, listado por empresa compradora y listado por proveedor.
+
+Las respuestas recuperaron el pedido ID `1`, con comprador `1`, proveedor `1`, cantidad `100`, total `1500` y estado `PAID`.
+
+![Listado de pedidos](assets/chapter-5/orders-list-local.png)
+
+*Evidencia O-01. GET /api/v1/fuel-orders, con respuesta 200 OK.*
+
+![Detalle del pedido](assets/chapter-5/order-detail-local.png)
+
+*Evidencia O-02. GET /api/v1/fuel-orders/1, con respuesta 200 OK.*
+
+![Pedidos del comprador](assets/chapter-5/orders-company-local.png)
+
+*Evidencia O-03. GET /api/v1/fuel-orders/company/1, con respuesta 200 OK.*
+
+![Pedidos del proveedor](assets/chapter-5/orders-provider-local.png)
+
+*Evidencia O-04. GET /api/v1/fuel-orders/provider/1, con respuesta 200 OK.*
+
+**Actualización de stock - TS-12**
+
+Se ejecutó `POST http://localhost:8080/api/v1/fuel-products/1/update-stock` con el cuerpo:
+
+{
+  "newStock": 22000
+}
+
+La respuesta `200 OK` devolvió el producto ID `1` con `availableStock: 22000`, coincidiendo con el valor solicitado.
+
+![Actualización de stock](assets/chapter-5/product-stock-local.png)
+
+*Evidencia I-01. Actualización del stock del producto ID 1, con respuesta 200 OK.*
+
+Estas verificaciones completan las operaciones previstas para TS-07, TS-12, TS-13 y TS-27 en los casos satisfactorios ejecutados. No representan pruebas exhaustivas de errores, concurrencia o autorización.
+
 #### 5.3.1.5 Microservices Documentation Evidence for Sprint Review
 
-Durante el Sprint 1 se documentaron los Web Services de FuelBridge utilizando OpenAPI 3.0 a través de la dependencia `springdoc-openapi` (v3.0.3), generando automáticamente la especificación de la API y exponiéndola mediante Swagger UI. La documentación cubre un total de 9 grupos de endpoints con 73 rutas implementadas.
+Durante el Sprint 1 se documentaron las API REST de FuelBridge mediante springdoc-openapi 3.0.3 y Swagger UI. Después de la migración, la solución comprende el monolito residual y las aplicaciones independientes Notification Service, Catalog Service y Reporting Service.
 
-- **Swagger UI:** https://fuelbrigde-backend-production.up.railway.app/swagger-ui/index.html
-- **OpenAPI JSON:** https://fuelbrigde-backend-production.up.railway.app/api-docs
-- **Repositorio Backend:** https://github.com/HaloFuel/FuelBrigde-Backend
+Los contratos se definen en los controladores y recursos HTTP de cada aplicación. La documentación incorpora descripciones, parámetros, cuerpos de solicitud, esquemas de respuesta, ejemplos y requisitos de autenticación.
 
-A continuación se presenta la vista general de la documentación generada:
+La revisión corresponde a la rama `develop`, commit `3025f97ae508b372076360f34f6b95540e3686df`. Se identifican 13 operaciones HTTP en los microservicios extraídos: 7 en Notification, 3 en Catalog y 3 en Reporting.
+
+##### Acceso a la documentación
+
+Las pruebas posteriores a la extracción se realizaron en un entorno local, con las aplicaciones Spring Boot ejecutadas mediante Maven y MySQL en Docker.
+
+| Aplicación | Swagger UI | Especificación OpenAPI |
+|---|---|---|
+| FuelBridge API - monolito residual | http://localhost:8080/swagger-ui/index.html | http://localhost:8080/api-docs |
+| Notification Service | http://localhost:8081/swagger-ui/index.html | http://localhost:8081/v3/api-docs |
+| Catalog Service | http://localhost:8082/swagger-ui/index.html | http://localhost:8082/v3/api-docs |
+| Reporting Service | http://localhost:8083/swagger-ui/index.html | http://localhost:8083/v3/api-docs |
+
+Estas direcciones requieren que las aplicaciones estén ejecutándose en el equipo local.
+
+Los siguientes enlaces corresponden al despliegue previamente documentado del backend en Railway. Durante las pruebas locales, ese despliegue se encontraba suspendido:
+
+- **Swagger UI histórico:** https://fuelbrigde-backend-production.up.railway.app/swagger-ui/index.html
+- **OpenAPI JSON histórico:** https://fuelbrigde-backend-production.up.railway.app/api-docs
+- **Repositorio:** https://github.com/HaloFuel/FuelBrigde-Backend
+
+El despliegue anterior del monolito no acredita un despliegue público de los tres microservicios extraídos.
+
+##### Evidencia histórica de documentación del backend
+
+Las siguientes capturas corresponden a la documentación registrada anteriormente para FuelBridge API.
 
 ![Swagger Overview](assets/chapter-5/swagger-overview.png)
-*Figura 11. Vista general del Swagger UI de FuelBridge Platform v0.0.1-SNAPSHOT, mostrando el servidor de producción en Railway y los grupos de endpoints documentados.*
 
+*Figura 11. Vista general de Swagger UI del backend previamente documentado en Railway.*
 
 ![Swagger Controllers](assets/chapter-5/swagger-controllers.png)
-*Figura 12. Listado de controllers documentados en la especificación OpenAPI 3.0, incluyendo los bounded contexts Analytics, Fuel Products y Provider Companies.*
 
+*Figura 12. Grupos de controladores incluidos en la documentación anterior del backend. Después de la extracción, Catalog y Reporting delegan sus operaciones a microservicios independientes.*
 
-A continuación se presenta la tabla de endpoints documentados relacionados con el alcance del Sprint 1:
+La siguiente tabla presenta una selección de operaciones del monolito residual relacionadas con el Sprint 1. El inventario completo se consulta en su especificación OpenAPI.
 
-| Bounded Context    | Endpoint                                             | Verbo HTTP | Descripción                                          | Response                                   |
-| ------------------ | ---------------------------------------------------- | ---------- | ---------------------------------------------------- | ------------------------------------------ |
-| IAM                | `/api/v1/authentication/sign-up`                     | POST       | Registro de nuevo usuario con rol y empresa asociada | `201 Created` — usuario con id y roles     |
-| IAM                | `/api/v1/authentication/sign-in`                     | POST       | Autenticación y obtención de token JWT               | `200 OK` — id, username y Bearer token     |
-| Buyer Companies    | `/api/v1/buyer-companies`                            | POST       | Registro de empresa compradora                       | `201 Created` — empresa con id generado    |
-| Buyer Companies    | `/api/v1/buyer-companies`                            | GET        | Listado de empresas compradoras                      | `200 OK` — array de empresas               |
-| Buyer Companies    | `/api/v1/buyer-companies/{companyId}`                | GET        | Consulta de empresa por ID                           | `200 OK` — datos de la empresa             |
-| Buyer Companies    | `/api/v1/buyer-companies/{companyId}`                | PUT        | Actualización de empresa compradora                  | `200 OK` — empresa actualizada             |
-| Provider Companies | `/api/v1/provider-companies`                         | POST       | Registro de empresa proveedora                       | `201 Created` — proveedor con id           |
-| Provider Companies | `/api/v1/provider-companies`                         | GET        | Listado de empresas proveedoras                      | `200 OK` — array de proveedores            |
-| Provider Companies | `/api/v1/provider-companies/{providerId}`            | GET        | Consulta de proveedor por ID                         | `200 OK` — datos del proveedor             |
-| Provider Companies | `/api/v1/provider-companies/{providerId}`            | PUT        | Actualización de empresa proveedora                  | `200 OK` — proveedor actualizado           |
-| Fuel Products      | `/api/v1/fuel-products`                              | POST       | Registro de producto de combustible                  | `201 Created` — producto con id            |
-| Fuel Products      | `/api/v1/fuel-products`                              | GET        | Listado de productos de combustible                  | `200 OK` — array de productos              |
-| Fuel Products      | `/api/v1/fuel-products/{fuelProductId}`              | GET        | Consulta de producto por ID                          | `200 OK` — datos del producto              |
-| Fuel Products      | `/api/v1/fuel-products/{fuelProductId}`              | PUT        | Actualización de producto                            | `200 OK` — producto actualizado            |
-| Fuel Products      | `/api/v1/fuel-products/{fuelProductId}`              | DELETE     | Eliminación de producto                              | `204 No Content`                           |
-| Fuel Products      | `/api/v1/fuel-products/{fuelProductId}/update-stock` | POST       | Actualización de stock disponible                    | `200 OK` — producto con stock actualizado  |
-| Fuel Orders        | `/api/v1/fuel-orders`                                | POST       | Creación de pedido de combustible                    | `201 Created` — pedido en estado `PENDING` |
-| Fuel Orders        | `/api/v1/fuel-orders`                                | GET        | Listado de todos los pedidos                         | `200 OK` — array de pedidos                |
-| Fuel Orders        | `/api/v1/fuel-orders/{orderId}`                      | GET        | Consulta de pedido por ID                            | `200 OK` — pedido con estado actual        |
-| Fuel Orders        | `/api/v1/fuel-orders/company/{companyId}`            | GET        | Pedidos de una empresa compradora                    | `200 OK` — array de pedidos filtrados      |
-| Fuel Orders        | `/api/v1/fuel-orders/provider/{providerId}`          | GET        | Pedidos asignados a un proveedor                     | `200 OK` — array de pedidos filtrados      |
-| Fuel Orders        | `/api/v1/fuel-orders/{orderId}/confirm`              | POST       | Confirmación del pedido por el proveedor             | `200 OK` — pedido en estado `CONFIRMED`    |
-| Fuel Orders        | `/api/v1/fuel-orders/{orderId}/cancel`               | POST       | Cancelación del pedido                               | `200 OK` — pedido en estado `CANCELLED`    |
-| Payments           | `/api/v1/payments`                                   | POST       | Registro de pago asociado a un pedido                | `201 Created` — pago en estado `PENDING`   |
-| Payments           | `/api/v1/payments/{paymentId}/complete`              | POST       | Confirmación de pago con referencia de transacción   | `200 OK` — pago en estado `COMPLETED`      |
-| Payments           | `/api/v1/payments/order/{orderId}`                   | GET        | Consulta de pago por pedido                          | `200 OK` — datos del pago                  |
-
-A continuación se muestra el schema del endpoint principal del bounded context Fuel Orders y la interacción con datos de muestra:
+| Bounded Context | Método | Ruta | Propósito |
+|---|---|---|---|
+| IAM | POST | `/api/v1/authentication/sign-up` | Registrar usuario |
+| IAM | POST | `/api/v1/authentication/sign-in` | Autenticar usuario y emitir JWT |
+| IAM | GET | `/api/v1/users` | Listar usuarios |
+| IAM | GET | `/api/v1/users/{userId}` | Consultar usuario |
+| IAM | POST | `/api/v1/buyer-companies` | Registrar empresa compradora |
+| IAM | GET | `/api/v1/buyer-companies` | Listar empresas compradoras |
+| IAM | GET | `/api/v1/buyer-companies/{companyId}` | Consultar empresa compradora |
+| IAM | PUT | `/api/v1/buyer-companies/{companyId}` | Actualizar empresa compradora |
+| IAM | POST | `/api/v1/provider-companies` | Registrar empresa proveedora |
+| IAM | GET | `/api/v1/provider-companies` | Listar empresas proveedoras |
+| IAM | GET | `/api/v1/provider-companies/{providerId}` | Consultar empresa proveedora |
+| IAM | PUT | `/api/v1/provider-companies/{providerId}` | Actualizar empresa proveedora |
+| Inventory | POST | `/api/v1/fuel-products` | Registrar producto |
+| Inventory | GET | `/api/v1/fuel-products` | Listar productos |
+| Inventory | GET | `/api/v1/fuel-products/{fuelProductId}` | Consultar producto |
+| Inventory | GET | `/api/v1/fuel-products/provider/{providerId}` | Consultar productos de un proveedor |
+| Inventory | PUT | `/api/v1/fuel-products/{fuelProductId}` | Actualizar producto |
+| Inventory | DELETE | `/api/v1/fuel-products/{fuelProductId}` | Eliminar producto |
+| Inventory | POST | `/api/v1/fuel-products/{fuelProductId}/update-stock` | Actualizar stock |
+| Ordering | POST | `/api/v1/fuel-orders` | Crear pedido |
+| Ordering | GET | `/api/v1/fuel-orders` | Listar pedidos |
+| Ordering | GET | `/api/v1/fuel-orders/{orderId}` | Consultar pedido |
+| Ordering | GET | `/api/v1/fuel-orders/company/{companyId}` | Consultar pedidos de una empresa compradora |
+| Ordering | GET | `/api/v1/fuel-orders/provider/{providerId}` | Consultar pedidos de un proveedor |
+| Ordering | POST | `/api/v1/fuel-orders/{orderId}/confirm` | Confirmar pedido |
+| Ordering | POST | `/api/v1/fuel-orders/{orderId}/cancel` | Cancelar pedido |
+| Ordering | POST | `/api/v1/fuel-orders/{orderId}/dispatch` | Despachar pedido |
+| Payment | POST | `/api/v1/payments` | Registrar pago |
+| Payment | POST | `/api/v1/payments/{paymentId}/complete` | Completar pago |
+| Payment | POST | `/api/v1/payments/{paymentId}/refund` | Reembolsar pago |
+| Payment | GET | `/api/v1/payments/order/{orderId}` | Consultar pago por pedido |
 
 ![Swagger Fuel Order Schema](assets/chapter-5/swagger-fuel-order-schema.png)
-*Figura 13. Endpoint POST /api/v1/fuel-orders expandido en Swagger UI, mostrando el schema del request body y los códigos de respuesta documentados.*
 
+*Figura 13. Documentación del cuerpo de solicitud y respuestas de POST /api/v1/fuel-orders.*
 
 ![Fuel Orders GET Response](assets/chapter-5/swagger-fuel-orders-get.png)
-*Figura 14. Consulta GET /api/v1/fuel-orders ejecutada desde Postman, mostrando el response 200 OK con el pedido en estado PAID y datos de muestra reales.*
 
-**Commits relacionados con documentación Sprint 1:**
+*Figura 14. Evidencia anterior de consulta de pedidos mediante Postman.*
 
-| Repository                  | Branch | Commit Id | Commit Message                                                                                             | Committed on |
-| --------------------------- | ------ | --------- | ---------------------------------------------------------------------------------------------------------- | ------------ |
-| HaloFuel/FuelBrigde-Backend | main   | `7b09f4d` | fix: Swagger server URL to point to Railway production                                                     | 2026-10-08   |
-| HaloFuel/FuelBrigde-Backend | main   | `404707d` | Rename startup/product from PrimeFuel/FullTank to HaloFuel/FuelBridge across package, pom, config and docs | 2026-10-08   |
+##### Autenticación y convenciones de consumo
+
+IAM del monolito emite el JWT utilizado para acceder a las operaciones protegidas. Notification, Catalog y Reporting validan tokens compatibles mediante la configuración `AUTHORIZATION_JWT_SECRET`.
+
+Las solicitudes protegidas utilizan:
+
+```http
+Authorization: Bearer <TOKEN_JWT>
+Accept: application/json
+```
+
+Las solicitudes con cuerpo JSON incluyen:
+
+```http
+Content-Type: application/json
+```
+
+La autenticación JWT no implica por sí sola que todas las operaciones tengan controles de autorización por propietario o rol.
+
+Los ejemplos siguientes distinguen respuestas observadas durante las pruebas locales de ejemplos ilustrativos de contrato. Los identificadores deben corresponder a registros del entorno utilizado.
+
+##### Notification Service
+
+Notification Service expone operaciones para crear notificaciones, consultar su contenido y modificar su estado de lectura.
+
+| Método | Ruta | Parámetros | Respuesta satisfactoria |
+|---|---|---|---|
+| POST | `/api/v1/notifications` | Cuerpo `CreateNotificationResource` | `201 Created` |
+| POST | `/api/v1/notifications/{notificationId}/mark-as-read` | `notificationId` en ruta; sin cuerpo | `200 OK` |
+| GET | `/api/v1/notifications/{notificationId}` | `notificationId` en ruta | `200 OK` |
+| GET | `/api/v1/notifications/user/{userId}` | `userId` en ruta | `200 OK` |
+| GET | `/api/v1/notifications/buyer/{companyId}` | `companyId` en ruta | `200 OK` |
+| GET | `/api/v1/notifications/provider/{providerId}` | `providerId` en ruta | `200 OK` |
+| GET | `/api/v1/notifications/user/{userId}/unread` | `userId` en ruta | `200 OK` |
+
+**Creación de notificación**
+
+El cuerpo acepta `userId`, `companyId`, `providerId`, `type`, `title`, `message` y `referenceId`.
+
+Cuando se proporciona `userId`, se utiliza directamente. En su ausencia, el servicio intenta resolver al destinatario mediante `companyId` y posteriormente `providerId`.
+
+Solicitud utilizada en la prueba local:
+
+```http
+POST http://localhost:8081/api/v1/notifications
+```
+
+```json
+{
+  "userId": 2,
+  "type": "ORDER_CONFIRMED",
+  "title": "Prueba Sprint 1",
+  "message": "Notificación creada desde el microservicio local.",
+  "referenceId": null
+}
+```
+
+Respuesta observada: `201 Created`.
+
+```json
+{
+  "id": 1,
+  "userId": 2,
+  "type": "ORDER_CONFIRMED",
+  "title": "Prueba Sprint 1",
+  "message": "Notificación creada desde el microservicio local.",
+  "read": false,
+  "referenceId": null,
+  "createdAt": "2026-10-10T00:38:36.464Z"
+}
+```
+
+**Consulta por identificador**
+
+La operación siguiente no requiere cuerpo:
+
+```http
+GET http://localhost:8081/api/v1/notifications/1
+```
+
+Durante la prueba devolvió `200 OK` con el mismo recurso presentado anteriormente. Si la notificación no existe, la consulta devuelve `404 Not Found`.
+
+**Consultas por destinatario**
+
+Ejemplos de rutas sin cuerpo de solicitud:
+
+```http
+GET http://localhost:8081/api/v1/notifications/user/2
+GET http://localhost:8081/api/v1/notifications/user/2/unread
+GET http://localhost:8081/api/v1/notifications/buyer/1
+GET http://localhost:8081/api/v1/notifications/provider/1
+```
+
+Estas operaciones devuelven listas de `NotificationResource`. Ejemplo ilustrativo:
+
+```json
+[
+  {
+    "id": 1,
+    "userId": 2,
+    "type": "ORDER_CONFIRMED",
+    "title": "Prueba Sprint 1",
+    "message": "Notificación creada desde el microservicio local.",
+    "read": false,
+    "referenceId": null,
+    "createdAt": "2026-10-10T00:38:36.464Z"
+  }
+]
+```
+
+Las consultas por comprador o proveedor resuelven un usuario asociado mediante IAM. Si no se encuentra ese usuario, devuelven una lista vacía. No debe suponerse que la cuenta de prueba está vinculada a una empresa, pues fue registrada con `companyId` y `providerId` nulos.
+
+**Marcar como leída**
+
+Ejemplo de solicitud, sin cuerpo:
+
+```http
+POST http://localhost:8081/api/v1/notifications/1/mark-as-read
+```
+
+La respuesta satisfactoria devuelve el recurso actualizado con `read: true`. Esta operación no se ejecutó en las evidencias locales presentadas.
+
+La creación manual documentada no demuestra que una transición de Ordering haya generado automáticamente esa notificación.
+
+##### Catalog Service
+
+Catalog Service administra calificaciones de proveedores.
+
+| Método | Ruta | Parámetros | Respuesta satisfactoria |
+|---|---|---|---|
+| GET | `/api/v1/provider-ratings` | Filtros opcionales `companyId` y `providerId` | `200 OK` |
+| POST | `/api/v1/provider-ratings` | Cuerpo JSON de calificación | `201 Created` |
+| PUT | `/api/v1/provider-ratings/{id}` | ID en ruta y cuerpo JSON | `200 OK` |
+
+**Registro de calificación**
+
+Solicitud utilizada en la prueba local:
+
+```http
+POST http://localhost:8082/api/v1/provider-ratings
+```
+
+```json
+{
+  "companyId": 1,
+  "providerId": 1,
+  "rating": 5
+}
+```
+
+Respuesta observada: `201 Created`.
+
+```json
+{
+  "id": 1,
+  "companyId": 1,
+  "providerId": 1,
+  "rating": 5
+}
+```
+
+Catalog comprueba mediante HTTP la existencia de ambas empresas en IAM. La calificación debe ser un entero entre 1 y 5 y solo se permite un registro por combinación de comprador y proveedor.
+
+**Consulta de calificaciones**
+
+Los filtros pueden utilizarse individualmente, combinarse u omitirse. La solicitud no requiere cuerpo.
+
+Solicitud utilizada en la prueba local:
+
+```http
+GET http://localhost:8082/api/v1/provider-ratings?companyId=1&providerId=1
+```
+
+Respuesta observada: `200 OK`.
+
+```json
+[
+  {
+    "id": 1,
+    "companyId": 1,
+    "providerId": 1,
+    "rating": 5
+  }
+]
+```
+
+**Actualización de calificación**
+
+Ejemplo ilustrativo de solicitud:
+
+```http
+PUT http://localhost:8082/api/v1/provider-ratings/1
+```
+
+```json
+{
+  "companyId": 1,
+  "providerId": 1,
+  "rating": 4
+}
+```
+
+Ejemplo ilustrativo de respuesta satisfactoria: `200 OK`.
+
+```json
+{
+  "id": 1,
+  "companyId": 1,
+  "providerId": 1,
+  "rating": 4
+}
+```
+
+La actualización conserva la empresa compradora y el proveedor del registro. Este ejemplo no representa una actualización ejecutada durante las pruebas presentadas.
+
+**Errores del contrato**
+
+| Situación | Respuesta |
+|---|---|
+| Datos inválidos o empresas inexistentes | `400 Bad Request` |
+| Calificación duplicada para comprador y proveedor | `409 Conflict` |
+| Actualización de una calificación inexistente | `404 Not Found` |
+| Intento de cambiar comprador o proveedor del registro | `400 Bad Request` |
+
+Las respuestas de validación pueden contener texto literal. Por ejemplo, el rechazo de una calificación duplicada utiliza:
+
+```text
+The buyer company already rated this provider
+```
+
+No se presupone un formato JSON uniforme para todos los errores.
+
+Catalog también puede consumirse mediante el gateway del monolito residual. Las rutas del gateway delegan en el microservicio y no constituyen una segunda implementación del dominio.
+
+##### Reporting Service
+
+Reporting obtiene pedidos, pagos y entregas mediante HTTP desde el monolito residual y calcula indicadores en memoria.
+
+| Método | Ruta | Propósito | Respuesta satisfactoria |
+|---|---|---|---|
+| GET | `/api/v1/analytics/platform` | Resumen general de la plataforma | `200 OK` |
+| GET | `/api/v1/analytics/providers/{providerId}` | Indicadores de un proveedor | `200 OK` |
+| GET | `/api/v1/analytics/buyers/{companyId}` | Indicadores de un comprador | `200 OK` |
+
+Todas estas operaciones se ejecutan sin cuerpo de solicitud.
+
+**Resumen de plataforma**
+
+Solicitud utilizada en la prueba local:
+
+```http
+GET http://localhost:8083/api/v1/analytics/platform
+```
+
+Respuesta observada después de registrar un pedido y completar su pago: `200 OK`.
+
+```json
+{
+  "totalOrders": 1,
+  "totalDeliveries": 0,
+  "totalPayments": 1,
+  "totalRevenue": 1500,
+  "pendingOrders": 0,
+  "completedDeliveries": 0
+}
+```
+
+**Analítica del comprador**
+
+Solicitud utilizada en la prueba local:
+
+```http
+GET http://localhost:8083/api/v1/analytics/buyers/1
+```
+
+Respuesta observada: `200 OK`.
+
+```json
+{
+  "companyId": 1,
+  "totalOrders": 1,
+  "totalSpent": 1500,
+  "completedPayments": 1,
+  "pendingPayments": 0,
+  "monthlySpending": [
+    {
+      "month": "2026-10",
+      "monthIndex": 10,
+      "amount": 1500
+    }
+  ]
+}
+```
+
+**Analítica del proveedor**
+
+Ejemplo de solicitud:
+
+```http
+GET http://localhost:8083/api/v1/analytics/providers/1
+```
+
+Ejemplo ilustrativo del contrato de respuesta, no ejecutado en las evidencias presentadas:
+
+```json
+{
+  "providerId": 1,
+  "totalOrders": 1,
+  "confirmedOrders": 0,
+  "cancelledOrders": 0,
+  "totalRevenue": 1500,
+  "monthlyRevenue": [
+    {
+      "month": "2026-10",
+      "monthIndex": 10,
+      "amount": 1500
+    }
+  ]
+}
+```
+
+Los ingresos y gastos se calculan a partir de pagos en estado `COMPLETED`. Las agrupaciones mensuales utilizan `paidAt` y omiten fechas nulas.
+
+El indicador `confirmedOrders` contabiliza pedidos en estados `CONFIRMED` o `DELIVERED`; no contabiliza automáticamente todos los pedidos pagados.
+
+Reporting también dispone de un gateway en el monolito residual. Los controladores revisados devuelven JSON y no incluyen una operación de generación de PDF.
+
+##### Evidencia de elaboración mediante control de versiones
+
+Los siguientes commits documentan ajustes de ejemplos de error en los contratos OpenAPI. Fueron identificados en el historial de la versión revisada.
+
+| Aplicación | Commit | Fecha | Cambio |
+|---|---|---|---|
+| Monolito residual | [d28d3be](https://github.com/HaloFuel/FuelBrigde-Backend/commit/d28d3be) | 2026-10-09 | Corrección de ejemplos de error para reflejar el formato de respuesta |
+| Notification | [420a57b](https://github.com/HaloFuel/FuelBrigde-Backend/commit/420a57b) | 2026-10-09 | Corrección de ejemplos de error del microservicio |
+| Catalog | [fd81914](https://github.com/HaloFuel/FuelBrigde-Backend/commit/fd81914) | 2026-10-09 | Corrección de ejemplos de error del microservicio |
+| Reporting | [3025f97](https://github.com/HaloFuel/FuelBrigde-Backend/commit/3025f97) | 2026-10-09 | Corrección de ejemplos de error del microservicio |
+
+Estos cambios complementan la evidencia de extracción y comunicación entre aplicaciones presentada en 5.3.1.9.
+
+##### Trazabilidad con el alcance establecido
+
+El Product Backlog contiene 27 historias técnicas de API, de TS-01 a TS-27. Para medir el avance comprobado del backend se contabilizan los grupos cuyas operaciones previstas fueron ejecutadas satisfactoriamente en el entorno local.
+
+No se contabilizan dos veces las mismas funcionalidades por aparecer tanto en historias de usuario como en historias técnicas.
+
+| Historia | Funcionalidad | Operaciones verificadas | Resultado |
+|---|---|---|---|
+| TS-01 | Autenticar usuarios | POST `/api/v1/authentication/sign-in` | `200 OK`, usuario ID 2 y JWT |
+| TS-04 | Crear pedido | POST `/api/v1/fuel-orders` | `201 Created`, pedido ID 1 y total 1500 |
+| TS-06 | Registrar usuario | POST `/api/v1/authentication/sign-up` | Usuario ID 2 registrado satisfactoriamente |
+| TS-07 | Consultar usuarios | GET `/api/v1/users` y GET `/api/v1/users/2` | `200 OK` en ambas operaciones; evidencias U-01 y U-02 |
+| TS-12 | Actualizar stock | POST `/api/v1/fuel-products/1/update-stock` | `200 OK`, stock actualizado a 22000; evidencia I-01 |
+| TS-13 | Consultar pedidos | GET general, por ID, por comprador y por proveedor | `200 OK` en las cuatro operaciones; evidencias O-01 a O-04 |
+| TS-27 | Consultar analítica | GET de plataforma, comprador y proveedor | `200 OK` en las tres consultas; evidencias R-01 a R-04 |
+
+**Cobertura verificada sobre el backlog técnico**
+
+- Total de grupos técnicos establecidos: `27`.
+- Grupos con sus operaciones previstas verificadas en casos satisfactorios: `7`.
+- Cobertura: `7 / 27 × 100 = 25.93 %`.
+
+Bajo esta medición explícita del alcance de API, la cobertura comprobada supera el 25 %.
+
+El denominador corresponde al backlog técnico del equipo; no es una fórmula prescrita por la rúbrica ni representa el porcentaje de toda la experiencia del producto, incluyendo interfaces y funcionalidades de presentación.
+
+También se verificaron parcialmente TS-08, TS-09, TS-11, TS-20, TS-22 y TS-26. Estas historias no se suman al numerador porque no se ejecutaron todas sus operaciones previstas.
+
+Las pruebas y capturas se presentan en 5.3.1.4. La comprobación de casos satisfactorios no equivale a una validación exhaustiva de todos los criterios de aceptación.
+
+##### Relación entre documentación y ejecución
+
+Los contratos de esta sección describen cómo consumir las API. Las pruebas de 5.3.1.4 demuestran resultados observados en el entorno local, incluyendo el cambio de los indicadores de Reporting después de registrar un pedido y completar un pago.
+
+Los ejemplos identificados como ilustrativos no se presentan como resultados de pruebas ejecutadas.
+
+**Fuente de implementación:** [FuelBridge Backend - versión revisada](https://github.com/HaloFuel/FuelBrigde-Backend/tree/3025f97ae508b372076360f34f6b95540e3686df).
+
 
 #### 5.3.1.6 Software Deployment Evidence for Sprint Review
 
-La primera versión funcional de FuelBridge se despliega desde los repositorios de desarrollo del frontend y del backend, no desde la landing page. Durante esta etapa, la aplicación quedó disponible para validación con la interfaz web consumiendo la API desplegada del sistema.
+La primera versión funcional de FuelBridge fue desplegada desde los repositorios de desarrollo del frontend y del backend, de manera independiente a la landing page. Durante esta etapa, la aplicación estuvo disponible para validación mediante la interfaz web desarrollada en Angular, conectada con la API de Spring Boot desplegada en Railway.
 
-| Elemento                 | Frontend                                                         | Backend                                                                    |
-| ------------------------ | ---------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| Producto                 | FuelBridge Web App / FuelBridge Frontend                         | FuelBridge API / FuelBridge Backend                                        |
-| Repositorio              | FuelBridge-Frontend                                              | FuelBridge-Backend                                                         |
-| Plataforma de despliegue | Vercel                                                           | Plataforma de despliegue configurada para Spring Boot/API                  |
-| Rama desplegada          | main                                                             | main                                                                       |
-| Build / Run              | Build del proyecto frontend para producción                      | Compilación y ejecución de la API Spring Boot                              |
-| Variables de entorno     | Configuradas para la conexión con la API y servicios del cliente | Configuradas para la conexión a base de datos y servicios internos         |
-| Estado                   | Frontend funcional y accesible desde la URL pública del proyecto | Backend funcional y consumido por la aplicación web                        |
-| URL pública              | https://fuel-brigde-frontend.vercel.app/home                     | https://fuelbrigde-backend-production.up.railway.app/swagger-ui/index.html |
+Para el despliegue se utilizaron Vercel, como plataforma de alojamiento del frontend, y Railway, como plataforma de ejecución del backend. Esta configuración permitió disponer de componentes independientes y establecer su comunicación mediante solicitudes HTTP.
 
-La evidencia de despliegue corresponde a la versión de Sprint Review de la solución digital, donde el frontend y el backend operan de manera desacoplada pero integrados para la validación del flujo principal del producto.
+| Elemento | Frontend | Backend |
+|---|---|---|
+| Producto | FuelBridge Web App / FuelBridge Frontend | FuelBridge API / FuelBridge Backend |
+| Repositorio | FuelBridge-Frontend | FuelBrigde-Backend |
+| Plataforma de despliegue | Vercel | Railway |
+| Rama desplegada | main | main |
+| Build / Run | Build del proyecto frontend para producción | Compilación y ejecución de la API Spring Boot |
+| Variables de entorno | Configuradas para la conexión con la API y servicios del cliente | Configuradas para la conexión a base de datos y servicios internos |
+| Estado | Frontend desplegado en Vercel | Backend previamente desplegado en Railway, con ejecución temporalmente suspendida por consumo de créditos |
+| URL pública | https://fuel-brigde-frontend.vercel.app/home | https://fuelbrigde-backend-production.up.railway.app/swagger-ui/index.html |
+
+La evidencia de despliegue corresponde a la versión de FuelBridge publicada durante el desarrollo del proyecto. El despliegue del backend en Railway permitió disponer de una API accesible mediante una dirección pública y configurada para su integración con el frontend.
+
+Sin embargo, debido al consumo de créditos asociado al mantenimiento de los servicios en Railway, se decidió mantener temporalmente suspendida su ejecución. Esta suspensión no implica que el despliegue no se haya realizado, sino que el servicio no se encuentra disponible públicamente mientras permanezca detenido.
+
+Por este motivo, las pruebas funcionales posteriores del TP1 se realizaron en un entorno local, ejecutando las aplicaciones mediante `localhost`. Esta modalidad permitió comprobar los endpoints, la autenticación y las operaciones de los servicios sin depender de la disponibilidad del entorno cloud, tal como se documenta en el apartado 5.3.1.4.
+
+Asimismo, durante la evolución arquitectónica se extrajeron Notification Service, Catalog Service y Reporting Service como aplicaciones independientes. Su funcionamiento se verificó localmente, según las evidencias de ejecución y documentación de los apartados 5.3.1.4, 5.3.1.5 y 5.3.1.9. Estas pruebas no se presentan como evidencia de despliegue público de los tres microservicios.
+
+Por lo tanto, se distingue entre el despliegue previamente realizado en Railway y Vercel, y las verificaciones locales efectuadas sobre la arquitectura revisada durante el TP1.
 
 **Landing Page desplegado:** [https://fuelbridgelandingpage.vercel.app/](https://fuelbridgelandingpage.vercel.app/)
-
 
 
 #### 5.3.1.7 Team Collaboration Insights during Sprint
@@ -3521,7 +4781,6 @@ Durante el Sprint 1, todos los miembros del equipo participaron en la implementa
 | Diego Fernando Herrera Enriquez           | DerDFHE        | 3               | 3                | 6             |
 | Schneider Carlos Alberto Delgado Carrasco | schneiderdc    | 6               | 5                | 11            |
 | **Total**                                 |                | **18**          | **17**           | **35**        |
-
 
 ![GitHub Insights - Commits Backend](/assets/chapter-5/commits_backend.png)
 **Commits realizadeos en el backend**
@@ -3572,6 +4831,190 @@ https://trello.com/invite/b/6ac87274106e25821de46ae4/ATTI3087071ed1bfa2ed167e7dc
 </div>
 
 *Figura. Tablero Kanban del Sprint 1 de FuelBridge, elaborado en Trello, mostrando las tareas organizadas según su estado final.*
+
+#### 5.3.1.9 Evidencia de migración a microservicios
+
+Durante TP1, FuelBridge evolucionó desde un monolito modular hacia una arquitectura híbrida mediante la extracción de Notification, Catalog y Reporting & Analytics. IAM, Ordering, Payment, Inventory, Fulfillment y Equipment permanecen dentro del monolito residual.
+
+La revisión técnica de la migración corresponde a la rama `develop`, commit `3025f97ae508b372076360f34f6b95540e3686df`, del repositorio [HaloFuel/FuelBrigde-Backend](https://github.com/HaloFuel/FuelBrigde-Backend).
+
+Los cambios descritos fueron identificados en el código y el historial local. La disponibilidad de los commits en GitHub y el despliegue integrado de las cuatro aplicaciones deben comprobarse como parte de la evidencia de entrega.
+
+##### Estado anterior y estado posterior
+
+El estado anterior puede reconstruirse mediante la revisión `11fe543fac907c6a732ac6be1d8a80fcbc7a86f1`, padre del commit que retiró Notification del monolito.
+
+| Aspecto | Antes de la extracción | Después de la extracción |
+| --- | --- | --- |
+| Aplicaciones backend | Una aplicación Spring Boot con nueve bounded contexts. | Cuatro aplicaciones Spring Boot: monolito residual y tres servicios extraídos. |
+| Notification | Contexto interno con persistencia y handler local. | Aplicación propia que recibe solicitudes HTTP; el listener de Ordering permanece en el monolito. |
+| Catalog | Contexto interno que consultaba repositorios de IAM. | Aplicación propia que valida empresas mediante HTTP. |
+| Reporting | Contexto interno que consultaba servicios Java de otros contextos. | Aplicación propia que obtiene datos por REST y calcula indicadores en memoria. |
+| Comunicación | Llamadas Java y eventos dentro del mismo proceso. | Eventos locales y comunicación REST síncrona entre aplicaciones. |
+| Persistencia | Los nueve contextos pertenecían al backend monolítico. | Monolito residual y esquemas configurables propios para Notification y Catalog; Reporting no tiene tablas de negocio identificadas. |
+| Construcción | Proyecto principal del backend. | Proyectos Maven y Dockerfiles independientes por aplicación. |
+| Compatibilidad de rutas | Controladores de negocio dentro del monolito. | Gateways internos conservan las rutas de Catalog y Reporting. |
+
+##### Estrategia de descomposición
+
+La migración se realizó por capacidades de negocio previamente delimitadas mediante bounded contexts:
+
+1. Se seleccionaron Notification, Catalog y Reporting & Analytics.
+2. Se trasladó su implementación a proyectos Spring Boot propios.
+3. Se retiraron los paquetes originales del árbol de producción del monolito.
+4. Se reemplazaron dependencias en memoria por contratos HTTP.
+5. Se conservaron las rutas anteriores de Catalog y Reporting mediante gateways de compatibilidad.
+
+Esta secuencia presenta características de una estrategia incremental Strangler Fig. La clasificación se deriva de los cambios observados; no se encontró un nuevo ADR que formalice la estrategia y sus decisiones.
+
+La extracción es parcial: los seis contextos restantes continúan compartiendo proceso y persistencia dentro de FuelBridge Platform.
+
+##### Aplicaciones resultantes
+
+| Aplicación | Ubicación | Bounded Contexts | Evidencia de separación |
+| --- | --- | --- | --- |
+| FuelBridge Platform | Proyecto raíz. | IAM, Ordering, Payment, Inventory, Fulfillment y Equipment. | Aplicación principal, POM y Dockerfile raíz. |
+| Notification Service | `fuelbridge-notification-service/` | Notification. | POM, clase principal, configuración, Maven Wrapper, Dockerfile y pruebas propios. |
+| Catalog Service | `fuelbridge-catalog-service/` | Catalog. | POM, clase principal, configuración, Maven Wrapper, Dockerfile y pruebas propios. |
+| Reporting Service | `fuelbridge-reporting-service/` | Reporting & Analytics. | POM, clase principal, configuración, Maven Wrapper, Dockerfile y pruebas propios. |
+
+Los proyectos extraídos disponen de clases `@SpringBootApplication` y pueden construirse como aplicaciones separadas. El POM raíz no agrega sus proyectos: compilar o probar solamente la raíz no construye ni ejecuta las suites de los tres microservicios.
+
+Esta separación no demuestra autonomía funcional frente a fallos. Notification y Catalog mantienen dependencias con IAM, mientras Reporting depende de las APIs del monolito para obtener pedidos, pagos y entregas.
+
+##### Evidencia de cambios en control de versiones
+
+Los commits incluidos en esta sección fueron comprobados en el historial remoto de la rama `develop`. Sus diffs evidencian la extracción de Notification, Catalog y Reporting, el retiro de sus implementaciones originales y la sustitución de dependencias internas por comunicación HTTP.
+
+| Cambio | Evidencia del antes y después | Archivos o componentes principales | Commit |
+| --- | --- | --- | --- |
+| Retirar Notification del monolito | Eliminación del contexto interno: 28 archivos y 556 líneas según el historial revisado. | Paquete `notification` del monolito. | [5d4bdb6](https://github.com/HaloFuel/FuelBrigde-Backend/commit/5d4bdb6) |
+| Conectar Ordering con Notification por HTTP | Sustitución de la invocación interna por una solicitud al servicio extraído. | `NotificationServiceClient.java`. | [7545cd6](https://github.com/HaloFuel/FuelBrigde-Backend/commit/7545cd6) |
+| Incorporar Notification al repositorio principal | Proyecto independiente incorporado como carpeta versionada con configuración y pruebas. | `fuelbridge-notification-service/`. | [28bb37f](https://github.com/HaloFuel/FuelBrigde-Backend/commit/28bb37f) |
+| Crear proyecto Catalog | Incorporación de proyecto Maven, clase principal y wrapper. | `fuelbridge-catalog-service/`. | [8521894](https://github.com/HaloFuel/FuelBrigde-Backend/commit/8521894) |
+| Extraer Catalog | Traslado del modelo y sustitución de dependencias IAM por un cliente HTTP. | Modelo, persistencia, controlador e `IamCompanyDirectory`. | [1e4cacb](https://github.com/HaloFuel/FuelBrigde-Backend/commit/1e4cacb) |
+| Configurar persistencia de Catalog | Incorporación de datasource y esquema configurable propios. | `application-mysql.properties` de Catalog. | [2c84a0a](https://github.com/HaloFuel/FuelBrigde-Backend/commit/2c84a0a) |
+| Conservar rutas de Catalog | Controlador local reemplazado por gateway y cliente HTTP. | `CatalogServiceGateway` y `CatalogServiceClient`. | [2e1b57e](https://github.com/HaloFuel/FuelBrigde-Backend/commit/2e1b57e) |
+| Crear proyecto Reporting | Incorporación de proyecto ejecutable propio. | POM, wrapper y clase principal de Reporting. | [437c1aa](https://github.com/HaloFuel/FuelBrigde-Backend/commit/437c1aa) |
+| Extraer Reporting | Sustitución de consultas Java internas por datos obtenidos mediante HTTP. | `AnalyticsDataSource`, `FuelBridgeAnalyticsDataSource` y servicio de consultas. | [4ee8f4c](https://github.com/HaloFuel/FuelBrigde-Backend/commit/4ee8f4c) |
+| Configurar datasource de Reporting | Configuración separada del proyecto principal. | `application-mysql.properties` de Reporting. | [44a0b1e](https://github.com/HaloFuel/FuelBrigde-Backend/commit/44a0b1e) |
+| Conservar rutas de Reporting | Controlador local reemplazado por gateway HTTP. | `ReportingServiceGateway` y `ReportingServiceClient`. | [2b30735](https://github.com/HaloFuel/FuelBrigde-Backend/commit/2b30735) |
+| Incorporar JWT en Catalog y Reporting | Validación compatible con los tokens del sistema. | Filtros y configuración de seguridad. | [6776920](https://github.com/HaloFuel/FuelBrigde-Backend/commit/6776920), [377ef28](https://github.com/HaloFuel/FuelBrigde-Backend/commit/377ef28) |
+| Adaptar pruebas BDD | La prueba deja de depender de Notification local y comprueba el contrato HTTP mediante un stub. | Steps de notificación y `NotificationHttpStub`. | [98795e0](https://github.com/HaloFuel/FuelBrigde-Backend/commit/98795e0) |
+| Incorporar Dockerfiles de Catalog y Reporting | Cada aplicación dispone de empaquetado propio. | Dockerfiles de ambos servicios. | [006c873](https://github.com/HaloFuel/FuelBrigde-Backend/commit/006c873), [f5f17f6](https://github.com/HaloFuel/FuelBrigde-Backend/commit/f5f17f6) |
+
+La incorporación de Notification al repositorio principal concentra parte de su implementación en un commit. No se encontró en ese historial una secuencia previa completa de creación, seguridad y empaquetado del servicio.
+
+Los commits de documentación, pruebas o ejemplos OpenAPI respaldan la evolución del producto, pero no se contabilizan como nuevas extracciones de microservicios.
+
+##### Comunicación después de la extracción
+
+| Origen | Destino | Mecanismo | Finalidad |
+| --- | --- | --- | --- |
+| Ordering | Listener local del monolito. | Eventos de Spring dentro del mismo proceso. | Reaccionar a confirmación, cancelación y despacho. |
+| Listener local / `NotificationServiceClient` | Notification Service. | POST REST síncrono. | Solicitar creación de notificaciones. |
+| Gateway de Catalog | Catalog Service. | REST síncrono. | Conservar rutas de calificaciones. |
+| Gateway de Reporting | Reporting Service. | REST síncrono. | Conservar rutas de indicadores. |
+| Notification Service | IAM del monolito. | GET REST cuando corresponde. | Resolver usuarios destinatarios. |
+| Catalog Service | IAM del monolito. | GET REST. | Comprobar empresas. |
+| Reporting Service | APIs del monolito. | GET REST. | Obtener pedidos, pagos y entregas. |
+
+Los eventos de Spring no atraviesan la frontera del proceso. El flujo de notificación utiliza un evento local seguido por una llamada HTTP síncrona; no se identificaron broker, outbox, reintentos ni transacciones distribuidas.
+
+Los clientes HTTP configuran timeout de conexión de 3 segundos y de lectura de 5 segundos. Un fallo remoto de Notification puede propagarse al flujo de Ordering. La persistencia del pedido y la de la notificación no comparten una transacción.
+
+##### Pruebas relacionadas con la migración
+
+Los reportes locales disponibles registran los siguientes resultados:
+
+| Aplicación | Casos registrados | Fallos | Errores | Omitidos |
+| --- | --- | --- | --- | --- |
+| FuelBridge Platform | 16 | 0 | 0 | 0 |
+| Notification Service | 4 | 0 | 0 | 0 |
+| Catalog Service | 4 | 0 | 0 | 0 |
+| Reporting Service | 4 | 0 | 0 | 0 |
+| **Total** | **28** | **0** | **0** | **0** |
+
+Las fuentes corresponden a los directorios `target/surefire-reports/` de cada proyecto. Los reportes no incluyen una identificación explícita del commit ejecutado; deben vincularse a esa revisión para completar la trazabilidad de la evidencia.
+
+La BDD de notificación valida el request HTTP, el JWT y sus datos mediante un stub. No demuestra persistencia en un Notification Service real ejecutándose simultáneamente con el monolito.
+
+Los resultados sin fallos no representan cobertura del 100% del código ni del alcance funcional. Tampoco acreditan una ejecución integrada en Railway.
+
+
+##### Alcance y pendientes de validación
+
+La evidencia presentada respalda la extracción de tres capacidades de negocio hacia aplicaciones Spring Boot independientes: Notification, Catalog y Reporting & Analytics. Esta evolución se encuentra documentada mediante los cambios del repositorio, las configuraciones de los proyectos y las verificaciones funcionales realizadas durante el TP1.
+
+Como parte de la revisión, se consolidaron las siguientes evidencias:
+
+- Actualización de las vistas arquitectónicas y diagramas de clases en el apartado 4.1.4.
+- Actualización de los diagramas de persistencia en el apartado 4.1.5.
+- Identificación de commits de extracción y refactorización publicados en GitHub.
+- Documentación de contratos REST y endpoints de los microservicios en el apartado 5.3.1.5.
+- Incorporación de una matriz de trazabilidad entre historias técnicas, endpoints y pruebas.
+- Ejecución de verificaciones funcionales locales del monolito y los servicios extraídos, documentadas en el apartado 5.3.1.4.
+
+Estas evidencias permiten relacionar la arquitectura diseñada con los cambios implementados y los resultados observados. Sin embargo, la ejecución satisfactoria de operaciones individuales no demuestra por sí sola la validación completa de todos los flujos distribuidos.
+
+Las siguientes actividades permanecen pendientes de validación o implementación:
+
+- Comprobar el flujo automático completo de notificaciones desde Ordering hacia Notification Service mediante una prueba integrada.
+- Verificar la integración del frontend con todos los microservicios extraídos.
+- Consolidar los resultados de las suites automatizadas de las cuatro aplicaciones, asociados a una revisión específica del repositorio.
+- Comprobar la configuración efectiva de los esquemas independientes y definir la migración de datos históricos.
+- Completar las decisiones arquitectónicas relacionadas con la propiedad de datos, comunicación entre servicios y manejo de fallos.
+
+Asimismo, se identificó una discrepancia funcional entre la confirmación de pedidos en estado `CONFIRMED` y la operación de despacho que exige el estado `PENDING`. Esta situación requiere revisión para garantizar la coherencia del flujo de negocio.
+
+Finalmente, se distingue el despliegue previamente realizado del backend en Railway, cuya ejecución se encuentra temporalmente suspendida por consumo de créditos, de las pruebas locales efectuadas sobre la arquitectura revisada. No se atribuye a estas últimas una validación de despliegue público integrado de los cuatro componentes.
+
+**ADR-09: Descomposición a microservicios (Notification, Catalog, Reporting & Analytics)**
+
+| **ID** | **Decisión** | **Alternativa descartada** | **Driver** | **Componente** | **Justificación** | **Consecuencia** |
+| --- | --- | --- | --- | --- | --- | --- |
+| ADR-09 | Extraer Notification, Catalog y Reporting & Analytics como aplicaciones Spring Boot independientes, siguiendo una estrategia de descomposición por capacidades de negocio (características de Strangler Fig, según el análisis de la sección 5.3.1.9) | Mantener los 9 Bounded Contexts en el Monolito Modular (ADR-02 sin modificación) | Criterio de evaluación "Microservice architecture" (TP1) | Notification Service, Catalog Service, Reporting & Analytics Service | Estos tres Bounded Contexts presentaban el menor acoplamiento transaccional respecto al núcleo de Ordering, lo que permitió extraerlos sin introducir un mecanismo de coordinación distribuida (Saga) en esta iteración | La extracción es parcial: los 6 BCs restantes (IAM, Ordering, Payment, Inventory, Fulfillment, Equipment) continúan compartiendo proceso y persistencia. El POM raíz no agrega los 3 proyectos extraídos como submódulos, por lo que compilar o probar solo la raíz no construye ni ejecuta sus suites; cada uno requiere compilación independiente. Notification y Catalog mantienen dependencia de IAM, y Reporting depende de las APIs del monolito, por lo que la separación no demuestra aún autonomía funcional frente a fallos. |
+
+Los 6 Bounded Contexts restantes quedan identificados como candidatos para extracción en iteraciones posteriores, priorizando Inventory y Equipment por su menor acoplamiento relativo, y dejando Ordering, Payment e Identity & Access para una etapa que requerirá introducir un mecanismo de coordinación transaccional distribuida (Saga Pattern).
+
+#### 5.3.1.10 Evidencia de mejora continua
+
+Durante la preparación del TP1 se revisaron los artefactos anteriores y se contrastaron con la implementación y las pruebas locales. Esta revisión permitió identificar diferencias entre la arquitectura documentada, el código posterior a la extracción de microservicios y la evidencia de funcionamiento disponible.
+
+Las mejoras siguientes se sustentan en la revisión crítica de los artefactos y en los problemas observados durante las pruebas. No se atribuyen a observaciones del docente que no hayan sido registradas.
+
+##### Mejoras aplicadas
+
+| Situación anterior o problema detectado | Modificación realizada | Evidencia del resultado |
+|---|---|---|
+| La descripción arquitectónica presentaba una API central con todos los bounded contexts internos | Se actualizó 4.1.4 para representar el monolito residual y Notification, Catalog y Reporting como aplicaciones independientes | Vistas de arquitectura y clases de 4.1.4; commits de extracción en 5.3.1.9 |
+| Los diagramas requerían contrastarse con las entidades actuales de persistencia | Se actualizó 4.1.5 con las tablas previstas por aplicación, la auditoría compartida y la distinción entre asociaciones JPA y referencias escalares | Diagramas de 4.1.5 y entidades de persistencia de la versión revisada |
+| La documentación de API se concentraba en el backend anterior | Se incorporaron los contratos, rutas, parámetros y ejemplos de los tres microservicios extraídos | Documentación de 5.3.1.5 y commits enlazados |
+| Swagger del monolito intentaba enviar solicitudes al despliegue suspendido de Railway | Se seleccionó el servidor localhost para las pruebas | Solicitudes locales y respuestas registradas en 5.3.1.4 |
+| El inicio de sesión devolvía 500 porque la clave JWT configurada tenía una longitud insuficiente | Se sustituyó la clave de configuración local por una de longitud suficiente y se utilizó el mismo valor en las cuatro aplicaciones, reiniciándolas | Inicio de sesión con 200 OK y solicitudes autenticadas satisfactorias a los microservicios |
+| Faltaba comprobar Reporting con operaciones registradas | Se creó un pedido de 100 unidades por un total de 1500 y se registró y completó su pago | Evidencias R-01 a R-04: indicadores iniciales en cero y resultados posteriores coherentes |
+| El inventario de endpoints no explicaba su relación con el alcance | Se incorporó una matriz vinculada a las historias técnicas y se ejecutaron comprobaciones adicionales | Trazabilidad de 5.3.1.5 y evidencias U-01, U-02, I-01 y O-01 a O-04 |
+
+La corrección de JWT fue un cambio de configuración del entorno local. No se presenta como una modificación del código fuente ni como un commit del repositorio.
+
+##### Aprendizajes de la revisión
+
+- Los diagramas y contratos deben actualizarse cuando cambia la distribución de responsabilidades entre aplicaciones.
+- Un campo identificador no demuestra por sí mismo la existencia de una clave foránea.
+- La documentación de una operación y su funcionamiento observado deben respaldarse con evidencias diferentes.
+- Una respuesta satisfactoria de Reporting debe contrastarse con los datos que utiliza para calcular sus indicadores.
+- La configuración de servidor y autenticación forma parte de la preparación necesaria para reproducir las pruebas.
+
+##### Mejoras pendientes
+
+| Mejora identificada | Motivo | Estado |
+|---|---|---|
+| Comprobar la generación automática de notificaciones desde Ordering hacia Notification Service | Las pruebas presentadas crean notificaciones manualmente | Pendiente |
+| Ampliar las pruebas de errores y autorización | Las verificaciones adicionales se concentraron en casos satisfactorios | Pendiente |
+| Definir un procedimiento versionado de migración de datos históricos | La extracción de código no demuestra el traslado de registros entre esquemas | Pendiente |
+| Revisar todas las transiciones del pedido | Algunas operaciones de estado tienen restricciones diferentes y requieren coherencia con el flujo de negocio | Pendiente |
+
+Las mejoras pendientes no se contabilizan como implementadas. Su registro permite distinguir los resultados alcanzados de las acciones que requieren trabajo posterior.
 
 
 # Referencias bibliográficas
