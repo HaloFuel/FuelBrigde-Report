@@ -4898,6 +4898,7 @@ Durante el Sprint 1, todos los miembros del equipo participaron en la implementa
 - El equipo aplicó GitFlow y Conventional Commits, referenciando historias de usuario y tareas (US-12, US-30, T02.02, TS-04) en los mensajes de commit. Los IDs US-29 y US-30 de las evidencias históricas corresponden a US-26 y US-27 en la especificación de 3.2.
 - El seguimiento del sprint se realizó en un tablero Kanban.
 
+
 ##### 5.3.1.8 Kanban Board
 
 Para la organización y seguimiento de las actividades correspondientes al Sprint 1 de FuelBridge, la startup HaloFuel implementó un tablero Kanban utilizando la herramienta Trello.
@@ -4916,17 +4917,20 @@ Se incorporaron 13 tareas del Sprint 1, con una estimación total de 34 horas, r
 
 Además, se utilizaron etiquetas de colores para diferenciar los Bounded Contexts y las áreas de trabajo, permitiendo identificar fácilmente las responsabilidades de cada actividad.
 
-Al cierre del Sprint 1, las 13 tareas figuraban como completadas según el Sprint Backlog, por lo que fueron ubicadas en la columna Terminado (Done).
+La captura del tablero Kanban corresponde a un registro del seguimiento realizado durante el Sprint 1. En ella se observan actividades distribuidas entre diferentes estados, lo que permite evidenciar el avance y la organización del trabajo del equipo en ese momento.
+
+Esta captura representa un estado del tablero durante el desarrollo del Sprint y no necesariamente su estado final. Las actividades completadas y las evidencias de implementación se encuentran documentadas en las secciones correspondientes del Sprint Review.
 
 **Link del tablero Trello:**
 
-https://trello.com/invite/b/6ac87274106e25821de46ae4/ATTI3087071ed1bfa2ed167e7dcdba4149dd6FCBE38D/fuelbridge-sprint-1-kanban-board
+[FuelBridge - Sprint 1 Kanban Board](https://trello.com/invite/b/6ac87274106e25821de46ae4/ATTI3087071ed1bfa2ed167e7dcdba4149dd6FCBE38D/fuelbridge-sprint-1-kanban-board)
 
 <div align="center">
   <img src="assets/chapter-5/KanbanBoardSprint1.png" width="900" />
 </div>
 
-*Figura. Tablero Kanban del Sprint 1 de FuelBridge, elaborado en Trello, mostrando las tareas organizadas según su estado final.*
+*Figura. Tablero Kanban del Sprint 1 de FuelBridge, elaborado en Trello, mostrando la distribución de actividades según su estado durante el seguimiento del Sprint.*
+
 
 #### 5.3.1.9 Evidencia de migración a microservicios
 
