@@ -1813,44 +1813,44 @@ A partir de estos impactos se definieron los Deliverables que la plataforma Fuel
 | **03**      | US-08  | Registrar información de pago              | Como solicitante, quiero ingresar la información de los pagos correspondientes para validar el pedido ante el proveedor.                                                           | **3**            |
 | **04**      | US-07  | Confirmar recepción de pedido              | Como solicitante, quiero confirmar que recibí el pedido para que el proveedor lo cierre.                                                                                           | **2**            |
 | **05**      | US-09  | Ver historial de pedidos                   | Como solicitante, quiero ver mis pedidos anteriores para tener control sobre mi consumo.                                                                                           | **2**            |
-| **06**      | US-43  | Ver detalle de pedido                      | Como usuario de ambos segmentos, quiero ver el detalle completo de un pedido para revisar toda la información asociada.                                                            | **2**            |
+| **06**      | US-40  | Ver detalle de pedido                      | Como usuario de ambos segmentos, quiero ver el detalle completo de un pedido para revisar toda la información asociada.                                                            | **2**            |
 | **07**      | US-10  | Ver pedidos pendientes                     | Como proveedor, quiero ver todos los pedidos pendientes para analizarlos y tomar acción.                                                                                           | **2**            |
 | **08**      | US-11  | Aprobar pedido                             | Como proveedor, quiero aprobar pedidos según los depósitos hechos a mis cuentas bancarias.                                                                                         | **3**            |
-| **09**      | US-42  | Rechazar pedido                            | Como proveedor, quiero rechazar un pedido cuando no pueda atenderlo para notificar al solicitante oportunamente.                                                                   | **2**            |
+| **09**      | US-39  | Rechazar pedido                            | Como proveedor, quiero rechazar un pedido cuando no pueda atenderlo para notificar al solicitante oportunamente.                                                                   | **2**            |
 | **10**      | US-12  | Marcar pedido como despachado              | Como proveedor, quiero marcar cuándo un pedido sale a entrega para notificar al cliente.                                                                                           | **2**            |
 | **11**      | US-13  | Cerrar pedido                              | Como proveedor, quiero cerrar el pedido cuando el cliente confirme la entrega para finalizar el proceso.                                                                           | **2**            |
 | **12**      | US-14  | Generar reporte de ventas                  | Como proveedor, quiero generar reportes de ventas para tener registro de operaciones realizadas.                                                                                   | **3**            |
-| **13**      | US-46  | Gestionar inventario de combustibles       | Como proveedor, quiero registrar, editar y eliminar los productos de combustible de mi catálogo para que estén disponibles como opciones al crear un pedido.                       | **3**            |
-| **14**      | US-44  | Gestionar vehículos de flota               | Como proveedor, quiero registrar y administrar los vehículos de mi flota para tenerlos disponibles al asignarlos a pedidos.                                                        | **3**            |
-| **15**      | US-45  | Gestionar conductores                      | Como proveedor, quiero registrar y administrar los conductores de mi empresa para asignarlos correctamente a los despachos.                                                        | **3**            |
-| **16**      | US-49  | Asignar recursos a despacho                | Como proveedor, quiero asignar un vehículo y un conductor a un pedido aprobado en una sola operación para agilizar la preparación del despacho.                                    | **5**            |
-| **17**      | US-22  | Validar disponibilidad de transporte       | Como proveedor, quiero saber qué vehículos están disponibles antes de asignarlos para vincularlos correctamente.                                                                   | **5**            |
+| **13**      | US-43  | Gestionar inventario de combustibles       | Como proveedor, quiero registrar, editar y eliminar los productos de combustible de mi catálogo para que estén disponibles como opciones al crear un pedido.                       | **3**            |
+| **14**      | US-41  | Gestionar vehículos de flota               | Como proveedor, quiero registrar y administrar los vehículos de mi flota para tenerlos disponibles al asignarlos a pedidos.                                                        | **3**            |
+| **15**      | US-42  | Gestionar conductores                      | Como proveedor, quiero registrar y administrar los conductores de mi empresa para asignarlos correctamente a los despachos.                                                        | **3**            |
+| **16**      | US-46  | Asignar recursos a despacho                | Como proveedor, quiero asignar un vehículo y un conductor a un pedido aprobado en una sola operación para agilizar la preparación del despacho.                                    | **5**            |
+| **17**      | US-19  | Validar disponibilidad de transporte       | Como proveedor, quiero saber qué vehículos están disponibles antes de asignarlos para vincularlos correctamente.                                                                   | **5**            |
 | **18**      | US-18  | Ver resumen de pedidos (Solicitante)       | Como solicitante, quiero ver un resumen de mis pedidos para identificar cuántos están en proceso o completados.                                                                    | **3**            |
-| **19**      | US-47  | Ver Dashboard principal del proveedor      | Como proveedor, quiero acceder a un panel principal con KPIs de operación y un gráfico de tendencia de ventas para tener visibilidad en tiempo real del estado de mi negocio.      | **3**            |
-| **20**      | US-29  | Recibir notificación de aprobación         | Como solicitante, quiero recibir una notificación cuando un pedido sea aprobado o rechazado para estar informado.                                                                  | **2**            |
-| **21**      | US-30  | Notificación de pedido despachado          | Como solicitante, quiero recibir una notificación cuando un pedido haya sido despachado para estar informado.                                                                      | **2**            |
-| **22**      | US-27  | Buscar pedido por código                   | Como usuario de ambos segmentos, quiero buscar un pedido específico por su código para encontrarlo rápidamente.                                                                    | **2**            |
-| **23**      | US-28  | Filtrar pedidos por estado                 | Como usuario de ambos segmentos, quiero filtrar mis pedidos por estado para facilitar la revisión.                                                                                 | **2**            |
-| **24**      | US-31  | Ver listado de empresas                    | Como proveedor, quiero ver una lista de empresas solicitantes para identificar a mis clientes frecuentes.                                                                          | **2**            |
-| **25**      | US-32  | Ver detalles de empresa                    | Como proveedor, quiero ver información detallada de una empresa solicitante para analizar su historial de pedidos.                                                                 | **2**            |
-| **26**      | US-33  | Ver gráfico de consumo (Solicitante)       | Como solicitante, quiero ver un gráfico de mi consumo mensual para tener control sobre el uso del combustible.                                                                     | **3**            |
-| **27**      | US-34  | Ver gráfico de ventas (Proveedor)          | Como proveedor, quiero ver un gráfico de ventas por mes para monitorear el rendimiento del negocio.                                                                                | **3**            |
-| **28**      | US-48  | Ver distribución de ventas por sector      | Como proveedor, quiero ver la distribución de mis ventas por sector industrial para identificar cuáles son mis clientes más relevantes por rubro.                                  | **2**            |
-| **29**      | US-35  | Descargar reporte PDF                      | Como usuario de ambos segmentos, quiero descargar un resumen de pedidos o ventas en formato PDF para archivarlo o compartirlo.                                                     | **3**            |
+| **19**      | US-44  | Ver Dashboard principal del proveedor      | Como proveedor, quiero acceder a un panel principal con KPIs de operación y un gráfico de tendencia de ventas para tener visibilidad en tiempo real del estado de mi negocio.      | **3**            |
+| **20**      | US-26  | Recibir notificación de aprobación         | Como solicitante, quiero recibir una notificación cuando un pedido sea aprobado o rechazado para estar informado.                                                                  | **2**            |
+| **21**      | US-27  | Notificación de pedido despachado          | Como solicitante, quiero recibir una notificación cuando un pedido haya sido despachado para estar informado.                                                                      | **2**            |
+| **22**      | US-24  | Buscar pedido por código                   | Como usuario de ambos segmentos, quiero buscar un pedido específico por su código para encontrarlo rápidamente.                                                                    | **2**            |
+| **23**      | US-25  | Filtrar pedidos por estado                 | Como usuario de ambos segmentos, quiero filtrar mis pedidos por estado para facilitar la revisión.                                                                                 | **2**            |
+| **24**      | US-28  | Ver listado de empresas                    | Como proveedor, quiero ver una lista de empresas solicitantes para identificar a mis clientes frecuentes.                                                                          | **2**            |
+| **25**      | US-29  | Ver detalles de empresa                    | Como proveedor, quiero ver información detallada de una empresa solicitante para analizar su historial de pedidos.                                                                 | **2**            |
+| **26**      | US-30  | Ver gráfico de consumo (Solicitante)       | Como solicitante, quiero ver un gráfico de mi consumo mensual para tener control sobre el uso del combustible.                                                                     | **3**            |
+| **27**      | US-31  | Ver gráfico de ventas (Proveedor)          | Como proveedor, quiero ver un gráfico de ventas por mes para monitorear el rendimiento del negocio.                                                                                | **3**            |
+| **28**      | US-45  | Ver distribución de ventas por sector      | Como proveedor, quiero ver la distribución de mis ventas por sector industrial para identificar cuáles son mis clientes más relevantes por rubro.                                  | **2**            |
+| **29**      | US-32  | Descargar reporte PDF                      | Como usuario de ambos segmentos, quiero descargar un resumen de pedidos o ventas en formato PDF para archivarlo o compartirlo.                                                     | **3**            |
 | **30**      | US-01  | Ver sección Home                           | Como visitante (proveedor), quiero ver una sección de inicio que resuma el valor de FuelBridge para comprender rápidamente el objetivo del sistema.                                | **2**            |
 | **31**      | US-02  | Ver sección About Us                       | Como visitante de ambos segmentos, quiero conocer quiénes están detrás de FuelBridge para confiar en el sistema.                                                                   | **1**            |
 | **32**      | US-03  | Ver sección How it works?                  | Como visitante de ambos segmentos, quiero entender cómo funciona FuelBridge paso a paso para evaluar si se ajusta a mis necesidades.                                               | **2**            |
-| **33**      | US-36  | Ver sección Benefits                       | Como visitante de ambos segmentos, quiero conocer las principales ventajas para evaluar la implementación de la plataforma.                                                        | **1**            |
-| **34**      | US-37  | Ver sección Lo que Dicen Nuestros Clientes | Como visitante de ambos segmentos, quiero conocer los testimonios de usuarios de FuelBridge para tener confianza en la plataforma.                                                 | **2**            |
-| **35**      | US-38  | Ver sección Planes y Precios               | Como visitante de ambos segmentos, quiero saber qué planes se adecuan a mis necesidades para poder iniciar un proceso de registro.                                                 | **3**            |
-| **36**      | US-39  | Cambiar idioma                             | Como visitante de ambos segmentos, quiero poder cambiar entre inglés y español para entender la plataforma en mi idioma preferido.                                                 | **3**            |
+| **33**      | US-33  | Ver sección Benefits                       | Como visitante de ambos segmentos, quiero conocer las principales ventajas para evaluar la implementación de la plataforma.                                                        | **1**            |
+| **34**      | US-34  | Ver sección Lo que Dicen Nuestros Clientes | Como visitante de ambos segmentos, quiero conocer los testimonios de usuarios de FuelBridge para tener confianza en la plataforma.                                                 | **2**            |
+| **35**      | US-35  | Ver sección Planes y Precios               | Como visitante de ambos segmentos, quiero saber qué planes se adecuan a mis necesidades para poder iniciar un proceso de registro.                                                 | **3**            |
+| **36**      | US-36  | Cambiar idioma                             | Como visitante de ambos segmentos, quiero poder cambiar entre inglés y español para entender la plataforma en mi idioma preferido.                                                 | **3**            |
 | **37**      | US-04  | Enviar mensaje de contacto                 | Como visitante de ambos segmentos, quiero enviar un mensaje desde Contact Us para solicitar más información.                                                                       | **3**            |
-| **38**      | US-23  | Ver perfil de usuario                      | Como usuario registrado, quiero ver mis datos de perfil para revisar mi información registrada.                                                                                    | **1**            |
-| **39**      | US-24  | Editar datos de perfil                     | Como usuario registrado, quiero editar mis datos para mantener mi información actualizada.                                                                                         | **2**            |
-| **40**      | US-25  | Ver sección de preguntas frecuentes        | Como visitante de ambos segmentos, quiero acceder a una sección de preguntas frecuentes para resolver dudas rápidamente.                                                           | **2**            |
-| **41**      | US-26  | Acceder a información de contacto rápido   | Como usuario de ambos segmentos, quiero ver datos de contacto directo (teléfono o correo) para hacer consultas urgentes.                                                           | **1**            |
-| **42**      | US-40  | Registrar empresa solicitante              | Como visitante (solicitante), quiero registrar mi empresa en la plataforma para comenzar a realizar pedidos de combustible.                                                        | **3**            |
-| **43**      | US-41  | Registrar empresa proveedora               | Como visitante (proveedor), quiero registrar mi empresa distribuidora en la plataforma para comenzar a gestionar pedidos de combustible.                                           | **3**            |
+| **38**      | US-20  | Ver perfil de usuario                      | Como usuario registrado, quiero ver mis datos de perfil para revisar mi información registrada.                                                                                    | **1**            |
+| **39**      | US-21  | Editar datos de perfil                     | Como usuario registrado, quiero editar mis datos para mantener mi información actualizada.                                                                                         | **2**            |
+| **40**      | US-22  | Ver sección de preguntas frecuentes        | Como visitante de ambos segmentos, quiero acceder a una sección de preguntas frecuentes para resolver dudas rápidamente.                                                           | **2**            |
+| **41**      | US-23  | Acceder a información de contacto rápido   | Como usuario de ambos segmentos, quiero ver datos de contacto directo (teléfono o correo) para hacer consultas urgentes.                                                           | **1**            |
+| **42**      | US-37  | Registrar empresa solicitante              | Como visitante (solicitante), quiero registrar mi empresa en la plataforma para comenzar a realizar pedidos de combustible.                                                        | **3**            |
+| **43**      | US-38  | Registrar empresa proveedora               | Como visitante (proveedor), quiero registrar mi empresa distribuidora en la plataforma para comenzar a gestionar pedidos de combustible.                                           | **3**            |
 | **44**      | US-15  | Iniciar sesión                             | Como usuario registrado, quiero iniciar sesión con correo y contraseña para acceder a mi cuenta.                                                                                   | **2**            |
 | **45**      | US-16  | Recuperar contraseña                       | Como usuario registrado, quiero recuperar mi contraseña para volver a acceder si la olvidé.                                                                                        | **2**            |
 | **46**      | US-17  | Cerrar sesión                              | Como usuario registrado, quiero poder cerrar sesión para mantener segura mi cuenta.                                                                                                | **1**            |
@@ -1890,7 +1890,7 @@ El tablero Kanban de seguimiento (Trello) se referencia en la sección [4.3.1.7]
 
 ---
 
-<div class="page"></div>
+<div style="page-break-before: always;"></div>
 
 # Capítulo IV: Product Architecture Design
 
@@ -2097,7 +2097,71 @@ FuelBridge Platform se comunica por HTTP/REST con los tres servicios. Notificati
   <img src="assets/chapter-4/iteration3-reporting-components.png" width="800" />
 </div>
 
-**Domain Class Diagram (Ordering BC)**
+<div style="break-inside: avoid; page-break-inside: avoid;">
+
+#### Domain Class Diagram (IAM BC)
+
+```mermaid
+classDiagram
+    class User {
+        +Long id
+        +String username
+        +String password
+        +Set~Role~ roles
+        +Long companyId
+        +Long providerId
+        +addRole(role)
+        +addRoles(roles)
+    }
+
+    class Role {
+        +Long id
+        +Roles name
+        +getDefaultRole()$ Role
+        +toRoleFromName(name)$ Role
+        +validateRoleSet(roles)$ List~Role~
+    }
+
+    class Roles {
+        &lt;&lt;enumeration&gt;&gt;
+        ROLE_BUYER
+        ROLE_PROVIDER
+    }
+
+    class BuyerCompany {
+        +Long id
+        +String name
+        +String ruc
+        +String sector
+        +String address
+        +String contactEmail
+        +String phone
+    }
+
+    class ProviderCompany {
+        +Long id
+        +String name
+        +String ruc
+        +Double rating
+        +String address
+        +String phone
+        +List~String~ fuelTypesOffered
+        +String description
+    }
+
+    User "0..*" --> "0..*" Role : roles
+    Role ..> Roles : tipo del atributo name
+    User ..> BuyerCompany : companyId
+    User ..> ProviderCompany : providerId
+```
+
+</div>
+
+**Nota de implementación:** IAM permanece dentro del monolito. `User.roles` se persiste mediante una relación JPA `ManyToMany` y la tabla `user_roles`. `companyId` y `providerId` son identificadores opcionales, sin asociaciones JPA ni FKs declaradas hacia las empresas en las entidades revisadas. El dominio no exige que únicamente uno esté informado. `validateRoleSet()` asigna `ROLE_BUYER` cuando la lista es nula o vacía; no comprueba la existencia de los roles en persistencia. El hash de contraseña y la emisión de JWT se realizan fuera del agregado `User`.
+
+<div style="break-inside: avoid; page-break-inside: avoid;">
+
+#### Domain Class Diagram (Ordering BC)
 
 ```mermaid
 classDiagram
@@ -2146,9 +2210,13 @@ classDiagram
     FuelOrder ..> Equipment : equipmentId
 ```
 
+</div>
+
 **Nota de implementación:** Ordering permanece dentro del monolito. `FuelOrder` representa un pedido de un solo producto mediante `fuelProductId` y `requestedQuantity`; no tiene una clase `OrderDetail` asociada. Las clases externas se muestran únicamente como referencias por ID. `dispatch()` exige `PENDING` y cambia el estado a `DISPATCHED`; `receive()` exige `DISPATCHED` y cambia el estado a `PENDING_PAYMENT`. `confirm()` y `cancel()` no validan el estado previo; `markPaid()` bloquea pedidos cancelados. Existe una discrepancia pendiente: un pedido confirmado como `CONFIRMED` no cumple la precondición actual de despacho.
 
 Las solicitudes se gestionan mediante `FuelRequestService` y `FuelRequestPersistenceEntity`. No se identificó un agregado de dominio `FuelRequest` equivalente a `FuelOrder`; por ello, no se incluye una clase idealizada en este diagrama.
+
+<div style="break-inside: avoid; page-break-inside: avoid;">
 
 #### Domain Class Diagram (Payment BC)
 
@@ -2182,7 +2250,11 @@ classDiagram
     Payment ..> BuyerCompany : companyId
 ```
 
+</div>
+
 **Nota de implementación:** Payment permanece dentro del monolito. El pago se crea en estado `PENDING`; `complete()` establece `COMPLETED` y registra referencia y fecha, mientras `refund()` y `fail()` establecen `REFUNDED` y `FAILED`. Estas operaciones no representan integración con una pasarela externa. El servicio de finalización actualiza el pago y el pedido dentro de una transacción local. No se encontró validación del importe contra el total del pedido ni almacenamiento de vouchers en cloud storage. El reembolso no revierte automáticamente el estado del pedido.
+
+<div style="break-inside: avoid; page-break-inside: avoid;">
 
 #### Domain Class Diagram (Inventory BC)
 
@@ -2223,7 +2295,11 @@ classDiagram
     FuelProduct ..> ProviderCompany : providerId
 ```
 
+</div>
+
 **Nota de implementación:** Inventory permanece dentro del monolito y contiene el agregado `FuelProduct`. No existen clases independientes de almacén, movimiento o reserva de stock en el modelo descrito. `updateStock()` reemplaza `availableStock`, sin validar cantidades negativas ni el límite de capacidad. `update()` no modifica `providerId` y conserva `active` cuando el comando lo omite. `providerId` es una columna obligatoria, sin asociación JPA ni FK declarada hacia IAM en la entidad revisada.
+
+<div style="break-inside: avoid; page-break-inside: avoid;">
 
 #### Domain Class Diagram (Fulfillment BC)
 
@@ -2296,9 +2372,13 @@ classDiagram
     Vehicle ..> ProviderCompany : providerId
 ```
 
+</div>
+
 **Nota de implementación:** Fulfillment permanece dentro del monolito. `Delivery`, `Driver` y `Vehicle` son agregados independientes; no existe composición ni relación directa conductor–vehículo. Las referencias son identificadores escalares. `Delivery.dispatch()`, `complete()` y `fail()` no validan el estado previo; los estados de Driver y Vehicle son `String`. El constructor de Delivery establece `SCHEDULED`, pero el servicio de creación llama inmediatamente a `dispatch()`.
 
 El servicio de creación de entrega comprueba recursos, proveedor, pedido, capacidad, stock y ausencia de otra entrega. La unicidad de entrega por pedido depende de una comprobación de aplicación: no se identificó una restricción `UNIQUE` equivalente en la entidad revisada.
+
+<div style="break-inside: avoid; page-break-inside: avoid;">
 
 #### Domain Class Diagram (Equipment BC)
 
@@ -2362,7 +2442,11 @@ classDiagram
     Equipment ..> ProviderCompany : favoriteProviderId
 ```
 
+</div>
+
 **Nota de implementación:** Equipment permanece dentro del monolito. `companyId` y `favoriteProviderId` son identificadores escalares, sin asociaciones JPA ni FKs declaradas hacia IAM en la entidad revisada. `assignFavoriteProvider()` asigna el identificador sin comprobar la existencia del proveedor. `receiveFuel()` limita el resultado a `tankCapacity`, pero no rechaza cantidades negativas. `update()` no modifica `companyId`. `autoRefill` y `refillThreshold` son atributos almacenados; su presencia no demuestra una operación automática de abastecimiento implementada. El enum `FuelType` se reutiliza desde Inventory.
+
+<div style="break-inside: avoid; page-break-inside: avoid;">
 
 #### Domain Class Diagram (Notification Service)
 
@@ -2408,9 +2492,13 @@ classDiagram
     Notification ..> User : userId
 ```
 
+</div>
+
 **Nota de implementación:** Notification se ejecuta como una aplicación propia. `User` contextualiza una referencia al IAM del monolito y no pertenece al microservicio. `userId` es una columna obligatoria sin asociación JPA ni FK declarada hacia IAM; `referenceId` es opcional y genérico. Ordering lo utiliza como identificador de pedido, pero no existe una relación tipada con `FuelOrder`.
 
 El constructor establece `read=false`; `markAsRead()` cambia ese valor a `true`. `createdAt` procede de la auditoría de persistencia. El servicio recibe notificaciones mediante HTTP: los listeners de Ordering permanecen en el monolito dentro de `NotificationServiceClient`. La existencia de valores en `NotificationType` no demuestra productores automáticos para todos ellos.
+
+<div style="break-inside: avoid; page-break-inside: avoid;">
 
 #### Domain Class Diagram (Catalog Service)
 
@@ -2438,9 +2526,13 @@ classDiagram
     ProviderRating ..> ProviderCompany : providerId
 ```
 
+</div>
+
 **Nota de implementación:** Catalog se ejecuta como una aplicación propia y su agregado es `ProviderRating`. Las empresas son referencias externas, no clases locales del servicio. Sus identificadores son columnas obligatorias sin asociaciones JPA ni FKs declaradas hacia IAM.
 
 Existe una restricción `UNIQUE(company_id, provider_id)` para una calificación por pareja comprador–proveedor. `changeRating()` valida valores entre 1 y 5 y también se utiliza desde el constructor. La API comprueba la existencia de las empresas mediante HTTP, pero no verifica que exista un pedido completado entre ellas. Catalog administra calificaciones; los productos y el stock pertenecen a Inventory.
+
+<div style="break-inside: avoid; page-break-inside: avoid;">
 
 #### Domain Class Diagram (Reporting Service)
 
@@ -2498,6 +2590,8 @@ classDiagram
     ProviderAnalytics ..> ProviderCompany : providerId
     BuyerAnalytics ..> BuyerCompany : companyId
 ```
+
+</div>
 
 **Nota de implementación:** Reporting se ejecuta como una aplicación propia, pero no tiene agregados ni entidades de negocio persistidas. Su modelo contiene cuatro records de resultados, sin operaciones adicionales de dominio. Las listas de `MonthlyAmount` se representan como asociaciones, sin asumir propiedad exclusiva.
 
@@ -3007,7 +3101,7 @@ La arquitectura debe dar soporte prioritario a las historias de usuario y endpoi
 
 - US-46 / TS-17: Asignar recursos físicos (vehículo y conductor) al despacho en una sola operación. Obliga a que Fulfillment BC consulte disponibilidad de TRANSPORT y DRIVER de forma atómica, lo que motiva el patrón Unit of Work (PAT-4, ver 4.1.6).
 
-- US-47: Despliegue de un Dashboard principal para el proveedor con KPIs y métricas en tiempo real. Es el origen directo del driver QA-2 (Performance) y de la decisión de indexar y optimizar las consultas de Reporting & Analytics BC (ver ADD-06 y ADR-07).
+- US-44: Despliegue de un Dashboard principal para el proveedor con KPIs y métricas en tiempo real. Es el origen directo del driver QA-2 (Performance) y de la decisión de indexar y optimizar las consultas de Reporting & Analytics BC (ver ADD-06 y ADR-07).
 
 ### 4.2.3 Quality Attribute Scenarios
 
@@ -3934,9 +4028,9 @@ En conjunto, la configuración de despliegue de FuelBridge proporciona una infra
 | US-12           | Marcar pedido como despachado           | T01.01  | Crear `DispatchFuelOrderCommand`                      | Definir el comando de dominio para despachar un pedido.                                                        | 2                | Milenko Rubén Cayanchi Avila              | Done   |
 | US-12           | Marcar pedido como despachado           | T01.02  | Manejar el comando en `FuelOrderCommandServiceImpl`   | Invocar `dispatch()` del agregado y persistir el cambio.                                                       | 3                | Carlos Alberto Lopez Goitia               | Done   |
 | US-12 / TS-17   | Marcar pedido como despachado           | T01.03  | Exponer `POST /api/v1/fuel-orders/{orderId}/dispatch` | Endpoint en `FuelOrdersController` siguiendo el patrón de `confirm` y `cancel`.                                | 2                | Sebastian Andres Aiquipa Poma             | Done   |
-| US-30           | Notificación de pedido despachado       | T02.01  | Registrar eventos de dominio en `FuelOrder`           | Emitir `FuelOrderConfirmedEvent`, `FuelOrderCancelledEvent` y `FuelOrderDispatchedEvent` al cambiar de estado. | 3                | Diego Fernando Herrera Enriquez           | Done   |
-| US-30           | Notificación de pedido despachado       | T02.02  | Publicar eventos en `FuelOrderRepositoryImpl.save()`  | Usar `ApplicationEventPublisher` al guardar el agregado.                                                       | 3                | Schneider Carlos Alberto Delgado Carrasco | Done   |
-| US-29 / US-30   | Notificaciones de aprobación y despacho | T02.03  | Crear `FuelOrderNotificationEventHandler`             | Listener en Notification BC que genera la notificación al usuario.                                             | 4                | Milenko Rubén Cayanchi Avila              | Done   |
+| US-27           | Notificación de pedido despachado       | T02.01  | Registrar eventos de dominio en `FuelOrder`           | Emitir `FuelOrderConfirmedEvent`, `FuelOrderCancelledEvent` y `FuelOrderDispatchedEvent` al cambiar de estado. | 3                | Diego Fernando Herrera Enriquez           | Done   |
+| US-27           | Notificación de pedido despachado       | T02.02  | Publicar eventos en `FuelOrderRepositoryImpl.save()`  | Usar `ApplicationEventPublisher` al guardar el agregado.                                                       | 3                | Schneider Carlos Alberto Delgado Carrasco | Done   |
+| US-26 / US-27   | Notificaciones de aprobación y despacho | T02.03  | Crear `FuelOrderNotificationEventHandler`             | Listener en Notification BC que genera la notificación al usuario.                                             | 4                | Milenko Rubén Cayanchi Avila              | Done   |
 | TS-04 / TS-14   | Endpoints de pedidos                    | T03.01  | Pruebas unitarias de `FuelOrder`                      | 9 escenarios sobre estados y excepciones (JUnit 5 + AssertJ).                                                  | 4                | Sebastian Andres Aiquipa Poma             | Done   |
 | TS-20           | Registrar y procesar pagos              | T03.02  | Pruebas unitarias de `Payment`                        | 4 escenarios: creación, completar, reembolsar y fallar.                                                        | 2                | Carlos Alberto Lopez Goitia               | Done   |
 | Técnica         | Calidad del entorno de pruebas          | T03.03  | Corregir `contextLoads()` con perfil de test          | Perfil `application-test.properties` con H2 en memoria.                                                        | 2                | Diego Fernando Herrera Enriquez           | Done   |
@@ -4025,7 +4119,7 @@ La siguiente tabla presenta las pruebas automatizadas verificadas, indicando el 
 | FuelBrigde-Backend | main                      | f70edda   | test: add Payment unit tests and H2 profile for contextLoads        | -                   | 08/10/2026          | Payment - Registrar pago fallido   |
 | FuelBrigde-Backend | main                      | f70edda   | test: add Payment unit tests and H2 profile for contextLoads        | -                   | 08/10/2026          | Spring Boot - contextLoads()       |
 | FuelBrigde-Backend | feature/sprint1-bdd-tests | e6e5a0f   | test: add cucumber BDD acceptance test for fuel order dispatch      | -                   | 08/10/2026          | US-12 - Despacho de pedidos        |
-| FuelBrigde-Backend | feature/sprint1-bdd-tests | ca13a7c   | test: add BDD acceptance test for fuel order dispatch notifications | -                   | 08/10/2026          | US-30 - Notificaciones de despacho |
+| FuelBrigde-Backend | feature/sprint1-bdd-tests | ca13a7c   | test: add BDD acceptance test for fuel order dispatch notifications | -                   | 08/10/2026          | US-27 - Notificaciones de despacho |
 
 **Enlaces de los commits:**
 
@@ -4061,7 +4155,9 @@ Esta configuración permite ejecutar las pruebas sin depender de una conexión a
 
 ##### Pruebas de Aceptación BDD con Cucumber
 
-Durante el Sprint 1 también se implementaron pruebas de aceptación para validar las historias de usuario US-12 y US-30, relacionadas directamente con el flujo de despacho y las notificaciones automáticas de FuelBridge.
+Durante el Sprint 1 también se implementaron pruebas de aceptación para validar las historias de usuario US-12 y US-27, relacionadas directamente con el flujo de despacho y las notificaciones automáticas de FuelBridge.
+
+Las capturas y los mensajes históricos de commit utilizan US-29 para aprobación y US-30 para despacho. En la especificación de 3.2, estas funcionalidades corresponden a US-26 y US-27, respectivamente. Las evidencias originales se conservan; las referencias de este informe utilizan los IDs de 3.2.
 
 **US-12 - Marcar pedido como despachado**
 
@@ -4081,7 +4177,7 @@ La prueba verifica las siguientes condiciones:
 
 La prueba fue ejecutada satisfactoriamente mediante Cucumber y Spring Boot Test, verificando el comportamiento del endpoint y la persistencia del nuevo estado.
 
-**US-30 - Notificación de pedido despachado**
+**US-27 - Notificación de pedido despachado**
 
 Se implementó el archivo `fuel-order-notification.feature`, correspondiente al Bounded Context Notification.
 
@@ -4110,7 +4206,7 @@ La ejecución finalizó con el mensaje `BUILD SUCCESS`, registrando siete prueba
 | PaymentTest                        |                  4 |        4 |        0 | Passed     |
 | FuelBridgePlatformApplicationTests |                  1 |        1 |        0 | Passed     |
 | Cucumber - US-12                   |                  1 |        1 |        0 | Passed     |
-| Cucumber - US-30                   |                  1 |        1 |        0 | Passed     |
+| Cucumber - US-27                   |                  1 |        1 |        0 | Passed     |
 | **Total**                          |              **7** |    **7** |    **0** | **Passed** |
 
 <div align="center">
@@ -4123,7 +4219,7 @@ La ejecución finalizó con el mensaje `BUILD SUCCESS`, registrando siete prueba
 
 Cucumber generó un reporte HTML en el archivo `target/cucumber-report.html`, que permite visualizar detalladamente los escenarios ejecutados y sus resultados.
 
-El reporte registra dos escenarios BDD ejecutados satisfactoriamente, correspondientes a las historias de usuario US-12 y US-30.
+El reporte registra dos escenarios BDD ejecutados satisfactoriamente, correspondientes a las historias de usuario US-12 y US-27.
 
 Ambos escenarios completaron sus cinco pasos Gherkin, obteniéndose un total de diez pasos aprobados y un porcentaje de éxito del 100%.
 
@@ -4131,7 +4227,7 @@ Ambos escenarios completaron sus cinco pasos Gherkin, obteniéndose un total de 
   <img src="assets/chapter-5/CucumberBDDTestResults.png" width="700" />
 </div>
 
-*Figura 2. Reporte HTML de Cucumber con los escenarios de aceptación US-12 y US-30 aprobados al 100%.*
+*Figura 2. Reporte HTML de Cucumber con los escenarios de aceptación US-12 y US-30 (identificador histórico de la actual US-27) aprobados al 100%.*
 
 ##### Evaluación de los Resultados del Sprint Review
 
@@ -4654,13 +4750,13 @@ Respuesta observada: `200 OK`.
 
 **Analítica del proveedor**
 
-Ejemplo de solicitud:
+Solicitud utilizada en la prueba local:
 
 ```http
 GET http://localhost:8083/api/v1/analytics/providers/1
 ```
 
-Ejemplo ilustrativo del contrato de respuesta, no ejecutado en las evidencias presentadas:
+Respuesta observada: `200 OK`. La ejecución y su captura se presentan en 5.3.1.4, evidencia R-04.
 
 ```json
 {
@@ -4783,10 +4879,10 @@ Durante el Sprint 1, todos los miembros del equipo participaron en la implementa
 | **Total**                                 |                | **18**          | **17**           | **35**        |
 
 ![GitHub Insights - Commits Backend](assets/chapter-5/commits_backend.png)
-**Commits realizadeos en el backend**
+**Commits realizados en el backend**
 
 ![GitHub Insights - Commits Frontend](assets/chapter-5/commits_frontend.png)
-**Commits realizadeos en el frontend**
+**Commits realizados en el frontend**
 
 ![Tablero Kanban - Sprint 1](assets/chapter-5/image_sprint.png)
 **Tablero Kanban**
@@ -4798,8 +4894,8 @@ Durante el Sprint 1, todos los miembros del equipo participaron en la implementa
 - Sebastian Aiquipa desarrolló los endpoints de empresas y de gestión de conductores y vehículos (Fulfillment), la corrección de expiración de token, y las vistas de formulario de pedido, detalle de pedido y lista de notificaciones.
 - Carlos Lopez refactorizó el manejo de comandos de estado de pedidos y la configuración CORS, documentó la autenticación, integró el Pull Request #1 (`feature/sprint1-bdd-tests`) y trabajó filtros de notificaciones, búsqueda de inventario y mejoras del login en el frontend.
 - Diego Herrera implementó el registro de usuarios (IAM) y el endpoint de creación de pedidos en backend, y el formulario de login y la corrección de aprobación/rechazo de pedidos en el frontend.
-- Schneider Delgado se encargó de las pruebas de despacho y de eventos de notificación (US-12, US-29, US-30), la publicación de eventos de dominio y el contador de pedidos despachados y notificaciones no leídas en el frontend.
-- El equipo aplicó GitFlow y Conventional Commits, referenciando historias de usuario y tareas (US-12, US-30, T02.02, TS-04) en los mensajes de commit.
+- Schneider Delgado se encargó de las pruebas de despacho y de eventos de notificación (US-12, US-26, US-27), la publicación de eventos de dominio y el contador de pedidos despachados y notificaciones no leídas en el frontend.
+- El equipo aplicó GitFlow y Conventional Commits, referenciando historias de usuario y tareas (US-12, US-30, T02.02, TS-04) en los mensajes de commit. Los IDs US-29 y US-30 de las evidencias históricas corresponden a US-26 y US-27 en la especificación de 3.2.
 - El seguimiento del sprint se realizó en un tablero Kanban.
 
 ##### 5.3.1.8 Kanban Board
@@ -4838,7 +4934,7 @@ Durante TP1, FuelBridge evolucionó desde un monolito modular hacia una arquitec
 
 La revisión técnica de la migración corresponde a la rama `develop`, commit `3025f97ae508b372076360f34f6b95540e3686df`, del repositorio [HaloFuel/FuelBrigde-Backend](https://github.com/HaloFuel/FuelBrigde-Backend).
 
-Los cambios descritos fueron identificados en el código y el historial local. La disponibilidad de los commits en GitHub y el despliegue integrado de las cuatro aplicaciones deben comprobarse como parte de la evidencia de entrega.
+Los cambios descritos fueron identificados en el código. Los commits de extracción y refactorización fueron comprobados en el historial remoto de la rama `develop`, como se detalla en la evidencia de control de versiones de esta sección. El despliegue integrado de las cuatro aplicaciones permanece pendiente de comprobación.
 
 ##### Estado anterior y estado posterior
 
@@ -4865,7 +4961,7 @@ La migración se realizó por capacidades de negocio previamente delimitadas med
 4. Se reemplazaron dependencias en memoria por contratos HTTP.
 5. Se conservaron las rutas anteriores de Catalog y Reporting mediante gateways de compatibilidad.
 
-Esta secuencia presenta características de una estrategia incremental Strangler Fig. La clasificación se deriva de los cambios observados; no se encontró un nuevo ADR que formalice la estrategia y sus decisiones.
+Esta secuencia presenta características de una estrategia incremental Strangler Fig. La clasificación se deriva de los cambios observados y se documenta en ADR-09 al final de esta sección.
 
 La extracción es parcial: los seis contextos restantes continúan compartiendo proceso y persistencia dentro de FuelBridge Platform.
 
