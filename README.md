@@ -4782,13 +4782,13 @@ Durante el Sprint 1, todos los miembros del equipo participaron en la implementa
 | Schneider Carlos Alberto Delgado Carrasco | schneiderdc    | 6               | 5                | 11            |
 | **Total**                                 |                | **18**          | **17**           | **35**        |
 
-![GitHub Insights - Commits Backend](/assets/chapter-5/commits_backend.png)
+![GitHub Insights - Commits Backend](assets/chapter-5/commits_backend.png)
 **Commits realizadeos en el backend**
 
-![GitHub Insights - Commits Frontend](/assets/chapter-5/commits_frontend.png)
+![GitHub Insights - Commits Frontend](assets/chapter-5/commits_frontend.png)
 **Commits realizadeos en el frontend**
 
-![Tablero Kanban - Sprint 1](/assets/chapter-5/image_sprint.png)
+![Tablero Kanban - Sprint 1](assets/chapter-5/image_sprint.png)
 **Tablero Kanban**
 
 **Análisis de colaboración**
