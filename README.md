@@ -625,7 +625,7 @@ Si bien HaloFuel está inicialmente orientada a empresas locales, el modelo de n
 
 9.  ¿Qué tan importante es para ustedes tener reportes históricos y comparativos de ventas?
 
-10. ¿Qué estrategias usan actualmente para fidelizar clientes, y cómo cree que una plata forma como NombredelaStartup podría apoyarlos?
+10. ¿Qué estrategias usan actualmente para fidelizar clientes, y cómo cree que una plata forma como FuelBridge podría apoyarlos?
 
 - **B. Empresas Solicitantes**
 
@@ -653,7 +653,7 @@ Si bien HaloFuel está inicialmente orientada a empresas locales, el modelo de n
 
 11. ¿Le interesaría recibir notificaciones en tiempo real sobre cambios de precio o estado de sus pedidos?
 
-12. ¿Qué barreras considera que dificultarían implementar una solución digital como PrimerFuel en su empresa?
+12. ¿Qué barreras considera que dificultarían implementar una solución digital como FuelBridge en su empresa?
 
 ### 2.2.2 Registro de entrevistas
 
