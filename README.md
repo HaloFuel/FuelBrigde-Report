@@ -276,7 +276,7 @@ Reconoce la necesidad del aprendizaje permanente para el desempeño profesional 
 </th>
 
 <th>
-<p><strong>Milenko Rubén Cayanchi Avila (AV1):</strong> Evaluó e investigó las dinámicas del mercado de combustibles en el Perú (fuentes OSINERGMIN, Produce y GESP) para fundamentar cuantitativamente el tamaño de mercado de los segmentos objetivo de minería, construcción y distribuidores.</p>
+<p><strong>Milenko Rubén Cayanchi Avila (AV1):</strong> Evaluó e investigó las dinámicas del mercado de combustibles en el Perú (fuentes OSINERGMIN y Produce) para fundamentar cuantitativamente el tamaño de mercado de los segmentos objetivo de minería, construcción y distribuidores.</p>
 
 <p><strong>Sebastian Andres Aiquipa Poma (AV1):</strong> Investigó plataformas competidoras en el mercado internacional y local (Zavgar, FuelCloud, Wialon) analizando sus modelos de negocio y características para definir estrategias de diferenciación B2B.</p>
 
@@ -381,6 +381,28 @@ Reconoce la necesidad del aprendizaje permanente para el desempeño profesional 
 El producto desarrollado por la startup HaloFuel se denomina FuelBridge. El nombre combina Fuel (el commodity que articula toda la operación del negocio) con Bridge (el puente digital que conecta a las empresas solicitantes con los proveedores de combustible), reflejando la propuesta de valor central: una plataforma que centraliza y conecta directamente a ambos actores del mercado, eliminando los intermediarios informales (llamadas, correos, WhatsApp, Excel) que hoy fragmentan el proceso.
 
 Distinción Startup vs. Producto: HaloFuel es la empresa/marca fundadora; FuelBridge es la plataforma (producto de software) que HaloFuel desarrolla y comercializa. Esta distinción se mantiene consistente en el resto del informe.
+
+**Objetivos y Restricciones**
+
+*Objetivos del producto:*
+
+| **Objetivo**                                                                                                                                                   | **Meta o indicador**                                                                                           | **Sección** |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ----------- |
+| Optimizar la gestión y distribución de combustible (Business Goal)                                                                                             | 300 empresas solicitantes activas y 100 proveedores registrados en el primer año; reducir 40% los tiempos de gestión de pedidos | 3.3         |
+| Registrar y confirmar pedidos desde un canal único                                                                                                              | Más del 70% de los pedidos confirmados sin correcciones posteriores durante los primeros tres meses de uso      | 1.2.3.2     |
+| Dar visibilidad del estado del pedido                                                                                                                           | Reducir 30% las llamadas de seguimiento de las empresas solicitantes                                            | 1.2.3.2     |
+| Estructurar la asignación y notificación del despacho                                                                                                           | Reducir 20% el tiempo promedio entre confirmación y entrega                                                     | 1.2.3.2     |
+| Notificar automáticamente los cambios de estado                                                                                                                 | Reducir 40% las solicitudes de información y 60% el tiempo promedio de atención, tras el primer trimestre de uso | 1.2.3.2     |
+
+*Restricciones:*
+
+| **Restricción**                | **Descripción**                                                                                                                                              | **Sección** |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
+| Tecnológica (CON-1)            | El backend se restringe a Spring Boot (Java) y MySQL para la persistencia transaccional                                                                      | 4.2.4       |
+| Integración de terceros (CON-2) | Dependencias externas para correo, almacenamiento de vouchers y generación de reportes, cuyas interfaces deben manejar latencias                            | 4.2.4       |
+| Plazo (CON-3)                  | Desarrollo estructurado en 4 sprints, lo que obliga a priorizar el MVP                                                                                       | 4.2.4       |
+| Alcance inicial                | Empresas medianas y grandes de construcción y minería que mantienen contratos de suministro con proveedores de combustible                                    | 1.2.3.1, 1.3 |
+| Adopción                       | Proveedores acostumbrados a procesos manuales y empresas que deben migrar desde canales informales; si no se adoptan, se limita el efecto de red de la plataforma | 1.2.3.2     |
 
 ### 1.2.2 Antecedentes y Problemática
 
@@ -526,7 +548,7 @@ Mantener comunicación constante con proveedores.
 
 **B. Proveedores de combustible**
 
-Empresas dedicadas a la distribución de combustibles, atendiendo principalmente a clientes corporativos o industriales. Según la Asociación de Grifos y Estaciones de Servicio del Perú (GESP), el país cuenta con aproximadamente 600 estaciones de servicio operativas, de las cuales el 60% son empresas familiares - un segmento con alta necesidad de digitalización y bajo nivel de sistematización actual. (Cifra de referencia sectorial; se recomienda validar con datos actualizados de OSINERGMIN antes de la entrega final.)
+Empresas dedicadas a la distribución de combustibles, atendiendo principalmente a clientes corporativos o industriales. Según Osinergmin, en el Perú existen más de 5,000 grifos y estaciones de servicio con Registro de Hidrocarburos bajo su supervisión permanente (Desde Adentro, 2025); el listado oficial de grifos y estaciones de servicio con registro hábil se publica en el portal de datos abiertos del Estado (Osinergmin, Registro de Hidrocarburos Líquidos). Esta cifra corresponde al universo de grifos y estaciones de servicio y es solo una referencia del tamaño del mercado: el segmento de FuelBridge son las empresas distribuidoras que atienden a clientes corporativos, un subconjunto de ese universo. Las entrevistas a proveedores (2.2.2) muestran que este segmento gestiona sus pedidos con WhatsApp, correo y hojas de Excel, es decir, con alta necesidad de digitalización y bajo nivel de sistematización actual.
 
 **Motivaciones:**
 
@@ -674,19 +696,6 @@ Si bien HaloFuel está inicialmente orientada a empresas locales, el modelo de n
 
 - **Entrevista 2:**
 
-| **Campo**               | Empresas solicitantes de combustible                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Nombre entrevistado** | Vannya                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| **Edad**                | 30                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| **Departamento**        | Lima                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| **Inicio del video**    | 00:00                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| **Fin del video**       | 04:49                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| **Link del video**      | [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202319027_upc_edu_pe/IQB5qTrYM78QSZVuiMmVg17EAefxCme6U4gWAVQFQBExCeY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=OZHSPU](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202319027_upc_edu_pe/IQB5qTrYM78QSZVuiMmVg17EAefxCme6U4gWAVQFQBExCeY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=OZHSPU)                                                                                                                                                                                                                                                                                                    |
-| **Foto entrevista**     | <img src="assets/chapter-2/image16.png" width="300" />                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| **Resumen**             | La entrevistada, Vannya Herrera, jefa comercial de una empresa proveedora de combustible en Lima, indicó que atienden principalmente a empresas de transporte, construcción, minería y agroindustria, gestionando alrededor de 80 a 100 pedidos mensuales. Actualmente, las cotizaciones y pedidos se coordinan mediante correo, teléfono y WhatsApp, complementados con un sistema básico y archivos de Excel, lo que genera pérdida de tiempo y dificultad para centralizar información. Considera importante contar con una plataforma que integre pedidos, cotizaciones, contratos, clientes, precios y entregas, además de alertas y reportes históricos de ventas. Asimismo, señaló que una solución digital permitiría reducir la carga administrativa, mejorar el seguimiento de pedidos y brindar una atención más rápida y transparente, contribuyendo también a la fidelización de clientes mediante mejores condiciones comerciales y comunicación. |
-
-- **Entrevista 3:** Empresas solicitantes de combustible
-
 | **Campo**               | Empresas solicitantes de combustible                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Nombre entrevistado** | Renato Guillermo Calvo Yalan                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
@@ -697,6 +706,19 @@ Si bien HaloFuel está inicialmente orientada a empresas locales, el modelo de n
 | **Link del video**      | [https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241c630_upc_edu_pe/IQDS2Yop64CbRLtW82ISOuc4AU56u40anOCvBotRFMydvE4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=Jgu6ZG](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241c630_upc_edu_pe/IQDS2Yop64CbRLtW82ISOuc4AU56u40anOCvBotRFMydvE4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=Jgu6ZG)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | **Foto entrevista**     | <img src="assets/chapter-2/image1.png" width="300" />                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | **Resumen**             | El entrevistado se desempeña como asistente de logística en una empresa de transporte de carga mediana, con más de dos años de experiencia en el sector, y gestiona un volumen aproximado de 8,000 a 12,000 unidades de combustible mensuales, dependiendo de la demanda operativa. Su labor principal consiste en coordinar pedidos y realizar el seguimiento de entregas, utilizando actualmente un sistema basado en contratos directos con proveedores, gestionado mediante llamadas, WhatsApp y registros en Excel, sin el uso de un sistema integrado. Entre los principales problemas identificados destacan la desorganización de la información, errores en los pedidos, falta de claridad en los datos, inconsistencias en los precios y una considerable pérdida de tiempo en la verificación y validación manual de la información. La trazabilidad en tiempo real es considerada muy importante, ya que permitiría un mayor control sobre los pedidos y el suministro. El uso de dispositivos se centra principalmente en teléfonos móviles para la comunicación y gestión operativa. En cuanto a los factores de decisión, el precio y el tiempo de entrega son los más relevantes, seguidos por la confianza en el proveedor. La falta de transparencia en los precios genera desconfianza y dificulta la comparación entre opciones, afectando negativamente la toma de decisiones. El entrevistado muestra interés en recibir notificaciones en tiempo real, especialmente sobre cambios de precios, para poder reaccionar oportunamente. Finalmente, identifica como principales barreras para la adopción de una solución digital la resistencia al cambio del personal y el tiempo requerido para adaptarse a una nueva forma de trabajo. |
+
+- **Entrevista 3:** Empresas solicitantes de combustible
+
+| **Campo**               | Empresas solicitantes de combustible                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Nombre entrevistado** | Jorge                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| **Edad**                | 50 años                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| **Departamento**        | Lima                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| **Inicio del video**    | 0:15                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| **Fin del video**       | 5:42                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| **Link del video**      | [upc-pre-202620-1acc0238-16723-FuelBridge-Entrevista-Segmento-Proveedores.mp4](https://upcedupe-my.sharepoint.com/:v:/g/personal/u201916755_upc_edu_pe/IQBD0lTGl-XwQ4qKCnmH6TofAeaUe0s7D1l69jdzKcbxme4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=oLBWzO)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| **Foto entrevista**     | <img src="assets/chapter-2/image32.png" width="300" />                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| **Resumen**             | El entrevistado se desempeña como Jefe de Logística en una empresa de transporte de carga, con aproximadamente ocho años de experiencia en el sector, encargándose de coordinar la flota y el abastecimiento de combustible para una operación que consume entre 15,000 y 19,000 galones de diésel al mes. Actualmente gestiona los pedidos por WhatsApp y llamadas, registrando después la información en Excel, lo que le ha generado errores puntuales y cruces entre pedidos por falta de confirmación clara con los proveedores. Su principal preocupación es no tener visibilidad en tiempo real del estado de sus pedidos, lo que en más de una ocasión ha afectado la programación de sus propios camiones, y reconoce haber pagado de más por no poder comparar precios entre proveedores en el momento de decidir la compra. Al priorizar sus criterios de compra, ubica el tiempo de entrega por encima del precio, y el historial de cumplimiento del proveedor como un factor casi tan relevante como el costo. Se mostró abierto a recibir notificaciones en tiempo real sobre precios y pedidos, pero identificó como principal barrera para adoptar una solución como FuelBridge que sus propios proveedores también deban sumarse a la plataforma, ya que de lo contrario la herramienta perdería utilidad; señaló además la conectividad en algunas zonas de operación y una posible resistencia inicial de su equipo como obstáculos secundarios, aunque considera que esta última se superaría rápido si perciben beneficios claros en el día a día. |
 
 2\. Segmento 2: Proveedores de combustible
 
@@ -715,16 +737,16 @@ Si bien HaloFuel está inicialmente orientada a empresas locales, el modelo de n
 
 - Entrevista 2:
 
-| **Campo**               | Proveedores de combustible                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Nombre entrevistado** | Jorge                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| **Edad**                | 50 años                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| **Departamento**        | Lima                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| **Inicio del video**    | 0:15                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| **Fin del video**       | 5:42                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| **Link del video**      | [upc-pre-202620-1acc0238-16723-FuelBridge-Entrevista-Segmento-Proveedores.mp4](https://upcedupe-my.sharepoint.com/:v:/g/personal/u201916755_upc_edu_pe/IQBD0lTGl-XwQ4qKCnmH6TofAeaUe0s7D1l69jdzKcbxme4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=oLBWzO)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| **Foto entrevista**     | <img src="assets/chapter-2/image32.png" width="300" />                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| **Resumen**             | El entrevistado se desempeña como Jefe de Logística en una empresa de transporte de carga, con aproximadamente ocho años de experiencia en el sector, encargándose de coordinar la flota y el abastecimiento de combustible para una operación que consume entre 15,000 y 19,000 galones de diésel al mes. Actualmente gestiona los pedidos por WhatsApp y llamadas, registrando después la información en Excel, lo que le ha generado errores puntuales y cruces entre pedidos por falta de confirmación clara con los proveedores. Su principal preocupación es no tener visibilidad en tiempo real del estado de sus pedidos, lo que en más de una ocasión ha afectado la programación de sus propios camiones, y reconoce haber pagado de más por no poder comparar precios entre proveedores en el momento de decidir la compra. Al priorizar sus criterios de compra, ubica el tiempo de entrega por encima del precio, y el historial de cumplimiento del proveedor como un factor casi tan relevante como el costo. Se mostró abierto a recibir notificaciones en tiempo real sobre precios y pedidos, pero identificó como principal barrera para adoptar una solución como FuelBridge que sus propios proveedores también deban sumarse a la plataforma, ya que de lo contrario la herramienta perdería utilidad; señaló además la conectividad en algunas zonas de operación y una posible resistencia inicial de su equipo como obstáculos secundarios, aunque considera que esta última se superaría rápido si perciben beneficios claros en el día a día. |
+| **Campo**               | Proveedores de combustible                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Nombre entrevistado** | Vannya                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| **Edad**                | 30                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| **Departamento**        | Lima                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **Inicio del video**    | 00:00                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **Fin del video**       | 04:49                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **Link del video**      | [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202319027_upc_edu_pe/IQB5qTrYM78QSZVuiMmVg17EAefxCme6U4gWAVQFQBExCeY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=OZHSPU](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202319027_upc_edu_pe/IQB5qTrYM78QSZVuiMmVg17EAefxCme6U4gWAVQFQBExCeY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=OZHSPU)                                                                                                                                                                                                                                                                                                    |
+| **Foto entrevista**     | <img src="assets/chapter-2/image16.png" width="300" />                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| **Resumen**             | La entrevistada, Vannya Herrera, jefa comercial de una empresa proveedora de combustible en Lima, indicó que atienden principalmente a empresas de transporte, construcción, minería y agroindustria, gestionando alrededor de 80 a 100 pedidos mensuales. Actualmente, las cotizaciones y pedidos se coordinan mediante correo, teléfono y WhatsApp, complementados con un sistema básico y archivos de Excel, lo que genera pérdida de tiempo y dificultad para centralizar información. Considera importante contar con una plataforma que integre pedidos, cotizaciones, contratos, clientes, precios y entregas, además de alertas y reportes históricos de ventas. Asimismo, señaló que una solución digital permitiría reducir la carga administrativa, mejorar el seguimiento de pedidos y brindar una atención más rápida y transparente, contribuyendo también a la fidelización de clientes mediante mejores condiciones comerciales y comunicación. |
 
 ## 2.3 Needfinding
 
@@ -1909,15 +1931,15 @@ El diseño arquitectónico de FuelBridge (desarrollado por HaloFuel) se rige baj
 
 ### 4.1.2 Approaches Statements Architectural Styles & Patterns
 
-Para resolver la problemática de comunicación informal y trazabilidad en el sector energético, se adoptan los siguientes estilos. La decisión final entre estilos candidatos se formaliza en la sección [4.3.1.4](#4314-choose-one-or-more-design-concepts-that-satisfy-the-selected-drivers), donde Monolito Modular es seleccionado sobre Microservicios distribuidos:
+Para resolver la problemática de comunicación informal y trazabilidad en el sector energético, se adoptan los siguientes estilos. La decisión inicial entre estilos candidatos se formaliza en la sección [4.3.1.4](#4314-choose-one-or-more-design-concepts-that-satisfy-the-selected-drivers), donde Monolito Modular es seleccionado sobre Microservicios distribuidos. Esa decisión fue revisada posteriormente: ADR-09 (registrado en [5.3.1.9](#5319-evidencia-de-migración-a-microservicios)) la reemplaza por la extracción parcial de tres Bounded Contexts hacia microservicios:
 
 | **ID** | **Estilo**                              | **Descripción**                                                                                                                                                                                       | **Driver relacionado**                                                              |
 | ------ | --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| ST-1   | Monolito Modular por Bounded Contexts   | El backend se estructura internamente en 9 Bounded Contexts independientes por dominio (ver ADR-02), facilitando la escalabilidad y el mantenimiento concurrente dentro de una única API desplegable. | QA-2 Performance, CON-1 (Tecnológicas)                                              |
+| ST-1   | Monolito Modular por Bounded Contexts   | El backend se estructura internamente en 9 Bounded Contexts independientes por dominio (ver ADR-02), facilitando la escalabilidad y el mantenimiento concurrente dentro de una única API desplegable. **Vigente en las Iteraciones 1 y 2; ADR-09 (5.3.1.9) supera parcialmente ADR-02**: solo 6 BCs permanecen en el monolito residual. | QA-2 Performance, CON-1 (Tecnológicas)                                              |
 | ST-2   | Single Page Application (SPA)           | El frontend utiliza un estilo de aplicación de página única para brindar una experiencia fluida sin recargas, crucial para paneles de control en tiempo real.                                         | QA-3 Usability                                                                      |
 | ST-3   | Event-Driven interno (Observer/Pub-Sub) | Implementado para la orquestación asíncrona entre Bounded Contexts, como el disparo de notificaciones o la generación de reportes PDF cuando un pedido cambia de estado en el sistema.                | QA-1 Availability & Traceability, CONC-2 (Desacoplamiento de Servicios Bloqueantes) |
 
-> Nota: en una versión previa de este capítulo, ST-1 se describía como "Microservicios lógicos", lo cual entraba en contradicción con la decisión adoptada en 4.3.1.4 (Monolito Modular, microservicios distribuidos rechazados por Constraint de time-to-market). Se corrige aquí para mantener consistencia entre el estilo declarado y la decisión arquitectónica final.
+> Nota: en una versión previa de este capítulo, ST-1 se describía como "Microservicios lógicos", lo cual entraba en contradicción con la decisión adoptada en 4.3.1.4 (Monolito Modular, microservicios distribuidos rechazados por Constraint de time-to-market). Se corrige aquí para mantener consistencia entre el estilo declarado y la decisión arquitectónica de las Iteraciones 1 y 2. Posteriormente, ADR-09 (5.3.1.9) revisó parcialmente el estilo; la decisión original queda registrada como histórica en 4.3.1.4 y ADR-02.
 
 ### 4.1.3 Context Diagram
 
@@ -3081,8 +3103,8 @@ flowchart LR
 | **ID** | **Atributo de calidad**         | **Categoría táctica (Bass et al.)** | **Táctica aplicada**                                                                                                                                                                                                                | **QA relacionado**                  |
 | ------ | ------------------------------- | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
 | TAC-1  | Disponibilidad (Availability)   | Detect Faults → Recover from Faults | Uso de redundancia en la persistencia de datos (Cloud Storage para archivos) y excepciones controladas (circuit-breaker simple) en la comunicación con servicios de terceros (como el PDF Generator) para evitar fallos en cascada. | QA-1                                |
-| TAC-2  | Seguridad (Security)            | Resist Attacks                      | Autenticación estricta mediante JSON Web Tokens (JWT) gestionada por el Identity & Access BC, además de obligar al uso de HTTPS para todo el tráfico entre la SPA, la Landing Page y la API.                                        | Constraint: Integración de Terceros |
-| TAC-3  | Modificabilidad (Modifiability) | Increase Cohesion / Reduce Coupling | La alta cohesión lograda al separar la API en 9 Bounded Contexts distintos permite modificar, por ejemplo, la lógica de inventario (Inventory BC) sin impactar la lógica de despachos (Fulfillment BC).                             | CONC-3 (Mantenimiento del Código)   |
+| TAC-2  | Seguridad (Security)            | Resist Attacks                      | Autenticación estricta mediante JSON Web Tokens (JWT) gestionada por el Identity & Access BC, además de obligar al uso de HTTPS para todo el tráfico entre la SPA, la Landing Page y la API.                                        | QA-5; Constraint: Integración de Terceros |
+| TAC-3  | Modificabilidad (Modifiability) | Increase Cohesion / Reduce Coupling | La alta cohesión lograda al separar la API en 9 Bounded Contexts distintos permite modificar, por ejemplo, la lógica de inventario (Inventory BC) sin impactar la lógica de despachos (Fulfillment BC).                             | QA-4, CONC-3 (Mantenimiento del Código) |
 | TAC-4  | Desempeño (Performance)         | Manage Resources / Resource Pooling | Índices en las columnas de búsqueda frecuente de ORDER (estado, fecha, cliente) y paginación en los endpoints de Dashboard para acotar el volumen de datos procesado por consulta.                                                  | QA-2                                |
 
 ## 4.2 Architectural Drivers
@@ -3095,17 +3117,17 @@ El propósito arquitectónico de FuelBridge es proporcionar una plataforma B2B c
 
 La arquitectura debe dar soporte prioritario a las historias de usuario y endpoints core identificados con mayor valor de negocio en el Product Backlog. Cada una exige una decisión estructural específica, no solo funcional:
 
-- US-05 / TS-04: Registrar un nuevo pedido de combustible (Solicitante) y su creación en la base de datos. Exige que el Ordering BC exponga un endpoint transaccional que valide stock (Catalog BC) antes de confirmar el REQUEST, lo cual condiciona la comunicación entre BCs definida en 4.3.1.3.
+- US-05 / TS-04: Registrar un nuevo pedido de combustible (Solicitante) y su creación en la base de datos. Exige que el Ordering BC exponga un endpoint transaccional que valide que el producto existe y pertenece al proveedor indicado (Inventory BC) al crear la solicitud, lo cual condiciona la comunicación entre BCs definida en 4.3.1.3. La verificación de stock se realiza al crear la entrega en Fulfillment BC (ver vista de actividad en 4.1.4).
 
-- US-11 / TS-14: Aprobar pedidos condicionados a la validación de los pagos correspondientes (Proveedor). Requiere una dependencia síncrona entre Ordering BC y Payment BC antes de permitir la transición de estado Pending → Approved (ver diagrama de estados en 4.1.4).
+- US-11 / TS-14: Aprobar pedidos condicionados a la validación de los pagos correspondientes (Proveedor). La arquitectura objetivo requiere una dependencia síncrona entre Ordering BC y Payment BC antes de permitir la transición del pedido. En la implementación actual `confirm()` no comprueba el pago ni el importe; esa brecha está registrada como pendiente en 5.3.1.9 (ver diagrama de estados en 4.1.4).
 
-- US-46 / TS-17: Asignar recursos físicos (vehículo y conductor) al despacho en una sola operación. Obliga a que Fulfillment BC consulte disponibilidad de TRANSPORT y DRIVER de forma atómica, lo que motiva el patrón Unit of Work (PAT-4, ver 4.1.6).
+- US-46 / TS-17: Asignar recursos físicos (vehículo y conductor) al despacho en una sola operación. Obliga a que Fulfillment BC consulte disponibilidad de Vehicle y Driver de forma atómica, lo que motiva el patrón Unit of Work (PAT-4, ver 4.1.6).
 
 - US-44: Despliegue de un Dashboard principal para el proveedor con KPIs y métricas en tiempo real. Es el origen directo del driver QA-2 (Performance) y de la decisión de indexar y optimizar las consultas de Reporting & Analytics BC (ver ADD-06 y ADR-07).
 
 ### 4.2.3 Quality Attribute Scenarios
 
-Basado en los requerimientos del sector B2B, se definen tres Quality Attribute Scenarios siguiendo el formato de 6 partes (Bass, Clements & Kazman). Los IDs QA-1, QA-2 y QA-3 asignados aquí son los mismos referenciados en los Architectural Design Backlogs de la sección 4.3:
+Basado en los requerimientos del sector B2B, se definen cinco Quality Attribute Scenarios siguiendo el formato de 6 partes (Bass, Clements & Kazman). Los IDs QA-1 a QA-5 asignados aquí son los mismos referenciados en los Architectural Design Backlogs de la sección 4.3 y en las tácticas de 4.1.7:
 
 **QA-1 - Disponibilidad y Trazabilidad (Availability & Traceability)**
 
@@ -3118,6 +3140,8 @@ Basado en los requerimientos del sector B2B, se definen tres Quality Attribute S
 | Respuesta           | El cambio de estado se publica como evento de dominio (Observer/Pub-Sub) y genera una notificación in-app para el Client correspondiente   |
 | Medida de respuesta | El 100% de los eventos de cambio de estado generan una notificación visible para el cliente en menos de 5 segundos, sin pérdida de eventos |
 
+> **Estado actual de QA-1:** el objetivo se mantiene como requisito de diseño, pero la implementación todavía no lo garantiza. Tras la extracción de Notification, el cambio de estado genera un evento local y una llamada HTTP síncrona al servicio; no existen broker, outbox ni reintentos, y un fallo de Notification puede propagarse al flujo de Ordering (ver 5.3.1.9). La medida "sin pérdida de eventos" queda pendiente de implementación y verificación.
+
 **QA-2 - Desempeño (Performance)**
 
 | **Parte**           | **Descripción**                                                                                                                                                                        |
@@ -3127,7 +3151,7 @@ Basado en los requerimientos del sector B2B, se definen tres Quality Attribute S
 | Entorno             | Operación normal, hasta 50 usuarios concurrentes consultando reportes                                                                                                                  |
 | Artefacto           | Reporting & Analytics BC y la base de datos MySQL                                                                                                                                      |
 | Respuesta           | El sistema consulta ORDER y tablas relacionadas usando índices por estado y fecha (ver ADR-07) y devuelve el resultado paginado                                                        |
-| Medida de respuesta | El 95% de las consultas del Dashboard y del historial responden en menos de 2 segundos bajo carga de 50 usuarios concurrentes (pendiente de validar con pruebas de carga, ver 4.3.2.7) |
+| Medida de respuesta | El 95% de las consultas del Dashboard y del historial responden en menos de 2 segundos bajo carga de 50 usuarios concurrentes (validado parcialmente con una prueba de carga, ver 4.3.2.7) |
 
 **QA-3 - Usabilidad (Usability)**
 
@@ -3139,6 +3163,32 @@ Basado en los requerimientos del sector B2B, se definen tres Quality Attribute S
 | Artefacto           | FuelBridge Web Application (SPA)                                                                                                                                           |
 | Respuesta           | La interfaz valida el formulario en el cliente y muestra confirmación visual inmediata del resultado de la acción                                                          |
 | Medida de respuesta | El sistema brinda feedback visual en menos de 300 ms tras la acción del usuario, y un usuario nuevo completa el registro de un pedido en menos de 2 minutos sin asistencia |
+
+**QA-4 - Modificabilidad (Modifiability)**
+
+| **Parte**           | **Descripción**                                                                                                                                                  |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Fuente del estímulo | Desarrollador del equipo                                                                                                                                         |
+| Estímulo            | Necesita modificar la lógica de un Bounded Context o extraerlo del monolito como aplicación independiente                                                        |
+| Entorno             | Desarrollo activo sobre la rama `develop`, antes de integrar el cambio                                                                                           |
+| Artefacto           | Bounded Contexts de FuelBridge (capas domain, application, infrastructure e interfaces), Repository Pattern y puntos de integración entre BCs                    |
+| Respuesta           | El cambio se aísla en el BC afectado; los demás BCs solo se modifican en el punto de integración (cliente o gateway) y conservan sus contratos REST             |
+| Medida de respuesta | El cambio se completa modificando únicamente el BC afectado y su punto de integración, y la suite de pruebas automatizadas se mantiene sin fallos               |
+
+> **Estado actual de QA-4:** evidencia parcial. La extracción de Notification retiró el contexto del monolito y lo sustituyó por `NotificationServiceClient` en Ordering (commits `5d4bdb6` y `7545cd6`), y la suite del monolito registra 25 casos sin fallos (ver 5.3.1.3 y 5.3.1.9). La medida no se verificó con una prueba específica.
+
+**QA-5 - Seguridad (Security)**
+
+| **Parte**           | **Descripción**                                                                                                                                                                         |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Fuente del estímulo | Usuario o sistema externo sin credenciales válidas                                                                                                                                      |
+| Estímulo            | Envía una solicitud a un endpoint protegido de la API sin token JWT, o con un token inválido o expirado                                                                                 |
+| Entorno             | Operación normal; aplicaciones FuelBridge Platform, Notification Service, Catalog Service y Reporting Service en ejecución                                                              |
+| Artefacto           | Identity & Access BC (emisión de JWT) y filtros de seguridad de las cuatro aplicaciones                                                                                                  |
+| Respuesta           | La aplicación rechaza la solicitud antes de ejecutar la operación y no expone datos; los tokens emitidos por IAM son aceptados por los servicios que comparten la clave configurada     |
+| Medida de respuesta | El 100% de las solicitudes sin token o con token inválido a endpoints protegidos reciben respuesta 401 y ninguna operación de negocio se ejecuta                                        |
+
+> **Estado actual de QA-5:** la validación de JWT está implementada en las cuatro aplicaciones (commits `6776920` y `377ef28` para Catalog y Reporting; ver 5.3.1.9). Las pruebas de casos de error y de autorización están pendientes (5.3.1.10); la medida no se ha verificado de forma automatizada.
 
 ### 4.2.4 Constraints
 
@@ -3152,7 +3202,7 @@ Basado en los requerimientos del sector B2B, se definen tres Quality Attribute S
 
 | **ID** | **Concern**                              | **Descripción**                                                                                                                                                                                                                                         |
 | ------ | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CONC-1 | Gestión Segura del Estado                | Coordinar el flujo transaccional entre el pedido, el pago y la liberación de inventario (Ordering BC, Payment BC y Catalog BC) garantizando que un despacho no ocurra si el pago y el stock no están debidamente verificados.                           |
+| CONC-1 | Gestión Segura del Estado                | Coordinar el flujo transaccional entre el pedido, el pago y la liberación de inventario (Ordering BC, Payment BC e Inventory BC) garantizando que un despacho no ocurra si el pago y el stock no están debidamente verificados.                           |
 | CONC-2 | Desacoplamiento de Servicios Bloqueantes | Extraer tareas pesadas o de latencia variable (generación de PDFs o envío masivo de correos) fuera del hilo principal de ejecución HTTP para no afectar la experiencia del usuario.                                                                     |
 | CONC-3 | Mantenimiento del Código                 | Asegurar convenciones claras de nombrado, estructuración por dominios y un pipeline de CI/CD que soporte integraciones continuas conforme avance el equipo durante los Sprints establecidos.                                                            |
 | CONC-4 | Separación de Responsabilidades          | Mantener la Landing Page (contenedor estático de presentación) completamente desacoplada de la lógica transaccional de la Web Application y la API, evitando que cambios de marketing/contenido requieran un despliegue de la plataforma transaccional. |
@@ -3201,11 +3251,13 @@ El elemento refinado en esta iteración es el sistema FuelBridge en su totalidad
 | ----------------------------------------------- | ------------ | --------------------------------------------------------------------------------------------------------------------------- |
 | Monolito MVC server-side                        | Rechazado    | Las recargas completas de página son incompatibles con la experiencia requerida en paneles de control en tiempo real (QA-3) |
 | SPA + REST API desacoplada                      | Seleccionado | Permite actualizaciones parciales de la vista y desacopla el ciclo de despliegue del frontend del backend                   |
-| Microservicios distribuidos                     | Rechazado    | Complejidad operativa incompatible con el plazo de 4 Sprints (Constraint: Time-to-market)                                   |
+| Microservicios distribuidos                     | Rechazado en la Iteración 1 (parcialmente adoptado en la Iteración 3, ver ADR-09) | Complejidad operativa incompatible con el plazo de 4 Sprints (Constraint: Time-to-market). En la Iteración 3 se extraen solo 3 de los 9 BCs (ADR-09) |
 | Monolito Modular (API única con BCs internos)   | Seleccionado | Compatible con Spring Boot y MySQL; permite cohesión por dominio sin overhead de infraestructura distribuida                |
 | Observer/Pub-Sub interno para eventos entre BCs | Seleccionado | Desacopla el Notification BC del flujo transaccional del Ordering BC sin requerir un message broker externo en esta etapa   |
 
-Decisión adoptada: arquitectura de Monolito Modular con SPA desacoplada. La API centralizada en Spring Boot se divide internamente en 9 Bounded Contexts que comparten una base de datos MySQL. La comunicación entre BCs que requiere desacoplamiento se implementa mediante Observer/Pub-Sub interno.
+Decisión adoptada (Iteración 1): arquitectura de Monolito Modular con SPA desacoplada. La API centralizada en Spring Boot se divide internamente en 9 Bounded Contexts que comparten una base de datos MySQL. La comunicación entre BCs que requiere desacoplamiento se implementa mediante Observer/Pub-Sub interno.
+
+> **Decisión evolucionada:** esta decisión (ADR-02) rige las Iteraciones 1 y 2 y es **superada parcialmente por ADR-09** por ADR-09 ([5.3.1.9](#5319-evidencia-de-migración-a-microservicios)), donde Notification, Catalog y Reporting & Analytics se extraen del monolito.
 
 #### 4.3.1.5 Instantiate Architectural Elements, Allocate Responsibilities, and Define Interfaces
 
@@ -3214,7 +3266,7 @@ Decisión adoptada: arquitectura de Monolito Modular con SPA desacoplada. La API
 | **Elemento**               | **Tipo**                 | **Responsabilidad**                                                                                                             | **Interfaz**                                                                                  |
 | -------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
 | Landing Page               | Static Web               | Presentación pública de la plataforma y redirección al Web Application                                                          | Ninguna, redirección via URL                                                                  |
-| FuelBridge Web Application | SPA (Vue/React)          | Interfaz unificada para clientes y proveedores en la gestión del ciclo de vida del combustible                                  | Consume: FuelBridge API (REST/HTTPS)                                                          |
+| FuelBridge Web Application | SPA (Angular)           | Interfaz unificada para clientes y proveedores en la gestión del ciclo de vida del combustible                                  | Consume: FuelBridge API (REST/HTTPS)                                                          |
 | FuelBridge API             | Spring Boot (Java)       | Lógica de negocio completa dividida en 9 BCs; procesamiento de pedidos, pagos, inventario, despachos, notificaciones y reportes | Expone: REST API (HTTPS/JSON). Consume: MySQL DB, Email Service, Cloud Storage, PDF Generator |
 | MySQL Database             | Base de datos relacional | Persistencia transaccional de todos los dominios del sistema                                                                    | Consumida por FuelBridge API via Spring Data JPA                                              |
 | Email Service              | Sistema externo          | Envío de correos de recuperación de contraseña                                                                                  | Consumido por Identity & Access BC via REST API                                               |
@@ -3237,17 +3289,79 @@ Decisión adoptada: arquitectura de Monolito Modular con SPA desacoplada. La API
 
 #### 4.3.1.6 Sketch Views (C4 & UML) and Record Design Decisions
 
+> **Nota sobre las vistas de esta iteración:** los diagramas C4 de la Iteración 1 se conservan como evidencia histórica del diseño de ese momento. Algunas etiquetas internas de las imágenes (por ejemplo "FullTank", "Vue.js" o "ASP.NET Core") corresponden a la nomenclatura previa a la definición final del producto (FuelBridge) y de su stack (Angular y Spring Boot). La arquitectura vigente se representa en [4.1.4](#414-approach-driven-viewpoints-diagrams).
+
 **C4 Context Diagram**
 
 <div align="center">
   <img src="assets/chapter-4/SystemContext.png" width="700" />
 </div>
 
-**Diagrama de Secuencia UML**
+**Diagrama de Secuencia UML — Creación y cambio de estado de un pedido (diseño de la Iteración 1)**
 
-<div align="center">
-  <img src="assets/chapter-4/image28.png" width="700" />
-</div>
+```mermaid
+sequenceDiagram
+    actor Cliente as Cliente B2B
+    actor Proveedor
+    participant SPA as FuelBridge Web Application (SPA Angular)
+    participant API as FuelBridge API (Spring Boot)
+    participant Ordering as Ordering BC
+    participant Notification as Notification BC
+    participant DB as MySQL Database
+
+    Note over Cliente,DB: Creación del pedido
+    Cliente->>SPA: Registra un nuevo pedido
+    SPA->>API: Solicitud de creación (REST / HTTPS)
+    API->>Ordering: Crear pedido
+    Ordering->>DB: Guardar pedido y estado inicial
+    DB-->>Ordering: Confirmación
+    Ordering->>Notification: Publicar evento de cambio de estado (Observer / Pub-Sub interno)
+    Notification->>DB: Registrar notificación in-app
+    DB-->>Notification: Confirmación
+    Ordering-->>API: Pedido creado
+    API-->>SPA: Resultado de la operación
+    SPA-->>Cliente: Muestra pedido y estado actual
+
+    Note over Cliente,DB: Revisión del pedido
+    Proveedor->>SPA: Consulta pedidos pendientes
+    SPA->>API: Solicita pedidos
+    API->>Ordering: Consultar pedidos pendientes
+    Ordering->>DB: Consultar pedidos
+    DB-->>Ordering: Lista de pedidos
+    Ordering-->>API: Pedidos pendientes
+    API-->>SPA: Información de pedidos
+    SPA-->>Proveedor: Muestra pedidos pendientes
+
+    Note over Cliente,DB: Cambio de estado
+    Proveedor->>SPA: Aprueba o rechaza pedido
+    SPA->>API: Solicita cambio de estado
+    API->>Ordering: Actualizar estado del pedido
+    alt Pedido aprobado
+        Ordering->>DB: Actualizar estado a aprobado
+        DB-->>Ordering: Confirmación
+    else Pedido rechazado
+        Ordering->>DB: Actualizar estado a rechazado
+        DB-->>Ordering: Confirmación
+    end
+    Ordering->>Notification: Publicar evento de cambio de estado (Observer / Pub-Sub interno)
+    Notification->>DB: Registrar nueva notificación in-app
+    DB-->>Notification: Confirmación
+    Ordering-->>API: Estado actualizado
+    API-->>SPA: Resultado
+    SPA-->>Proveedor: Confirma actualización
+
+    Note over Cliente,DB: Consulta del nuevo estado
+    Cliente->>SPA: Consulta estado del pedido
+    SPA->>API: Solicita información del pedido
+    API->>Ordering: Consultar estado
+    Ordering->>DB: Obtener pedido
+    DB-->>Ordering: Datos actualizados
+    Ordering-->>API: Estado actual
+    API-->>SPA: Datos del pedido
+    SPA-->>Cliente: Muestra estado actualizado
+```
+
+El diagrama representa el diseño de la Iteración 1, cuando Notification BC aún pertenecía al monolito y recibía los eventos de Ordering BC dentro del mismo proceso. Desde la Iteración 3, Notification es una aplicación independiente que recibe la solicitud por HTTP (ver [4.1.4](#414-approach-driven-viewpoints-diagrams) y [5.3.1.9](#5319-evidencia-de-migración-a-microservicios)). Los estados "aprobado" y "rechazado" corresponden al diseño; la implementación usa `CONFIRMED` y `CANCELLED`.
 
 **Diagrama de Componentes - Estructura del Monolito**
 
@@ -3278,13 +3392,13 @@ El diagrama de componentes de la Landing Page representa la estructura del sitio
 | **ID** | **Decisión**                                                  | **Alternativa descartada**        | **Driver**   | **Componente**             | **Justificación**                                                                        | **Consecuencia**                                                                |
 | ------ | ------------------------------------------------------------- | --------------------------------- | ------------ | -------------------------- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | ADR-01 | SPA desacoplada del backend                                   | Monolito MVC server-side          | QA-3         | FuelBridge Web Application | Soporte de actualizaciones parciales de vista sin recargas para paneles en tiempo real   | El frontend requiere pipeline de despliegue independiente                       |
-| ADR-02 | Monolito Modular como estilo del backend                      | Microservicios distribuidos       | CON-3, QA-2  | FuelBridge API             | Viable dentro del plazo de 4 Sprints; modificabilidad por dominio sin overhead operativo | Riesgo de acoplamiento si los BCs no mantienen límites claros en el código      |
-| ADR-03 | Observer/Pub-Sub interno para eventos Ordering → Notification | Message broker externo (RabbitMQ) | QA-1         | Domain Event Dispatcher    | Satisface QA-1 sin infraestructura adicional en el MVP                                   | Si el volumen de eventos crece, se requerirá migrar a un message broker externo |
-| ADR-04 | Base de datos MySQL compartida entre todos los BCs            | Base de datos por BC              | CON-1, CON-3 | MySQL Database             | Compatible con CON-1 (Tecnológicas) y CON-3 (Time-to-market)                             | Cambios en tablas compartidas requieren coordinación entre BCs                  |
+| ADR-02 | Monolito Modular como estilo del backend (**estado: superado parcialmente por ADR-09**) | Microservicios distribuidos       | CON-3, QA-2  | FuelBridge API             | Viable dentro del plazo de 4 Sprints; modificabilidad por dominio sin overhead operativo | Riesgo de acoplamiento si los BCs no mantienen límites claros en el código. Decisión revisada en la Iteración 3: ADR-09 extrae 3 BCs |
+| ADR-03 | Observer/Pub-Sub interno para eventos Ordering → Notification (**estado: revisada parcialmente por ADR-09**: el evento sigue siendo local, pero Notification se invoca por HTTP) | Message broker externo (RabbitMQ) | QA-1         | Domain Event Dispatcher    | Satisface QA-1 sin infraestructura adicional en el MVP                                   | Si el volumen de eventos crece, se requerirá migrar a un message broker externo |
+| ADR-04 | Base de datos MySQL compartida entre todos los BCs (**estado: revisada parcialmente por ADR-09**: Notification y Catalog usan esquema propio) | Base de datos por BC              | CON-1, CON-3 | MySQL Database             | Compatible con CON-1 (Tecnológicas) y CON-3 (Time-to-market)                             | Cambios en tablas compartidas requieren coordinación entre BCs                  |
 
 #### 4.3.1.7 Analysis of Current Design and Review Iteration Goal (Kanban Board)
 
-El tablero Kanban de la Iteración 1 se gestiona en Trello: **[Tablero FuelBridge - Iteración 1](https://trello.com/invite/b/69e2fd01ee5b055b2d967a45/ATTI05a9ebca4c1da02108fc92fa76bfa07e412172F6/fulltank)**. Al cierre de esta iteración, las tareas del backlog ADD-01 a ADD-05 quedan distribuidas así:
+El tablero Kanban de la Iteración 1 se gestiona en un tablero propio de Trello: **[FuelBridge - ADD Iteración 1](https://trello.com/b/MyufuAEL/fuelbridge-add-iteracion-1)**. Al cierre de esta iteración, las tareas del backlog ADD-01 a ADD-05 quedan distribuidas así:
 
 <div align="center">
   <img src="assets/chapter-4/TrelloIteracion1.png" width="700" />
@@ -3322,7 +3436,7 @@ Los drivers QA-1 y QA-3 quedan satisfechos a nivel estructural. QA-2 se traslada
 | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | ------ | ------------- | ------------ |
 | Optimizar consultas del Dashboard y reportes                                            | QA-2 Performance                                                                     | ADD-06 | Alta          | Por resolver |
 | Definir procesamiento asíncrono para notificaciones y reportes PDF                      | QA-1 Availability & Traceability / CONC-2 (Desacoplamiento de Servicios Bloqueantes) | ADD-07 | Alta          | Por resolver |
-| Refinar componentes internos de Ordering BC, Notification BC y Reporting & Analytics BC | QA-2 Performance / Modificabilidad                                                   | ADD-08 | Alta          | Por resolver |
+| Refinar componentes internos de Ordering BC, Notification BC y Reporting & Analytics BC | QA-2 Performance / QA-4 Modificabilidad                                              | ADD-08 | Alta          | Por resolver |
 | Definir interfaces internas entre BCs mediante eventos de dominio                       | CONC-1 (Gestión Segura del Estado)                                                   | ADD-09 | Media         | Por resolver |
 | Establecer estrategia de índices y consultas para MySQL                                 | QA-2 Performance                                                                     | ADD-10 | Media         | Por resolver |
 
@@ -3342,7 +3456,7 @@ En esta iteración se refina el contenedor FuelBridge/FuelBridge API, específic
 
 - Payment BC: validación de pagos antes de aprobación.
 
-- Catalog BC: verificación de stock antes del despacho.
+- Inventory BC: verificación de stock antes del despacho.
 
 Estos elementos se seleccionan porque concentran los puntos de mayor riesgo: pedidos, pagos, stock, notificaciones y reportes.
 
@@ -3364,7 +3478,7 @@ Decisión adoptada: mantener el Monolito Modular con eventos internos mediante O
 | -------------------------- | ---------------------- | ----------------------------------------------------- | ------------------------------------------------- |
 | Ordering BC                | Componente API         | Crear, aprobar, rechazar, despachar y cerrar pedidos  | Expone endpoints REST. Publica eventos internos.  |
 | Payment BC                 | Componente API         | Registrar vouchers y validar montos de pago.          | Consume Cloud Storage. Expone validación interna. |
-| Catalog BC                 | Componente API         | Gestionar stock, precios e inventario de combustible. | Consulta/actualiza MySQL mediante repositorios.   |
+| Inventory BC               | Componente API         | Gestionar stock, precios e inventario de combustible. | Consulta/actualiza MySQL mediante repositorios.   |
 | Fulfillment BC             | Componente API         | Asignar vehículos y conductores al despacho.          | Consume pedidos aprobados desde Ordering BC.      |
 | Notification BC            | Componente API         | Generar notificaciones in-app ante cambios de estado. | Consume eventos internos de Ordering BC           |
 | Reporting & Analytics BC   | Componente API         | Calcular KPIs, métricas y solicitar PDFs.             | Consulta MySQL y consume PDF Generator Service.   |
@@ -3376,35 +3490,41 @@ Decisión adoptada: mantener el Monolito Modular con eventos internos mediante O
 
 **C4 Component Diagram – FuelBridge API refinado (Iteración 2)**
 
-El diagrama de componentes de esta iteración muestra la estructura interna de la API, refinando los Bounded Contexts más críticos: Ordering, Payment, Catalog, Fulfillment, Notification y Reporting & Analytics. Ordering BC actúa como núcleo del ciclo de pedido y publica eventos internos (vía Domain Event Dispatcher) cuando un pedido cambia de estado. Notification BC consume esos eventos para generar alertas in-app, mientras Reporting & Analytics BC consulta MySQL a través de Reporting Query Repository para mostrar KPIs y solicitar reportes PDF al servicio externo. Esta vista evidencia bajo acoplamiento, alta cohesión y procesamiento asíncrono interno.
+El diagrama de componentes de esta iteración muestra la estructura interna de la API, refinando los Bounded Contexts más críticos: Ordering, Payment, Inventory, Fulfillment, Notification y Reporting & Analytics. Ordering BC actúa como núcleo del ciclo de pedido y publica eventos internos (vía Domain Event Dispatcher) cuando un pedido cambia de estado. Notification BC consume esos eventos para generar alertas in-app, mientras Reporting & Analytics BC consulta MySQL a través de Reporting Query Repository para mostrar KPIs y solicitar reportes PDF al servicio externo. Esta vista evidencia bajo acoplamiento, alta cohesión y procesamiento asíncrono interno.
 
 | **ID** | **Decisión**                                         | **Alternativa descartada**                | **Driver** | **Componente**             | **Justificación**                                  | **Consecuencia**                                         |
 | ------ | ---------------------------------------------------- | ----------------------------------------- | ---------- | -------------------------- | -------------------------------------------------- | -------------------------------------------------------- |
-| ADR-05 | Usar Observer/Pub-Sub interno para eventos de pedido | Llamadas directas entre BCs               | QA-1       | Domain Event Dispatcher    | Reduce acoplamiento entre Ordering y Notification. | Si crece el volumen, podría requerirse broker externo.   |
+| ADR-05 | Usar Observer/Pub-Sub interno para eventos de pedido (**estado: revisada parcialmente por ADR-09**: el evento es local y Notification se invoca por HTTP) | Llamadas directas entre BCs               | QA-1       | Domain Event Dispatcher    | Reduce acoplamiento entre Ordering y Notification. | Si crece el volumen, podría requerirse broker externo.   |
 | ADR-06 | Aplicar Repository Pattern con Spring Data JPA       | Consultas SQL directas en controladores   | CONC-3     | Order Repository           | Centraliza acceso a datos y mejora mantenibilidad. | Requiere disciplina para no duplicar lógica de consulta. |
 | ADR-07 | Optimizar Dashboard con consultas indexadas          | Consultas sin estrategia de índices       | QA-2       | Reporting Query Repository | Mejora performance en reportes e historial.        | Se deben mantener índices según evolución del modelo.    |
 | ADR-08 | Mantener generación de PDF fuera del flujo principal | Generar PDF dentro del endpoint principal | CONC-2     | Reporting & Analytics BC   | Evita bloqueo de la API ante latencia externa.     | Requiere manejo de estados o errores de generación.      |
+| ADR-09 | Extraer Notification, Catalog y Reporting & Analytics como aplicaciones Spring Boot independientes (descomposición por capacidades de negocio, características de Strangler Fig) | Mantener los 9 Bounded Contexts en el Monolito Modular (ADR-02 sin modificación) | QA-4, CONC-3 | Notification Service, Catalog Service, Reporting & Analytics Service | Son los BCs con menor acoplamiento transaccional respecto a Ordering, por lo que se extraen sin introducir coordinación distribuida (Saga). | Extracción parcial: 6 BCs permanecen en el monolito residual y la separación aún no demuestra autonomía frente a fallos. Detalle completo en 5.3.1.9. |
+
+> **Nota sobre ADR-09:** esta decisión se tomó después de cerrar la Iteración 2, durante el TP1, y se registra aquí para mantener centralizadas las decisiones arquitectónicas del capítulo. ADR-09 revisa parcialmente ADR-02, ADR-03, ADR-04 y ADR-05 (ver sus estados en las tablas de 4.3.1.6 y de esta sección).
 
 #### 4.3.2.7 Analysis of Current Design and Review Iteration Goal (Kanban Board)
 
-El tablero Kanban de la Iteración 2 se gestiona en el mismo tablero Trello referenciado en [4.3.1.7]
-
-(#4317-analysis-of-current-design-and-review-iteration-goal-kanban-board). Al cierre de esta iteración, las tareas del backlog ADD-06 a ADD-10 quedan distribuidas así:
+El tablero Kanban de la Iteración 2 se gestiona en un tablero propio de Trello, independiente del de la Iteración 1: **[FuelBridge - ADD Iteración 2](https://trello.com/b/tHJ7cBUt/fuelbridge-add-iteracion-2)**. Al cierre de esta iteración, las tareas del backlog ADD-06 a ADD-10 quedan distribuidas así:
 
 <div align="center">
   <img src="assets/chapter-4/TrelloIteracion2.png" width="700" />
 </div>
 
-| **To Do** | **In Progress**                                                                       | **Done**                                                                                     |
-| --------- | ------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| -         | Evaluar futura migración a broker externo si el volumen de eventos supera lo estimado | Refinar componentes internos de FuelBridge API (ADD-08)                                      |
-|           |                                                                                       | Definir comunicación interna entre Ordering BC y Notification BC (ADD-09)                    |
-|           |                                                                                       | Definir estrategia de consultas para Dashboard y reportes (ADD-06)                           |
-|           |                                                                                       | Registrar ADR-05 a ADR-08                                                                    |
-|           |                                                                                       | Aplicar Repository Pattern con Spring Data JPA                                               |
-|           |                                                                                       | Validar performance real con pruebas de carga contra la medida de QA-2 (95% < 2s, ver 4.2.3) |
+| **To Do** | **In Progress**                                                                       | **Done**                                                                                           |
+| --------- | ------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| -         | Evaluar futura migración a broker externo si el volumen de eventos supera lo estimado | Optimizar consultas del Dashboard y reportes (ADD-06)                                              |
+|           |                                                                                       | Definir procesamiento asíncrono para notificaciones y reportes PDF (ADD-07)                        |
+|           |                                                                                       | Refinar componentes internos de Ordering BC, Notification BC y Reporting & Analytics BC (ADD-08)   |
+|           |                                                                                       | Definir interfaces internas entre BCs mediante eventos de dominio (ADD-09)                         |
+|           |                                                                                       | Establecer estrategia de índices y consultas para MySQL (ADD-10)                                   |
+|           |                                                                                       | Abordar QA-2 (Performance) a nivel de componentes internos                                         |
+|           |                                                                                       | Registrar ADR-05 a ADR-08                                                                          |
+|           |                                                                                       | Aplicar Repository Pattern con Spring Data JPA                                                     |
+|           |                                                                                       | Validar performance real con pruebas de carga contra la medida de QA-2 (95% < 2 s, ver 4.2.3)      |
 
-QA-2 (Performance) queda **cubierto y validado**: se ejecutó una prueba de carga real contra `GET /api/v1/analytics/platform` desplegado en Railway, con 200 peticiones en tandas de 50 concurrentes. Resultado: mínimo 331.7 ms, máximo 988.9 ms, percentil 95 en 705.6 ms, muy por debajo del umbral de 2000 ms definido en 4.2.3.
+QA-2 (Performance) queda **validado parcialmente**: se ejecutó una prueba de carga real contra `GET /api/v1/analytics/platform` desplegado en Railway, con 200 peticiones en tandas de 50 concurrentes. Resultado: mínimo 331.7 ms, máximo 988.9 ms, percentil 95 en 705.6 ms, por debajo del umbral de 2000 ms definido en 4.2.3.
+
+Alcance y limitaciones de la medición: la prueba se ejecutó sobre el monolito desplegado en Railway antes de la extracción de Reporting Service, cubre un único endpoint de analítica y no cubre el historial de pedidos. Repetir la prueba sobre Reporting Service (que calcula los indicadores en memoria con datos obtenidos por HTTP del monolito) queda pendiente.
 
 <div align="center">
   <img src="assets/chapter-4/qa2-load-test.png" width="700" />
@@ -3416,7 +3536,7 @@ QA-2 (Performance) queda **cubierto y validado**: se ejecutó una prueba de carg
 | ------------ | ----------- | ------- | -------------------------- |
 | QA-2         | ADD-06      | ADR-07  | Reporting Query Repository |
 | QA-1, CONC-2 | ADD-07      | ADR-08  | Reporting & Analytics BC   |
-| CONC-3       | ADD-08      | ADR-06  | Order Repository           |
+| QA-4, CONC-3 | ADD-08      | ADR-06  | Order Repository           |
 | CONC-1       | ADD-09      | ADR-05  | Domain Event Dispatcher    |
 | QA-2         | ADD-10      | ADR-07  | MySQL Database             |
 
@@ -3430,13 +3550,91 @@ QA-2 (Performance) queda **cubierto y validado**: se ejecutó una prueba de carg
 
 El diagrama muestra el refinamiento interno de la FuelBridge API durante la segunda iteración. Se representan los Bounded Contexts principales relacionados con pedidos, pagos, stock, despachos, notificaciones y reportes, además del Domain Event Dispatcher y los repositorios. La estructura busca reducir el acoplamiento entre componentes y mejorar el acceso a datos y el rendimiento de las consultas.
 
-**UML Sequence Diagram – Aprobación y despacho de pedido**
+**UML Sequence Diagram – Aprobación y despacho de pedido (diseño de la Iteración 2)**
 
-<div align="center">
-  <img src="assets/chapter-4/image18.png" width="700" />
-</div>
+```mermaid
+sequenceDiagram
+    actor Proveedor as Proveedor / Operador
+    actor Cliente as Cliente B2B
+    participant SPA as FuelBridge Web Application
+    participant Ordering as Ordering BC
+    participant Payment as Payment BC
+    participant Inventory as Inventory BC
+    participant Fulfillment as Fulfillment BC
+    participant Dispatcher as Domain Event Dispatcher
+    participant Notification as Notification BC
+    participant Reporting as Reporting & Analytics BC
+    participant DB as MySQL Database
+    participant PDF as PDF Generator Service (integración planificada)
 
-El diagrama de secuencia representa el flujo de aprobación de un pedido, incluyendo la validación del pago y stock, la asignación del despacho y la actualización del estado. Luego, el sistema publica eventos internos para generar notificaciones y actualizar la información de reportes, mostrando la interacción entre los principales componentes de la API.
+    Note over Proveedor,PDF: Consulta del pedido
+    Proveedor->>SPA: Selecciona pedido pendiente
+    SPA->>Ordering: Solicita información del pedido
+    Ordering->>DB: Consulta pedido
+    DB-->>Ordering: Datos del pedido
+    Ordering-->>SPA: Información del pedido
+    SPA-->>Proveedor: Muestra pedido pendiente
+
+    Note over Proveedor,PDF: Validación del pedido
+    Proveedor->>SPA: Aprueba pedido
+    SPA->>Ordering: Solicita aprobación
+    Ordering->>Payment: Validar pago
+    Payment->>DB: Consultar pago
+    DB-->>Payment: Información del pago
+    Payment-->>Ordering: Pago válido
+    Ordering->>Inventory: Verificar stock
+    Inventory->>DB: Consultar stock disponible
+    DB-->>Inventory: Stock disponible
+    Inventory-->>Ordering: Stock confirmado
+
+    alt Pago válido y stock disponible
+        Ordering->>DB: Actualizar estado a aprobado
+        DB-->>Ordering: Confirmación
+        Ordering->>Fulfillment: Solicitar asignación de despacho
+        Fulfillment->>DB: Registrar vehículo y conductor
+        DB-->>Fulfillment: Confirmación
+        Fulfillment-->>Ordering: Despacho asignado
+        Ordering->>Dispatcher: Publicar OrderStatusChanged
+        Dispatcher->>Notification: Entregar evento de cambio de estado
+        Notification->>DB: Registrar notificación in-app
+        DB-->>Notification: Confirmación
+        Dispatcher->>Reporting: Entregar evento para actualizar métricas
+        Reporting->>DB: Consultar datos actualizados
+        DB-->>Reporting: Datos para KPIs
+        Ordering-->>SPA: Pedido aprobado
+        SPA-->>Proveedor: Confirma aprobación
+    else Pago inválido o stock insuficiente
+        Ordering->>DB: Mantener pedido pendiente o rechazado
+        DB-->>Ordering: Confirmación
+        Ordering->>Dispatcher: Publicar evento de rechazo
+        Dispatcher->>Notification: Notificar resultado
+        Notification->>DB: Registrar notificación
+        Ordering-->>SPA: Aprobación rechazada
+        SPA-->>Proveedor: Muestra motivo
+    end
+
+    Note over Proveedor,PDF: Consulta del cliente
+    Cliente->>SPA: Consulta estado del pedido
+    SPA->>Ordering: Solicita estado actual
+    Ordering->>DB: Consultar pedido
+    DB-->>Ordering: Estado actualizado
+    Ordering-->>SPA: Estado del pedido
+    SPA-->>Cliente: Muestra estado actualizado
+
+    Note over Proveedor,PDF: Generación de reporte
+    Proveedor->>SPA: Solicita reporte
+    SPA->>Reporting: Solicitar reporte del período
+    Reporting->>DB: Consultar pedidos y métricas
+    DB-->>Reporting: Datos agregados
+    Reporting->>PDF: Solicitar generación de PDF
+    PDF-->>Reporting: Documento generado
+    Reporting-->>SPA: Reporte disponible
+    SPA-->>Proveedor: Presenta reporte
+```
+
+El diagrama de secuencia representa el **diseño objetivo** de la Iteración 2 para el flujo de aprobación de un pedido: validación del pago y del stock, asignación del despacho y actualización del estado, seguida de la publicación de eventos internos para generar notificaciones y actualizar la información de reportes. Se usa la nomenclatura vigente de Bounded Contexts (el stock pertenece a Inventory BC; Catalog BC gestiona las calificaciones de proveedores).
+
+> **Estado de implementación:** la implementación actual no ejecuta las validaciones de pago y de stock dentro de la aprobación (`confirm()` no comprueba el pago; el stock se valida al crear la entrega en Fulfillment BC), y la generación de PDF mediante un servicio externo no está implementada. El comportamiento realmente implementado se documenta en las vistas de comportamiento de [4.1.4](#414-approach-driven-viewpoints-diagrams) y las brechas pendientes en 5.3.1.9.
 
 ---
 
@@ -3461,6 +3659,8 @@ Se escribieron pruebas unitarias sobre los agregados centrales de Ordering BC y 
 - `receive()` lanza `IllegalStateException` si el pedido nunca fue despachado.
 - `markPaid()` marca el pedido como `PAID` cuando no está cancelado.
 - `markPaid()` lanza `IllegalStateException` si el pedido ya está `CANCELLED`.
+
+Estos 9 escenarios están implementados en `FuelOrderTest` ([commit `cd86740`](https://github.com/HaloFuel/FuelBrigde-Backend/commit/cd86740)). Sobre el mismo agregado y su flujo existen además `FuelOrderDomainEventsTest` (1 prueba del evento de despacho) y `FuelOrderCommandServiceImplTest` (4 pruebas del servicio de comandos).
 
 **Payment (Payment BC)** - 4 escenarios cubiertos:
 
@@ -3509,23 +3709,120 @@ El backend aplica cuatro patrones de diseño de forma consistente en los 9 Bound
 
 ### 5.1.3 Pattern Based Custom Software Library
 
-El backend ya contiene tipos transversales para representar resultados y errores de aplicación, como `Result<T, ApplicationError>`, dentro de `shared.application.result`. Estos tipos son candidatos a reutilización porque los consumen servicios de distintos Bounded Contexts y no representan una regla propia de Ordering, Payment ni de otro dominio.
+El backend de FuelBridge contiene dos tipos transversales para representar resultados y errores de aplicación: `Result<T, E>` y `ApplicationError`, ubicados en el paquete `shared.application.result`. Los servicios de aplicación de distintos Bounded Contexts los utilizan para devolver el resultado de una operación sin lanzar excepciones (por ejemplo, `Result<Equipment, ApplicationError>` en `EquipmentCommandService`). No expresan reglas propias de Ordering, Payment ni de ningún otro dominio, por lo que son candidatos naturales a una librería reutilizable.
 
-**Estado actual y alcance de la extracción:** en el código documentado, estos tipos forman parte del backend; la evidencia disponible no demuestra que ya estén empaquetados como una librería independiente. Por ello, se propone extraerlos a un módulo Java reutilizable llamado `fuelbridge-shared-kernel`, publicado como un artefacto JAR Maven (por ejemplo, `com.halofuel:fuelbridge-shared-kernel`). El backend y futuros servicios podrán declararlo como dependencia en lugar de copiar las clases. Esta sección documenta el alcance de la librería propuesta y no afirma que el artefacto ya haya sido publicado.
+**Patrón creacional aplicado: Static Factory Method.** Los resultados se construyen mediante fábricas estáticas y no mediante constructores públicos:
 
-El patrón creacional seleccionado es **Static Factory Method** para construir resultados válidos de forma explícita, mediante operaciones como `Result.success(value)` y `Result.failure(error)`, si estas fábricas no existen aún en la implementación actual. Antes de presentar el patrón como aplicado, se debe implementar y probarlo en la librería. El contrato debe conservar la representación que ya espera el backend y evitar estados ambiguos, como un resultado simultáneamente exitoso y fallido.
+```java
+// Result.java
+public sealed interface Result<T, E> {
+    record Success<T, E>(T value) implements Result<T, E> { }
+    record Failure<T, E>(E error) implements Result<T, E> { }
 
-La librería debe contener únicamente abstracciones genéricas de aplicación, por ejemplo `Result` y `ApplicationError` cuando su definición no dependa de un Bounded Context. No se deben extraer agregados, eventos de dominio, entidades JPA, repositorios concretos, controladores ni clases que dependan de Spring o de HTTP. Así se mantiene el módulo independiente del framework y apto para ser referenciado por otros servicios.
+    static <T, E> Result<T, E> success(T value) { return new Success<>(value); }
+    static <T, E> Result<T, E> failure(E error) { return new Failure<>(error); }
+    // map, flatMap, mapError, recover, getOrElse, toOptional, isSuccess, isFailure
+}
+
+// ApplicationError.java
+public record ApplicationError(String code, String message, String details) {
+    public static ApplicationError validationError(String fieldOrConcept, String reason) { ... }
+    public static ApplicationError notFound(String resourceType, String identifier) { ... }
+    public static ApplicationError businessRuleViolation(String rule, String reason) { ... }
+    public static ApplicationError conflict(String resource, String reason) { ... }
+    public static ApplicationError unexpected(String context, String reason) { ... }
+}
+```
+
+`Result` se define como interfaz sellada con dos variantes (`Success` y `Failure`), lo que impide representar un resultado simultáneamente exitoso y fallido. Las fábricas estáticas de `ApplicationError` centralizan los códigos y mensajes de error (`VALIDATION_ERROR`, `<RECURSO>_NOT_FOUND`, `BUSINESS_RULE_VIOLATION`, `<RECURSO>_CONFLICT`, `UNEXPECTED_ERROR`), de modo que todos los Bounded Contexts devuelven errores con la misma estructura.
+
+**Evidencia de la necesidad de la librería.** Tras la extracción de microservicios (ADR-09), ambos archivos están copiados sin cambios en las cuatro aplicaciones del backend. Se comprobó que las cuatro copias tienen contenido idéntico:
+
+| Aplicación | Archivos que usan `Result` o `ApplicationError` |
+| --- | --- |
+| FuelBridge Platform (monolito residual) | 21 |
+| Notification Service | 6 |
+| Catalog Service | 4 |
+| Reporting Service | 4 |
+
+**Estado actual y alcance.** Los tipos existen y funcionan dentro de cada aplicación, pero todavía no están empaquetados como una librería independiente: la duplicación entre aplicaciones sigue vigente y esta sección no afirma que el artefacto se haya publicado. La librería propuesta es un módulo Java llamado `fuelbridge-shared-kernel`, publicado como JAR Maven (por ejemplo, `com.halofuel:fuelbridge-shared-kernel`), que contendría únicamente `Result` y `ApplicationError`. Las cuatro aplicaciones lo declararían como dependencia y eliminarían sus copias locales. Quedan fuera de la librería los agregados, eventos de dominio, entidades JPA, repositorios, controladores y cualquier clase que dependa de Spring o de HTTP, para mantener el módulo independiente del framework. La extracción queda planificada para la siguiente entrega.
 
 ### 5.1.4 Framework Pattern Driven Refactoring Report
 
-Esta refactorización conecta el cambio de estado de los pedidos con la generación de notificaciones mediante el mecanismo de eventos de Spring. Se aplica **Observer (Publish-Subscribe)** usando `ApplicationEventPublisher` y `@EventListener`, componentes nativos de Spring Boot, sin añadir una librería de Mediator ni trasladar esta solución a ASP.NET Core.
+Esta refactorización conecta el cambio de estado de los pedidos con la generación de notificaciones mediante el mecanismo de eventos de Spring. Se aplica **Observer (Publish-Subscribe)** usando `ApplicationEventPublisher` y `@EventListener`, componentes nativos de Spring Boot. El cambio se realizó en el commit [`fdcb7a1`](https://github.com/HaloFuel/FuelBrigde-Backend/commit/fdcb7a1), cuyo commit padre es [`f70edda`](https://github.com/HaloFuel/FuelBrigde-Backend/commit/f70edda).
 
-**Antes:** según el historial de cambios descrito para el Sprint 1, Ordering actualizaba y persistía el pedido, pero los eventos de dominio no estaban conectados con Notification BC. En consecuencia, un cambio de estado no originaba por sí mismo la notificación correspondiente. Para la captura del estado anterior, se debe usar el código del commit inmediatamente anterior a la refactorización; no se debe reconstruir un fragmento hipotético como si hubiera sido código real.
+**Antes (commit `f70edda`):** el agregado `FuelOrder` solo cambiaba su estado. Los métodos `confirm()`, `cancel()` y `dispatch()` no registraban ningún evento de dominio, y `FuelOrderRepositoryImpl.save()` solo persistía la entidad. En consecuencia, un cambio de estado no originaba la notificación correspondiente en Notification BC.
 
-**Después:** `FuelOrder` registra eventos de dominio al confirmar, cancelar o despachar un pedido. `FuelOrderRepositoryImpl` publica los eventos registrados mediante `ApplicationEventPublisher` al guardar el agregado y limpia la lista de eventos publicados. `FuelOrderNotificationEventHandler`, ubicado en Notification BC, recibe los eventos con `@EventListener`, obtiene al usuario asociado a la empresa compradora y solicita la creación de la notificación mediante `NotificationCommandService`. Las dependencias del handler se reciben por constructor.
+```java
+// FuelOrder.java
+public void confirm() {
+    this.status = OrderStatus.CONFIRMED;
+}
 
-La mejora reduce el acoplamiento entre los contextos: Ordering publica hechos del dominio sin depender directamente de Notification BC, y el handler puede evolucionar sin modificar el agregado. También concentra la reacción a los eventos en un componente dedicado, lo que facilita mantener y probar la integración. Los eventos de Spring usados aquí son locales al mismo proceso y, por defecto, se procesan sincrónicamente; no equivalen a mensajería durable ni a comunicación entre microservicios. Si la notificación debe ejecutarse únicamente después de confirmar la transacción de base de datos, se debe evaluar `@TransactionalEventListener(phase = TransactionPhase.AFTER_COMMIT)` y documentar ese cambio cuando se implemente.
+public void cancel() {
+    this.status = OrderStatus.CANCELLED;
+}
+
+public void dispatch() {
+    if (status != OrderStatus.PENDING) throw new IllegalStateException("Order is not pending assignment");
+    this.status = OrderStatus.DISPATCHED;
+}
+
+// FuelOrderRepositoryImpl.java
+@Override
+public FuelOrder save(FuelOrder fuelOrder) {
+    var entity = FuelOrderPersistenceAssembler.toPersistenceFromDomain(fuelOrder);
+    return FuelOrderPersistenceAssembler.toDomainFromPersistence(
+            fuelOrderPersistenceRepository.save(entity));
+}
+```
+
+**Después (commit `fdcb7a1`):** `FuelOrder` registra un evento de dominio al confirmar, cancelar o despachar un pedido. `FuelOrderRepositoryImpl` publica los eventos registrados mediante `ApplicationEventPublisher` al guardar el agregado y limpia la lista de eventos publicados. `FuelOrderNotificationEventHandler`, ubicado en Notification BC, recibe los eventos con `@EventListener`, obtiene al usuario asociado a la empresa compradora y solicita la creación de la notificación mediante `NotificationCommandService`. Las dependencias del handler se reciben por constructor.
+
+```java
+// FuelOrder.java
+public void confirm() {
+    this.status = OrderStatus.CONFIRMED;
+    registerDomainEvent(new FuelOrderConfirmedEvent(this.id, this.companyId));
+}
+
+public void cancel() {
+    this.status = OrderStatus.CANCELLED;
+    registerDomainEvent(new FuelOrderCancelledEvent(this.id, this.companyId));
+}
+
+public void dispatch() {
+    if (status != OrderStatus.PENDING) throw new IllegalStateException("Order is not pending assignment");
+    this.status = OrderStatus.DISPATCHED;
+    registerDomainEvent(new FuelOrderDispatchedEvent(this.id, this.companyId));
+}
+
+// FuelOrderRepositoryImpl.java
+@Override
+public FuelOrder save(FuelOrder fuelOrder) {
+    var entity = FuelOrderPersistenceAssembler.toPersistenceFromDomain(fuelOrder);
+    var savedEntity = fuelOrderPersistenceRepository.save(entity);
+    fuelOrder.domainEvents().forEach(applicationEventPublisher::publishEvent);
+    fuelOrder.clearDomainEvents();
+    return FuelOrderPersistenceAssembler.toDomainFromPersistence(savedEntity);
+}
+
+// FuelOrderNotificationEventHandler.java (Notification BC)
+@EventListener
+public void on(FuelOrderDispatchedEvent event) {
+    userRepository.findByCompanyId(event.companyId()).ifPresent(user ->
+            notificationCommandService.handle(new CreateNotificationCommand(
+                    user.getId(),
+                    NotificationType.ORDER_DISPATCHED,
+                    "Pedido despachado",
+                    "El pedido número " + event.orderId() + " ha sido despachado.",
+                    event.orderId())));
+}
+```
+
+La mejora reduce el acoplamiento entre los contextos: Ordering publica hechos del dominio sin depender directamente de Notification BC, y el handler puede evolucionar sin modificar el agregado. También concentra la reacción a los eventos en un componente dedicado, lo que facilita mantener y probar la integración.
+
+**Limitación:** los eventos de Spring usados aquí son locales al mismo proceso y, por defecto, se procesan de forma síncrona; no equivalen a mensajería durable ni a comunicación entre microservicios. Como mejora futura se puede evaluar `@TransactionalEventListener(phase = TransactionPhase.AFTER_COMMIT)` para que la notificación se ejecute solo después de confirmar la transacción de base de datos.
 
 ## 5.2 Software Configuration Management
 
@@ -3696,15 +3993,15 @@ Los mensajes de commit siguen la especificación **Conventional Commits** (conve
 
 El **alcance** corresponde al Bounded Context o módulo afectado (`ordering`, `payment`, `notification`, `config`, etc.).
 
-**Ejemplos aplicados al proyecto**
+**Ejemplos aplicados al proyecto** (mensajes reales del repositorio `FuelBrigde-Backend`)
 
 ```text
-feat(ordering): add dispatch endpoint for fuel orders
-feat(notification): handle FuelOrderDispatchedEvent to create user notification
-fix(config): read Railway MySQL environment variables in mysql profile
-test(ordering): add unit tests for FuelOrder state transitions
-test(payment): add unit tests for Payment aggregate
-docs(report): document Sprint 1 development evidence
+feat(auth): implement login endpoint.
+feat(ordering): implement create order endpoint
+test(orders): prevent dispatch of paid fuel orders (US-12)
+refactor(orders): centralize status command handling (TS-04, TS-14)
+feat(catalog-service): validate JWT issued by FuelBridge API
+docs(orders): document notification domain events (US-29, US-30)
 ```
 
 #### Flujo de trabajo y Pull Requests
@@ -3728,14 +4025,20 @@ Se aplica **Semantic Versioning 2.0.0** con formato `MAJOR.MINOR.PATCH`. Mientra
 
 #### Evidencia de commits
 
-Ejemplo de commits representativos del Sprint 1 (backend):
+Commits representativos del Sprint 1 (backend), verificados en el historial de [HaloFuel/FuelBrigde-Backend](https://github.com/HaloFuel/FuelBrigde-Backend):
 
-| Repositorio        | Rama                                 | Commit Id | Mensaje                                                                         |
-| ------------------ | ------------------------------------ | --------- | ------------------------------------------------------------------------------- |
-| FuelBrigde-Backend | `feature/ordering-dispatch-endpoint` | `<hash>`  | feat(ordering): add dispatch endpoint for fuel orders                           |
-| FuelBrigde-Backend | `feature/notification-order-events`  | `<hash>`  | feat(notification): handle FuelOrderDispatchedEvent to create user notification |
-| FuelBrigde-Backend | `develop`                            | `<hash>`  | test(ordering): add unit tests for FuelOrder state transitions                  |
-| FuelBrigde-Backend | `develop`                            | `<hash>`  | fix(config): read Railway MySQL environment variables in mysql profile          |
+| Repositorio        | Rama                        | Commit Id                                                                      | Mensaje                                                                            | Autor (GitHub) | Fecha      |
+| ------------------ | --------------------------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------- | -------------- | ---------- |
+| FuelBrigde-Backend | `main`                      | [`f72ff07`](https://github.com/HaloFuel/FuelBrigde-Backend/commit/f72ff07)     | fix: read SPRING_DATASOURCE_URL from env var for Railway deploy                    | MaxghZZ        | 07/10/2026 |
+| FuelBrigde-Backend | `main`                      | [`743d841`](https://github.com/HaloFuel/FuelBrigde-Backend/commit/743d841)     | fix: add PORT env var support for Railway deployment                               | MaxghZZ        | 07/10/2026 |
+| FuelBrigde-Backend | `main`                      | [`f70edda`](https://github.com/HaloFuel/FuelBrigde-Backend/commit/f70edda)     | test: add Payment unit tests and H2 profile for contextLoads                       | CarlosAlb101   | 08/10/2026 |
+| FuelBrigde-Backend | `main`                      | [`fdcb7a1`](https://github.com/HaloFuel/FuelBrigde-Backend/commit/fdcb7a1)     | feat: publish fuel order events, create notifications and add dispatch endpoint    | CarlosAlb101   | 08/10/2026 |
+| FuelBrigde-Backend | `feature/sprint1-bdd-tests` | [`e6e5a0f`](https://github.com/HaloFuel/FuelBrigde-Backend/commit/e6e5a0f)     | test: add cucumber BDD acceptance test for fuel order dispatch                     | schneiderdc    | 08/10/2026 |
+| FuelBrigde-Backend | `feature/sprint1-bdd-tests` | [`ca13a7c`](https://github.com/HaloFuel/FuelBrigde-Backend/commit/ca13a7c)     | test: add BDD acceptance test for fuel order dispatch notifications                | schneiderdc    | 08/10/2026 |
+| FuelBrigde-Backend | `develop`                   | [`62b020f`](https://github.com/HaloFuel/FuelBrigde-Backend/commit/62b020f)     | test(orders): prevent dispatch of paid fuel orders (US-12)                         | schneiderdc    | 09/10/2026 |
+| FuelBrigde-Backend | `develop`                   | [`cd86740`](https://github.com/HaloFuel/FuelBrigde-Backend/commit/cd86740)     | test(orders): add unit tests for FuelOrder state transitions                       | MaxghZZ        | 23/10/2026 |
+
+Los commits `e6e5a0f` y `ca13a7c` se integraron a `develop` mediante el Pull Request #1 (`feature/sprint1-bdd-tests`). Durante el Sprint 1 una parte de los commits se realizó directamente sobre `main` y `develop`; el flujo de trabajo descrito arriba es la convención adoptada por el equipo y se aplicó mediante Pull Request en la rama de pruebas BDD.
 
 
 ### 5.2.3 Source Code Style Guide & Conventions
@@ -3925,7 +4228,7 @@ La plataforma permite publicar la aplicación web y acceder a ella desde un nave
 
 **Hosting:** Railway es una plataforma cloud que permite desplegar aplicaciones backend y administrar servicios de infraestructura. En FuelBridge, se utiliza para ejecutar la API REST desarrollada con Java 26 y Spring Boot 4.
 
-El backend implementa una arquitectura de monolito modular, organizada mediante Bounded Contexts siguiendo los principios de Domain-Driven Design (DDD). Entre sus principales módulos se encuentran IAM, Ordering, Inventory, Catalog, Payment, Fulfillment, Notification, Reporting y Equipment.
+El backend implementa una arquitectura de monolito modular, organizada mediante Bounded Contexts siguiendo los principios de Domain-Driven Design (DDD). Entre sus principales módulos se encuentran IAM, Ordering, Inventory, Catalog, Payment, Fulfillment, Notification, Reporting y Equipment. Esta descripción corresponde al backend desplegado en Railway durante el Sprint 1, que agrupaba los nueve Bounded Contexts; la posterior extracción de Notification, Catalog y Reporting & Analytics como aplicaciones independientes se describe en el diagrama de despliegue y en 5.3.1.9.
 
 **Contenedorización:** El backend utiliza Docker para facilitar su construcción y ejecución. Su archivo `Dockerfile` implementa una construcción en múltiples etapas, utilizando una imagen con JDK 26 para compilar el proyecto mediante Maven y otra con JRE 26 para ejecutar la aplicación.
 
@@ -3972,43 +4275,49 @@ La base de datos se encuentra desplegada como un servicio independiente dentro d
 
 #### C4 Deployment Diagram
 
-El diagrama de despliegue C4 representa la distribución de los componentes de FuelBridge dentro de su infraestructura de producción, identificando los entornos donde se ejecutan las aplicaciones y los mecanismos de comunicación utilizados.
+El diagrama de despliegue C4 representa la distribución de los componentes de FuelBridge entre los entornos donde se ejecutan y distingue dos grupos según su estado de verificación.
 
-La arquitectura contempla los siguientes elementos:
+**Desplegado en la nube (Sprint 1):**
 
 - **Vercel Cloud:** aloja y distribuye los archivos estáticos del frontend Angular.
-- **Navegador del usuario:** ejecuta la aplicación Angular y permite interactuar con las funcionalidades de la plataforma.
-- **Railway Backend:** ejecuta la API REST desarrollada con Java 26 y Spring Boot 4, encargada de procesar las operaciones del negocio.
+- **Navegador del usuario:** ejecuta la aplicación Angular y permite interactuar con la plataforma.
+- **Railway Backend:** ejecuta FuelBridge Platform, la API REST desarrollada con Java 26 y Spring Boot 4. En el despliegue de Railway agrupa los nueve Bounded Contexts. Su ejecución se encuentra temporalmente suspendida por consumo de créditos.
 - **Railway MySQL:** almacena la información persistente mediante una base de datos relacional MySQL 9.
 
-El proceso de comunicación comienza cuando el usuario accede a la aplicación web publicada en Vercel mediante HTTPS. Los archivos del frontend son descargados y ejecutados en el navegador, desde donde se realizan solicitudes HTTP a la API REST del backend desplegado en Railway.
+**Verificado únicamente en entorno local (no desplegado públicamente):**
 
-Posteriormente, el backend procesa las operaciones del negocio y utiliza JDBC y Spring Data JPA para consultar o modificar la información almacenada en MySQL.
+- **FuelBridge Platform (monolito residual):** conserva IAM, Ordering, Payment, Inventory, Fulfillment y Equipment.
+- **Notification Service:** aplicación Spring Boot independiente con esquema MySQL propio (`fuelbridge_notification`).
+- **Catalog Service:** aplicación Spring Boot independiente con esquema MySQL propio (`fuelbridge_catalog`).
+- **Reporting Service:** aplicación Spring Boot independiente sin tablas de negocio propias; obtiene pedidos, pagos y entregas mediante HTTP desde el monolito.
 
-Esta distribución permite mantener el frontend separado del backend a nivel de despliegue, mientras que el backend conserva una arquitectura interna de monolito modular basada en DDD.
+El proceso de comunicación comienza cuando el usuario accede a la aplicación web publicada en Vercel mediante HTTPS. Los archivos del frontend son descargados y ejecutados en el navegador, desde donde se realizan solicitudes HTTP a la API REST del backend. El backend procesa las operaciones del negocio y utiliza JDBC y Spring Data JPA para consultar o modificar la información almacenada en MySQL.
+
+Tras la extracción de microservicios, el monolito residual se comunica con Notification, Catalog y Reporting mediante REST síncrono; las direcciones de los servicios se configuran con variables de entorno (`NOTIFICATION_SERVICE_URL`, `CATALOG_SERVICE_URL` y `REPORTING_SERVICE_URL`) y los puertos de ejecución local con la variable `PORT`. Estos tres servicios se ejecutaron y verificaron en `localhost` (5.3.1.4, 5.3.1.5 y 5.3.1.9); no se presentan como evidencia de despliegue público.
 
 <div align="center">
   <img src="assets/chapter-5/FuelBridgeDeploymentDiagram.png" width="700" />
 </div>
 
-*Figura 3. C4 Deployment Diagram de FuelBridge, representando la infraestructura de producción en Vercel y Railway, así como la comunicación entre el frontend Angular, la API Spring Boot y MySQL.*
+*Figura 3. C4 Deployment Diagram de FuelBridge: infraestructura en Vercel y Railway (frontend, monolito y MySQL) y los microservicios Notification, Catalog y Reporting verificados en entorno local.*
 
 #### Validación de la Configuración de Despliegue
 
-Para verificar la infraestructura de producción se consideran las siguientes comprobaciones:
+Para verificar la infraestructura se consideran las siguientes comprobaciones:
 
-| Componente          | Evidencia de despliegue                                    |
-| ------------------- | ---------------------------------------------------------- |
-| Frontend Angular    | Despliegue en Vercel con estado `Ready`                    |
-| Backend Spring Boot | Servicio FuelBridge-Backend con estado `Online` en Railway |
-| Base de datos MySQL | Servicio MySQL con estado `Online` y despliegue `ACTIVE`   |
-| Persistencia        | Volumen `mysql-volume` asociado a MySQL                    |
-| Comunicación        | Frontend configurado para consumir la API REST de Railway  |
-| Infraestructura     | Diagrama C4 que representa los nodos y sus conexiones      |
+| Componente              | Entorno                   | Evidencia                                                                                      |
+| ----------------------- | ------------------------- | ---------------------------------------------------------------------------------------------- |
+| Frontend Angular        | Vercel (nube)             | Despliegue con estado `Ready`                                                                  |
+| Backend Spring Boot     | Railway (nube)            | Servicio FuelBridge-Backend con estado `Online` al momento de la captura; luego suspendido     |
+| Base de datos MySQL     | Railway (nube)            | Servicio MySQL con estado `Online` y despliegue `ACTIVE`                                       |
+| Persistencia            | Railway (nube)            | Volumen `mysql-volume` asociado a MySQL                                                        |
+| Notification Service    | Local (`localhost`)       | Ejecución y operaciones verificadas (5.3.1.4, 5.3.1.5); sin despliegue público                 |
+| Catalog Service         | Local (`localhost`)       | Ejecución y operaciones verificadas (5.3.1.4, 5.3.1.5); sin despliegue público                 |
+| Reporting Service       | Local (`localhost`)       | Evidencias R-01 a R-04 (5.3.1.4); sin despliegue público                                       |
+| Comunicación            | Vercel → Railway          | Frontend configurado para consumir la API REST de Railway                                      |
+| Infraestructura         | -                         | Diagrama C4 que representa los nodos y sus conexiones                                          |
 
-Las evidencias permiten identificar la infraestructura utilizada y el estado de los servicios al momento de realizar las capturas. La validación funcional completa requiere comprobar adicionalmente las operaciones entre frontend, backend y base de datos.
-
-En conjunto, la configuración de despliegue de FuelBridge proporciona una infraestructura centralizada para la lógica del negocio y la persistencia, manteniendo independiente la publicación del frontend y facilitando el mantenimiento de los componentes de la solución.
+Las evidencias permiten identificar la infraestructura utilizada y el estado de los servicios al momento de realizar las capturas. El despliegue integrado de las cuatro aplicaciones del backend en la nube permanece pendiente de comprobación (5.3.1.9).
 
 ## 5.3 Microservices Implementation
 
@@ -4120,12 +4429,14 @@ La siguiente tabla presenta las pruebas automatizadas verificadas, indicando el 
 | FuelBrigde-Backend | main                      | f70edda   | test: add Payment unit tests and H2 profile for contextLoads        | -                   | 08/10/2026          | Spring Boot - contextLoads()       |
 | FuelBrigde-Backend | feature/sprint1-bdd-tests | e6e5a0f   | test: add cucumber BDD acceptance test for fuel order dispatch      | -                   | 08/10/2026          | US-12 - Despacho de pedidos        |
 | FuelBrigde-Backend | feature/sprint1-bdd-tests | ca13a7c   | test: add BDD acceptance test for fuel order dispatch notifications | -                   | 08/10/2026          | US-27 - Notificaciones de despacho |
+| FuelBrigde-Backend | develop                   | cd86740   | test(orders): add unit tests for FuelOrder state transitions        | -                   | 23/10/2026          | FuelOrder - 9 escenarios del agregado |
 
 **Enlaces de los commits:**
 
 - [Commit f70edda - Pruebas unitarias de Payment y configuración H2](https://github.com/HaloFuel/FuelBrigde-Backend/commit/f70edda47e)
 - [Commit e6e5a0f - Prueba BDD de despacho de pedidos](https://github.com/HaloFuel/FuelBrigde-Backend/commit/e6e5a0f)
 - [Commit ca13a7c - Prueba BDD de notificaciones](https://github.com/HaloFuel/FuelBrigde-Backend/commit/ca13a7c)
+- [Commit cd86740 - Pruebas unitarias del agregado FuelOrder](https://github.com/HaloFuel/FuelBrigde-Backend/commit/cd86740)
 
 ##### Pruebas Unitarias del Backend
 
@@ -4144,6 +4455,10 @@ Las pruebas implementadas comprueban las siguientes operaciones:
 4. **Registrar pago fallido:** Comprueba que la operación `fail()` cambie el estado del pago a `FAILED`.
 
 Estas pruebas permiten validar las principales transiciones de estado del agregado Payment sin depender de servicios externos.
+
+**Pruebas del Bounded Context Ordering**
+
+Se implementaron nueve pruebas unitarias del agregado `FuelOrder` en la clase `FuelOrderTest` (JUnit 5 y AssertJ, sin contexto de Spring): estado inicial `PENDING`, transiciones de `confirm()`, `cancel()`, `dispatch()`, `receive()` y `markPaid()`, y los tres casos en los que el agregado rechaza la operación con `IllegalStateException` (despacho de un pedido que no está pendiente, recepción de un pedido nunca despachado y pago de un pedido cancelado).
 
 **Prueba de Inicialización de Spring Boot**
 
@@ -4199,21 +4514,26 @@ Las pruebas automatizadas se ejecutaron mediante Maven, utilizando el siguiente 
 
 `.\mvnw.cmd test`
 
-La ejecución finalizó con el mensaje `BUILD SUCCESS`, registrando siete pruebas exitosas, sin errores, fallos ni pruebas omitidas.
+La ejecución se realizó sobre la rama `develop` después de integrar `FuelOrderTest` y finalizó con el mensaje `BUILD SUCCESS`, registrando 25 pruebas exitosas, sin errores, fallos ni pruebas omitidas.
 
-| Testing Suite                      | Pruebas ejecutadas | Exitosas | Fallidas | Estado     |
-| ---------------------------------- | -----------------: | -------: | -------: | ---------- |
-| PaymentTest                        |                  4 |        4 |        0 | Passed     |
-| FuelBridgePlatformApplicationTests |                  1 |        1 |        0 | Passed     |
-| Cucumber - US-12                   |                  1 |        1 |        0 | Passed     |
-| Cucumber - US-27                   |                  1 |        1 |        0 | Passed     |
-| **Total**                          |              **7** |    **7** |    **0** | **Passed** |
+| Testing Suite                         | Pruebas ejecutadas | Exitosas | Fallidas | Estado      |
+| ------------------------------------- | -----------------: | -------: | -------: | ----------- |
+| FuelOrderTest                         |                  9 |        9 |        0 | Passed      |
+| FuelOrderCommandServiceImplTest       |                  4 |        4 |        0 | Passed      |
+| FuelOrderDomainEventsTest             |                  1 |        1 |        0 | Passed      |
+| NotificationServiceClientTest         |                  2 |        2 |        0 | Passed      |
+| PaymentTest                           |                  4 |        4 |        0 | Passed      |
+| CatalogServiceGatewayTest             |                  1 |        1 |        0 | Passed      |
+| ReportingServiceGatewayTest           |                  1 |        1 |        0 | Passed      |
+| FuelBridgePlatformApplicationTests    |                  1 |        1 |        0 | Passed      |
+| Cucumber (US-12 y US-27)              |                  2 |        2 |        0 | Passed      |
+| **Total**                             |             **25** |   **25** |    **0** | **Passed**  |
 
 <div align="center">
   <img src="assets/chapter-5/CucumberTestResults.png" width="700" />
 </div>
 
-*Figura 1. Resultado de ejecución de las pruebas automatizadas mediante Maven, mostrando siete pruebas exitosas y el mensaje BUILD SUCCESS.*
+*Figura 1. Resultado de ejecución de las pruebas automatizadas mediante Maven sobre `develop`, mostrando 25 pruebas exitosas, sin fallos, y el mensaje BUILD SUCCESS.*
 
 ##### Evidencia del Reporte HTML de Cucumber
 
@@ -5029,11 +5349,11 @@ Los reportes locales disponibles registran los siguientes resultados:
 
 | Aplicación | Casos registrados | Fallos | Errores | Omitidos |
 | --- | --- | --- | --- | --- |
-| FuelBridge Platform | 16 | 0 | 0 | 0 |
+| FuelBridge Platform | 25 | 0 | 0 | 0 |
 | Notification Service | 4 | 0 | 0 | 0 |
 | Catalog Service | 4 | 0 | 0 | 0 |
 | Reporting Service | 4 | 0 | 0 | 0 |
-| **Total** | **28** | **0** | **0** | **0** |
+| **Total** | **37** | **0** | **0** | **0** |
 
 Las fuentes corresponden a los directorios `target/surefire-reports/` de cada proyecto. Los reportes no incluyen una identificación explícita del commit ejecutado; deben vincularse a esa revisión para completar la trazabilidad de la evidencia.
 
@@ -5071,9 +5391,11 @@ Finalmente, se distingue el despliegue previamente realizado del backend en Rail
 
 **ADR-09: Descomposición a microservicios (Notification, Catalog, Reporting & Analytics)**
 
+ADR-09 también se encuentra registrada, en forma resumida, junto al resto de decisiones arquitectónicas de la sección [4.3.2.6](#4326-sketch-views-c4--uml-and-record-design-decisions).
+
 | **ID** | **Decisión** | **Alternativa descartada** | **Driver** | **Componente** | **Justificación** | **Consecuencia** |
 | --- | --- | --- | --- | --- | --- | --- |
-| ADR-09 | Extraer Notification, Catalog y Reporting & Analytics como aplicaciones Spring Boot independientes, siguiendo una estrategia de descomposición por capacidades de negocio (características de Strangler Fig, según el análisis de la sección 5.3.1.9) | Mantener los 9 Bounded Contexts en el Monolito Modular (ADR-02 sin modificación) | Criterio de evaluación "Microservice architecture" (TP1) | Notification Service, Catalog Service, Reporting & Analytics Service | Estos tres Bounded Contexts presentaban el menor acoplamiento transaccional respecto al núcleo de Ordering, lo que permitió extraerlos sin introducir un mecanismo de coordinación distribuida (Saga) en esta iteración | La extracción es parcial: los 6 BCs restantes (IAM, Ordering, Payment, Inventory, Fulfillment, Equipment) continúan compartiendo proceso y persistencia. El POM raíz no agrega los 3 proyectos extraídos como submódulos, por lo que compilar o probar solo la raíz no construye ni ejecuta sus suites; cada uno requiere compilación independiente. Notification y Catalog mantienen dependencia de IAM, y Reporting depende de las APIs del monolito, por lo que la separación no demuestra aún autonomía funcional frente a fallos. |
+| ADR-09 | Extraer Notification, Catalog y Reporting & Analytics como aplicaciones Spring Boot independientes, siguiendo una estrategia de descomposición por capacidades de negocio (características de Strangler Fig, según el análisis de la sección 5.3.1.9) | Mantener los 9 Bounded Contexts en el Monolito Modular (ADR-02 sin modificación) | QA-4 (Modificabilidad), CONC-3 (Mantenimiento del Código) | Notification Service, Catalog Service, Reporting & Analytics Service | Estos tres Bounded Contexts presentaban el menor acoplamiento transaccional respecto al núcleo de Ordering, lo que permitió extraerlos sin introducir un mecanismo de coordinación distribuida (Saga) en esta iteración | La extracción es parcial: los 6 BCs restantes (IAM, Ordering, Payment, Inventory, Fulfillment, Equipment) continúan compartiendo proceso y persistencia. El POM raíz no agrega los 3 proyectos extraídos como submódulos, por lo que compilar o probar solo la raíz no construye ni ejecuta sus suites; cada uno requiere compilación independiente. Notification y Catalog mantienen dependencia de IAM, y Reporting depende de las APIs del monolito, por lo que la separación no demuestra aún autonomía funcional frente a fallos. |
 
 Los 6 Bounded Contexts restantes quedan identificados como candidatos para extracción en iteraciones posteriores, priorizando Inventory y Equipment por su menor acoplamiento relativo, y dejando Ordering, Payment e Identity & Access para una etapa que requerirá introducir un mecanismo de coordinación transaccional distribuida (Saga Pattern).
 
@@ -5081,7 +5403,31 @@ Los 6 Bounded Contexts restantes quedan identificados como candidatos para extra
 
 Durante la preparación del TP1 se revisaron los artefactos anteriores y se contrastaron con la implementación y las pruebas locales. Esta revisión permitió identificar diferencias entre la arquitectura documentada, el código posterior a la extracción de microservicios y la evidencia de funcionamiento disponible.
 
-Las mejoras siguientes se sustentan en la revisión crítica de los artefactos y en los problemas observados durante las pruebas. No se atribuyen a observaciones del docente que no hayan sido registradas.
+Las observaciones del docente de las entregas Av1 y Av2 se registran en la primera tabla y se vinculan con la corrección aplicada y la sección donde puede verificarse. Las mejoras de la segunda tabla se sustentan en la revisión crítica de los artefactos y en los problemas observados durante las pruebas.
+
+##### Corrección de las observaciones de Av1 y Av2
+
+| Entrega | Observación del docente | Corrección aplicada | Sección |
+|---|---|---|---|
+| Av1 | El Anexos figuraba en el índice sin contenido en el cuerpo | Se retiró del índice | Contenido |
+| Av1 | El producto aparecía con nombres distintos en la carátula y el cuerpo | La carátula identifica la startup (HaloFuel) y el producto (FuelBridge), igual que el cuerpo del informe | Carátula, 1.2.1 |
+| Av2 | Los 4 principios no tenían ID ni referencia a drivers | Cada principio tiene ID (P-1 a P-4) y columna "Driver relacionado" | 4.1.1 |
+| Av2 | Los 3 estilos no citaban drivers | Cada estilo tiene ID (ST-1 a ST-3) y driver relacionado | 4.1.2 |
+| Av2 | 4.1.2 declaraba "Microservicios lógicos" mientras 4.3.1.4 decidía "Monolito Modular" | Se corrigió ST-1 y se dejó una nota que explica el cambio; ADR-09 registra la revisión posterior de la decisión | 4.1.2, 4.3.1.4, 4.3.2.6 |
+| Av2 | El producto se llamaba FuelBridge, PrimeFuel y FullTank | El texto del informe usa FuelBridge; las imágenes históricas se identifican como tales | 4.1.1, 4.3.1.6 |
+| Av2 | Faltaban los diagramas de clases, actividad y estado, globales y por Bounded Context | Se agregaron diagramas de clases por Bounded Context y vistas de estados, actividad y secuencia | 4.1.4 |
+| Av2 | El texto decía "Spring Data JPA" pero el contenedor era ASP.NET Core 8 con EF Core | Se unificó el stack a Spring Boot y Spring Data JPA en texto y diagramas vigentes | 4.1.4, 4.2.4 |
+| Av2 | El diagrama de BD no estaba agrupado por Bounded Context | El modelo de datos se presenta agrupado por Bounded Context y por aplicación | 4.1.5 |
+| Av2 | Solo 3 patrones, sin diagrama ni driver | Se documentan 4 patrones (PAT-1 a PAT-4) con driver y diagrama | 4.1.6 |
+| Av2 | Las 3 tácticas eran genéricas, sin QA ni categoría de Bass | Las tácticas tienen ID, categoría de Bass, descripción y QA relacionado | 4.1.7 |
+| Av2 | Los 3 QAS eran párrafos sin las 6 partes ni IDs | Se redactaron 5 QAS (QA-1 a QA-5) en formato de 6 partes con medidas verificables | 4.2.3 |
+| Av2 | Constraints y concerns sin ID; historias principales sin justificación estructural | Se asignaron IDs (CON-1 a CON-3, CONC-1 a CONC-4) y cada historia principal indica su decisión estructural | 4.2.2, 4.2.4, 4.2.5 |
+| Av2 | En 4.3.2.5 "Domain Event Dispatcher" aparecía dos veces y Order Repository tenía una función equivocada | Se corrigió la tabla; Order Repository consulta pedidos y Reporting Query Repository optimiza reportes | 4.3.2.5 |
+| Av2 | Texto instructivo en 4.3.2.6 y ADR sin columna de driver ni de componente | Se redactó la descripción y los ADR incluyen driver y componente | 4.3.1.6, 4.3.2.6 |
+| Av2 | QA-2 se declaraba cubierto sin medida ni prueba | Se ejecutó una prueba de carga contra la medida de QA-2 y se documentaron sus limitaciones | 4.2.3, 4.3.2.7 |
+| Av2 | El Kanban era una tabla sin captura y el enlace no era público ni estaba en 4.3 | Cada iteración tiene su tablero de Trello, con captura y enlace en su sección | 4.3.1.7, 4.3.2.7 |
+| Av2 | La trazabilidad driver, decisión y componente era parcial | Cada iteración incluye una tabla driver, backlog, ADR y componente | 4.3.1.7, 4.3.2.7 |
+| Av2 | Typo "Bounded Contents", typo en "Análisis" y versiones desordenadas | Se corrigieron los textos y se ordenó el registro de versiones por fecha | 4.1.4, Registro de Versiones |
 
 ##### Mejoras aplicadas
 
@@ -5094,6 +5440,7 @@ Las mejoras siguientes se sustentan en la revisión crítica de los artefactos y
 | El inicio de sesión devolvía 500 porque la clave JWT configurada tenía una longitud insuficiente | Se sustituyó la clave de configuración local por una de longitud suficiente y se utilizó el mismo valor en las cuatro aplicaciones, reiniciándolas | Inicio de sesión con 200 OK y solicitudes autenticadas satisfactorias a los microservicios |
 | Faltaba comprobar Reporting con operaciones registradas | Se creó un pedido de 100 unidades por un total de 1500 y se registró y completó su pago | Evidencias R-01 a R-04: indicadores iniciales en cero y resultados posteriores coherentes |
 | El inventario de endpoints no explicaba su relación con el alcance | Se incorporó una matriz vinculada a las historias técnicas y se ejecutaron comprobaciones adicionales | Trazabilidad de 5.3.1.5 y evidencias U-01, U-02, I-01 y O-01 a O-04 |
+| 5.1.1 y la tarea T03.01 declaraban 9 escenarios de `FuelOrder`, pero `FuelOrderTest.java` era un archivo vacío ubicado en `src/main` y no se ejecutaba | Se implementó `FuelOrderTest` con los 9 escenarios en `src/test`, se eliminó el archivo vacío y se actualizó el conteo de pruebas | Commit [`cd86740`](https://github.com/HaloFuel/FuelBrigde-Backend/commit/cd86740); Surefire con 25 pruebas y 0 fallos (5.3.1.3) |
 
 La corrección de JWT fue un cambio de configuración del entorno local. No se presenta como una modificación del código fuente ni como un commit del repositorio.
 
@@ -5121,7 +5468,13 @@ Las mejoras pendientes no se contabilizan como implementadas. Su registro permit
 
 - Adzic, G. (s.f.). Impact Mapping. Recuperado de [https://www.impactmapping.org/](https://www.impactmapping.org/)
 
+- Angular. (s.f.). Angular Style Guide. Recuperado de [https://angular.dev/style-guide](https://angular.dev/style-guide)
+
+- Bass, L., Clements, P., & Kazman, R. (2012). Software Architecture in Practice (3rd ed.). Addison-Wesley Professional.
+
 - Brandolini, A. (s.f.). Introducing EventStorming. Recuperado de [https://www.eventstorming.com/](https://www.eventstorming.com/)
+
+- Brown, S. (s.f.). The C4 model for visualising software architecture. Recuperado de [https://c4model.com/](https://c4model.com/)
 
 - CareerFoundry. (s.f.). What are User Flows in User Experience (UX) Design?. Recuperado de [https://careerfoundry.com/en/blog/ux-design/what-are-user-flows/](https://careerfoundry.com/en/blog/ux-design/what-are-user-flows/)
 
@@ -5133,17 +5486,29 @@ Las mejoras pendientes no se contabilizan como implementadas. Su registro permit
 
 - Cucumber. (s.f.). Gherkin Reference. Recuperado de [https://cucumber.io/docs/gherkin/reference/](https://cucumber.io/docs/gherkin/reference/)
 
+- Desde Adentro. (2025, 9 de setiembre). Osinergmin cierra 23 grifos inseguros tras Mega Operativo nacional. Recuperado de [https://www.desdeadentro.pe/2025/09/osinergmin-cierra-23-grifos-inseguros-tras-mega-operativo-nacional/](https://www.desdeadentro.pe/2025/09/osinergmin-cierra-23-grifos-inseguros-tras-mega-operativo-nacional/)
+
+- Docker. (s.f.). Docker Documentation. Recuperado de [https://docs.docker.com/](https://docs.docker.com/)
+
 - Driessen, V. (2010). A successful Git branching model. nvie.com. Recuperado de [https://nvie.com/posts/a-successful-git-branching-model/](https://nvie.com/posts/a-successful-git-branching-model/)
 
 - DZone. (s.f.). Acceptance Criteria in Scrum: Explanation, Examples, and Template. Recuperado de [https://dzone.com/articles/acceptance-criteria-in-software-explanation-exampl](https://dzone.com/articles/acceptance-criteria-in-software-explanation-exampl)
 
+- EditorConfig. (s.f.). EditorConfig. Recuperado de [https://editorconfig.org/](https://editorconfig.org/)
+
 - Evans, E. (2004). Domain-Driven Design: Tackling Complexity in the Heart of Software. Addison-Wesley Professional. Recuperado de [https://www.oreilly.com/library/view/domain-driven-design-tackling/0321125215/](https://www.oreilly.com/library/view/domain-driven-design-tackling/0321125215/)
+
+- Fowler, M. (2004). StranglerFigApplication. Recuperado de [https://martinfowler.com/bliki/StranglerFigApplication.html](https://martinfowler.com/bliki/StranglerFigApplication.html)
 
 - Fowler, M. (2006). Ubiquitous Language. Recuperado de [https://martinfowler.com/bliki/UbiquitousLanguage.html](https://martinfowler.com/bliki/UbiquitousLanguage.html)
 
 - Google. (s.f.). Google HTML/CSS Style Guide. Recuperado de [https://google.github.io/styleguide/htmlcssguide.html](https://google.github.io/styleguide/htmlcssguide.html)
 
+- Google. (s.f.). Google Java Style Guide. Recuperado de [https://google.github.io/styleguide/javaguide.html](https://google.github.io/styleguide/javaguide.html)
+
 - Google. (s.f.). Google JavaScript Style Guide. Recuperado de [https://google.github.io/styleguide/jsguide.html](https://google.github.io/styleguide/jsguide.html)
+
+- Google. (s.f.). Google TypeScript Style Guide. Recuperado de [https://google.github.io/styleguide/tsguide.html](https://google.github.io/styleguide/tsguide.html)
 
 - Gothelf, J., & Seiden, J. (2021). Lean UX: Designing Great Products with Agile Teams (3rd ed.). O'Reilly Media. Recuperado de [https://www.oreilly.com/library/view/lean-ux-2nd/9781491953594/](https://www.oreilly.com/library/view/lean-ux-2nd/9781491953594/)
 
@@ -5153,6 +5518,8 @@ Las mejoras pendientes no se contabilizan como implementadas. Su registro permit
 
 - IBM Design. (s.f.). As-is Scenario Map. Enterprise Design Thinking. Recuperado de [https://www.ibm.com/design/thinking/page/toolkit/activity/as-is-scenario-map](https://www.ibm.com/design/thinking/page/toolkit/activity/as-is-scenario-map)
 
+- JUnit. (s.f.). JUnit 5 User Guide. Recuperado de [https://junit.org/junit5/docs/current/user-guide/](https://junit.org/junit5/docs/current/user-guide/)
+
 - Martin, R. C. (2017). Clean Architecture: A Craftsman's Guide to Software Structure and Design. Prentice Hall. Recuperado de [https://www.oreilly.com/library/view/clean-architecture-a/9780134494272/](https://www.oreilly.com/library/view/clean-architecture-a/9780134494272/)
 
 - Mendel, J. (s.f.). Seriously, what's your (startup's) problem?. Medium. Recuperado de [4](https://medium.com/@jakemendel/seriously-whats-your-startup-s-problem-b3a884c54ab4)
@@ -5161,11 +5528,19 @@ Las mejoras pendientes no se contabilizan como implementadas. Su registro permit
 
 - Nielsen Norman Group. (2016). The Four Dimensions of Tone of Voice. Recuperado de [https://www.nngroup.com/articles/tone-of-voice-dimensions/](https://www.nngroup.com/articles/tone-of-voice-dimensions/)
 
+- OpenAPI Initiative. (s.f.). OpenAPI Specification. Recuperado de [https://spec.openapis.org/oas/latest.html](https://spec.openapis.org/oas/latest.html)
+
+- Osinergmin. (s.f.). Registro de Hidrocarburos Líquidos (Grifos y Estaciones de Servicios). Plataforma Nacional de Datos Abiertos. Recuperado de [https://www.datosabiertos.gob.pe/dataset/registro-de-hidrocarburos-l%C3%ADquidos-osinergmin](https://www.datosabiertos.gob.pe/dataset/registro-de-hidrocarburos-l%C3%ADquidos-osinergmin)
+
 - Preston-Werner, T. (s.f.). Semantic Versioning 2.0.0. Recuperado de [https://semver.org/](https://semver.org/)
+
+- Prettier. (s.f.). Prettier Documentation. Recuperado de [https://prettier.io/docs/](https://prettier.io/docs/)
 
 - Progressa Lean. (s.f.). 5W+2H - Técnica de análisis de problemas. Recuperado de [https://www.progressalean.com/5w2h-tecnica-de-analisis-de-problemas/](https://www.progressalean.com/5w2h-tecnica-de-analisis-de-problemas/)
 
 - Refactoring.Guru. (s.f.). Design Patterns. Recuperado de [https://refactoring.guru/es/design-patterns](https://refactoring.guru/es/design-patterns)
+
+- Spring. (s.f.). Spring Boot Reference Documentation. Recuperado de [https://docs.spring.io/spring-boot/](https://docs.spring.io/spring-boot/)
 
 - UXPressia. (s.f.). User vs. Buyer Persona: Differences and free template. Recuperado de [https://uxpressia.com/blog/user-persona-vs-buyer-persona-difference](https://uxpressia.com/blog/user-persona-vs-buyer-persona-difference)
 
